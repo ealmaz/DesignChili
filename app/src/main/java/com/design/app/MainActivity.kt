@@ -1,4 +1,4 @@
-package com.design.chili
+package com.design.app
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
