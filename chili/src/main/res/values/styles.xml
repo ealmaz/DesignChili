@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <attr format="reference|color" name="cardBack"/>
+
+    <style name="SuperDuperStyle">
+        <item name="android:background">?cardBack</item>
+    </style>
+
+</resources>

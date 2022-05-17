@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="DesingChiliTeme" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <item name="cardBack">@color/super_duper_color</item>
+    </style>
+
+</resources>
