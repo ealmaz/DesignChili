@@ -1,3 +1,582 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
+    <!-- Custom attributes-->
+
+    <attr name="TextSizeH1" format="dimension"/>
+    <attr name="TextSizeH2" format="dimension"/>
+    <attr name="TextSizeH3" format="dimension"/>
+    <attr name="TextSizeH4" format="dimension"/>
+    <attr name="TextSizeH5" format="dimension"/>
+    <attr name="TextSizeH6" format="dimension"/>
+    <attr name="TextSizeH7" format="dimension"/>
+    <attr name="TextSizeH8" format="dimension"/>
+    <attr name="TextSizeH9" format="dimension"/>
+    <attr name="TextSizeH10" format="dimension"/>
+
+    <attr name="PrimaryTextColor" format="color"/>
+    <attr name="SecondaryTextColor" format="color"/>
+    <attr name="MarkedTextColor" format="color"/>
+    <attr name="ErrorTextColor" format="color"/>
+
+    <attr name="RegularTextFont" format="string"/>
+    <attr name="BoldTextFont" format="string"/>
+    <attr name="ItalicTextFont" format="string"/>
+
+    <!-- Text appearances -->
+
+    <style name="BaseTextAppearance">
+        <item name="android:fontFamily">?RegularTextFont</item>
+    </style>
+
+
+    <!--    H1 -->
+
+    <style name="H1" parent="BaseTextAppearance">
+        <item name="android:textSize">?TextSizeH1</item>
+    </style>
+
+    <style name="H1.Primary">
+        <item name="android:textColor">?PrimaryTextColor</item>
+    </style>
+
+    <style name="H1.Secondary">
+        <item name="android:textColor">?SecondaryTextColor</item>
+    </style>
+
+    <style name="H1.Marked">
+        <item name="android:textColor">?MarkedTextColor</item>
+    </style>
+
+    <style name="H1.Error">
+        <item name="android:textColor">?ErrorTextColor</item>
+    </style>
+
+    <style name="H1.Primary.Bold">
+        <item name="android:fontFamily">?BoldTextFont</item>
+    </style>
+
+    <style name="H1.Primary.Italic">
+        <item name="android:fontFamily">?ItalicTextFont</item>
+    </style>
+
+    <style name="H1.Secondary.Bold">
+        <item name="android:fontFamily">?BoldTextFont</item>
+    </style>
+
+    <style name="H1.Secondary.Italic">
+        <item name="android:fontFamily">?ItalicTextFont</item>
+    </style>
+
+    <style name="H1.Marked.Bold">
+        <item name="android:fontFamily">?BoldTextFont</item>
+    </style>
+
+    <style name="H1.Marked.Italic">
+        <item name="android:fontFamily">?ItalicTextFont</item>
+    </style>
+
+    <style name="H1.Error.Bold">
+        <item name="android:fontFamily">?BoldTextFont</item>
+    </style>
+
+    <style name="H1.Error.Italic">
+        <item name="android:fontFamily">?ItalicTextFont</item>
+    </style>
+
+
+    <!--    H2 -->
+
+    <style name="H2" parent="BaseTextAppearance">
+        <item name="android:textSize">?TextSizeH2</item>
+    </style>
+
+    <style name="H2.Primary">
+        <item name="android:textColor">?PrimaryTextColor</item>
+    </style>
+
+    <style name="H2.Secondary">
+        <item name="android:textColor">?SecondaryTextColor</item>
+    </style>
+
+    <style name="H2.Marked">
+        <item name="android:textColor">?MarkedTextColor</item>
+    </style>
+
+    <style name="H2.Error">
+        <item name="android:textColor">?ErrorTextColor</item>
+    </style>
+
+    <style name="H2.Primary.Bold">
+        <item name="android:fontFamily">?BoldTextFont</item>
+    </style>
+
+    <style name="H2.Primary.Italic">
+        <item name="android:fontFamily">?ItalicTextFont</item>
+    </style>
+
+    <style name="H2.Secondary.Bold">
+        <item name="android:fontFamily">?BoldTextFont</item>
+    </style>
+
+    <style name="H2.Secondary.Italic">
+        <item name="android:fontFamily">?ItalicTextFont</item>
+    </style>
+
+    <style name="H2.Marked.Bold">
+        <item name="android:fontFamily">?BoldTextFont</item>
+    </style>
+
+    <style name="H2.Marked.Italic">
+        <item name="android:fontFamily">?ItalicTextFont</item>
+    </style>
+
+    <style name="H2.Error.Bold">
+        <item name="android:fontFamily">?BoldTextFont</item>
+    </style>
+
+    <style name="H2.Error.Italic">
+        <item name="android:fontFamily">?ItalicTextFont</item>
+    </style>
+
+
+    <!--    H3 -->
+
+    <style name="H3" parent="BaseTextAppearance">
+        <item name="android:textSize">?TextSizeH3</item>
+    </style>
+
+    <style name="H3.Primary">
+        <item name="android:textColor">?PrimaryTextColor</item>
+    </style>
+
+    <style name="H3.Secondary">
+        <item name="android:textColor">?SecondaryTextColor</item>
+    </style>
+
+    <style name="H3.Marked">
+        <item name="android:textColor">?MarkedTextColor</item>
+    </style>
+
+    <style name="H3.Error">
+        <item name="android:textColor">?ErrorTextColor</item>
+    </style>
+
+    <style name="H3.Primary.Bold">
+        <item name="android:fontFamily">?BoldTextFont</item>
+    </style>
+
+    <style name="H3.Primary.Italic">
+        <item name="android:fontFamily">?ItalicTextFont</item>
+    </style>
+
+    <style name="H3.Secondary.Bold">
+        <item name="android:fontFamily">?BoldTextFont</item>
+    </style>
+
+    <style name="H3.Secondary.Italic">
+        <item name="android:fontFamily">?ItalicTextFont</item>
+    </style>
+
+    <style name="H3.Marked.Bold">
+        <item name="android:fontFamily">?BoldTextFont</item>
+    </style>
+
+    <style name="H3.Marked.Italic">
+        <item name="android:fontFamily">?ItalicTextFont</item>
+    </style>
+
+    <style name="H3.Error.Bold">
+        <item name="android:fontFamily">?BoldTextFont</item>
+    </style>
+
+    <style name="H3.Error.Italic">
+        <item name="android:fontFamily">?ItalicTextFont</item>
+    </style>
+
+
+    <!--    H4 -->
+
+    <style name="H4" parent="BaseTextAppearance">
+        <item name="android:textSize">?TextSizeH4</item>
+    </style>
+
+    <style name="H4.Primary">
+        <item name="android:textColor">?PrimaryTextColor</item>
+    </style>
+
+    <style name="H4.Secondary">
+        <item name="android:textColor">?SecondaryTextColor</item>
+    </style>
+
+    <style name="H4.Marked">
+        <item name="android:textColor">?MarkedTextColor</item>
+    </style>
+
+    <style name="H4.Error">
+        <item name="android:textColor">?ErrorTextColor</item>
+    </style>
+
+    <style name="H4.Primary.Bold">
+        <item name="android:fontFamily">?BoldTextFont</item>
+    </style>
+
+    <style name="H4.Primary.Italic">
+        <item name="android:fontFamily">?ItalicTextFont</item>
+    </style>
+
+    <style name="H4.Secondary.Bold">
+        <item name="android:fontFamily">?BoldTextFont</item>
+    </style>
+
+    <style name="H4.Secondary.Italic">
+        <item name="android:fontFamily">?ItalicTextFont</item>
+    </style>
+
+    <style name="H4.Marked.Bold">
+        <item name="android:fontFamily">?BoldTextFont</item>
+    </style>
+
+    <style name="H4.Marked.Italic">
+        <item name="android:fontFamily">?ItalicTextFont</item>
+    </style>
+
+    <style name="H4.Error.Bold">
+        <item name="android:fontFamily">?BoldTextFont</item>
+    </style>
+
+    <style name="H4.Error.Italic">
+        <item name="android:fontFamily">?ItalicTextFont</item>
+    </style>
+
+
+    <!--    H5 -->
+
+    <style name="H5" parent="BaseTextAppearance">
+        <item name="android:textSize">?TextSizeH5</item>
+    </style>
+
+    <style name="H5.Primary">
+        <item name="android:textColor">?PrimaryTextColor</item>
+    </style>
+
+    <style name="H5.Secondary">
+        <item name="android:textColor">?SecondaryTextColor</item>
+    </style>
+
+    <style name="H5.Marked">
+        <item name="android:textColor">?MarkedTextColor</item>
+    </style>
+
+    <style name="H5.Error">
+        <item name="android:textColor">?ErrorTextColor</item>
+    </style>
+
+    <style name="H5.Primary.Bold">
+        <item name="android:fontFamily">?BoldTextFont</item>
+    </style>
+
+    <style name="H5.Primary.Italic">
+        <item name="android:fontFamily">?ItalicTextFont</item>
+    </style>
+
+    <style name="H5.Secondary.Bold">
+        <item name="android:fontFamily">?BoldTextFont</item>
+    </style>
+
+    <style name="H5.Secondary.Italic">
+        <item name="android:fontFamily">?ItalicTextFont</item>
+    </style>
+
+    <style name="H5.Marked.Bold">
+        <item name="android:fontFamily">?BoldTextFont</item>
+    </style>
+
+    <style name="H5.Marked.Italic">
+        <item name="android:fontFamily">?ItalicTextFont</item>
+    </style>
+
+    <style name="H5.Error.Bold">
+        <item name="android:fontFamily">?BoldTextFont</item>
+    </style>
+
+    <style name="H5.Error.Italic">
+        <item name="android:fontFamily">?ItalicTextFont</item>
+    </style>
+
+
+    <!--    H6 -->
+
+    <style name="H6" parent="BaseTextAppearance">
+        <item name="android:textSize">?TextSizeH6</item>
+    </style>
+
+    <style name="H6.Primary">
+        <item name="android:textColor">?PrimaryTextColor</item>
+    </style>
+
+    <style name="H6.Secondary">
+        <item name="android:textColor">?SecondaryTextColor</item>
+    </style>
+
+    <style name="H6.Marked">
+        <item name="android:textColor">?MarkedTextColor</item>
+    </style>
+
+    <style name="H6.Error">
+        <item name="android:textColor">?ErrorTextColor</item>
+    </style>
+
+    <style name="H6.Primary.Bold">
+        <item name="android:fontFamily">?BoldTextFont</item>
+    </style>
+
+    <style name="H6.Primary.Italic">
+        <item name="android:fontFamily">?ItalicTextFont</item>
+    </style>
+
+    <style name="H6.Secondary.Bold">
+        <item name="android:fontFamily">?BoldTextFont</item>
+    </style>
+
+    <style name="H6.Secondary.Italic">
+        <item name="android:fontFamily">?ItalicTextFont</item>
+    </style>
+
+    <style name="H6.Marked.Bold">
+        <item name="android:fontFamily">?BoldTextFont</item>
+    </style>
+
+    <style name="H6.Marked.Italic">
+        <item name="android:fontFamily">?ItalicTextFont</item>
+    </style>
+
+    <style name="H6.Error.Bold">
+        <item name="android:fontFamily">?BoldTextFont</item>
+    </style>
+
+    <style name="H6.Error.Italic">
+        <item name="android:fontFamily">?ItalicTextFont</item>
+    </style>
+
+
+    <!--    H7 -->
+
+    <style name="H7" parent="BaseTextAppearance">
+        <item name="android:textSize">?TextSizeH7</item>
+    </style>
+
+    <style name="H7.Primary">
+        <item name="android:textColor">?PrimaryTextColor</item>
+    </style>
+
+    <style name="H7.Secondary">
+        <item name="android:textColor">?SecondaryTextColor</item>
+    </style>
+
+    <style name="H7.Marked">
+        <item name="android:textColor">?MarkedTextColor</item>
+    </style>
+
+    <style name="H7.Error">
+        <item name="android:textColor">?ErrorTextColor</item>
+    </style>
+
+    <style name="H7.Primary.Bold">
+        <item name="android:fontFamily">?BoldTextFont</item>
+    </style>
+
+    <style name="H7.Primary.Italic">
+        <item name="android:fontFamily">?ItalicTextFont</item>
+    </style>
+
+    <style name="H7.Secondary.Bold">
+        <item name="android:fontFamily">?BoldTextFont</item>
+    </style>
+
+    <style name="H7.Secondary.Italic">
+        <item name="android:fontFamily">?ItalicTextFont</item>
+    </style>
+
+    <style name="H7.Marked.Bold">
+        <item name="android:fontFamily">?BoldTextFont</item>
+    </style>
+
+    <style name="H7.Marked.Italic">
+        <item name="android:fontFamily">?ItalicTextFont</item>
+    </style>
+
+    <style name="H7.Error.Bold">
+        <item name="android:fontFamily">?BoldTextFont</item>
+    </style>
+
+    <style name="H7.Error.Italic">
+        <item name="android:fontFamily">?ItalicTextFont</item>
+    </style>
+
+
+    <!--    H8 -->
+
+    <style name="H8" parent="BaseTextAppearance">
+        <item name="android:textSize">?TextSizeH8</item>
+    </style>
+
+    <style name="H8.Primary">
+        <item name="android:textColor">?PrimaryTextColor</item>
+    </style>
+
+    <style name="H8.Secondary">
+        <item name="android:textColor">?SecondaryTextColor</item>
+    </style>
+
+    <style name="H8.Marked">
+        <item name="android:textColor">?MarkedTextColor</item>
+    </style>
+
+    <style name="H8.Error">
+        <item name="android:textColor">?ErrorTextColor</item>
+    </style>
+
+    <style name="H8.Primary.Bold">
+        <item name="android:fontFamily">?BoldTextFont</item>
+    </style>
+
+    <style name="H8.Primary.Italic">
+        <item name="android:fontFamily">?ItalicTextFont</item>
+    </style>
+
+    <style name="H8.Secondary.Bold">
+        <item name="android:fontFamily">?BoldTextFont</item>
+    </style>
+
+    <style name="H8.Secondary.Italic">
+        <item name="android:fontFamily">?ItalicTextFont</item>
+    </style>
+
+    <style name="H8.Marked.Bold">
+        <item name="android:fontFamily">?BoldTextFont</item>
+    </style>
+
+    <style name="H8.Marked.Italic">
+        <item name="android:fontFamily">?ItalicTextFont</item>
+    </style>
+
+    <style name="H8.Error.Bold">
+        <item name="android:fontFamily">?BoldTextFont</item>
+    </style>
+
+    <style name="H8.Error.Italic">
+        <item name="android:fontFamily">?ItalicTextFont</item>
+    </style>
+
+
+    <!--    H9 -->
+
+    <style name="H9" parent="BaseTextAppearance">
+        <item name="android:textSize">?TextSizeH9</item>
+    </style>
+
+    <style name="H9.Primary">
+        <item name="android:textColor">?PrimaryTextColor</item>
+    </style>
+
+    <style name="H9.Secondary">
+        <item name="android:textColor">?SecondaryTextColor</item>
+    </style>
+
+    <style name="H9.Marked">
+        <item name="android:textColor">?MarkedTextColor</item>
+    </style>
+
+    <style name="H9.Error">
+        <item name="android:textColor">?ErrorTextColor</item>
+    </style>
+
+    <style name="H9.Primary.Bold">
+        <item name="android:fontFamily">?BoldTextFont</item>
+    </style>
+
+    <style name="H9.Primary.Italic">
+        <item name="android:fontFamily">?ItalicTextFont</item>
+    </style>
+
+    <style name="H9.Secondary.Bold">
+        <item name="android:fontFamily">?BoldTextFont</item>
+    </style>
+
+    <style name="H9.Secondary.Italic">
+        <item name="android:fontFamily">?ItalicTextFont</item>
+    </style>
+
+    <style name="H9.Marked.Bold">
+        <item name="android:fontFamily">?BoldTextFont</item>
+    </style>
+
+    <style name="H9.Marked.Italic">
+        <item name="android:fontFamily">?ItalicTextFont</item>
+    </style>
+
+    <style name="H9.Error.Bold">
+        <item name="android:fontFamily">?BoldTextFont</item>
+    </style>
+
+    <style name="H9.Error.Italic">
+        <item name="android:fontFamily">?ItalicTextFont</item>
+    </style>
+
+
+<!--    H10 -->
+
+    <style name="H10" parent="BaseTextAppearance">
+        <item name="android:textSize">?TextSizeH10</item>
+    </style>
+
+    <style name="H10.Primary">
+        <item name="android:textColor">?PrimaryTextColor</item>
+    </style>
+
+    <style name="H10.Secondary">
+        <item name="android:textColor">?SecondaryTextColor</item>
+    </style>
+
+    <style name="H10.Marked">
+        <item name="android:textColor">?MarkedTextColor</item>
+    </style>
+
+    <style name="H10.Error">
+        <item name="android:textColor">?ErrorTextColor</item>
+    </style>
+
+    <style name="H10.Primary.Bold">
+        <item name="android:fontFamily">?BoldTextFont</item>
+    </style>
+
+    <style name="H10.Primary.Italic">
+        <item name="android:fontFamily">?ItalicTextFont</item>
+    </style>
+
+    <style name="H10.Secondary.Bold">
+        <item name="android:fontFamily">?BoldTextFont</item>
+    </style>
+
+    <style name="H10.Secondary.Italic">
+        <item name="android:fontFamily">?ItalicTextFont</item>
+    </style>
+
+    <style name="H10.Marked.Bold">
+        <item name="android:fontFamily">?BoldTextFont</item>
+    </style>
+
+    <style name="H10.Marked.Italic">
+        <item name="android:fontFamily">?ItalicTextFont</item>
+    </style>
+
+    <style name="H10.Error.Bold">
+        <item name="android:fontFamily">?BoldTextFont</item>
+    </style>
+
+    <style name="H10.Error.Italic">
+        <item name="android:fontFamily">?ItalicTextFont</item>
+    </style>
+
 </resources>

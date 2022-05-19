@@ -1,3 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
+    <style name="BaseChiliDesignTheme.Night">
+
+
+        <!-- Text appearance-->
+        <item name="PrimaryTextColor">@color/gray_3</item>
+        <item name="MarkedTextColor">@color/white_1</item>
+        <!-- End text appearance-->
+
+
+    </style>
+
+    <style name="ChiliDesignTheme" parent="BaseChiliDesignTheme.Night"/>
+
 </resources>

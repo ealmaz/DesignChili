@@ -1,4 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="super_duper_color">#49A1FF</color>
+
+    <!--  Black -->
+    <color name="black_1">#010101</color>
+    <color name="black_2">#111112</color>
+    <color name="black_3">#1c1c1e</color>
+    <color name="black_4">#28282a</color>
+    <color name="black_5">#4a4a4a</color>
+
+    <!-- Gray -->
+    <color name="gray_1">#8a8a8e</color>
+    <color name="gray_2">#c8c8c8</color>
+    <color name="gray_3">#ececec</color>
+    <color name="gray_4">#efeff4</color>
+    <color name="gray_5">#F7F7F7</color>
+    <color name="gray_6">#E0E0E5</color>
+    <color name="gray_7">#D8D8D8</color>
+    <color name="gray_8">#D5D5D5</color>
+
+    <!-- White -->
+    <color name="white_1">#FFFFFF</color>
+
+    <!-- Magenta -->
+    <color name="magenta_1">#f0047f</color>
+    <color name="magenta_2">#CC0D71</color>
+    <color name="magenta_3">#f6a7d0</color>
+
+    <!-- Green -->
+    <color name="green_1">#82B752</color>
+    <color name="green_2">#415C29</color>
+    <color name="green_3">#D1E3C1</color>
+    <color name="green_4">#709E47</color>
+    <color name="green_5">#04E762</color>
+
+    <!-- Blue -->
+    <color name="blue_1">#007AFF</color>
+    <color name="blue_2">#026DB5</color>
+    <color name="blue_3">#CAEDF7</color>
+    <color name="blue_4">#52B1B7</color>
+    <color name="blue_5">#4A90E2</color>
+
+    <!-- Red -->
+    <color name="red_1">#FF3B30</color>
+    <color name="red_2">#1A0706</color>
+    <color name="red_3">#FFD8D8</color>
+    <color name="red_4">#D6232A</color>
+
+    <!-- Orange -->
+    <color name="orange_1">#FF9500</color>
+    <color name="orange_2">#F76201</color>
+    <color name="orange_4">#EB972F</color>
+
+    <!-- Cyan -->
+    <color name="cyan_1">#5AC8FA</color>
+    <color name="cyan_2">#42D8D8</color>
+
+    <!-- Purple -->
+    <color name="purple_1">#B620E0</color>
+    <color name="purple_2">#7D29E8</color>
+
+    <!-- Yellow -->
+    <color name="yellow_1">#FFCC00</color>
+    <color name="yellow_2">#FFE600</color>
+
 </resources>

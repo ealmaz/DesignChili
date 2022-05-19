@@ -1,8 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="DesingChiliTeme" parent="Theme.AppCompat.DayNight.NoActionBar">
-        <item name="cardBack">@color/super_duper_color</item>
+    <style name="BaseChiliDesignTheme" parent="Theme.AppCompat.DayNight.NoActionBar">
+
+
+        <!-- Text appearance theme-->
+        <item name="TextSizeH1">@dimen/text_64sp</item>
+        <item name="TextSizeH2">@dimen/text_32sp</item>
+        <item name="TextSizeH3">@dimen/text_28sp</item>
+        <item name="TextSizeH4">@dimen/text_24sp</item>
+        <item name="TextSizeH5">@dimen/text_20sp</item>
+        <item name="TextSizeH6">@dimen/text_18sp</item>
+        <item name="TextSizeH7">@dimen/text_16sp</item>
+        <item name="TextSizeH8">@dimen/text_14sp</item>
+        <item name="TextSizeH9">@dimen/text_12sp</item>
+        <item name="TextSizeH10">@dimen/text_10sp</item>
+
+        <item name="PrimaryTextColor">@color/black_5</item>
+        <item name="SecondaryTextColor">@color/gray_1</item>
+        <item name="MarkedTextColor">@color/black_1</item>
+        <item name="ErrorTextColor">@color/red_1</item>
+
+        <item name="RegularTextFont">@font/roboto_regular</item>
+        <item name="BoldTextFont">@font/roboto_medium</item>
+        <item name="ItalicTextFont">@font/roboto_italic</item>
+        <!-- End text appearance theme-->
+
     </style>
+
+
+    <style name="ChiliDesignTheme" parent="BaseChiliDesignTheme"/>
 
 </resources>
