@@ -4,19 +4,9 @@
         <shape android:shape="rectangle">
             <corners
                 android:radius="?PrimaryButtonCornerRadius"
-                tools:radius="8dp"/>
+                tools:radius="4dp"/>
             <solid
                 android:color="?PrimaryButtonBackgroundDisabled"
-                tools:color="@color/green_1"/>
-        </shape>
-    </item>
-    <item android:state_pressed="true">
-        <shape android:shape="rectangle">
-            <corners
-                android:radius="?PrimaryButtonCornerRadius"
-                tools:radius="8dp"/>
-            <solid
-                android:color="?PrimaryButtonBackgroundPressed"
                 tools:color="@color/green_1"/>
         </shape>
     </item>
@@ -24,7 +14,7 @@
         <shape android:shape="rectangle">
             <corners
                 android:radius="?PrimaryButtonCornerRadius"
-                tools:radius="8dp"/>
+                tools:radius="4dp"/>
             <solid
                 android:color="?PrimaryButtonBackgroundActive"
                 tools:color="@color/green_1"/>

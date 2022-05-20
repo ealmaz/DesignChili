@@ -28,6 +28,13 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+    sourceSets {
+        main {
+            res {
+                srcDirs 'src/main/res', 'src/main/res-screen/buttons'
+            }
+        }
+    }
 }
 
 dependencies {

@@ -12,25 +12,26 @@
     </style>
 
     <style name="PrimaryButtonText" parent="BaseButtonText">
-        <item name="android:textColor">?PrimaryButtonTextColor</item>
+        <item name="android:textColor">@color/primary_button_text_color</item>
         <item name="android:fontFamily">?PrimaryButtonTextFont</item>
         <item name="android:textSize">?PrimaryButtonTextSize</item>
     </style>
 
     <style name="SecondaryButtonText" parent="BaseButtonText">
-        <item name="android:textColor">?SecondaryButtonTextColor</item>
+        <item name="android:textColor">@color/secondary_button_text_color</item>
         <item name="android:fontFamily">?SecondaryButtonTextFont</item>
         <item name="android:textSize">?SecondaryButtonTextSize</item>
     </style>
 
     <style name="AdditionalButtonText" parent="BaseButtonText">
-        <item name="android:textColor">?AdditionalButtonTextColor</item>
+        <item name="android:textColor">@color/additional_button_text_color</item>
         <item name="android:fontFamily">?AdditionalButtonTextFont</item>
         <item name="android:textSize">?AdditionalButtonTextSize</item>
     </style>
 
     <style name="ComponentButtonText" parent="BaseButtonText">
-        <item name="android:textColor">?ComponentButtonTextColor</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">@color/component_button_text_color</item>
         <item name="android:fontFamily">?ComponentButtonTextFont</item>
         <item name="android:textSize">?ComponentButtonTextSize</item>
     </style>

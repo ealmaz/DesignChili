@@ -10,8 +10,13 @@
         <!-- End text appearance-->
 
 
+        <item name="android:windowBackground">@color/black_1</item>
 <!--        Primary Button-->
         <item name="PrimaryButtonBackgroundDisabled">@color/green_2</item>
+
+
+        <!-- Ripple-->
+        <item name="rippleForegroundColor">@color/gray_1</item>
 
 
     </style>

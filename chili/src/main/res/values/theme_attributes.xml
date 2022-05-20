@@ -13,31 +13,23 @@
     <attr name="TextSizeH9" format="dimension"/>
     <attr name="TextSizeH10" format="dimension"/>
 
-    <attr name="PrimaryButtonTextSize" format="dimension"/>
-    <attr name="SecondaryButtonTextSize" format="dimension"/>
-    <attr name="AdditionalButtonTextSize" format="dimension"/>
-    <attr name="ComponentButtonTextSize" format="dimension"/>
-
     <!-- Text color attributes   -->
     <attr name="PrimaryTextColor" format="color"/>
     <attr name="SecondaryTextColor" format="color"/>
     <attr name="MarkedTextColor" format="color"/>
     <attr name="ErrorTextColor" format="color"/>
 
-    <attr name="PrimaryButtonTextColor" format="color"/>
-    <attr name="SecondaryButtonTextColor" format="color"/>
-    <attr name="AdditionalButtonTextColor" format="color"/>
-    <attr name="ComponentButtonTextColor" format="color"/>
-
     <!-- Text font attributes   -->
     <attr name="RegularTextFont" format="string"/>
     <attr name="BoldTextFont" format="string"/>
     <attr name="ItalicTextFont" format="string"/>
 
-    <attr name="PrimaryButtonTextFont" format="string"/>
-    <attr name="SecondaryButtonTextFont" format="string"/>
-    <attr name="AdditionalButtonTextFont" format="string"/>
-    <attr name="ComponentButtonTextFont" format="string"/>
+
+
+    <!-- Ripple-->
+    <attr name="rippleForegroundColor" format="dimension"/>
+    <attr name="rippleForegroundCornerRadius" format="dimension"/>
+
 
 
     <!-- CustomCardView attributes -->
@@ -69,35 +61,47 @@
 
     <!-- Primary Button attributes -->
     <attr name="PrimaryButtonBackgroundActive" format="color"/>
-    <attr name="PrimaryButtonBackgroundPressed" format="color"/>
     <attr name="PrimaryButtonBackgroundDisabled" format="color"/>
     <attr name="PrimaryButtonCornerRadius" format="dimension"/>
+    <attr name="PrimaryButtonTextSize" format="dimension"/>
+    <attr name="PrimaryButtonTextFont" format="string"/>
+    <attr name="PrimaryButtonTextColorActive" format="color"/>
+    <attr name="PrimaryButtonTextColorPressed" format="color"/>
+    <attr name="PrimaryButtonTextColorDisabled" format="color"/>
 
-
+    <attr name="PrimaryButtonRippleColor" format="color"/>
 
     <!-- Secondary Button attributes -->
     <attr name="SecondaryButtonBackgroundActive" format="color"/>
-    <attr name="SecondaryButtonBackgroundPressed" format="color"/>
     <attr name="SecondaryButtonBackgroundDisabled" format="color"/>
     <attr name="SecondaryButtonCornerRadius" format="dimension"/>
-
-
+    <attr name="SecondaryButtonTextSize" format="dimension"/>
+    <attr name="SecondaryButtonTextFont" format="string"/>
+    <attr name="SecondaryButtonTextColorActive" format="color"/>
+    <attr name="SecondaryButtonTextColorPressed" format="color"/>
+    <attr name="SecondaryButtonTextColorDisabled" format="color"/>
 
     <!-- Additional Button attributes -->
     <attr name="AdditionalButtonBackgroundActive" format="color"/>
-    <attr name="AdditionalButtonBackgroundPressed" format="color"/>
     <attr name="AdditionalButtonBackgroundDisabled" format="color"/>
     <attr name="AdditionalButtonCornerRadius" format="dimension"/>
+    <attr name="AdditionalButtonTextSize" format="dimension"/>
+    <attr name="AdditionalButtonTextFont" format="string"/>
+    <attr name="AdditionalButtonTextColorActive" format="color"/>
+    <attr name="AdditionalButtonTextColorPressed" format="color"/>
+    <attr name="AdditionalButtonTextColorDisabled" format="color"/>
+
     <attr name="AdditionalButtonBorderColor" format="color"/>
-
-
+    <attr name="AdditionalButtonDisabledBorderColor" format="color"/>
 
     <!-- Component Button attributes -->
     <attr name="ComponentButtonBackgroundActive" format="color"/>
-    <attr name="ComponentButtonBackgroundPressed" format="color"/>
     <attr name="ComponentButtonBackgroundDisabled" format="color"/>
     <attr name="ComponentButtonCornerRadius" format="dimension"/>
-
-
+    <attr name="ComponentButtonTextSize" format="dimension"/>
+    <attr name="ComponentButtonTextFont" format="string"/>
+    <attr name="ComponentButtonTextColorActive" format="color"/>
+    <attr name="ComponentButtonTextColorPressed" format="color"/>
+    <attr name="ComponentButtonTextColorDisabled" format="color"/>
 
 </resources>
