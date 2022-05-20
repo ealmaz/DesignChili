@@ -10,6 +10,10 @@
         <!-- End text appearance-->
 
 
+<!--        Primary Button-->
+        <item name="PrimaryButtonBackgroundDisabled">@color/green_2</item>
+
+
     </style>
 
     <style name="ChiliDesignTheme" parent="BaseChiliDesignTheme.Night"/>

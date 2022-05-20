@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Text size attributes   -->
+    <attr name="TextSizeH1" format="dimension"/>
+    <attr name="TextSizeH2" format="dimension"/>
+    <attr name="TextSizeH3" format="dimension"/>
+    <attr name="TextSizeH4" format="dimension"/>
+    <attr name="TextSizeH5" format="dimension"/>
+    <attr name="TextSizeH6" format="dimension"/>
+    <attr name="TextSizeH7" format="dimension"/>
+    <attr name="TextSizeH8" format="dimension"/>
+    <attr name="TextSizeH9" format="dimension"/>
+    <attr name="TextSizeH10" format="dimension"/>
+
+    <attr name="PrimaryButtonTextSize" format="dimension"/>
+    <attr name="SecondaryButtonTextSize" format="dimension"/>
+    <attr name="AdditionalButtonTextSize" format="dimension"/>
+    <attr name="ComponentButtonTextSize" format="dimension"/>
+
+    <!-- Text color attributes   -->
+    <attr name="PrimaryTextColor" format="color"/>
+    <attr name="SecondaryTextColor" format="color"/>
+    <attr name="MarkedTextColor" format="color"/>
+    <attr name="ErrorTextColor" format="color"/>
+
+    <attr name="PrimaryButtonTextColor" format="color"/>
+    <attr name="SecondaryButtonTextColor" format="color"/>
+    <attr name="AdditionalButtonTextColor" format="color"/>
+    <attr name="ComponentButtonTextColor" format="color"/>
+
+    <!-- Text font attributes   -->
+    <attr name="RegularTextFont" format="string"/>
+    <attr name="BoldTextFont" format="string"/>
+    <attr name="ItalicTextFont" format="string"/>
+
+    <attr name="PrimaryButtonTextFont" format="string"/>
+    <attr name="SecondaryButtonTextFont" format="string"/>
+    <attr name="AdditionalButtonTextFont" format="string"/>
+    <attr name="ComponentButtonTextFont" format="string"/>
+
+
+    <!-- CustomCardView attributes -->
+    <attr name="CardViewBackground" format="reference"/>
+    <attr name="CardViewCornerRadius" format="dimension"/>
+
+
+
+    <!-- CellView attributes -->
+    <attr name="CellViewBackground" format="reference"/>
+    <attr name="CellViewDividerColor" format="color"/>
+    <attr name="CellCornerRadius" format="dimension"/>
+
+
+
+    <!-- Snackbar attributes -->
+    <attr name="SnackbarBackground" format="reference"/>
+    <attr name="SnackbarCornerRadius" format="dimension"/>
+
+
+
+    <!-- InputView attributes -->
+    <attr name="BaseInputViewBackground" format="reference"/>
+    <attr name="BaseInputViewBackgroundError" format="reference"/>
+    <attr name="BaseInputViewCursorColor" format="color"/>
+    <attr name="BaseInputViewIconTint" format="color"/>
+
+
+
+    <!-- Primary Button attributes -->
+    <attr name="PrimaryButtonBackgroundActive" format="color"/>
+    <attr name="PrimaryButtonBackgroundPressed" format="color"/>
+    <attr name="PrimaryButtonBackgroundDisabled" format="color"/>
+    <attr name="PrimaryButtonCornerRadius" format="dimension"/>
+
+
+
+    <!-- Secondary Button attributes -->
+    <attr name="SecondaryButtonBackgroundActive" format="color"/>
+    <attr name="SecondaryButtonBackgroundPressed" format="color"/>
+    <attr name="SecondaryButtonBackgroundDisabled" format="color"/>
+    <attr name="SecondaryButtonCornerRadius" format="dimension"/>
+
+
+
+    <!-- Additional Button attributes -->
+    <attr name="AdditionalButtonBackgroundActive" format="color"/>
+    <attr name="AdditionalButtonBackgroundPressed" format="color"/>
+    <attr name="AdditionalButtonBackgroundDisabled" format="color"/>
+    <attr name="AdditionalButtonCornerRadius" format="dimension"/>
+    <attr name="AdditionalButtonBorderColor" format="color"/>
+
+
+
+    <!-- Component Button attributes -->
+    <attr name="ComponentButtonBackgroundActive" format="color"/>
+    <attr name="ComponentButtonBackgroundPressed" format="color"/>
+    <attr name="ComponentButtonBackgroundDisabled" format="color"/>
+    <attr name="ComponentButtonCornerRadius" format="dimension"/>
+
+
+
+</resources>

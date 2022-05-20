@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="CellView">
+        <attr name="roundedCornerSingle" format="boolean"/>
+        <attr name="roundedCornerTop" format="boolean"/>
+        <attr name="roundedCornerMiddle" format="boolean"/>
+        <attr name="roundedCornerBottom" format="boolean"/>
+    </declare-styleable>
+
+</resources>

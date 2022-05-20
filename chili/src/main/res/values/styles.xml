@@ -1,4 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <style name="BaseChiliViewStyle"></style>
+
+
+    <style name="ButtonStyle" parent="BaseChiliViewStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingTop">@dimen/padding_14dp</item>
+        <item name="android:paddingBottom">@dimen/padding_14dp</item>
+        <item name="android:paddingStart">@dimen/padding_24dp</item>
+        <item name="android:paddingEnd">@dimen/padding_24dp</item>
+        <item name="android:foreground">?selectableItemBackground</item>
+    </style>
+
+
+    <style name="ButtonStyle.Primary">
+        <item name="android:background">@drawable/primary_button_background</item>
+        <item name="android:textAppearance">@style/PrimaryButtonText</item>
+    </style>
+
+    <style name="ButtonStyle.Secondary">
+        <item name="android:background">@drawable/secondary_button_background</item>
+        <item name="android:textAppearance">@style/SecondaryButtonText</item>
+    </style>
+
+
+    <style name="ButtonStyle.Additional">
+        <item name="android:background">@drawable/additional_button_background</item>
+        <item name="android:textAppearance">@style/AdditionalButtonText</item>
+    </style>
+
+
+    <style name="ButtonStyle.Component">
+        <item name="android:background">@drawable/component_button_background</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:paddingTop">@dimen/padding_0dp</item>
+        <item name="android:paddingBottom">@dimen/padding_0dp</item>
+        <item name="android:paddingStart">@dimen/padding_0dp</item>
+        <item name="android:paddingEnd">@dimen/padding_0dp</item>
+        <item name="android:textAppearance">@style/ComponentButtonText</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+    </style>
+
+
 </resources>

@@ -1,37 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <!-- Custom attributes-->
-
-    <attr name="TextSizeH1" format="dimension"/>
-    <attr name="TextSizeH2" format="dimension"/>
-    <attr name="TextSizeH3" format="dimension"/>
-    <attr name="TextSizeH4" format="dimension"/>
-    <attr name="TextSizeH5" format="dimension"/>
-    <attr name="TextSizeH6" format="dimension"/>
-    <attr name="TextSizeH7" format="dimension"/>
-    <attr name="TextSizeH8" format="dimension"/>
-    <attr name="TextSizeH9" format="dimension"/>
-    <attr name="TextSizeH10" format="dimension"/>
-
-    <attr name="PrimaryTextColor" format="color"/>
-    <attr name="SecondaryTextColor" format="color"/>
-    <attr name="MarkedTextColor" format="color"/>
-    <attr name="ErrorTextColor" format="color"/>
-
-    <attr name="RegularTextFont" format="string"/>
-    <attr name="BoldTextFont" format="string"/>
-    <attr name="ItalicTextFont" format="string"/>
-
-    <!-- Text appearances -->
-
     <style name="BaseTextAppearance">
         <item name="android:fontFamily">?RegularTextFont</item>
     </style>
 
 
-    <!--    H1 -->
+    <!-- Buttons text appearance   -->
+    <style name="BaseButtonText" parent="BaseTextAppearance">
+        <item name="android:textAllCaps">true</item>
+    </style>
 
+    <style name="PrimaryButtonText" parent="BaseButtonText">
+        <item name="android:textColor">?PrimaryButtonTextColor</item>
+        <item name="android:fontFamily">?PrimaryButtonTextFont</item>
+        <item name="android:textSize">?PrimaryButtonTextSize</item>
+    </style>
+
+    <style name="SecondaryButtonText" parent="BaseButtonText">
+        <item name="android:textColor">?SecondaryButtonTextColor</item>
+        <item name="android:fontFamily">?SecondaryButtonTextFont</item>
+        <item name="android:textSize">?SecondaryButtonTextSize</item>
+    </style>
+
+    <style name="AdditionalButtonText" parent="BaseButtonText">
+        <item name="android:textColor">?AdditionalButtonTextColor</item>
+        <item name="android:fontFamily">?AdditionalButtonTextFont</item>
+        <item name="android:textSize">?AdditionalButtonTextSize</item>
+    </style>
+
+    <style name="ComponentButtonText" parent="BaseButtonText">
+        <item name="android:textColor">?ComponentButtonTextColor</item>
+        <item name="android:fontFamily">?ComponentButtonTextFont</item>
+        <item name="android:textSize">?ComponentButtonTextSize</item>
+    </style>
+
+
+    <!--    H1 -->
     <style name="H1" parent="BaseTextAppearance">
         <item name="android:textSize">?TextSizeH1</item>
     </style>
@@ -86,7 +91,6 @@
 
 
     <!--    H2 -->
-
     <style name="H2" parent="BaseTextAppearance">
         <item name="android:textSize">?TextSizeH2</item>
     </style>
@@ -141,7 +145,6 @@
 
 
     <!--    H3 -->
-
     <style name="H3" parent="BaseTextAppearance">
         <item name="android:textSize">?TextSizeH3</item>
     </style>
@@ -196,7 +199,6 @@
 
 
     <!--    H4 -->
-
     <style name="H4" parent="BaseTextAppearance">
         <item name="android:textSize">?TextSizeH4</item>
     </style>
@@ -251,7 +253,6 @@
 
 
     <!--    H5 -->
-
     <style name="H5" parent="BaseTextAppearance">
         <item name="android:textSize">?TextSizeH5</item>
     </style>
@@ -306,7 +307,6 @@
 
 
     <!--    H6 -->
-
     <style name="H6" parent="BaseTextAppearance">
         <item name="android:textSize">?TextSizeH6</item>
     </style>
@@ -361,7 +361,6 @@
 
 
     <!--    H7 -->
-
     <style name="H7" parent="BaseTextAppearance">
         <item name="android:textSize">?TextSizeH7</item>
     </style>
@@ -416,7 +415,6 @@
 
 
     <!--    H8 -->
-
     <style name="H8" parent="BaseTextAppearance">
         <item name="android:textSize">?TextSizeH8</item>
     </style>
@@ -471,7 +469,6 @@
 
 
     <!--    H9 -->
-
     <style name="H9" parent="BaseTextAppearance">
         <item name="android:textSize">?TextSizeH9</item>
     </style>
@@ -526,7 +523,6 @@
 
 
 <!--    H10 -->
-
     <style name="H10" parent="BaseTextAppearance">
         <item name="android:textSize">?TextSizeH10</item>
     </style>
