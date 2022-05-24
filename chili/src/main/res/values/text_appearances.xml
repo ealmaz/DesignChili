@@ -9,6 +9,7 @@
     <!-- Buttons text appearance   -->
     <style name="BaseButtonText" parent="BaseTextAppearance">
         <item name="android:textAllCaps">true</item>
+        <item name="android:textAlignment">center</item>
     </style>
 
     <style name="PrimaryButtonText" parent="BaseButtonText">
