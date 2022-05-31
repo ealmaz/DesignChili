@@ -81,6 +81,16 @@
         <item name="ComponentButtonTextColorPressed">@color/blue_1</item>
         <item name="ComponentButtonTextColorDisabled">@color/blue_1_alpha_50</item>
 
+
+        <item name="InputViewEndIconTint">@color/gray_1</item>
+        <item name="InputViewHintTextColor">@color/gray_1_alpha_50</item>
+        <item name="InputViewBackgroundColor">@color/gray_5</item>
+        <item name="InputViewBackgroundErrorColor">@color/red_3</item>
+        <item name="InputViewCursorColor">@color/magenta_1</item>
+        <item name="InputViewErrorMessageTextColor">@color/red_1</item>
+        <item name="InputViewMessageTextColor">@color/black_5</item>
+
+
     </style>
 
 

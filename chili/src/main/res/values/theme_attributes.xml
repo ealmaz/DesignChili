@@ -104,4 +104,15 @@
     <attr name="ComponentButtonTextColorPressed" format="color"/>
     <attr name="ComponentButtonTextColorDisabled" format="color"/>
 
+
+
+    <!-- InputView   -->
+    <attr name="InputViewEndIconTint" format="color"/>
+    <attr name="InputViewHintTextColor" format="color"/>
+    <attr name="InputViewBackgroundColor" format="color"/>
+    <attr name="InputViewBackgroundErrorColor" format="color"/>
+    <attr name="InputViewCursorColor" format="color"/>
+    <attr name="InputViewErrorMessageTextColor" format="color"/>
+    <attr name="InputViewMessageTextColor" format="color"/>
+
 </resources>

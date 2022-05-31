@@ -31,7 +31,7 @@ android {
     sourceSets {
         main {
             res {
-                srcDirs 'src/main/res', 'src/main/res-screen/buttons'
+                srcDirs 'src/main/res', 'src/main/res-screen/buttons', 'src/main/res-screen/input_views'
             }
         }
     }

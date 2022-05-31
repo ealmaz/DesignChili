@@ -1,5 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <declare-styleable name="BaseInputView">
+        <attr name="android:gravity"/>
+        <attr name="android:inputType"/>
+        <attr name="android:hint"/>
+        <attr name="android:enabled"/>
+        <attr name="android:textAllCaps"/>
+        <attr name="android:maxLength"/>
+        <attr name="message" format="string"/>
+        <attr name="errorMessage" format="string"/>
+        <attr name="actionButtonText" format="string"/>
+        <attr name="fieldBackground" format="color"/>
+        <attr name="errorFieldBackground" format="color"/>
+        <attr name="messageTextColor" format="color"/>
+        <attr name="errorMessageTextColor" format="color"/>
+        <attr name="hintTextColor"/>
+        <attr name="endIconTint"/>
+        <attr name="endIconMode"/>
+        <attr name="endIconDrawable"/>
+    </declare-styleable>
+
 
 </resources>

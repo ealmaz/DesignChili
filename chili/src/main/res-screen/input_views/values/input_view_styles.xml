@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="InputViewStyle" parent="BaseChiliViewStyle">
+        <item name="errorFieldBackground">?InputViewBackgroundErrorColor</item>
+        <item name="fieldBackground">?InputViewBackgroundColor</item>
+        <item name="hintTextColor">?InputViewHintTextColor</item>
+        <item name="errorMessageTextColor">?InputViewErrorMessageTextColor</item>
+        <item name="messageTextColor">?InputViewMessageTextColor</item>
+    </style>
+
+
+    <style name="InputViewStyle.Simple">
+
+    </style>
+
+    <style name="InputViewStyle.Masked">
+
+    </style>
+
+
+</resources>
