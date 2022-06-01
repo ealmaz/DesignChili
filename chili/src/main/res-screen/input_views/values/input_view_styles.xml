@@ -10,13 +10,17 @@
     </style>
 
 
-    <style name="InputViewStyle.Simple">
+    <style name="InputViewStyle.Simple"> </style>
 
+    <style name="InputViewStyle.PhoneMask">
+        <item name="android:inputType">number</item>
+        <item name="allowedInputSymbols">1234567890</item>
+        <item name="mask">+996 XXX XXX XXX</item>
     </style>
 
-    <style name="InputViewStyle.Masked">
-
+    <style name="InputViewStyle.Password">
+        <item name="android:inputType">textPassword</item>
+        <item name="endIconMode">password_toggle</item>
     </style>
-
 
 </resources>

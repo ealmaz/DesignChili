@@ -63,7 +63,7 @@ class MaskedInputView : BaseInputView {
 
     private fun setupFiled() {
         clearAndSetFilters(arrayOf())
-        addTextWatcher(maskTextWatcher)
+        getInputField().addTextChangedListener(maskTextWatcher)
         maskTextWatcher.setupField()
     }
 
