@@ -56,7 +56,7 @@ open class BaseInputView: ConstraintLayout {
         obtainAttributes(attrs)
     }
 
-    protected open fun inflateViews(context: Context) {
+    private fun inflateViews(context: Context) {
         val view = LayoutInflater.from(context).inflate(R.layout.view_base_input, this)
         this.view = BaseInputViewVariables(
             inputField = view.findViewById(R.id.et_input),
@@ -130,7 +130,24 @@ open class BaseInputView: ConstraintLayout {
         }
     }
 
-    private fun setupHintTextColor(@ColorInt color: Int) {
+    override fun onRestoreInstanceState(state: Parcelable?) {
+        var superState: Parcelable? = null
+        (state as? Bundle)?.let { bundle ->
+            setText(bundle.getString(EditText::class.java.canonicalName))
+            superState = bundle.getParcelable(SUPER_STATE)
+        }
+        super.onRestoreInstanceState(superState)
+    }
+
+    override fun onSaveInstanceState(): Parcelable? {
+        val supperState = super.onSaveInstanceState()
+        return Bundle().apply {
+            putString(EditText::class.java.canonicalName, getInputText())
+            putParcelable(SUPER_STATE, supperState)
+        }
+    }
+
+    protected open fun setupHintTextColor(@ColorInt color: Int) {
         hintTextColor = color
         view.inputField.setHintTextColor(color)
     }
@@ -179,23 +196,6 @@ open class BaseInputView: ConstraintLayout {
 
     fun setHint(hint: String?) {
         view.inputField.hint = hint
-    }
-
-    override fun onRestoreInstanceState(state: Parcelable?) {
-        var superState: Parcelable? = null
-        (state as? Bundle)?.let { bundle ->
-            setText(bundle.getString(EditText::class.java.canonicalName))
-            superState = bundle.getParcelable(SUPER_STATE)
-        }
-        super.onRestoreInstanceState(superState)
-    }
-
-    override fun onSaveInstanceState(): Parcelable? {
-        val supperState = super.onSaveInstanceState()
-        return Bundle().apply {
-            putString(EditText::class.java.canonicalName, getInputText())
-            putParcelable(SUPER_STATE, supperState)
-        }
     }
 
     fun setInputType(type: Int) {

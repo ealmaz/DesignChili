@@ -10,18 +10,23 @@ import com.design.chili.view.input.SelectionEditText
 
 class MaskedTextWatcher private constructor(
     val field: SelectionEditText,
-    val hintTextColor: Int,
-    val representation: Char,
-    val mask: String,
-    val maskSymbols: List<Char>) : TextWatcher {
+    var hintTextColor: Int,
+    var representation: Char,
+    var mask: String,
+    var maskSymbols: List<Char>,
+    var allowedInputSymbols: String) : TextWatcher {
 
     init {
-        field.startSelectionLimit = mask.indexOfFirst { it == representation }
+        updateStartSelectionLimit()
     }
 
     private var isEditing = false
 
     private var selectionPosition = mask.indexOf(representation)
+
+    private fun updateStartSelectionLimit() {
+        field.startSelectionLimit = mask.indexOfFirst { it == representation }
+    }
 
 
     override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
@@ -30,10 +35,11 @@ class MaskedTextWatcher private constructor(
 
     override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
         if (isEditing) return
+        if (mask == "*") return
         isEditing = true
         selectionPosition = field.selectionStart
         val inputText = StringBuilder(field.text.toString())
-        val clearedText = clearMaskSymbols(inputText.toString())
+        val clearedText = clearMaskSymbols(inputText.toString()).clearForbiddenSymbols()
         val maskedText = mergeStrings(clearedText, before > count)
         val ssb = SpannableStringBuilder(maskedText)
         val lastMaskSym = maskedText.indexOfFirst { it == representation }.takeIf { it != -1 } ?: maskedText.length
@@ -50,6 +56,11 @@ class MaskedTextWatcher private constructor(
 
     fun clearMaskSymbols(text: String): String {
         return text.filter { !maskSymbols.contains(it) && it != representation }
+    }
+
+    fun String.clearForbiddenSymbols(): String {
+        if (allowedInputSymbols == "*") return this
+        return this.filter { allowedInputSymbols.contains(it) }
     }
 
     fun mergeStrings(inputText: String, isDelete: Boolean): String {
@@ -90,6 +101,7 @@ class MaskedTextWatcher private constructor(
     }
 
     fun setupField() {
+        if (mask == "*") return
         field.setText(mask)
     }
 
@@ -100,15 +112,26 @@ class MaskedTextWatcher private constructor(
         return true
     }
 
+    fun setupNewMask(newMask: String = mask, newMaskSymbols: List<Char> = maskSymbols) {
+        maskSymbols = newMaskSymbols
+        if (mask != newMask) {
+            mask = newMask
+            updateStartSelectionLimit()
+        }
+        setupField()
+    }
+
     class Builder {
 
         private var representation = 'X'
 
-        private var mask = "+996 XXX XXX - XXX"
+        private var mask = "*"
 
-        private var maskSymbols = listOf('-', ' ')
+        private var maskSymbols = listOf('-', ' ', '/')
 
         private var hintTextColor: Int = Color.GRAY
+
+        private var allowedInputSymbols = "*"
 
         fun setRepresentationChar(representation: Char): Builder {
             this.representation = representation
@@ -130,8 +153,13 @@ class MaskedTextWatcher private constructor(
             return this
         }
 
+        fun setAllowedInputSymbols(allowedInputSymbols: String): Builder {
+            this.allowedInputSymbols = allowedInputSymbols
+            return this
+        }
+
         fun build(field: SelectionEditText): MaskedTextWatcher {
-            return MaskedTextWatcher(field, hintTextColor, representation, mask, maskSymbols)
+            return MaskedTextWatcher(field, hintTextColor, representation, mask, maskSymbols, allowedInputSymbols)
         }
     }
 }
