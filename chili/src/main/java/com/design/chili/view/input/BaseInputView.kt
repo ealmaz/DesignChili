@@ -67,7 +67,7 @@ open class BaseInputView: ConstraintLayout {
     }
 
     private fun obtainAttributes(attrs: AttributeSet) {
-        context?.obtainStyledAttributes(attrs, R.styleable.BaseInputView)?.run {
+        context?.obtainStyledAttributes(attrs, R.styleable.BaseInputView, R.attr.inputViewDefaultStyle, R.style.InputViewStyle_Simple)?.run {
 
             getColor(R.styleable.BaseInputView_errorFieldBackground, ContextCompat.getColor(context, R.color.red_3)).let {
                 setupErrorFieldBackground(it)

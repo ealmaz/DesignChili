@@ -7,7 +7,7 @@
                 tools:radius="4dp"/>
             <solid
                 android:color="?PrimaryButtonBackgroundDisabled"
-                tools:color="@color/green_1"/>
+                tools:color="@color/green_3"/>
         </shape>
     </item>
     <item android:state_enabled="true">

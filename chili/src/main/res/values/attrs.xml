@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    
+    <declare-styleable name="DefaultStyleTheme">
+        <attr name="inputViewDefaultStyle" format="reference"/>
+        <attr name="maskedInputDefaultStyle" format="reference"/>
+    </declare-styleable>
 
     <declare-styleable name="BaseInputView">
         <attr name="android:gravity"/>

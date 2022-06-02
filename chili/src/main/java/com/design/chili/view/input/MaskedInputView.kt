@@ -28,7 +28,7 @@ class MaskedInputView : BaseInputView {
     }
 
     private fun obtainAttributes(attrs: AttributeSet) {
-        context?.obtainStyledAttributes(attrs, R.styleable.MaskedInputView)?.run {
+        context?.obtainStyledAttributes(attrs, R.styleable.MaskedInputView, R.attr.maskedInputDefaultStyle, R.style.InputViewStyle_Masked)?.run {
             getString(R.styleable.MaskedInputView_mask)?.let {
                 maskTextWatcher.setupNewMask(newMask = it)
             }
