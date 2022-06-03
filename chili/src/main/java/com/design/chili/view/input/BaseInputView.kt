@@ -500,7 +500,11 @@ open class BaseInputView: ConstraintLayout {
         }
         if (!isInputRightDrawableExist()) setInputRightDrawable(R.drawable.ic_clear)
         view.inputField.addTextChangedListener(
-            ClearTextIconTextWatcher(getInputRightImageView(), ::clearInput, ::isInputEmpty)
+            ClearTextIconTextWatcher(
+                getInputRightImageView(),
+                ::clearInput,
+                ::isInputEmpty,
+                ::isInputEnabled)
         )
     }
 

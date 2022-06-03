@@ -4,20 +4,17 @@ import android.text.Editable
 import android.text.TextWatcher
 import android.view.View
 import android.widget.ImageView
-import com.design.chili.extensions.gone
-import com.design.chili.extensions.visible
 
 class ClearTextIconTextWatcher(
     private val icon: ImageView,
     private val clearText: () -> Unit,
-    private val isTextEmpty: (() -> Boolean)? = null,
+    private val isTextEmpty: (() -> Boolean) = { false },
+    private val isFieldEnabled: (() -> Boolean) = { true },
 ) : TextWatcher {
 
     init {
-        icon.apply {
-            visibility = if (isTextEmpty?.invoke() != false) View.GONE else View.VISIBLE
-            setOnClickListener { clearText() }
-        }
+        icon.setOnClickListener { clearText() }
+        setupClearIconVisibility()
     }
 
     override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
@@ -25,9 +22,13 @@ class ClearTextIconTextWatcher(
     override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {}
 
     override fun afterTextChanged(s: Editable?) {
-        when (isTextEmpty?.invoke() ?: s.isNullOrEmpty()) {
-            true -> icon.gone()
-            false -> icon.visible()
+        setupClearIconVisibility()
+    }
+
+    private fun setupClearIconVisibility() {
+        icon.visibility = when (!isTextEmpty() && isFieldEnabled()) {
+            true -> View.VISIBLE
+            false -> View.GONE
         }
     }
 }

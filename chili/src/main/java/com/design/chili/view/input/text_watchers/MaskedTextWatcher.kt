@@ -17,15 +17,16 @@ class MaskedTextWatcher private constructor(
     var allowedInputSymbols: String) : TextWatcher {
 
     init {
-        updateStartSelectionLimit()
+        updateSelectionLimits()
     }
 
     private var isEditing = false
 
     private var selectionPosition = mask.indexOf(representation)
 
-    private fun updateStartSelectionLimit() {
+    private fun updateSelectionLimits() {
         field.startSelectionLimit = mask.indexOfFirst { it == representation }
+        field.endSelectionLimit = -1
     }
 
 
@@ -106,6 +107,7 @@ class MaskedTextWatcher private constructor(
     }
 
     fun isInputEmpty(): Boolean {
+        if (mask == "*") return field.text.isNullOrEmpty()
         field.text.toString().forEachIndexed { index, c ->
             if (c != mask[index]) return false
         }
@@ -115,8 +117,8 @@ class MaskedTextWatcher private constructor(
     fun setupNewMask(newMask: String = mask, newMaskSymbols: List<Char> = maskSymbols) {
         maskSymbols = newMaskSymbols
         if (mask != newMask) {
-            mask = newMask
-            updateStartSelectionLimit()
+            mask = newMask.takeIf { it.isNotEmpty() } ?: "*"
+            updateSelectionLimits()
         }
         setupField()
     }
