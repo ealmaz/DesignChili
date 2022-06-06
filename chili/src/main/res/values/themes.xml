@@ -3,7 +3,6 @@
 
     <style name="BaseChiliDesignTheme" parent="Theme.AppCompat.DayNight.NoActionBar">
 
-        <item name="android:buttonStyle">@style/ButtonStyle.Primary</item>
 
         <!-- Text appearance theme-->
         <item name="TextSizeH1">@dimen/text_64sp</item>
@@ -82,7 +81,7 @@
         <item name="ComponentButtonTextColorPressed">@color/blue_1</item>
         <item name="ComponentButtonTextColorDisabled">@color/blue_1_alpha_50</item>
 
-
+        <!-- InputView -->
         <item name="InputViewEndIconTint">@color/gray_1</item>
         <item name="InputViewHintTextColor">@color/gray_1_alpha_50</item>
         <item name="InputViewBackgroundColor">@color/gray_5</item>

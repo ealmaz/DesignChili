@@ -18,7 +18,13 @@
         <!-- Ripple-->
         <item name="rippleForegroundColor">@color/gray_1</item>
 
-        <!-- inputView-->
+        <!-- InputView -->
+        <item name="InputViewEndIconTint">@color/gray_1</item>
+        <item name="InputViewHintTextColor">@color/gray_1_alpha_50</item>
+        <item name="InputViewBackgroundColor">@color/black_3</item>
+        <item name="InputViewBackgroundErrorColor">@color/red_2</item>
+        <item name="InputViewCursorColor">@color/magenta_1</item>
+        <item name="InputViewErrorMessageTextColor">@color/red_1</item>
         <item name="InputViewMessageTextColor">@color/gray_3</item>
 
 

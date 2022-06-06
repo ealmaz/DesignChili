@@ -317,6 +317,17 @@ open class BaseInputView: ConstraintLayout {
         view.inputField.keyListener = DigitsKeyListener.getInstance(symbols)
     }
 
+    fun addTextWatcher(
+        beforeTextChanged: ((s: CharSequence?, start: Int, count: Int, after: Int) -> Unit)? = null,
+        onTextChanged: ((s: CharSequence?, start: Int, before: Int, count: Int) -> Unit)? = null,
+        afterTextChanged: ((s: Editable?) -> Unit)? = null,
+        onTextChangedListener: ((String?) -> Unit)? = null
+    ) {
+        val textWatcher = SimpleTextWatcher(beforeTextChanged, onTextChanged, afterTextChanged, onTextChangedListener)
+        view.inputField.addTextChangedListener(textWatcher)
+        textWatchers.add(textWatcher)
+    }
+
     fun addTextWatcher(textWatcher: TextWatcher) {
         view.inputField.addTextChangedListener(textWatcher)
         textWatchers.add(textWatcher)
