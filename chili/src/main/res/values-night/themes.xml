@@ -28,6 +28,10 @@
         <item name="InputViewMessageTextColor">@color/gray_3</item>
 
 
+        <!-- CardView  -->
+        <item name="CardViewBackground">@color/black_3</item>
+
+
     </style>
 
     <style name="ChiliDesignTheme" parent="BaseChiliDesignTheme.Night"/>

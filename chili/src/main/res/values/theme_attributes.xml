@@ -32,7 +32,7 @@
 
 
 
-    <!-- CustomCardView attributes -->
+    <!-- CardView attributes -->
     <attr name="CardViewBackground" format="reference"/>
     <attr name="CardViewCornerRadius" format="dimension"/>
 

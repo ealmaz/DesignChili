@@ -90,6 +90,10 @@
         <item name="InputViewErrorMessageTextColor">@color/red_1</item>
         <item name="InputViewMessageTextColor">@color/black_5</item>
 
+        <!-- CardView -->
+        <item name="CardViewBackground">@color/white_1</item>
+        <item name="CardViewCornerRadius">@dimen/radius_4dp</item>
+
     </style>
 
 
