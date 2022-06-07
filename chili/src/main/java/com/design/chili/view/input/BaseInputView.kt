@@ -502,20 +502,25 @@ open class BaseInputView: ConstraintLayout {
         view.tvMessage.invisible()
     }
 
-    fun setupClearTextButton() {
+    fun setupClearTextButton(
+        clearText: (() -> Unit)? = null,
+        isInputEmpty: (() -> Boolean)? = null,
+        isInputEnabled: (() -> Boolean)? = null,
+    ) {
         view.textInputLayout.apply {
             if (endIconMode == TextInputLayout.END_ICON_PASSWORD_TOGGLE) {
                 endIconMode = TextInputLayout.END_ICON_NONE
-                updatePadding(top = resources.getDimensionPixelSize(R.dimen.padding_12dp), bottom = resources.getDimensionPixelSize(R.dimen.padding_12dp))
+                updatePadding(top = resources.getDimensionPixelSize(R.dimen.padding_12dp),
+                    bottom = resources.getDimensionPixelSize(R.dimen.padding_12dp))
             }
         }
         if (!isInputRightDrawableExist()) setInputRightDrawable(R.drawable.ic_clear)
         view.inputField.addTextChangedListener(
             ClearTextIconTextWatcher(
                 getInputRightImageView(),
-                ::clearInput,
-                ::isInputEmpty,
-                ::isInputEnabled)
+                clearText ?: ::clearInput,
+                isInputEmpty ?: ::isInputEmpty,
+                isInputEnabled ?: ::isInputEnabled)
         )
     }
 
