@@ -32,8 +32,8 @@ class PieChartTitledView : CardView {
     private fun setupView() {
         val view = inflate(context, R.layout.view_titled_pie_chart, this)
         this.view = PieChartViewVariables(
-            title = view.findViewById(R.id.tv_title),
-            amount = view.findViewById(R.id.tv_amount),
+            tvTitle = view.findViewById(R.id.tv_title),
+            tvAmount = view.findViewById(R.id.tv_amount),
             pieChart = view.findViewById(R.id.pie_chart)
         )
         cardElevation = 0.0f
@@ -43,15 +43,15 @@ class PieChartTitledView : CardView {
     }
 
     fun setTitle(value: String) {
-        view.title.text = value
+        view.tvTitle.text = value
     }
 
     fun setAmount(value: String) {
-        view.amount.text = value
+        view.tvAmount.text = value
     }
 
     fun setAmount(value: Spanned) {
-        view.amount.text = value
+        view.tvAmount.text = value
     }
 
     private fun setupPieChart() {
@@ -80,7 +80,7 @@ class PieChartTitledView : CardView {
 }
 
 data class PieChartViewVariables(
-    var title: TextView,
-    var amount: TextView,
+    var tvTitle: TextView,
+    var tvAmount: TextView,
     var pieChart: PieChart
 )

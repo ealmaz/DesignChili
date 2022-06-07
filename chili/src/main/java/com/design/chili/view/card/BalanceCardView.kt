@@ -41,7 +41,7 @@ class BalanceCardView : FrameLayout {
     }
 
     private fun obtainAttributes(attrs: AttributeSet, defStyle: Int = R.style.CardViewStyle_BalanceCard) {
-        context?.obtainStyledAttributes(attrs, R.styleable.BalanceCardView, R.attr.cardViewDefaultStyle, defStyle)?.run {
+        context?.obtainStyledAttributes(attrs, R.styleable.BalanceCardView, R.attr.balanceCardViewDefaultStyle, defStyle)?.run {
             getString(R.styleable.BalanceCardView_title)?.let {
                 setTitleText(it)
             }
@@ -68,6 +68,7 @@ class BalanceCardView : FrameLayout {
             getBoolean(R.styleable.BalanceCardView_isSurfaceClickable, false).let {
                 setIsSurfaceClickable(it)
             }
+            recycle()
         }
     }
 

@@ -4,7 +4,8 @@
     <declare-styleable name="DefaultStyleTheme">
         <attr name="inputViewDefaultStyle" format="reference"/>
         <attr name="maskedInputDefaultStyle" format="reference"/>
-        <attr name="cardViewDefaultStyle" format="reference" />
+        <attr name="balanceCardViewDefaultStyle" format="reference" />
+        <attr name="categoryItemCardViewDefaultStyle" format="reference"/>
     </declare-styleable>
 
     <declare-styleable name="BaseInputView">
@@ -49,5 +50,18 @@
         <attr name="isSurfaceClickable" format="boolean"/>
     </declare-styleable>
 
+    <declare-styleable name="CategoryItemView">
+        <attr name="title"/>
+        <attr name="isNotificationEnabled" format="boolean"/>
+        <attr name="squircleViewDrawable" format="reference"/>
+        <attr name="amountText" format="string"/>
+    </declare-styleable>
+
+    <declare-styleable name="SquircleImageView">
+        <attr name="civ_border_width" format="dimension" />
+        <attr name="civ_border_color" format="color" />
+        <attr name="civ_border_overlay" format="boolean" />
+        <attr name="civ_circle_background_color" format="color" />
+    </declare-styleable>
 
 </resources>

@@ -35,6 +35,7 @@
     <!-- CardView attributes -->
     <attr name="CardViewBackground" format="reference"/>
     <attr name="CardViewCornerRadius" format="dimension"/>
+    <attr name="CardViewSquircleBackground" format="reference"/>
 
 
 

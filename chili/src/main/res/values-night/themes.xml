@@ -30,6 +30,7 @@
 
         <!-- CardView  -->
         <item name="CardViewBackground">@color/black_3</item>
+        <item name="CardViewSquircleBackground">@color/black_2</item>
 
 
     </style>

@@ -32,6 +32,7 @@
     <!-- Radius    -->
     <dimen name="radius_0dp">0dp</dimen>
     <dimen name="radius_4dp">4dp</dimen>
+    <dimen name="radius_8dp">8dp</dimen>
 
 
     <!-- View_size-->
@@ -47,5 +48,7 @@
     <dimen name="view_32dp">32dp</dimen>
     <dimen name="view_44dp">44dp</dimen>
     <dimen name="view_48dp">48dp</dimen>
+    <dimen name="view_64dp">64dp</dimen>
+    <dimen name="view_200dp">200dp</dimen>
 
 </resources>
