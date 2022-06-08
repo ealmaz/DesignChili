@@ -48,10 +48,11 @@ class BalanceCardView : FrameLayout {
             getString(R.styleable.BalanceCardView_value)?.let {
                 setValue(it)
             }
-            getInt(R.styleable.BalanceCardView_iconType, -1).takeIf { it != -1 }?.let {
+            getInt(R.styleable.BalanceCardView_iconType, -1).let {
                 when (it) {
                     0 -> setIconType(IconType.PLUS)
                     1 -> setIconType(IconType.CHEVRON)
+                    else -> setIconDrawable(null)
                 }
             }
             getDrawable(R.styleable.BalanceCardView_iconDrawable)?.let {
@@ -108,7 +109,7 @@ class BalanceCardView : FrameLayout {
         view.value.setText(textResId)
     }
 
-    fun setIconDrawable(drawable: Drawable) {
+    fun setIconDrawable(drawable: Drawable?) {
         view.icon.setImageDrawable(drawable)
     }
 

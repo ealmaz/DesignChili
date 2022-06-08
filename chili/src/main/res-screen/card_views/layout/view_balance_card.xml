@@ -15,20 +15,21 @@
             android:id="@+id/tv_title"
             style="@style/SingleLineTextView"
             android:textAppearance="@style/H9.Primary"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/padding_12dp"
             android:layout_marginTop="@dimen/padding_8dp"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toStartOf="@id/iv_action_icon"
+            app:layout_constraintHorizontal_bias="0"
             tools:text="title"/>
 
         <TextView
             android:id="@+id/tv_value"
             style="@style/SingleLineTextView"
             android:textAppearance="@style/H5.Primary.Bold"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/padding_12dp"
             android:layout_marginTop="@dimen/padding_6dp"
@@ -37,6 +38,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@id/iv_action_icon"
+            app:layout_constraintHorizontal_bias="0"
             tools:text="Value"/>
 
         <ImageView
@@ -51,8 +53,7 @@
             android:background="?selectableItemBackgroundBorderless"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            tools:src="@drawable/ic_magenta_plus"/>
+            app:layout_constraintEnd_toEndOf="parent" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
