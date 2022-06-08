@@ -36,7 +36,7 @@
     <attr name="CardViewBackground" format="reference"/>
     <attr name="CardViewCornerRadius" format="dimension"/>
     <attr name="CardViewSquircleBackground" format="reference"/>
-
+    <attr name="CardViewPhonePickerDividerColor" format="color"/>
 
 
     <!-- CellView attributes -->

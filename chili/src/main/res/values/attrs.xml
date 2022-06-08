@@ -7,6 +7,7 @@
         <attr name="balanceCardViewDefaultStyle" format="reference" />
         <attr name="categoryItemCardViewDefaultStyle" format="reference"/>
         <attr name="navigatorCardViewDefaultStyle" format="reference"/>
+        <attr name="phoneNumberPickerCardViewDefaultStyle" format="reference"/>
     </declare-styleable>
 
     <declare-styleable name="BaseInputView">
@@ -70,6 +71,13 @@
         <attr name="countDrawable" format="reference"/>
         <attr name="cardIcon" format="reference"/>
         <attr name="isSurfaceClickable"/>
+    </declare-styleable>
+
+    <declare-styleable name="PhoneNumberPickerCardView">
+        <attr name="title"/>
+        <attr name="titleIcon" format="reference"/>
+        <attr name="primaryButtonText" format="string"/>
+        <attr name="secondaryButtonText" format="string"/>
     </declare-styleable>
 
 </resources>

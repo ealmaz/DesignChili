@@ -94,6 +94,8 @@
         <item name="CardViewBackground">@color/white_1</item>
         <item name="CardViewCornerRadius">@dimen/radius_4dp</item>
         <item name="CardViewSquircleBackground">@color/gray_3</item>
+        <item name="CardViewPhonePickerDividerColor">@color/black_5</item>
+
 
     </style>
 
