@@ -6,6 +6,7 @@
         <attr name="maskedInputDefaultStyle" format="reference"/>
         <attr name="balanceCardViewDefaultStyle" format="reference" />
         <attr name="categoryItemCardViewDefaultStyle" format="reference"/>
+        <attr name="navigatorCardViewDefaultStyle" format="reference"/>
     </declare-styleable>
 
     <declare-styleable name="BaseInputView">
@@ -62,6 +63,13 @@
         <attr name="civ_border_color" format="color" />
         <attr name="civ_border_overlay" format="boolean" />
         <attr name="civ_circle_background_color" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="NavigatorCardView">
+        <attr name="title"/>
+        <attr name="countDrawable" format="reference"/>
+        <attr name="cardIcon" format="reference"/>
+        <attr name="isSurfaceClickable"/>
     </declare-styleable>
 
 </resources>

@@ -1,15 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="CardViewStyle" parent="BaseChiliViewStyle">
-    </style>
+    <style name="CardViewStyle" parent="BaseChiliViewStyle"/>
 
-    <style name="CardViewStyle.BalanceCard">
+    <style name="CardViewStyle.BalanceCard"/>
 
-    </style>
+    <style name="CardViewStyle.CategoryItemViewStyle"/>
 
-    <style name="CardViewStyle.CategoryItemViewStyle">
-
-    </style>
+    <style name="CardViewStyle.NavigatorCardView"/>
 
 </resources>
