@@ -8,6 +8,7 @@
         <attr name="categoryItemCardViewDefaultStyle" format="reference"/>
         <attr name="navigatorCardViewDefaultStyle" format="reference"/>
         <attr name="phoneNumberPickerCardViewDefaultStyle" format="reference"/>
+        <attr name="tariffPriceInfoCardViewDefaultStyle" format="reference"/>
     </declare-styleable>
 
     <declare-styleable name="BaseInputView">
@@ -78,6 +79,22 @@
         <attr name="titleIcon" format="reference"/>
         <attr name="primaryButtonText" format="string"/>
         <attr name="secondaryButtonText" format="string"/>
+    </declare-styleable>
+
+    <declare-styleable name="ItemInfoCardView">
+        <attr name="title"/>
+        <attr name="value"/>
+        <attr name="icon"/>
+    </declare-styleable>
+
+    <declare-styleable name="TariffPriceInfoCardView">
+        <attr name="title"/>
+        <attr name="internetCost" format="string"/>
+        <attr name="voiceInCost" format="string"/>
+        <attr name="voiceOutCost" format="string"/>
+        <attr name="smsCost" format="string"/>
+        <attr name="isDividerVisible" format="boolean"/>
+        <attr name="roundedCornerMode"/>
     </declare-styleable>
 
 </resources>

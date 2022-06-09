@@ -9,14 +9,18 @@
         <item name="MarkedTextColor">@color/white_1</item>
         <!-- End text appearance-->
 
-
-        <item name="android:windowBackground">@color/black_1</item>
         <!-- Primary Button-->
         <item name="PrimaryButtonBackgroundDisabled">@color/green_2</item>
 
 
+        <!-- ScreenBackground -->
+        <item name="screenBackground">@color/black_2</item>
+
         <!-- Ripple-->
         <item name="rippleForegroundColor">@color/gray_1</item>
+
+        <!-- Divider -->
+        <item name="dividerColor">@color/black_4</item>
 
         <!-- InputView -->
         <item name="InputViewEndIconTint">@color/gray_1</item>
@@ -31,6 +35,7 @@
         <!-- CardView  -->
         <item name="CardViewBackground">@color/black_3</item>
         <item name="CardViewSquircleBackground">@color/black_2</item>
+        <item name="AnimatedLeftoverAddButtonBackground">@color/black_4</item>
 
 
     </style>

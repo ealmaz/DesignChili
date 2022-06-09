@@ -58,7 +58,7 @@ class NavigatorCardView : ConstraintLayout {
             getDrawable(R.styleable.NavigatorCardView_countDrawable).let {
                 setCountDrawable(it)
             }
-            getBoolean(R.styleable.NavigatorCardView_isSurfaceClickable, false).let {
+            getBoolean(R.styleable.NavigatorCardView_isSurfaceClickable, true).let {
                 setIsSurfaceClickable(it)
             }
             recycle()
@@ -108,7 +108,7 @@ class NavigatorCardView : ConstraintLayout {
     }
 }
 
-data class NavigatorCardViewVariables(
+private data class NavigatorCardViewVariables(
     var root: FrameLayout,
     var ivIcon: ImageView,
     var tvTitle: TextView,

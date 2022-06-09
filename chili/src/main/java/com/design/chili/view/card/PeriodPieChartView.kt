@@ -108,7 +108,7 @@ class PeriodPieChartView : CardView {
     }
 }
 
-data class PeriodPieChartVariables(
+private data class PeriodPieChartVariables(
     var tvDate: TextView,
     var ivPreviousPeriod: ImageView,
     var pieChart: PieChart,

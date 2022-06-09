@@ -27,9 +27,16 @@
         <!-- End text appearance theme-->
 
 
+        <!-- ScreenBackground -->
+        <item name="screenBackground">@color/gray_4</item>
+
         <!-- Ripple-->
         <item name="rippleForegroundColor">@color/black_1_alpha_20</item>
         <item name="rippleForegroundCornerRadius">@dimen/radius_4dp</item>
+
+        <!-- Divider -->
+        <item name="dividerColor">@color/gray_2</item>
+        <item name="dividerHeightSize">1dp</item>
 
 
         <!-- Primary Button attributes -->
@@ -95,6 +102,17 @@
         <item name="CardViewCornerRadius">@dimen/radius_4dp</item>
         <item name="CardViewSquircleBackground">@color/gray_3</item>
         <item name="CardViewPhonePickerDividerColor">@color/black_5</item>
+        <item name="AnimatedLeftoverAddButtonBackground">@color/white_1</item>
+
+        <!-- TariffPriceInfoView -->
+        <item name="InternetLabel">Internet t</item>
+        <item name="InternetIcon">@drawable/ic_clear</item>
+        <item name="VoiceInLabel">VoiceIn T</item>
+        <item name="VoiceInIcon">@drawable/ic_clear</item>
+        <item name="VoiceOutLabel">VoiceOut T</item>
+        <item name="VoiceOutIcon">@drawable/ic_clear</item>
+        <item name="SmsLabel">Sms T</item>
+        <item name="SmsIcon">@drawable/ic_clear</item>
 
 
     </style>

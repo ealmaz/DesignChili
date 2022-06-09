@@ -11,6 +11,8 @@
 
     <style name="CardViewStyle.PhoneNumberPickerCardViewStyle"/>
 
+    <style name="CardViewStyle.TariffPriceInfoCardView"/>
+
 
     <style name="NumberPickerStyle" parent="@android:style/Widget.Material.NumberPicker" tools:ignore="NewApi">
         <item name="colorControlNormal">?CardViewPhonePickerDividerColor</item>

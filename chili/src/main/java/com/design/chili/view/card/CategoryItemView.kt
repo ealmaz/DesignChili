@@ -97,7 +97,7 @@ class CategoryItemView : FrameLayout {
     }
 }
 
-data class CategoryItemViewVariables(
+private data class CategoryItemViewVariables(
     var svIcon: SquircleView,
     var ivNotification: ImageView,
     var tvTitle: TextView,

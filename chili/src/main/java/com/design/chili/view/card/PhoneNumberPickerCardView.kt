@@ -138,7 +138,7 @@ class PhoneNumberPickerCardView : ConstraintLayout {
     }
 }
 
-data class PhoneNumberPickerCardViewVariables(
+private data class PhoneNumberPickerCardViewVariables(
     var tvTitle: TextView,
     var ivTitleImage: ImageView,
     var npPhonePicker: NumberPicker,

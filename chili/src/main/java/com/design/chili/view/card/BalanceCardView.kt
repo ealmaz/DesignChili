@@ -11,6 +11,8 @@ import androidx.annotation.DrawableRes
 import androidx.annotation.StringRes
 import androidx.appcompat.content.res.AppCompatResources
 import com.design.chili.R
+import com.design.chili.util.IconType
+import com.design.chili.util.RoundedCornerMode
 
 class BalanceCardView : FrameLayout {
 
@@ -134,15 +136,7 @@ class BalanceCardView : FrameLayout {
 
 }
 
-enum class IconType {
-    PLUS, CHEVRON
-}
-
-enum class RoundedCornerMode {
-    SINGLE, TOP, MIDDLE, BOTTOM
-}
-
-data class BalanceCardViewVariables(
+private data class BalanceCardViewVariables(
     var root: FrameLayout,
     var title: TextView,
     var value: TextView,

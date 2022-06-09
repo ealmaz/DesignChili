@@ -79,7 +79,7 @@ class PieChartTitledView : CardView {
     }
 }
 
-data class PieChartViewVariables(
+private data class PieChartViewVariables(
     var tvTitle: TextView,
     var tvAmount: TextView,
     var pieChart: PieChart
