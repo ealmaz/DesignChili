@@ -9,6 +9,7 @@
         <attr name="navigatorCardViewDefaultStyle" format="reference"/>
         <attr name="phoneNumberPickerCardViewDefaultStyle" format="reference"/>
         <attr name="tariffPriceInfoCardViewDefaultStyle" format="reference"/>
+        <attr name="tariffPackagesInfoCardViewDefaultStyle" format="reference"/>
     </declare-styleable>
 
     <declare-styleable name="BaseInputView">
@@ -106,6 +107,23 @@
         <attr name="arcBaseStrokeWidth" format="dimension"/>
         <attr name="arcProgressStrokeColor" format="color"/>
         <attr name="arcProgressStrokeWidth" format="dimension"/>
+    </declare-styleable>
+
+    <declare-styleable name="TariffPackagesInfoCardView">
+        <attr name="title"/>
+        <attr name="isDividerVisible"/>
+        <attr name="roundedCornerMode"/>
+        <attr name="internetArcTitle" format="string"/>
+        <attr name="internetArcSubtitle" format="string"/>
+        <attr name="internetArcCaption" format="string"/>
+        <attr name="internetArcFabVisibility" format="boolean"/>
+        <attr name="internetArcIcon" format="reference"/>
+        <attr name="callArcTitle" format="string"/>
+        <attr name="callArcSubtitle" format="string"/>
+        <attr name="callArcCaption" format="string"/>
+        <attr name="callArcFabVisibility" format="boolean"/>
+        <attr name="callArcIcon" format="reference"/>
+
     </declare-styleable>
 
 </resources>

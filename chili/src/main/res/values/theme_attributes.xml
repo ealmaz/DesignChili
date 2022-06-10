@@ -133,4 +133,10 @@
     <attr name="SmsLabel" format="string"/>
     <attr name="SmsIcon" format="reference"/>
 
+    <!-- TariffPackagesInfoView -->
+    <attr name="TariffPackagesInfoVerticalDivider" format="color"/>
+    <attr name="TariffPackagesInfoAddButtonTint" format="color"/>
+    <attr name="TariffPackagesInfoInternetProgress" format="color"/>
+    <attr name="TariffPackagesInfoCallProgress" format="color"/>
+
 </resources>

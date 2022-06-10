@@ -37,6 +37,9 @@
         <item name="CardViewSquircleBackground">@color/black_2</item>
         <item name="AnimatedLeftoverAddButtonBackground">@color/black_4</item>
 
+        <!-- TariffPackagesInfoView -->
+        <item name="TariffPackagesInfoVerticalDivider">@color/black_4</item>
+        <item name="TariffPackagesInfoAddButtonTint">@color/black_4</item>
 
     </style>
 

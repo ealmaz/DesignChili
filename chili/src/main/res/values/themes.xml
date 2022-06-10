@@ -114,6 +114,11 @@
         <item name="SmsLabel">Sms T</item>
         <item name="SmsIcon">@drawable/ic_clear</item>
 
+        <!-- TariffPackagesInfoView -->
+        <item name="TariffPackagesInfoVerticalDivider">@color/gray_3</item>
+        <item name="TariffPackagesInfoAddButtonTint">@color/white_1</item>
+        <item name="TariffPackagesInfoInternetProgress">@color/cyan_1</item>
+        <item name="TariffPackagesInfoCallProgress">@color/green_1</item>
 
     </style>
 
