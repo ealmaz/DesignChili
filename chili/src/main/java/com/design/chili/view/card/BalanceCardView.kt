@@ -143,7 +143,7 @@ class BalanceCardView : FrameLayout {
         view.icon.isClickable = isClickable
         view.icon.isFocusable = isClickable
         if (isClickable) {
-            view.icon.setBackgroundResource(R.drawable.card_circle_ripple)
+            view.icon.setBackgroundResource(R.drawable.ri)
         }
     }
 }
