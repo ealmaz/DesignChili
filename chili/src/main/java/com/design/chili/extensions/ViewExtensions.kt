@@ -2,6 +2,7 @@ package com.design.chili.extensions
 
 import android.view.View
 import android.widget.EditText
+import android.widget.TextView
 import androidx.core.widget.addTextChangedListener
 import com.design.chili.R
 import java.util.concurrent.TimeUnit
@@ -63,4 +64,22 @@ internal fun View.invisible() {
 
 internal fun View.gone() {
     visibility = View.GONE
+}
+
+internal fun TextView.setTextOrHide(value: String?) {
+    text = value
+    when (value) {
+        null -> gone()
+        else -> visible()
+    }
+}
+
+internal fun TextView.setTextOrHide(resId: Int?) {
+    when (resId) {
+        null -> gone()
+        else -> {
+            visible()
+            setText(resId)
+        }
+    }
 }

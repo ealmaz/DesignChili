@@ -25,17 +25,25 @@
     <attr name="ItalicTextFont" format="string"/>
 
 
+    <!-- ScreenBackground -->
+    <attr name="screenBackground" format="reference"/>
 
     <!-- Ripple-->
     <attr name="rippleForegroundColor" format="dimension"/>
     <attr name="rippleForegroundCornerRadius" format="dimension"/>
 
+    <!-- Divider -->
+    <attr name="dividerColor" format="color"/>
+    <attr name="dividerHeightSize" format="dimension"/>
 
 
-    <!-- CustomCardView attributes -->
+
+    <!-- CardView attributes -->
     <attr name="CardViewBackground" format="reference"/>
     <attr name="CardViewCornerRadius" format="dimension"/>
-
+    <attr name="CardViewSquircleBackground" format="reference"/>
+    <attr name="CardViewPhonePickerDividerColor" format="color"/>
+    <attr name="AnimatedLeftoverAddButtonBackground" format="color"/>
 
 
     <!-- CellView attributes -->
@@ -105,7 +113,6 @@
     <attr name="ComponentButtonTextColorDisabled" format="color"/>
 
 
-
     <!-- InputView   -->
     <attr name="InputViewEndIconTint" format="color"/>
     <attr name="InputViewHintTextColor" format="color"/>
@@ -114,5 +121,22 @@
     <attr name="InputViewCursorColor" format="color"/>
     <attr name="InputViewErrorMessageTextColor" format="color"/>
     <attr name="InputViewMessageTextColor" format="color"/>
+
+
+    <!-- TariffPriceInfoView -->
+    <attr name="InternetLabel" format="string"/>
+    <attr name="InternetIcon" format="reference"/>
+    <attr name="VoiceInLabel" format="string"/>
+    <attr name="VoiceInIcon" format="reference"/>
+    <attr name="VoiceOutLabel" format="string"/>
+    <attr name="VoiceOutIcon" format="reference"/>
+    <attr name="SmsLabel" format="string"/>
+    <attr name="SmsIcon" format="reference"/>
+
+    <!-- TariffPackagesInfoView -->
+    <attr name="TariffPackagesInfoVerticalDivider" format="color"/>
+    <attr name="TariffPackagesInfoAddButtonTint" format="color"/>
+    <attr name="TariffPackagesInfoInternetProgress" format="color"/>
+    <attr name="TariffPackagesInfoCallProgress" format="color"/>
 
 </resources>

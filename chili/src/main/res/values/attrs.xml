@@ -4,6 +4,12 @@
     <declare-styleable name="DefaultStyleTheme">
         <attr name="inputViewDefaultStyle" format="reference"/>
         <attr name="maskedInputDefaultStyle" format="reference"/>
+        <attr name="balanceCardViewDefaultStyle" format="reference" />
+        <attr name="categoryItemCardViewDefaultStyle" format="reference"/>
+        <attr name="navigatorCardViewDefaultStyle" format="reference"/>
+        <attr name="phoneNumberPickerCardViewDefaultStyle" format="reference"/>
+        <attr name="tariffPriceInfoCardViewDefaultStyle" format="reference"/>
+        <attr name="tariffPackagesInfoCardViewDefaultStyle" format="reference"/>
     </declare-styleable>
 
     <declare-styleable name="BaseInputView">
@@ -31,5 +37,94 @@
         <attr name="allowedInputSymbols" format="string"/>
     </declare-styleable>
 
+    <declare-styleable name="BalanceCardView">
+        <attr name="title"/>
+        <attr name="value" format="string"/>
+        <attr name="iconType" format="enum">
+            <enum name="plus" value="0"/>
+            <enum name="chevron" value="1"/>
+        </attr>
+        <attr name="iconDrawable" format="reference"/>
+        <attr name="roundedCornerMode" format="enum">
+            <enum name="single" value="0"/>
+            <enum name="top" value="1"/>
+            <enum name="middle" value="2"/>
+            <enum name="bottom" value="3"/>
+        </attr>
+        <attr name="isSurfaceClickable" format="boolean"/>
+        <attr name="isIconClickable" format="boolean"/>
+    </declare-styleable>
+
+    <declare-styleable name="CategoryItemView">
+        <attr name="title"/>
+        <attr name="isNotificationEnabled" format="boolean"/>
+        <attr name="squircleViewDrawable" format="reference"/>
+        <attr name="amountText" format="string"/>
+    </declare-styleable>
+
+    <declare-styleable name="SquircleImageView">
+        <attr name="civ_border_width" format="dimension" />
+        <attr name="civ_border_color" format="color" />
+        <attr name="civ_border_overlay" format="boolean" />
+        <attr name="civ_circle_background_color" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="NavigatorCardView">
+        <attr name="title"/>
+        <attr name="countDrawable" format="reference"/>
+        <attr name="cardIcon" format="reference"/>
+        <attr name="isSurfaceClickable"/>
+    </declare-styleable>
+
+    <declare-styleable name="PhoneNumberPickerCardView">
+        <attr name="title"/>
+        <attr name="titleIcon" format="reference"/>
+        <attr name="primaryButtonText" format="string"/>
+        <attr name="secondaryButtonText" format="string"/>
+    </declare-styleable>
+
+    <declare-styleable name="ItemInfoCardView">
+        <attr name="title"/>
+        <attr name="value"/>
+        <attr name="icon"/>
+    </declare-styleable>
+
+    <declare-styleable name="TariffPriceInfoCardView">
+        <attr name="title"/>
+        <attr name="internetCost" format="string"/>
+        <attr name="voiceInCost" format="string"/>
+        <attr name="voiceOutCost" format="string"/>
+        <attr name="smsCost" format="string"/>
+        <attr name="isDividerVisible" format="boolean"/>
+        <attr name="roundedCornerMode"/>
+    </declare-styleable>
+
+    <declare-styleable name="AnimatedArcProgressView">
+        <attr name="arcWidth" format="dimension"/>
+        <attr name="arcStartAngle" format="integer"/>
+        <attr name="arcSweepAngle" format="integer"/>
+        <attr name="arcMargin" format="dimension"/>
+        <attr name="arcBaseStrokeColor" format="color"/>
+        <attr name="arcBaseStrokeWidth" format="dimension"/>
+        <attr name="arcProgressStrokeColor" format="color"/>
+        <attr name="arcProgressStrokeWidth" format="dimension"/>
+    </declare-styleable>
+
+    <declare-styleable name="TariffPackagesInfoCardView">
+        <attr name="title"/>
+        <attr name="isDividerVisible"/>
+        <attr name="roundedCornerMode"/>
+        <attr name="internetArcTitle" format="string"/>
+        <attr name="internetArcSubtitle" format="string"/>
+        <attr name="internetArcCaption" format="string"/>
+        <attr name="internetArcFabVisibility" format="boolean"/>
+        <attr name="internetArcIcon" format="reference"/>
+        <attr name="callArcTitle" format="string"/>
+        <attr name="callArcSubtitle" format="string"/>
+        <attr name="callArcCaption" format="string"/>
+        <attr name="callArcFabVisibility" format="boolean"/>
+        <attr name="callArcIcon" format="reference"/>
+
+    </declare-styleable>
 
 </resources>

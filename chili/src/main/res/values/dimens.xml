@@ -32,5 +32,30 @@
     <!-- Radius    -->
     <dimen name="radius_0dp">0dp</dimen>
     <dimen name="radius_4dp">4dp</dimen>
+    <dimen name="radius_8dp">8dp</dimen>
+
+
+    <!-- View_size-->
+    <dimen name="view_0dp">0dp</dimen>
+    <dimen name="view_2dp">2dp</dimen>
+    <dimen name="view_4dp">4dp</dimen>
+    <dimen name="view_6dp">6dp</dimen>
+    <dimen name="view_8dp">8dp</dimen>
+    <dimen name="view_12dp">12dp</dimen>
+    <dimen name="view_14dp">14dp</dimen>
+    <dimen name="view_16dp">16dp</dimen>
+    <dimen name="view_20dp">20dp</dimen>
+    <dimen name="view_24dp">24dp</dimen>
+    <dimen name="view_30dp">30dp</dimen>
+    <dimen name="view_32dp">32dp</dimen>
+    <dimen name="view_44dp">44dp</dimen>
+    <dimen name="view_48dp">48dp</dimen>
+    <dimen name="view_64dp">64dp</dimen>
+    <dimen name="view_74dp">74dp</dimen>
+    <dimen name="view_96dp">96dp</dimen>
+    <dimen name="view_102dp">102dp</dimen>
+    <dimen name="view_110dp">110dp</dimen>
+    <dimen name="view_136dp">136dp</dimen>
+    <dimen name="view_200dp">200dp</dimen>
 
 </resources>

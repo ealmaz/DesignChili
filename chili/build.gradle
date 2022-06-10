@@ -31,13 +31,15 @@ android {
     sourceSets {
         main {
             res {
-                srcDirs 'src/main/res', 'src/main/res-screen/buttons', 'src/main/res-screen/input_views'
+                srcDirs 'src/main/res', 'src/main/res-screen/buttons', 'src/main/res-screen/input_views', 'src/main/res-screen/card_views'
             }
         }
     }
 }
 
 dependencies {
+
+    implementation "com.github.PhilJay:MPAndroidChart:v3.1.0"
 
     implementation 'androidx.core:core-ktx:1.7.0'
     implementation 'androidx.appcompat:appcompat:1.4.1'
