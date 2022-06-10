@@ -97,4 +97,15 @@
         <attr name="roundedCornerMode"/>
     </declare-styleable>
 
+    <declare-styleable name="AnimatedArcProgressView">
+        <attr name="arcWidth" format="dimension"/>
+        <attr name="arcStartAngle" format="integer"/>
+        <attr name="arcSweepAngle" format="integer"/>
+        <attr name="arcMargin" format="dimension"/>
+        <attr name="arcBaseStrokeColor" format="color"/>
+        <attr name="arcBaseStrokeWidth" format="dimension"/>
+        <attr name="arcProgressStrokeColor" format="color"/>
+        <attr name="arcProgressStrokeWidth" format="dimension"/>
+    </declare-styleable>
+
 </resources>

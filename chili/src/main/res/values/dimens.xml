@@ -51,6 +51,7 @@
     <dimen name="view_44dp">44dp</dimen>
     <dimen name="view_48dp">48dp</dimen>
     <dimen name="view_64dp">64dp</dimen>
+    <dimen name="view_96dp">96dp</dimen>
     <dimen name="view_110dp">110dp</dimen>
     <dimen name="view_136dp">136dp</dimen>
     <dimen name="view_200dp">200dp</dimen>
