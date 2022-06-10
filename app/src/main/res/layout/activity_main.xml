@@ -1,60 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
-    <LinearLayout
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        tools:context=".MainActivity">
+        android:id="@+id/container"/>
 
-        <Button
-            android:text="Primary button"
-            style="@style/ButtonStyle.Primary"
-            android:layout_margin="@dimen/padding_16dp"/>
-
-        <Button
-            android:text="Primary button disabled"
-            style="@style/ButtonStyle.Primary"
-            android:enabled="false"
-            android:layout_margin="@dimen/padding_16dp"/>
-
-        <Button
-            android:text="Secondary button"
-            style="@style/ButtonStyle.Secondary"
-            android:layout_margin="@dimen/padding_16dp"/>
-
-        <Button
-            android:text="Secondary button disabled"
-            style="@style/ButtonStyle.Secondary"
-            android:enabled="false"
-            android:layout_margin="@dimen/padding_16dp"/>
-
-        <Button
-            android:text="Additional button"
-            style="@style/ButtonStyle.Additional"
-            android:layout_margin="@dimen/padding_16dp"/>
-
-        <Button
-            android:text="Additional button disabled"
-            style="@style/ButtonStyle.Additional"
-            android:enabled="false"
-            android:layout_margin="@dimen/padding_16dp"/>
-
-        <TextView
-            android:text="Component button"
-            style="@style/ButtonStyle.Component"
-            android:layout_margin="@dimen/padding_16dp"/>
-
-        <TextView
-            android:text="Component button disabled"
-            style="@style/ButtonStyle.Component"
-            android:enabled="false"
-            android:layout_margin="@dimen/padding_16dp"/>
-
-    </LinearLayout>
-
-</ScrollView>
+</LinearLayout>

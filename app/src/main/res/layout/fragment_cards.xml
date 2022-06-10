@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?screenBackground"
+    android:paddingBottom="@dimen/padding_16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginHorizontal="@dimen/padding_16dp"
+        android:layout_marginTop="@dimen/padding_16dp"
+        android:paddingBottom="@dimen/padding_16dp"
+        tools:context=".MainActivity">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.design.chili.view.card.BalanceCardView
+                android:layout_marginTop="@dimen/padding_16dp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                app:title="Баланс"
+                app:iconType="plus"
+                app:value="100 c"
+                app:roundedCornerMode="single"/>
+
+            <com.design.chili.view.card.BalanceCardView
+                android:layout_marginTop="@dimen/padding_16dp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                app:title="Баланс"
+                app:iconType="chevron"
+                android:layout_marginStart="@dimen/padding_4dp"
+                app:value="100 c"
+                app:isIconClickable="false"
+                app:isSurfaceClickable="true"
+                app:roundedCornerMode="single"/>
+
+        </LinearLayout>
+
+        <com.design.chili.view.card.BalanceCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:value="500"
+            app:title="Баланс"
+            app:iconType="chevron"
+            app:isSurfaceClickable="true"
+            app:isIconClickable="false"
+            app:roundedCornerMode="top"
+            android:layout_marginTop="@dimen/padding_16dp"/>
+
+        <com.design.chili.view.card.PieChartTitledView
+            android:id="@+id/pieChart"
+            android:layout_width="@dimen/view_200dp"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?selectableItemBackgroundBorderless"
+            android:layout_marginTop="@dimen/padding_16dp"/>
+
+        <com.design.chili.view.card.PeriodPieChartView
+            android:id="@+id/chart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding_16dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/padding_16dp">
+
+
+            <com.design.chili.view.card.CategoryItemView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                app:title="title mirfewfwefwefwfwewefwewefwefwefw"
+                app:squircleViewDrawable="@drawable/ic_darkmode_false_"
+                app:isNotificationEnabled="true"
+                android:layout_marginEnd="@dimen/padding_4dp"/>
+
+            <com.design.chili.view.card.CategoryItemView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                app:title="title mir"
+                app:squircleViewDrawable="@drawable/ic_squircle_phone"
+                android:layout_marginEnd="@dimen/padding_4dp"/>
+
+
+            <com.design.chili.view.card.CategoryItemView
+                android:layout_width="0dp"
+                android:id="@+id/category_view"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                app:title="title mir"
+                app:amountText="550"
+                app:squircleViewDrawable="@drawable/ic_darkmode_false_"
+                android:layout_marginEnd="@dimen/padding_4dp"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/padding_4dp">
+
+
+            <com.design.chili.view.card.CategoryItemView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                app:title="title mir"
+                app:amountText="550"
+                app:squircleViewDrawable="@drawable/ic_squircle_phone"
+                android:layout_marginEnd="@dimen/padding_4dp"/>
+
+            <com.design.chili.view.card.CategoryItemView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                app:title="title mir"
+                app:squircleViewDrawable="@drawable/ic_darkmode_false_"
+                app:isNotificationEnabled="true"
+                android:layout_marginEnd="@dimen/padding_4dp"/>
+
+
+            <com.design.chili.view.card.CategoryItemView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                app:title="title mir"
+                app:amountText="550"
+                app:squircleViewDrawable="@drawable/ic_darkmode_false_"
+                app:isNotificationEnabled="true"
+                android:layout_marginEnd="@dimen/padding_4dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="@dimen/padding_16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <com.design.chili.view.card.NavigatorCardView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="4dp"
+                android:layout_weight="1"
+                app:title="История платежей"
+                app:cardIcon="@drawable/ic_group_1"
+                app:countDrawable="@drawable/ic_group_2"
+                app:isSurfaceClickable="true" />
+
+            <com.design.chili.view.card.NavigatorCardView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:title="dqwdqwd"
+                app:cardIcon="@drawable/ic_group_1"
+                android:layout_marginEnd="4dp"/>
+
+            <com.design.chili.view.card.NavigatorCardView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:title="wefwefwefwefwefwefwefwefewfwefwewfwefwefwefwefwefwefwefwefwf"
+                app:cardIcon="@drawable/ic_group_1"
+                android:layout_marginEnd="4dp"/>
+
+        </LinearLayout>
+
+        <com.design.chili.view.card.PhoneNumberPickerCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:title="Стань абонентом"
+            app:titleIcon="@drawable/ic_combined_shape__2_"
+            android:id="@+id/nvn2"
+            android:layout_marginTop="@dimen/padding_16dp"/>
+
+        <com.design.chili.view.card.PhoneNumberPickerCardView
+            android:id="@+id/pnpcv_numbers"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:title="Стань абонентом"
+            app:titleIcon="@drawable/ic_combined_shape__2_"
+            app:primaryButtonText="Custorm primary"
+            app:secondaryButtonText="Custorn sevs"
+            android:layout_marginTop="@dimen/padding_16dp"/>
+
+        <com.design.chili.view.card.TariffPriceInfoCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:roundedCornerMode="top"
+            app:title="Пакетов нет. Ваш тариф - Оной!"
+            app:isDividerVisible="true"
+            app:voiceInCost="12 c/ мин"
+            app:voiceOutCost="34 c/ мин"
+            app:internetCost="34 c/ мин"
+            app:smsCost="34 c/ мин"
+            android:layout_marginTop="@dimen/padding_16dp"/>
+
+        <com.design.chili.view.card.TariffPackagesInfoCardView
+            android:id="@+id/tpiv"
+            android:layout_marginTop="@dimen/padding_16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:internetArcTitle="35 ГБ"
+            app:internetArcSubtitle="из 45 ГБ"
+            app:internetArcCaption="Больше интернета"
+            app:callArcTitle="17 мин"
+            app:callArcSubtitle="До 300 мин"
+            app:callArcCaption="Больше минут"
+            app:title="Пакеты активны до 20.06.2021. Внутри сети бесплатно!"
+            app:isDividerVisible="false" />
+
+        <com.design.chili.view.card.TariffPackagesInfoCardView
+            android:id="@+id/tpiv2"
+            android:layout_marginTop="@dimen/padding_16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:internetArcSubtitle="До 100 ГБ"
+            app:internetArcFabVisibility="false"
+            app:internetArcIcon="@drawable/ic_darkmode_false_"
+            app:callArcSubtitle="До 300 мин"
+            app:callArcIcon="@drawable/ic_darkmode_false_"
+            app:callArcFabVisibility="false"
+            app:title="Пакеты активны до 20.06.2021. Внутри сети бесплатно!"
+            app:isDividerVisible="false" />
+
+    </LinearLayout>
+
+</ScrollView>
