@@ -85,9 +85,9 @@ class AnimatedArcProgressView(context: Context, private val attrs: AttributeSet)
         paint.strokeCap = Paint.Cap.ROUND
         paint.color = arcBaseStrokeColor
         val right = (width / 2) + ((arcWidthPx ?: 0) / 2)
-        val bottom = (arcWidthPx ?: 0) + 10
+        val bottom = (arcWidthPx ?: 0) + arcProgressStrokeWidthPx.toFloat()
         val left = (width / 2) - ((arcWidthPx ?: 0) / 2)
-        canvas.drawArc(left.toFloat(), 10f, right.toFloat(), bottom.toFloat(), arcStartAngle, arcSweepAngle, false, paint)
+        canvas.drawArc(left.toFloat(), arcProgressStrokeWidthPx.toFloat(), right.toFloat(), bottom.toFloat(), arcStartAngle, arcSweepAngle, false, paint)
     }
 
     private fun drawArc(canvas: Canvas?) {
@@ -96,9 +96,9 @@ class AnimatedArcProgressView(context: Context, private val attrs: AttributeSet)
         paint.strokeCap = Paint.Cap.ROUND
         paint.color = arcProgressStrokeColor
         val right = (width / 2) + ((arcWidthPx ?: 0) / 2)
-        val bottom = (arcWidthPx ?: 0) + 10
+        val bottom = (arcWidthPx ?: 0) + arcProgressStrokeWidthPx.toFloat()
         val left = (width / 2) - ((arcWidthPx ?: 0) / 2)
-        canvas.drawArc(left.toFloat(), 10f, right.toFloat(), bottom.toFloat(), arcStartAngle, arcProgressAngle, false, paint)
+        canvas.drawArc(left.toFloat(), arcProgressStrokeWidthPx.toFloat(), right.toFloat(), bottom.toFloat(), arcStartAngle, arcProgressAngle, false, paint)
     }
 
     private fun animateRemainAmount(progressAngle: Float) {

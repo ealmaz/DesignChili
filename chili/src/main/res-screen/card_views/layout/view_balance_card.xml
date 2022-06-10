@@ -45,12 +45,9 @@
             android:id="@+id/iv_action_icon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:clickable="true"
-            android:focusable="true"
             android:layout_marginTop="@dimen/padding_16dp"
             android:layout_marginBottom="@dimen/padding_16dp"
             android:layout_marginEnd="@dimen/padding_4dp"
-            android:background="?selectableItemBackgroundBorderless"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />

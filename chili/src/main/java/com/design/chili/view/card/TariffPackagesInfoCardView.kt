@@ -12,6 +12,7 @@ import androidx.annotation.StringRes
 import androidx.constraintlayout.widget.ConstraintLayout
 import com.design.chili.R
 import com.design.chili.extensions.gone
+import com.design.chili.extensions.invisible
 import com.design.chili.extensions.setTextOrHide
 import com.design.chili.extensions.visible
 import com.design.chili.util.RoundedCornerMode
@@ -187,7 +188,7 @@ class TariffPackagesInfoCardView : ConstraintLayout {
     }
 
     fun setInternetFabVisibility(isVisible: Boolean) {
-        view.internetFab.visibility = if (isVisible) View.VISIBLE else View.GONE
+        view.internetFab.visibility = if (isVisible) View.VISIBLE else View.INVISIBLE
     }
 
     fun setCallTitle(@StringRes resId: Int?) {
@@ -241,7 +242,7 @@ class TariffPackagesInfoCardView : ConstraintLayout {
     }
 
     fun setCallFabVisibility(isVisible: Boolean) {
-        view.callFab.visibility = if (isVisible) View.VISIBLE else View.GONE
+        view.callFab.visibility = if (isVisible) View.VISIBLE else View.INVISIBLE
     }
 
     fun setInternetRemain(limit: Long, remain: Long) {

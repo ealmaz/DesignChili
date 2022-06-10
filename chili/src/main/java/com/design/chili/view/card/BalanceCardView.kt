@@ -3,6 +3,7 @@ package com.design.chili.view.card
 import android.content.Context
 import android.graphics.drawable.Drawable
 import android.util.AttributeSet
+import android.util.TypedValue
 import android.view.LayoutInflater
 import android.widget.FrameLayout
 import android.widget.ImageView
@@ -10,6 +11,7 @@ import android.widget.TextView
 import androidx.annotation.DrawableRes
 import androidx.annotation.StringRes
 import androidx.appcompat.content.res.AppCompatResources
+import androidx.core.content.res.ResourcesCompat
 import com.design.chili.R
 import com.design.chili.util.IconType
 import com.design.chili.util.RoundedCornerMode
@@ -70,6 +72,9 @@ class BalanceCardView : FrameLayout {
             }
             getBoolean(R.styleable.BalanceCardView_isSurfaceClickable, false).let {
                 setIsSurfaceClickable(it)
+            }
+            getBoolean(R.styleable.BalanceCardView_isIconClickable, true).let {
+                setIsIconClickable(it)
             }
             recycle()
         }
@@ -134,6 +139,13 @@ class BalanceCardView : FrameLayout {
         view.icon.setOnClickListener { onClick.invoke() }
     }
 
+    fun setIsIconClickable(isClickable: Boolean) {
+        view.icon.isClickable = isClickable
+        view.icon.isFocusable = isClickable
+        if (isClickable) {
+            view.icon.setBackgroundResource(R.drawable.card_circle_ripple)
+        }
+    }
 }
 
 private data class BalanceCardViewVariables(

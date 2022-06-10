@@ -52,6 +52,7 @@
             <enum name="bottom" value="3"/>
         </attr>
         <attr name="isSurfaceClickable" format="boolean"/>
+        <attr name="isIconClickable" format="boolean"/>
     </declare-styleable>
 
     <declare-styleable name="CategoryItemView">
