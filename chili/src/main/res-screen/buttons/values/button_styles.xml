@@ -12,6 +12,7 @@
         <item name="android:gravity">center</item>
         <item name="android:clickable">true</item>
         <item name="android:focusable">true</item>
+        <item name="android:stateListAnimator">@null</item>
     </style>
 
     <style name="ButtonStyle.Primary">
