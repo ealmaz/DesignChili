@@ -10,6 +10,8 @@
         <attr name="phoneNumberPickerCardViewDefaultStyle" format="reference"/>
         <attr name="tariffPriceInfoCardViewDefaultStyle" format="reference"/>
         <attr name="tariffPackagesInfoCardViewDefaultStyle" format="reference"/>
+        <attr name="logoTitleSubtitleCellDefaultStyle" format="reference"/>
+
     </declare-styleable>
 
     <declare-styleable name="BaseInputView">
@@ -125,6 +127,15 @@
         <attr name="callArcFabVisibility" format="boolean"/>
         <attr name="callArcIcon" format="reference"/>
 
+    </declare-styleable>
+
+    <declare-styleable name="LogoTitleSubtitleCell">
+        <attr name="android:icon" format="reference"/>
+        <attr name="themed_icon" format="reference" />
+        <attr name="title" format="string" />
+        <attr name="subtitle" format="string" />
+        <attr name="hide_divider" format="boolean" />
+        <attr name="roundedCornerMode" />
     </declare-styleable>
 
 </resources>
