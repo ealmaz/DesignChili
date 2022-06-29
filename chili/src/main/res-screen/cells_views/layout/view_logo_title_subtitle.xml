@@ -39,7 +39,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:singleLine="false"
-            style="@style/H7.Primary"
+            android:textAppearance="@style/H7.Primary"
             tools:text="Здесь основной текст" />
 
         <TextView
@@ -48,8 +48,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/padding_8dp"
             android:singleLine="false"
-            style="@style/H8.Secondary"
-            android:visibility="visible"
+            android:textAppearance="@style/H8.Secondary"
+            android:visibility="gone"
             tools:text="Здесь дополнительный текст" />
 
 
