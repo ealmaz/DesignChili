@@ -4,7 +4,10 @@ import android.view.View
 import android.widget.EditText
 import android.widget.TextView
 import androidx.core.widget.addTextChangedListener
+import com.bumptech.glide.Glide
 import com.design.chili.R
+import com.design.chili.util.RoundedCornerMode
+import com.design.chili.view.image.SquircleView
 import java.util.concurrent.TimeUnit
 
 internal var View.lastItemClickTime: Long
@@ -82,4 +85,22 @@ internal fun TextView.setTextOrHide(resId: Int?) {
             setText(resId)
         }
     }
+}
+
+fun SquircleView.setImageByUrl(url: String?) {
+    Glide.with(this)
+        .load(url)
+        .dontTransform()
+        .into(this)
+}
+
+fun View.setupRoundedCornersMode(modeValue: Int) {
+    this.setBackgroundResource(
+        when (modeValue) {
+            RoundedCornerMode.TOP.value -> R.drawable.card_rounded_top_background
+            RoundedCornerMode.MIDDLE.value -> R.drawable.card_rounded_middle_background
+            RoundedCornerMode.BOTTOM.value -> R.drawable.card_rounded_bottom_background
+            else -> R.drawable.card_rounded_background
+        }
+    )
 }

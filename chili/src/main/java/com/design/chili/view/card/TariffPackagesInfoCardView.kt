@@ -11,8 +11,8 @@ import androidx.annotation.DrawableRes
 import androidx.annotation.StringRes
 import androidx.constraintlayout.widget.ConstraintLayout
 import com.design.chili.R
+import com.design.chili.extensions.*
 import com.design.chili.extensions.gone
-import com.design.chili.extensions.invisible
 import com.design.chili.extensions.setTextOrHide
 import com.design.chili.extensions.visible
 import com.design.chili.util.RoundedCornerMode
@@ -76,12 +76,7 @@ class TariffPackagesInfoCardView : ConstraintLayout {
             }
 
             getInteger(R.styleable.TariffPackagesInfoCardView_roundedCornerMode, 0).let {
-                when (it) {
-                    0 -> setupRoundedCornersMode(RoundedCornerMode.SINGLE)
-                    1 -> setupRoundedCornersMode(RoundedCornerMode.TOP)
-                    2 -> setupRoundedCornersMode(RoundedCornerMode.MIDDLE)
-                    3 -> setupRoundedCornersMode(RoundedCornerMode.BOTTOM)
-                }
+                view.rootView.setupRoundedCornersMode(it)
             }
 
             getString(R.styleable.TariffPackagesInfoCardView_internetArcTitle).let {
@@ -261,16 +256,6 @@ class TariffPackagesInfoCardView : ConstraintLayout {
         view.divider.visibility = if (isVisible) View.VISIBLE else View.GONE
     }
 
-    fun setupRoundedCornersMode(mode: RoundedCornerMode) {
-        view.rootView.setBackgroundResource(
-            when (mode) {
-                RoundedCornerMode.TOP -> R.drawable.card_rounded_top_background
-                RoundedCornerMode.MIDDLE -> R.drawable.card_rounded_middle_background
-                RoundedCornerMode.BOTTOM -> R.drawable.card_rounded_bottom_background
-                else -> R.drawable.card_rounded_background
-            }
-        )
-    }
 }
 
 private data class TariffPackagesInfoCardViewVariables(

@@ -31,7 +31,7 @@ android {
     sourceSets {
         main {
             res {
-                srcDirs 'src/main/res', 'src/main/res-screen/buttons', 'src/main/res-screen/input_views', 'src/main/res-screen/card_views'
+                srcDirs 'src/main/res', 'src/main/res-screen/buttons', 'src/main/res-screen/input_views', 'src/main/res-screen/card_views', 'src/main/res-screen/cells_views'
             }
         }
     }
@@ -47,6 +47,7 @@ dependencies {
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+    implementation 'com.github.bumptech.glide:glide:4.12.0'
 }
 afterEvaluate {
     publishing {

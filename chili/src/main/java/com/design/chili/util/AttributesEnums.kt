@@ -4,6 +4,6 @@ enum class IconType {
     PLUS, CHEVRON
 }
 
-enum class RoundedCornerMode {
-    SINGLE, TOP, MIDDLE, BOTTOM
+enum class RoundedCornerMode(var value: Int) {
+    SINGLE(0), TOP(1), MIDDLE(2), BOTTOM(3)
 }

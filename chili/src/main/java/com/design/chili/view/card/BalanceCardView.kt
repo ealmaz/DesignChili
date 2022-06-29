@@ -11,10 +11,9 @@ import android.widget.TextView
 import androidx.annotation.DrawableRes
 import androidx.annotation.StringRes
 import androidx.appcompat.content.res.AppCompatResources
-import androidx.core.content.res.ResourcesCompat
 import com.design.chili.R
+import com.design.chili.extensions.setupRoundedCornersMode
 import com.design.chili.util.IconType
-import com.design.chili.util.RoundedCornerMode
 
 class BalanceCardView : FrameLayout {
 
@@ -63,12 +62,7 @@ class BalanceCardView : FrameLayout {
                 setIconDrawable(it)
             }
             getInt(R.styleable.BalanceCardView_roundedCornerMode, 0).let {
-                when (it) {
-                    0 -> setupRoundedCornersMode(RoundedCornerMode.SINGLE)
-                    1 -> setupRoundedCornersMode(RoundedCornerMode.TOP)
-                    2 -> setupRoundedCornersMode(RoundedCornerMode.MIDDLE)
-                    3 -> setupRoundedCornersMode(RoundedCornerMode.BOTTOM)
-                }
+                view.root.setupRoundedCornersMode(it)
             }
             getBoolean(R.styleable.BalanceCardView_isSurfaceClickable, false).let {
                 setIsSurfaceClickable(it)
@@ -87,17 +81,6 @@ class BalanceCardView : FrameLayout {
             true -> AppCompatResources.getDrawable(context, R.drawable.ripple_rounded_corner_foreground)
             else -> null
         }
-    }
-
-    fun setupRoundedCornersMode(mode: RoundedCornerMode) {
-        view.root.setBackgroundResource(
-            when (mode) {
-                RoundedCornerMode.TOP -> R.drawable.card_rounded_top_background
-                RoundedCornerMode.MIDDLE -> R.drawable.card_rounded_middle_background
-                RoundedCornerMode.BOTTOM -> R.drawable.card_rounded_bottom_background
-                else -> R.drawable.card_rounded_background
-            }
-        )
     }
 
     fun setTitleText(text: String) {

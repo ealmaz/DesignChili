@@ -19,6 +19,9 @@ class MainFragment : BaseFragment<FragmentMainBinding>() {
         vb.cards.setOnClickListener {
             openFragment(CardsFragment())
         }
+        vb.cells.setOnClickListener {
+            openFragment(CellsFragment())
+        }
     }
 
     override fun inflateViewBinging(): FragmentMainBinding {
