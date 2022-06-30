@@ -2,6 +2,7 @@ package com.design.chili.view.card
 
 import android.content.Context
 import android.graphics.drawable.Drawable
+import android.text.Spanned
 import android.util.AttributeSet
 import android.util.TypedValue
 import android.view.LayoutInflater
@@ -11,6 +12,7 @@ import android.widget.TextView
 import androidx.annotation.DrawableRes
 import androidx.annotation.StringRes
 import androidx.appcompat.content.res.AppCompatResources
+import androidx.core.view.isVisible
 import com.design.chili.R
 import com.design.chili.extensions.setupRoundedCornersMode
 import com.design.chili.util.IconType
@@ -95,6 +97,12 @@ class BalanceCardView : FrameLayout {
         view.value.text = value
     }
 
+    fun setValue(value: Spanned?) {
+        value?.let {
+            view.value.text = value
+        }
+    }
+
     fun setValueTextRes(@StringRes textResId: Int) {
         view.value.setText(textResId)
     }
@@ -120,6 +128,10 @@ class BalanceCardView : FrameLayout {
 
     fun setOnIconClickListener(onClick: () -> Unit) {
         view.icon.setOnClickListener { onClick.invoke() }
+    }
+
+    fun setActionIconVisibility(isVisible: Boolean){
+        view.icon.isVisible = isVisible
     }
 
     fun setIsIconClickable(isClickable: Boolean) {
