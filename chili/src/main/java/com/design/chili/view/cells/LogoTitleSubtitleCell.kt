@@ -42,7 +42,7 @@ class LogoTitleSubtitleCell : ConstraintLayout {
             tvSubtitle = view.findViewById(R.id.tv_subtitle),
             logo = view.findViewById(R.id.iv_icon),
             divider = view.findViewById(R.id.view_divider),
-            rootView = view.findViewById(R.id.rootView)
+            rootView = view.findViewById(R.id.root)
         )
         removeAllElevation()
     }
@@ -62,7 +62,7 @@ class LogoTitleSubtitleCell : ConstraintLayout {
                     view.divider?.isVisible = !it
                 }
                 getInteger(R.styleable.LogoTitleSubtitleCell_roundedCornerMode, 0).let {
-                    view.rootView.setupRoundedCornersMode(it)
+                    view.rootView?.setupRoundedCornersMode(it)
                 }
 
             recycle()
@@ -150,5 +150,5 @@ private data class LogoTitleSubtitleCellVariables(
     var tvSubtitle: TextView,
     var logo: ImageView?,
     var divider: View?,
-    var rootView: ConstraintLayout,
+    var rootView: ConstraintLayout?,
 )
