@@ -4,6 +4,7 @@ import android.content.Context
 import android.text.Spanned
 import android.util.AttributeSet
 import android.view.View
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.annotation.ColorRes
 import androidx.annotation.DrawableRes
@@ -39,7 +40,7 @@ class LogoTitleSubtitleCell : ConstraintLayout {
         this.view = LogoTitleSubtitleCellVariables(
             tvTitle = view.findViewById(R.id.tv_title),
             tvSubtitle = view.findViewById(R.id.tv_subtitle),
-            logo = view.findViewById(R.id.icon),
+            logo = view.findViewById(R.id.iv_icon),
             divider = view.findViewById(R.id.divider),
             rootView = view.findViewById(R.id.rootView)
         )
@@ -118,19 +119,17 @@ class LogoTitleSubtitleCell : ConstraintLayout {
     }
 
     fun setLogo(@DrawableRes drawableRes: Int?) {
-        view.logo.run {
-            setImageDrawable(
-                drawableRes?.let {
-                    context.drawable(drawableRes)
-                }
-            )
-            visible()
+        drawableRes?.let {
+            view.logo?.run {
+                setImageDrawable(context.drawable(drawableRes))
+                visible()
+            }
         }
     }
 
     fun setLogo(url: String?) {
         url?.let {
-            view.logo.run {
+            view.logo?.run {
                 setImageByUrl(url)
                 visible()
             }
@@ -149,7 +148,7 @@ class LogoTitleSubtitleCell : ConstraintLayout {
 private data class LogoTitleSubtitleCellVariables(
     var tvTitle: TextView,
     var tvSubtitle: TextView,
-    var logo: SquircleView,
+    var logo: ImageView?,
     var divider: View,
     var rootView: ConstraintLayout,
 )

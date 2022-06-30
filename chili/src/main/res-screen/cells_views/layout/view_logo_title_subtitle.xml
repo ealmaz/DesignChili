@@ -7,8 +7,8 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-    <com.design.chili.view.image.SquircleView
-        android:id="@+id/icon"
+    <ImageView
+        android:id="@+id/iv_icon"
         android:layout_width="@dimen/view_32dp"
         android:layout_height="@dimen/view_32dp"
         android:layout_marginStart="@dimen/padding_8dp"
@@ -16,7 +16,6 @@
         android:layout_marginBottom="@dimen/padding_8dp"
         app:layout_constraintBottom_toTopOf="@+id/divider"
         android:visibility="gone"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
 
@@ -30,7 +29,7 @@
         android:layout_marginBottom="@dimen/padding_8dp"
         app:layout_constraintRight_toLeftOf="@+id/icon_chevron"
         app:layout_constraintHorizontal_weight="2"
-        app:layout_constraintStart_toEndOf="@+id/icon"
+        app:layout_constraintStart_toEndOf="@+id/iv_icon"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toTopOf="@+id/divider">
 

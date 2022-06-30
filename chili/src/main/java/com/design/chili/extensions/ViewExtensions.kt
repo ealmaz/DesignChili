@@ -2,6 +2,7 @@ package com.design.chili.extensions
 
 import android.view.View
 import android.widget.EditText
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.core.widget.addTextChangedListener
 import com.bumptech.glide.Glide
@@ -88,6 +89,13 @@ internal fun TextView.setTextOrHide(resId: Int?) {
 }
 
 fun SquircleView.setImageByUrl(url: String?) {
+    Glide.with(this)
+        .load(url)
+        .dontTransform()
+        .into(this)
+}
+
+fun ImageView.setImageByUrl(url: String?) {
     Glide.with(this)
         .load(url)
         .dontTransform()
