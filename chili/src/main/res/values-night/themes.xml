@@ -45,4 +45,6 @@
 
     <style name="ChiliDesignTheme" parent="BaseChiliDesignTheme.Night"/>
 
+    <style name="ChiliDesignThemeDay" parent="BaseChiliDesignTheme"/>
+
 </resources>

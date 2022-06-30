@@ -125,4 +125,6 @@
 
     <style name="ChiliDesignTheme" parent="BaseChiliDesignTheme"/>
 
+    <style name="ChiliDesignThemeDay" parent="BaseChiliDesignTheme"/>
+
 </resources>
