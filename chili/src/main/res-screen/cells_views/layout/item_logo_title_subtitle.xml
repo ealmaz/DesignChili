@@ -7,7 +7,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-    <ImageView
+    <com.design.chili.view.image.SquircleView
         android:id="@+id/iv_icon"
         android:layout_width="@dimen/view_32dp"
         android:layout_height="@dimen/view_32dp"
