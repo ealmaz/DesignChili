@@ -3,6 +3,7 @@ package com.design.chili.view.cells
 import android.content.Context
 import android.text.Spanned
 import android.util.AttributeSet
+import android.view.LayoutInflater
 import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
@@ -15,7 +16,6 @@ import com.design.chili.R
 import com.design.chili.extensions.*
 import com.design.chili.extensions.gone
 import com.design.chili.extensions.visible
-import com.design.chili.view.image.SquircleView
 
 class LogoTitleSubtitleCell : ConstraintLayout {
 
@@ -36,7 +36,7 @@ class LogoTitleSubtitleCell : ConstraintLayout {
     }
 
     private fun setupView() {
-        val view = inflate(context, R.layout.view_logo_title_subtitle, this)
+        val view = LayoutInflater.from(context).inflate(R.layout.view_logo_title_subtitle, this)
         this.view = LogoTitleSubtitleCellVariables(
             tvTitle = view.findViewById(R.id.tv_title),
             tvSubtitle = view.findViewById(R.id.tv_subtitle),
