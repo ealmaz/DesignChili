@@ -241,7 +241,7 @@ class TariffPackagesInfoCardView : ConstraintLayout {
     }
 
     fun setInternetRemain(limit: Long, remain: Long) {
-        view.internetArc.setArcProgress(limit, remain)
+        view.internetArc.setArcProgress(limit, remain, true)
     }
 
     fun setCallRemain(limit: Long, remain: Long) {

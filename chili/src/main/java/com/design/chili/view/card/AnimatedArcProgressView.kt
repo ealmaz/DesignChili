@@ -5,11 +5,13 @@ import android.content.Context
 import android.graphics.Canvas
 import android.graphics.Color
 import android.graphics.Paint
+import android.text.Html
 import android.util.AttributeSet
 import android.view.View
 import android.view.animation.LinearInterpolator
 import androidx.annotation.ColorInt
 import androidx.core.animation.addListener
+import androidx.core.text.parseAsHtml
 import com.design.chili.R
 
 class AnimatedArcProgressView(context: Context, private val attrs: AttributeSet) : View(context, attrs) {
@@ -130,15 +132,17 @@ class AnimatedArcProgressView(context: Context, private val attrs: AttributeSet)
     }
 
 
-    private fun calculateProgress(limit: Long, remain: Long): Float {
+    private fun calculateProgress(limit: Long, remain: Long, isUnlimited: Boolean?= false): Float {
         return when {
+            isUnlimited == true -> 290f
+            remain <= 1L -> 0f
             limit == 0L || remain > limit -> arcSweepAngle
             else -> arcSweepAngle * remain / limit
         }
     }
 
-    fun setArcProgress(limit: Long = 0, remain: Long = 0) {
-        val angle = calculateProgress(limit, remain)
+    fun setArcProgress(limit: Long = 0, remain: Long = 0, isUnlimited: Boolean? = false) {
+        val angle = calculateProgress(limit, remain, isUnlimited)
         when (arcProgressAngle > 0) {
             true -> reversAnimation { animateRemainAmount(angle) }
             else -> animateRemainAmount(angle)
