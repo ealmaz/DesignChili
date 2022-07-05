@@ -83,7 +83,7 @@
         <item name="ComponentButtonBackgroundDisabled">@android:color/transparent</item>
         <item name="ComponentButtonCornerRadius">@dimen/radius_4dp</item>
         <item name="ComponentButtonTextSize">@dimen/text_16sp</item>
-        <item name="ComponentButtonTextFont">@font/roboto_medium</item>
+        <item name="ComponentButtonTextFont">@font/roboto_regular</item>
         <item name="ComponentButtonTextColorActive">@color/blue_1</item>
         <item name="ComponentButtonTextColorPressed">@color/blue_1</item>
         <item name="ComponentButtonTextColorDisabled">@color/blue_1_alpha_50</item>
