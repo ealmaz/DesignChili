@@ -10,6 +10,7 @@ import android.util.AttributeSet
 import android.view.View
 import android.view.animation.LinearInterpolator
 import androidx.annotation.ColorInt
+import androidx.annotation.ColorRes
 import androidx.core.animation.addListener
 import androidx.core.text.parseAsHtml
 import com.design.chili.R
@@ -67,6 +68,11 @@ class AnimatedArcProgressView(context: Context, private val attrs: AttributeSet)
             }
             recycle()
         }
+    }
+
+    fun setProgressStrokeColor(@ColorInt colorId: Int){
+        arcProgressStrokeColor = colorId
+        invalidate()
     }
 
     override fun layout(l: Int, t: Int, r: Int, b: Int) {
