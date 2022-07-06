@@ -54,8 +54,8 @@
 
 
         <!-- Secondary Button attributes -->
-        <item name="SecondaryButtonBackgroundActive">@android:color/transparent</item>
-        <item name="SecondaryButtonBackgroundDisabled">@android:color/transparent</item>
+        <item name="SecondaryButtonBackgroundActive">@color/gray_5</item>
+        <item name="SecondaryButtonBackgroundDisabled">@color/gray_5</item>
         <item name="SecondaryButtonCornerRadius">@dimen/radius_4dp</item>
         <item name="SecondaryButtonTextSize">@dimen/text_14sp</item>
         <item name="SecondaryButtonTextFont">@font/roboto_medium</item>
@@ -70,8 +70,8 @@
         <item name="AdditionalButtonCornerRadius">@dimen/radius_4dp</item>
         <item name="AdditionalButtonTextSize">@dimen/text_14sp</item>
         <item name="AdditionalButtonTextFont">@font/roboto_medium</item>
-        <item name="AdditionalButtonTextColorActive">@color/gray_1</item>
-        <item name="AdditionalButtonTextColorPressed">@color/gray_1</item>
+        <item name="AdditionalButtonTextColorActive">@color/black_4</item>
+        <item name="AdditionalButtonTextColorPressed">@color/black_4</item>
         <item name="AdditionalButtonTextColorDisabled">@color/gray_1_alpha_50</item>
 
         <item name="AdditionalButtonBorderColor">@color/gray_1</item>
@@ -101,7 +101,7 @@
         <item name="CardViewBackground">@color/white_1</item>
         <item name="CardViewCornerRadius">@dimen/radius_4dp</item>
         <item name="CardViewSquircleBackground">@color/gray_3</item>
-        <item name="CardViewPhonePickerDividerColor">@color/black_5</item>
+        <item name="CardViewPhonePickerDividerColor">@color/gray_5</item>
         <item name="AnimatedLeftoverAddButtonBackground">@color/white_1</item>
 
         <!-- TariffPriceInfoView -->
