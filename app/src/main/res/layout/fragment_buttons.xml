@@ -16,135 +16,80 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Primary button"
-            android:layout_margin="@dimen/padding_16dp"/>
-
-        <TextView
-            android:text="More info"
-            android:id="@+id/primaryButtonMore"
-            android:layout_gravity="end"
-            style="@style/ButtonStyle.Component"
-            android:layout_margin="@dimen/padding_8dp"/>
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="@color/gray_1_alpha_50"/>
+            android:layout_marginStart="@dimen/padding_16dp"
+            android:layout_marginEnd="@dimen/padding_16dp"
+            android:layout_marginTop="@dimen/padding_8dp"/>
 
         <Button
             android:text="Primary button disabled"
             style="@style/ButtonStyle.Primary"
             android:enabled="false"
-            android:layout_margin="@dimen/padding_16dp"/>
-
-        <TextView
-            android:text="More info"
-            android:layout_gravity="end"
-            style="@style/ButtonStyle.Component"
-            android:layout_margin="@dimen/padding_8dp"/>
+            android:layout_marginStart="@dimen/padding_16dp"
+            android:layout_marginEnd="@dimen/padding_16dp"
+            android:layout_marginTop="@dimen/padding_8dp"/>
 
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:background="@color/gray_1_alpha_50"/>
+            android:background="@color/gray_1_alpha_50"
+            android:layout_marginTop="@dimen/padding_16dp"/>
 
         <Button
             android:text="Secondary button"
             style="@style/ButtonStyle.Secondary"
-            android:layout_margin="@dimen/padding_16dp"/>
-
-        <TextView
-            android:text="More info"
-            android:layout_gravity="end"
-            style="@style/ButtonStyle.Component"
-            android:layout_margin="@dimen/padding_8dp"/>
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="@color/gray_1_alpha_50"/>
+            android:layout_marginStart="@dimen/padding_16dp"
+            android:layout_marginEnd="@dimen/padding_16dp"
+            android:layout_marginTop="@dimen/padding_8dp"/>
 
         <Button
             android:text="Secondary button disabled"
             style="@style/ButtonStyle.Secondary"
             android:enabled="false"
-            android:layout_margin="@dimen/padding_16dp"/>
-
-        <TextView
-            android:text="More info"
-            android:layout_gravity="end"
-            style="@style/ButtonStyle.Component"
-            android:layout_margin="@dimen/padding_8dp"/>
+            android:layout_marginStart="@dimen/padding_16dp"
+            android:layout_marginEnd="@dimen/padding_16dp"
+            android:layout_marginTop="@dimen/padding_8dp"/>
 
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:background="@color/gray_1_alpha_50"/>
+            android:background="@color/gray_1_alpha_50"
+            android:layout_marginTop="@dimen/padding_16dp"/>
 
         <Button
             android:text="Additional button"
             style="@style/ButtonStyle.Additional"
-            android:layout_margin="@dimen/padding_16dp"/>
-
-        <TextView
-            android:text="More info"
-            android:layout_gravity="end"
-            style="@style/ButtonStyle.Component"
-            android:layout_margin="@dimen/padding_8dp"/>
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="@color/gray_1_alpha_50"/>
+            android:layout_marginStart="@dimen/padding_16dp"
+            android:layout_marginEnd="@dimen/padding_16dp"
+            android:layout_marginTop="@dimen/padding_8dp"/>
 
         <Button
             android:text="Additional button disabled"
             style="@style/ButtonStyle.Additional"
             android:enabled="false"
-            android:layout_margin="@dimen/padding_16dp"/>
-
-        <TextView
-            android:text="More info"
-            android:layout_gravity="end"
-            style="@style/ButtonStyle.Component"
-            android:layout_margin="@dimen/padding_8dp"/>
+            android:layout_marginStart="@dimen/padding_16dp"
+            android:layout_marginEnd="@dimen/padding_16dp"
+            android:layout_marginTop="@dimen/padding_8dp"/>
 
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:background="@color/gray_1_alpha_50"/>
+            android:background="@color/gray_1_alpha_50"
+            android:layout_marginTop="@dimen/padding_16dp"/>
 
         <TextView
             android:text="Component button"
             style="@style/ButtonStyle.Component"
-            android:layout_margin="@dimen/padding_16dp"/>
-
-        <TextView
-            android:text="More info"
-            android:layout_gravity="end"
-            style="@style/ButtonStyle.Component"
-            android:layout_margin="@dimen/padding_8dp"/>
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="@color/gray_1_alpha_50"/>
+            android:layout_marginStart="@dimen/padding_16dp"
+            android:layout_marginEnd="@dimen/padding_16dp"
+            android:layout_marginTop="@dimen/padding_8dp"/>
 
         <TextView
             android:text="Component button disabled"
             style="@style/ButtonStyle.Component"
             android:enabled="false"
-            android:layout_margin="@dimen/padding_16dp"/>
-
-        <TextView
-            android:text="More info"
-            android:layout_gravity="end"
-            style="@style/ButtonStyle.Component"
-            android:layout_margin="@dimen/padding_8dp"/>
-
-<!--        <View-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="1dp"-->
-<!--            android:background="@color/gray_1_alpha_50"/>-->
+            android:layout_marginStart="@dimen/padding_16dp"
+            android:layout_marginEnd="@dimen/padding_16dp"
+            android:layout_marginTop="@dimen/padding_8dp"/>
 
     </LinearLayout>
 
