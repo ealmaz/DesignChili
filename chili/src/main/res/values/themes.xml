@@ -38,6 +38,12 @@
         <item name="dividerColor">@color/gray_2</item>
         <item name="dividerHeightSize">1dp</item>
 
+        <!-- Snackbar attributes -->
+        <item name="SnackbarBackground">@color/white_1</item>
+        <item name="SnackbarCornerRadius">@dimen/radius_4dp</item>
+        <item name="SnackbarElevation">@dimen/elevation_8dp</item>
+        <item name="SnackbarTextColor">@color/black_5</item>
+
 
         <!-- Primary Button attributes -->
         <item name="PrimaryButtonBackgroundActive">@color/green_1</item>

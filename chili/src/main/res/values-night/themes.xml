@@ -22,6 +22,10 @@
         <!-- Divider -->
         <item name="dividerColor">@color/black_4</item>
 
+        <!-- Snackbar attributes -->
+        <item name="SnackbarBackground">@color/black_3</item>
+        <item name="SnackbarTextColor">@color/gray_3</item>
+
         <!-- InputView -->
         <item name="InputViewEndIconTint">@color/gray_1</item>
         <item name="InputViewHintTextColor">@color/gray_1_alpha_50</item>

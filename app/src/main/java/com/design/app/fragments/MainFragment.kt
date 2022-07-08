@@ -22,6 +22,9 @@ class MainFragment : BaseFragment<FragmentMainBinding>() {
         vb.cells.setOnClickListener {
             openFragment(CellsFragment())
         }
+        vb.snackbar.setOnClickListener {
+            openFragment(SnackbarFragment())
+        }
     }
 
     override fun inflateViewBinging(): FragmentMainBinding {
