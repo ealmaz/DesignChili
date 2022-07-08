@@ -44,6 +44,11 @@
         <item name="SnackbarElevation">@dimen/elevation_8dp</item>
         <item name="SnackbarTextColor">@color/black_5</item>
 
+        <!-- Segmented Picker   -->
+        <item name="SegmentedPickerBackgroundColor">@color/gray_3</item>
+        <item name="SegmentedPickerTabIndicatorColor">@color/white_1</item>
+        <item name="SegmentedPickerTabTextColor">@color/black_5</item>
+
 
         <!-- Primary Button attributes -->
         <item name="PrimaryButtonBackgroundActive">@color/green_1</item>

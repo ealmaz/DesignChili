@@ -25,6 +25,9 @@ class MainFragment : BaseFragment<FragmentMainBinding>() {
         vb.snackbar.setOnClickListener {
             openFragment(SnackbarFragment())
         }
+        vb.common.setOnClickListener {
+            openFragment(CommonViews())
+        }
     }
 
     override fun inflateViewBinging(): FragmentMainBinding {

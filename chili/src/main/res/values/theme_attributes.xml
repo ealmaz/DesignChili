@@ -60,6 +60,12 @@
     <attr name="SnackbarTextColor" format="color"/>
 
 
+    <!-- Segmented Picker   -->
+    <attr name="SegmentedPickerBackgroundColor" format="color"/>
+    <attr name="SegmentedPickerTabIndicatorColor" format="color"/>
+    <attr name="SegmentedPickerTabTextColor" format="color"/>
+
+
 
     <!-- InputView attributes -->
     <attr name="BaseInputViewBackground" format="reference"/>
