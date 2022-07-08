@@ -37,13 +37,19 @@
 
         </com.google.android.material.tabs.TabLayout>
 
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/padding_16dp"
+            android:background="@color/gray_1"/>
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="@style/H8.Primary"
             android:text="CheckBox"
             android:layout_marginStart="@dimen/padding_16dp"
-            android:layout_marginTop="@dimen/padding_32dp"/>
+            android:layout_marginTop="@dimen/padding_8dp"/>
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -130,8 +136,47 @@
 
         </LinearLayout>
 
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/padding_16dp"
+            android:background="@color/gray_1"/>
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/H8.Primary"
+            android:text="RadioButton"
+            android:layout_marginStart="@dimen/padding_16dp"
+            android:layout_marginTop="@dimen/padding_8dp"/>
 
+        <RadioGroup
+            android:layout_margin="@dimen/padding_16dp"
+            android:background="@drawable/card_rounded_background"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/padding_8dp"
+                android:text="RadioButton - RadioButtonStyle"
+                style="@style/RadioButtonStyle"/>
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/padding_8dp"
+                android:text="RadioButton - RadioButtonStyle"
+                style="@style/RadioButtonStyle"/>
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/padding_8dp"
+                android:text="RadioButton - RadioButtonRltStyle"
+                style="@style/RadioButtonRltStyle"/>
+
+        </RadioGroup>
     </LinearLayout>
 
 </ScrollView>

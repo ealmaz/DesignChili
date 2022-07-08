@@ -18,4 +18,19 @@
         <item name="android:buttonTint">@drawable/check_box_color</item>
     </style>
 
+    <style name="RadioButtonStyle" parent="BaseChiliViewStyle">
+        <item name="android:buttonTint">@drawable/radio_button_color</item>
+        <item name="android:padding">8dp</item>
+        <item name="android:layout_marginStart">@dimen/padding_8dp</item>
+        <item name="android:textAlignment">textStart</item>
+    </style>
+
+    <style name="RadioButtonRltStyle" parent="BaseChiliViewStyle">
+        <item name="android:layoutDirection">rtl</item>
+        <item name="android:buttonTint">@drawable/radio_button_color</item>
+        <item name="android:padding">8dp</item>
+        <item name="android:layout_marginStart">@dimen/padding_8dp</item>
+        <item name="android:textAlignment">textStart</item>
+    </style>
+
 </resources>

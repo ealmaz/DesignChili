@@ -36,6 +36,10 @@
         <item name="CheckBoxUncheckedColor">@color/gray_3</item>
         <item name="CheckBoxDisabledColor">@color/gray_1_alpha_50</item>
 
+        <!-- RadioButton  -->
+        <item name="RadioButtonUncheckedColor">@color/gray_3</item>
+        <item name="RadioButtonDisabledColor">@color/gray_1_alpha_50</item>
+
         <!-- InputView -->
         <item name="InputViewEndIconTint">@color/gray_1</item>
         <item name="InputViewHintTextColor">@color/gray_1_alpha_50</item>

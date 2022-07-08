@@ -71,6 +71,11 @@
     <attr name="CheckBoxUncheckedColor" format="color"/>
     <attr name="CheckBoxDisabledColor" format="color"/>
 
+    <!-- RadioButton  -->
+    <attr name="RadioButtonCheckedColor" format="color"/>
+    <attr name="RadioButtonUncheckedColor" format="color"/>
+    <attr name="RadioButtonDisabledColor" format="color"/>
+
 
     <!-- InputView attributes -->
     <attr name="BaseInputViewBackground" format="reference"/>
