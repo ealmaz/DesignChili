@@ -49,6 +49,11 @@
         <item name="SegmentedPickerTabIndicatorColor">@color/white_1</item>
         <item name="SegmentedPickerTabTextColor">@color/black_5</item>
 
+        <!-- CheckBox  -->
+        <item name="CheckBoxCheckedColor">@color/magenta_1</item>
+        <item name="CheckBoxUncheckedColor">@color/black_5</item>
+        <item name="CheckBoxDisabledColor">@color/gray_2</item>
+
 
         <!-- Primary Button attributes -->
         <item name="PrimaryButtonBackgroundActive">@color/green_1</item>

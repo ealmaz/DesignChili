@@ -66,6 +66,11 @@
     <attr name="SegmentedPickerTabTextColor" format="color"/>
 
 
+    <!-- CheckBox  -->
+    <attr name="CheckBoxCheckedColor" format="color"/>
+    <attr name="CheckBoxUncheckedColor" format="color"/>
+    <attr name="CheckBoxDisabledColor" format="color"/>
+
 
     <!-- InputView attributes -->
     <attr name="BaseInputViewBackground" format="reference"/>

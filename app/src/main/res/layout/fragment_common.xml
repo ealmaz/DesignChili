@@ -37,6 +37,99 @@
 
         </com.google.android.material.tabs.TabLayout>
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/H8.Primary"
+            android:text="CheckBox"
+            android:layout_marginStart="@dimen/padding_16dp"
+            android:layout_marginTop="@dimen/padding_32dp"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding_8dp"
+            android:orientation="horizontal">
+
+            <CheckBox
+                style="@style/CheckBoxStyle"
+                android:checked="true"
+                android:layout_marginStart="@dimen/padding_16dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/H8.Primary"
+                android:text="CheckBox checked"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding_8dp"
+            android:orientation="horizontal">
+
+            <CheckBox
+                style="@style/CheckBoxStyle"
+                android:checked="false"
+                android:layout_marginStart="@dimen/padding_16dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/H8.Primary"
+                android:text="CheckBox uncheked"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding_8dp"
+            android:orientation="horizontal">
+
+            <CheckBox
+                style="@style/CheckBoxStyle"
+                android:checked="true"
+                android:enabled="false"
+                android:layout_marginStart="@dimen/padding_16dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/H8.Primary"
+                android:text="CheckBox check disabled"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding_8dp"
+            android:orientation="horizontal">
+
+            <CheckBox
+                style="@style/CheckBoxStyle"
+                android:checked="false"
+                android:enabled="false"
+                android:layout_marginStart="@dimen/padding_16dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/H8.Primary"
+                android:text="CheckBox uncheck disapled"/>
+
+        </LinearLayout>
+
 
 
     </LinearLayout>
