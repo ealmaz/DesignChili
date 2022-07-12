@@ -15,6 +15,8 @@ class ActionBottomSheet : BaseBottomSheetDialogFragment() {
 
     override fun createContentView(inflater: LayoutInflater, container: ViewGroup?): View {
         val linearLayout = LinearLayout(context).apply {
+            val padding = resources.getDimensionPixelSize(R.dimen.padding_16dp)
+            setPadding(padding, 0, padding, 0)
             orientation = LinearLayout.VERTICAL
         }
         renderActionButtons(linearLayout)

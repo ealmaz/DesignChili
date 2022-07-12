@@ -33,23 +33,4 @@
         <item name="android:textAlignment">textStart</item>
     </style>
 
-    <style name="BottomSheetStyle" parent="Theme.Design.BottomSheetDialog">
-        <item name="bottomSheetStyle">@style/BottomSheetModalStyle</item>
-        <item name="android:windowIsFloating">false</item>
-        <item name="android:statusBarColor">@android:color/transparent</item>
-        <item name="android:windowSoftInputMode">adjustPan</item>
-    </style>
-
-    <style name="BottomSheetModalStyle" parent="Widget.Design.BottomSheet.Modal">
-        <item name="android:background">@drawable/bg_rounded_bottom_sheet</item>
-    </style>
-
-    <style name="ActionBottomSheetButtonStyle" parent="ButtonStyle.Secondary">
-        <item name="android:textColor">?ActionBottomSheetButtonTextColor</item>
-    </style>
-
-    <style name="ActionBottomSheetAccentButtonStyle" parent="ButtonStyle.Secondary">
-        <item name="android:textColor">?ActionBottomSheetAccentButtonTextColor</item>
-    </style>
-
 </resources>

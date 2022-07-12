@@ -14,6 +14,7 @@ import android.widget.LinearLayout
 import androidx.annotation.NonNull
 import androidx.annotation.Nullable
 import androidx.annotation.RequiresApi
+import androidx.fragment.app.FragmentManager
 import com.design.chili.R
 import com.design.chili.extensions.gone
 import com.design.chili.extensions.setOnSingleClickListener
@@ -132,5 +133,9 @@ abstract class BaseBottomSheetDialogFragment : BottomSheetDialogFragment() {
         val displayMetrics = DisplayMetrics()
         activity?.windowManager?.defaultDisplay?.getMetrics(displayMetrics)
         return displayMetrics.heightPixels
+    }
+
+    fun show(fragmentManager: FragmentManager) {
+        this.show(fragmentManager, null)
     }
 }
