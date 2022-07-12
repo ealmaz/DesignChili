@@ -28,6 +28,9 @@ class MainFragment : BaseFragment<FragmentMainBinding>() {
         vb.common.setOnClickListener {
             openFragment(CommonViews())
         }
+        vb.bottomSheet.setOnClickListener {
+            openFragment(BottomSheetsFragment())
+        }
     }
 
     override fun inflateViewBinging(): FragmentMainBinding {

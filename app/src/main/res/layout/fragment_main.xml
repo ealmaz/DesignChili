@@ -60,6 +60,14 @@
             style="@style/ButtonStyle.Primary"
             android:layout_margin="@dimen/padding_16dp"/>
 
+        <Button
+            android:id="@+id/bottom_sheet"
+            android:text="Bottom sheets"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/ButtonStyle.Primary"
+            android:layout_margin="@dimen/padding_16dp"/>
+
     </LinearLayout>
 
 </ScrollView>

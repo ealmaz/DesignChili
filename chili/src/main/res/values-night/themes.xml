@@ -40,6 +40,11 @@
         <item name="RadioButtonUncheckedColor">@color/gray_3</item>
         <item name="RadioButtonDisabledColor">@color/gray_1_alpha_50</item>
 
+        <!-- Bottom sheet -->
+        <item name="BottomSheetBackgroundColor">@color/black_2</item>
+        <!-- Bottom sheet >>> ActionBottomSheet   -->
+        <item name="ActionBottomSheetButtonTextColor">@color/gray_3</item>
+
         <!-- InputView -->
         <item name="InputViewEndIconTint">@color/gray_1</item>
         <item name="InputViewHintTextColor">@color/gray_1_alpha_50</item>

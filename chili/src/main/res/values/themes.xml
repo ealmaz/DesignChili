@@ -59,6 +59,13 @@
         <item name="RadioButtonUncheckedColor">@color/black_5</item>
         <item name="RadioButtonDisabledColor">@color/gray_2</item>
 
+        <!-- Bottom sheet -->
+        <item name="BottomSheetBackgroundColor">@color/white_1</item>
+        <item name="BottomSheetTopCornersRadius">@dimen/radius_8dp</item>
+        <!-- Bottom sheet >>> ActionBottomSheet   -->
+        <item name="ActionBottomSheetButtonTextColor">@color/black_5</item>
+        <item name="ActionBottomSheetAccentButtonTextColor">@color/blue_1</item>
+
 
         <!-- Primary Button attributes -->
         <item name="PrimaryButtonBackgroundActive">@color/green_1</item>
