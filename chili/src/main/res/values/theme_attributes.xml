@@ -79,6 +79,7 @@
     <!-- Bottom sheet -->
     <attr name="BottomSheetBackgroundColor" format="color"/>
     <attr name="BottomSheetTopCornersRadius" format="dimension"/>
+    <attr name="BottomSheetTopDrawableColor" format="color"/>
     <!-- Bottom sheet >>> ActionBottomSheet   -->
     <attr name="ActionBottomSheetButtonTextColor" format="color"/>
     <attr name="ActionBottomSheetAccentButtonTextColor" format="color"/>

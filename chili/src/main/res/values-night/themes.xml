@@ -42,6 +42,7 @@
 
         <!-- Bottom sheet -->
         <item name="BottomSheetBackgroundColor">@color/black_2</item>
+        <item name="BottomSheetTopDrawableColor">@color/black_3</item>
         <!-- Bottom sheet >>> ActionBottomSheet   -->
         <item name="ActionBottomSheetButtonTextColor">@color/gray_3</item>
 

@@ -62,6 +62,7 @@
         <!-- Bottom sheet -->
         <item name="BottomSheetBackgroundColor">@color/white_1</item>
         <item name="BottomSheetTopCornersRadius">@dimen/radius_8dp</item>
+        <item name="BottomSheetTopDrawableColor">@color/white_1</item>
         <!-- Bottom sheet >>> ActionBottomSheet   -->
         <item name="ActionBottomSheetButtonTextColor">@color/black_5</item>
         <item name="ActionBottomSheetAccentButtonTextColor">@color/blue_1</item>

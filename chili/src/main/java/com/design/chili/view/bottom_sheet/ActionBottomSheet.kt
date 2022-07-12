@@ -1,6 +1,5 @@
 package com.design.chili.view.bottom_sheet
 
-import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -14,23 +13,18 @@ import java.io.Serializable
 
 class ActionBottomSheet : BaseBottomSheetDialogFragment() {
 
-    override val layoutResId = R.layout.view_action_bottom_sheet
-
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?,
-    ): View? {
-        val view = inflater.inflate(layoutResId, container, false)
-        renderActionButtons(view)
-        return view
+    override fun createContentView(inflater: LayoutInflater, container: ViewGroup?): View {
+        val linearLayout = LinearLayout(context).apply {
+            orientation = LinearLayout.VERTICAL
+        }
+        renderActionButtons(linearLayout)
+        return linearLayout
     }
 
-    private fun renderActionButtons(view: View) {
-        val rootView = view.findViewById<LinearLayout>(R.id.ll_root)
+    private fun renderActionButtons(layout: LinearLayout) {
         val buttons = arguments?.get(BUTTONS_ARG) as? List<ActionBottomSheetButton>
         buttons?.forEach { buttonInfo ->
-            rootView.addView(createActionButtonView(buttonInfo))
+            layout.addView(createActionButtonView(buttonInfo))
         }
     }
 
