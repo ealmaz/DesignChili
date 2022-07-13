@@ -1,4 +1,4 @@
-package com.design.chili.view.bottom_sheet
+package com.design.chili.view.bottom_sheet.base
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -11,8 +11,8 @@ import com.design.chili.R
 
 abstract class BaseViewBottomSheetDialogFragment : BaseBottomSheetDialogFragment() {
 
-    override lateinit var topDrawableView: View
-    override lateinit var closeIconView: View
+    override var topDrawableView: View? = null
+    override var closeIconView: View? = null
 
     @Nullable
     override fun onCreateView(

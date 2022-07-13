@@ -67,6 +67,10 @@
         <item name="ActionBottomSheetButtonTextColor">@color/black_5</item>
         <item name="ActionBottomSheetAccentButtonTextColor">@color/blue_1</item>
 
+        <!-- InAppPush -->
+        <item name="InAppPushBackground">@color/white_1</item>
+        <item name="InAppPushCornerRadius">@dimen/radius_24dp</item>
+
 
         <!-- Primary Button attributes -->
         <item name="PrimaryButtonBackgroundActive">@color/green_1</item>

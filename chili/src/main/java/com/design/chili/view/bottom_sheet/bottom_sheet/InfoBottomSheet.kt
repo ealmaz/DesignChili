@@ -1,4 +1,4 @@
-package com.design.chili.view.bottom_sheet
+package com.design.chili.view.bottom_sheet.bottom_sheet
 
 import android.os.Bundle
 import android.text.Spanned
@@ -13,12 +13,14 @@ import androidx.annotation.StringRes
 import com.design.chili.R
 import com.design.chili.extensions.setOnSingleClickListener
 import com.design.chili.extensions.visible
+import com.design.chili.view.bottom_sheet.base.BaseViewBottomSheetDialogFragment
 
-class DetailedInfoBottomSheet private constructor(): BaseViewBottomSheetDialogFragment() {
+class InfoBottomSheet private constructor(): BaseViewBottomSheetDialogFragment() {
 
     private lateinit var tvText: TextView
     private lateinit var ivIcon: ImageView
     private lateinit var btnPrimary: Button
+    private lateinit var btnSecondary: Button
 
     private var text: String? = null
     private var textSpanned: Spanned? = null
@@ -26,17 +28,19 @@ class DetailedInfoBottomSheet private constructor(): BaseViewBottomSheetDialogFr
 
     private var iconRes: Int? = null
 
-    private var primaryButton: Pair<String, (DetailedInfoBottomSheet.() -> Unit)>? = null
-    private var primaryButtonRes: Pair<Int, (DetailedInfoBottomSheet.() -> Unit)>? = null
+    private var primaryButton: Pair<String, (InfoBottomSheet.() -> Unit)>? = null
+    private var secondaryButton: Pair<String, (InfoBottomSheet.() -> Unit)>? = null
+    private var primaryButtonRes: Pair<Int, (InfoBottomSheet.() -> Unit)>? = null
+    private var secondaryButtonRes: Pair<Int, (InfoBottomSheet.() -> Unit)>? = null
 
     override val hasCloseIcon: Boolean = true
-    override val topDrawableVisible = true
 
     override fun createContentView(inflater: LayoutInflater, container: ViewGroup?): View {
-        val view = inflater.inflate(R.layout.view_detailed_info_bottom_sheet, container, false)
+        val view = inflater.inflate(R.layout.view_info_bottom_sheet, container, false)
         tvText = view.findViewById(R.id.tv_text)
         ivIcon = view.findViewById(R.id.iv_icon)
         btnPrimary = view.findViewById(R.id.btn_primary)
+        btnSecondary = view.findViewById(R.id.btn_secondary)
         return view
     }
 
@@ -53,7 +57,9 @@ class DetailedInfoBottomSheet private constructor(): BaseViewBottomSheetDialogFr
         iconRes?.let { setIcon(it) }
 
         primaryButton?.let { setPrimaryButton(it.first, it.second) }
+        secondaryButton?.let { setSecondaryButton(it.first, it.second) }
         primaryButtonRes?.let { setPrimaryButton(it.first, it.second) }
+        secondaryButtonRes?.let { setSecondaryButton(it.first, it.second) }
     }
 
     private fun setIcon(@DrawableRes resId: Int) {
@@ -84,19 +90,35 @@ class DetailedInfoBottomSheet private constructor(): BaseViewBottomSheetDialogFr
         }
     }
 
-    private fun setPrimaryButton(@StringRes resId: Int, action: (DetailedInfoBottomSheet.() -> Unit)? = null) {
+    private fun setPrimaryButton(@StringRes resId: Int, action: (InfoBottomSheet.() -> Unit)? = null) {
         btnPrimary.apply {
             visible()
             setText(resId)
-            setOnSingleClickListener { action?.invoke(this@DetailedInfoBottomSheet) }
+            setOnSingleClickListener { action?.invoke(this@InfoBottomSheet) }
         }
     }
 
-    private fun setPrimaryButton(text: String, action: (DetailedInfoBottomSheet.() -> Unit)? = null) {
+    private fun setSecondaryButton(@StringRes resId: Int, action: (InfoBottomSheet.() -> Unit)? = null) {
+        btnSecondary.apply {
+            visible()
+            setText(resId)
+            setOnSingleClickListener { action?.invoke(this@InfoBottomSheet) }
+        }
+    }
+
+    private fun setPrimaryButton(text: String, action: (InfoBottomSheet.() -> Unit)? = null) {
         btnPrimary.apply {
             visible()
             setText(text)
-            setOnSingleClickListener { action?.invoke(this@DetailedInfoBottomSheet) }
+            setOnSingleClickListener { action?.invoke(this@InfoBottomSheet) }
+        }
+    }
+
+    private fun setSecondaryButton(text: String, action: (InfoBottomSheet.() -> Unit)? = null) {
+        btnSecondary.apply {
+            visible()
+            setText(text)
+            setOnSingleClickListener { action?.invoke(this@InfoBottomSheet) }
         }
     }
 
@@ -107,8 +129,10 @@ class DetailedInfoBottomSheet private constructor(): BaseViewBottomSheetDialogFr
 
         private var iconRes: Int? = null
 
-        private var primaryButton: Pair<String, (DetailedInfoBottomSheet.() -> Unit)>? = null
-        private var primaryButtonRes: Pair<Int, (DetailedInfoBottomSheet.() -> Unit)>? = null
+        private var primaryButton: Pair<String, (InfoBottomSheet.() -> Unit)>? = null
+        private var secondaryButton: Pair<String, (InfoBottomSheet.() -> Unit)>? = null
+        private var primaryButtonRes: Pair<Int, (InfoBottomSheet.() -> Unit)>? = null
+        private var secondaryButtonRes: Pair<Int, (InfoBottomSheet.() -> Unit)>? = null
 
         fun setMessage(text: String): Builder {
             this.text = text
@@ -130,24 +154,36 @@ class DetailedInfoBottomSheet private constructor(): BaseViewBottomSheetDialogFr
             return this
         }
 
-        fun setPrimaryButton(primaryButton: Pair<String, (DetailedInfoBottomSheet.() -> Unit)>): Builder {
+        fun setPrimaryButton(primaryButton: Pair<String, (InfoBottomSheet.() -> Unit)>): Builder {
             this.primaryButton = primaryButton
             return this
         }
 
-        fun setPrimaryButtonRes(primaryButtonRes: Pair<Int, (DetailedInfoBottomSheet.() -> Unit)>): Builder {
+        fun setSecondaryButton(secondaryButton: Pair<String, (InfoBottomSheet.() -> Unit)>): Builder {
+            this.secondaryButton = secondaryButton
+            return this
+        }
+
+        fun setPrimaryButtonRes(primaryButtonRes: Pair<Int, (InfoBottomSheet.() -> Unit)>): Builder {
             this.primaryButtonRes = primaryButtonRes
             return this
         }
 
-        fun build(): DetailedInfoBottomSheet {
-            return DetailedInfoBottomSheet().apply {
+        fun setSecondaryButtonRes(secondaryButtonRes: Pair<Int, (InfoBottomSheet.() -> Unit)>): Builder {
+            this.secondaryButtonRes = secondaryButtonRes
+            return this
+        }
+
+        fun build(): InfoBottomSheet {
+            return InfoBottomSheet().apply {
                 this.text = this@Builder.text
                 this.textSpanned = this@Builder.textSpanned
                 this.textResId = this@Builder.textResId
                 this.iconRes = this@Builder.iconRes
                 this.primaryButton = this@Builder.primaryButton
+                this.secondaryButton = this@Builder.secondaryButton
                 this.primaryButtonRes = this@Builder.primaryButtonRes
+                this.secondaryButtonRes = this@Builder.secondaryButtonRes
             }
         }
     }

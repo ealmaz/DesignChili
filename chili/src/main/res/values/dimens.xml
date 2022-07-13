@@ -34,6 +34,7 @@
     <dimen name="radius_0dp">0dp</dimen>
     <dimen name="radius_4dp">4dp</dimen>
     <dimen name="radius_8dp">8dp</dimen>
+    <dimen name="radius_24dp">24dp</dimen>
 
 
     <!-- View_size-->

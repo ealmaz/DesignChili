@@ -1,4 +1,4 @@
-package com.design.chili.view.bottom_sheet
+package com.design.chili.view.bottom_sheet.bottom_sheet
 
 import android.os.Bundle
 import android.text.Spanned
@@ -13,6 +13,7 @@ import androidx.annotation.StringRes
 import com.design.chili.R
 import com.design.chili.extensions.setOnSingleClickListener
 import com.design.chili.extensions.visible
+import com.design.chili.view.bottom_sheet.base.BaseViewBottomSheetDialogFragment
 
 class DescriptionBottomSheet private constructor(): BaseViewBottomSheetDialogFragment() {
 

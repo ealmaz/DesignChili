@@ -84,7 +84,9 @@
     <attr name="ActionBottomSheetButtonTextColor" format="color"/>
     <attr name="ActionBottomSheetAccentButtonTextColor" format="color"/>
 
-
+    <!-- InAppPush -->
+    <attr name="InAppPushBackground" format="color"/>
+    <attr name="InAppPushCornerRadius" format="dimension"/>
 
     <!-- InputView attributes -->
     <attr name="BaseInputViewBackground" format="reference"/>

@@ -46,6 +46,9 @@
         <!-- Bottom sheet >>> ActionBottomSheet   -->
         <item name="ActionBottomSheetButtonTextColor">@color/gray_3</item>
 
+        <!-- InAppPush -->
+        <item name="InAppPushBackground">@color/black_3</item>
+
         <!-- InputView -->
         <item name="InputViewEndIconTint">@color/gray_1</item>
         <item name="InputViewHintTextColor">@color/gray_1_alpha_50</item>
