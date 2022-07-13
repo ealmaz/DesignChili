@@ -11,7 +11,7 @@
         <attr name="tariffPriceInfoCardViewDefaultStyle" format="reference"/>
         <attr name="tariffPackagesInfoCardViewDefaultStyle" format="reference"/>
         <attr name="logoTitleSubtitleCellDefaultStyle" format="reference"/>
-
+        <attr name="logoTitleActionCellDefaultStyle" format="reference"/>
     </declare-styleable>
 
     <declare-styleable name="BaseInputView">
@@ -135,6 +135,15 @@
         <attr name="title" format="string" />
         <attr name="subtitle" format="string" />
         <attr name="hide_divider" format="boolean" />
+        <attr name="roundedCornerMode" />
+    </declare-styleable>
+
+    <declare-styleable name="LogoTitleActionCell">
+        <attr name="android:icon" format="reference"/>
+        <attr name="title"/>
+        <attr name="subtitle"/>
+        <attr name="action" format="string" />
+        <attr name="hide_divider"/>
         <attr name="roundedCornerMode" />
     </declare-styleable>
 
