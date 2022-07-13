@@ -3,7 +3,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@android:color/transparent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:id="@+id/ll_root">
 
     <ImageView
         android:id="@+id/iv_top_drawable"
@@ -13,7 +14,8 @@
         android:layout_marginTop="@dimen/padding_8dp"
         android:layout_marginBottom="@dimen/padding_8dp"
         android:background="@drawable/bottom_sheet_top_drawable"
-        android:backgroundTint="?BottomSheetTopDrawableColor"/>
+        android:backgroundTint="?BottomSheetTopDrawableColor"
+        android:visibility="gone"/>
 
     <LinearLayout
         android:id="@+id/ll_content"
@@ -32,7 +34,12 @@
             android:layout_marginEnd="@dimen/padding_8dp"
             android:layout_marginBottom="@dimen/padding_8dp"
             android:background="@drawable/ic_clear"
-            android:visibility="visible" />
+            android:visibility="gone" />
+
+        <FrameLayout
+            android:id="@+id/bottom_sheet_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
 
     </LinearLayout>
 

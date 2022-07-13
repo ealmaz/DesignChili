@@ -14,7 +14,7 @@ import com.design.chili.R
 import com.design.chili.extensions.setOnSingleClickListener
 import com.design.chili.extensions.visible
 
-class DescriptionBottomSheet private constructor(): BaseBottomSheetDialogFragment() {
+class DescriptionBottomSheet private constructor(): BaseViewBottomSheetDialogFragment() {
 
     private lateinit var tvTitle: TextView
     private lateinit var tvDescription: TextView

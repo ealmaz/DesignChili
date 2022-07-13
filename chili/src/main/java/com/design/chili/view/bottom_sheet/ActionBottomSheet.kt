@@ -11,7 +11,7 @@ import com.design.chili.extensions.setOnSingleClickListener
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import java.io.Serializable
 
-class ActionBottomSheet : BaseBottomSheetDialogFragment() {
+class ActionBottomSheet : BaseViewBottomSheetDialogFragment() {
 
     override fun createContentView(inflater: LayoutInflater, container: ViewGroup?): View {
         val linearLayout = LinearLayout(context).apply {

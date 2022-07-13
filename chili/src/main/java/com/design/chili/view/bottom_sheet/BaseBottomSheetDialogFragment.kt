@@ -31,24 +31,28 @@ abstract class BaseBottomSheetDialogFragment : BottomSheetDialogFragment() {
     protected open val isHideable: Boolean = true
     protected open val isBackButtonEnabled: Boolean = true
 
-    private lateinit var topDrawableView: View
-    private lateinit var closeIconView: View
+    abstract var topDrawableView: View
+    abstract var closeIconView: View
 
-    @Nullable
-    override fun onCreateView(
-        @NonNull inflater: LayoutInflater, @Nullable container: ViewGroup?,
-        @Nullable savedInstanceState: Bundle?,
-    ): View? {
-        val view = inflater.inflate(R.layout.view_base_bottom_sheet, container, false)
-        val contentView = view.findViewById<LinearLayout>(R.id.ll_content)
-        contentView.addView(createContentView(inflater, container))
-        initViewVariables(view)
-        return view
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setStyle(STYLE_NORMAL, R.style.BottomSheetStyle)
     }
 
-    private fun initViewVariables(view: View) {
-        topDrawableView = view.findViewById(R.id.iv_top_drawable)
-        closeIconView = view.findViewById(R.id.iv_close)
+    override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
+        val dialog = super.onCreateDialog(savedInstanceState) as BottomSheetDialog
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O_MR1) updateNavbarColor(dialog)
+        dialog.run {
+            setOnShowListener { onShowDialog(this) }
+            setupBottomSheetBackButtonEnabled()
+        }
+        return dialog
+    }
+
+    private fun onShowDialog(dialog: Dialog) {
+        val bottomSheet: FrameLayout? = dialog.findViewById(com.google.android.material.R.id.design_bottom_sheet)
+        val behavior = bottomSheet?.let { BottomSheetBehavior.from<View>(bottomSheet) }
+        setupBottomSheetBehavior(behavior)
     }
 
 
@@ -59,6 +63,7 @@ abstract class BaseBottomSheetDialogFragment : BottomSheetDialogFragment() {
         setupBottomSheetHideable()
         setupTopDrawableVisibility()
     }
+
 
     private fun setupBottomSheetCloseIcon() {
         closeIconView.apply {
@@ -86,20 +91,18 @@ abstract class BaseBottomSheetDialogFragment : BottomSheetDialogFragment() {
         }
     }
 
-    private fun setupBottomSheetBehavior() {
-        val bottomSheet: FrameLayout? = dialog?.findViewById(com.google.android.material.R.id.design_bottom_sheet)
-        bottomSheet?.run {
-            val behavior: BottomSheetBehavior<*> = BottomSheetBehavior.from<View>(this)
-            if (!isHideable) {
-                behavior.isHideable = isHideable
-                behavior.peekHeight = getWindowHeight() * 20 / 100
+    open fun setupBottomSheetBehavior(behavior: BottomSheetBehavior<*>?) {
+        behavior?.run {
+            if (!this@BaseBottomSheetDialogFragment.isHideable) {
+                isHideable = this@BaseBottomSheetDialogFragment.isHideable
+                peekHeight = getWindowHeight() * 20 / 100
             }
-            behavior.skipCollapsed = true
-            behavior.state = BottomSheetBehavior.STATE_EXPANDED
+            skipCollapsed = true
+            state = BottomSheetBehavior.STATE_EXPANDED
         }
     }
 
-    private fun setupBottomSheetBackButton() {
+    private fun setupBottomSheetBackButtonEnabled() {
         if (!isBackButtonEnabled) {
             dialog?.setOnKeyListener { _, keyCode, _ ->
                 keyCode == KeyEvent.KEYCODE_BACK || keyCode == KeyEvent.ACTION_DOWN
@@ -107,29 +110,12 @@ abstract class BaseBottomSheetDialogFragment : BottomSheetDialogFragment() {
         }
     }
 
-    abstract fun createContentView(inflater: LayoutInflater, @Nullable container: ViewGroup?): View
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setStyle(STYLE_NORMAL, R.style.BottomSheetStyle)
-    }
-
-    override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
-        val dialog = super.onCreateDialog(savedInstanceState) as BottomSheetDialog
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O_MR1) updateNavbarColor(dialog)
-        dialog.run {
-            setOnShowListener { setupBottomSheetBehavior() }
-            setupBottomSheetBackButton()
-        }
-        return dialog
-    }
-
     @RequiresApi(api = Build.VERSION_CODES.M)
     private fun updateNavbarColor(dialog: Dialog) {
         dialog.window?.updateNavigationBarColor()
     }
 
-    private fun getWindowHeight(): Int {
+    protected fun getWindowHeight(): Int {
         val displayMetrics = DisplayMetrics()
         activity?.windowManager?.defaultDisplay?.getMetrics(displayMetrics)
         return displayMetrics.heightPixels
