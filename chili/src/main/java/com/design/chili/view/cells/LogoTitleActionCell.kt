@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.annotation.ColorInt
 import androidx.annotation.ColorRes
 import androidx.annotation.DrawableRes
 import androidx.annotation.StringRes
@@ -103,18 +104,24 @@ class LogoTitleActionCell : ConstraintLayout {
         changeSubtitleColor(colorId)
     }
 
-    private fun setAction(label: CharSequence?) {
+    private fun setAction(label: String, action: () -> Unit = {}) {
         view.action.text = label
+        setOnSingleClickListener(action)
     }
 
-    private fun setAction(@StringRes stringId: Int) {
+    private fun setAction(@StringRes stringId: Int, action: () -> Unit = {}) {
         view.action.text = context.getString(stringId)
+        setOnSingleClickListener(action)
     }
 
-    fun setup(titleLabel: String?, subtitleLabel: String?, actionLabel: String?, logo: Any?) {
+    private fun setActionWithColor(label: String, @ColorInt textColor: Int, action: () -> Unit = {}) {
+        setAction(label, action)
+        view.action.setTextColor(textColor)
+    }
+
+    fun setup(titleLabel: String?, subtitleLabel: String?, logo: Any?) {
         setTitle(titleLabel)
         setSubtitle(subtitleLabel)
-        setAction(actionLabel)
         setLogo(logo)
     }
 

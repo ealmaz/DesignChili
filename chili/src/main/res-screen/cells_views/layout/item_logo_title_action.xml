@@ -9,8 +9,8 @@
 
     <com.design.chili.view.image.SquircleView
         android:id="@+id/iv_icon"
-        android:layout_width="@dimen/view_32dp"
-        android:layout_height="@dimen/view_32dp"
+        android:layout_width="@dimen/view_46dp"
+        android:layout_height="@dimen/view_46dp"
         android:layout_marginStart="@dimen/padding_8dp"
         android:layout_marginTop="@dimen/padding_8dp"
         android:layout_marginBottom="@dimen/padding_8dp"
