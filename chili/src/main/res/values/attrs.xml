@@ -4,6 +4,7 @@
     <declare-styleable name="DefaultStyleTheme">
         <attr name="inputViewDefaultStyle" format="reference"/>
         <attr name="maskedInputDefaultStyle" format="reference"/>
+        <attr name="multilineInputDefaultStyle" format="reference"/>
         <attr name="balanceCardViewDefaultStyle" format="reference" />
         <attr name="categoryItemCardViewDefaultStyle" format="reference"/>
         <attr name="navigatorCardViewDefaultStyle" format="reference"/>
@@ -40,6 +41,12 @@
     <declare-styleable name="MaskedInputView">
         <attr name="mask" format="string"/>
         <attr name="allowedInputSymbols" format="string"/>
+    </declare-styleable>
+
+    <declare-styleable name="MultilineInputView">
+        <attr name="maxLines" format="integer"/>
+        <attr name="minLines" format="integer"/>
+        <attr name="maxLength" format="integer"/>
     </declare-styleable>
 
     <declare-styleable name="BalanceCardView">
