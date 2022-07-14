@@ -20,13 +20,12 @@ class MultilineInputView : BaseInputView {
         context?.obtainStyledAttributes(attrs, R.styleable.MultilineInputView, R.attr.multilineInputDefaultStyle, R.style.InputViewStyle_Simple)?.run {
             getInteger(R.styleable.MultilineInputView_maxLength, -1)
                 .takeIf { it != -1 }?.let { setMaxLength(it) }
-            getInteger(R.styleable.MultilineInputView_maxLines, -1)
+            getInteger(R.styleable.MultilineInputView_maxInputLines, -1)
+                .takeIf { it != -1 }?.let { setMaxInputLines(it) }
+            getInteger(R.styleable.MultilineInputView_android_maxLines, -1)
                 .takeIf { it != -1 }?.let { setMaxLines(it) }
-            getInteger(R.styleable.MultilineInputView_maxLinesFrame, -1)
-                .takeIf { it != -1 }?.let { setMaxLinesFrame(it) }
             getInteger(R.styleable.MultilineInputView_minLines, -1)
                 .takeIf { it != -1 }?.let { setMinLines(it) }
-
             setupViews()
             recycle()
         }
@@ -36,19 +35,15 @@ class MultilineInputView : BaseInputView {
         setGravity(Gravity.LEFT)
         hideAction()
         hideMessage()
-        enableMultiline()
-    }
-
-    private fun enableMultiline() {
-        view.inputField.isSingleLine = false
     }
 
     private fun setMaxLines(linesCount: Int) {
-        view.inputField.addTextChangedListener(LimitedInputLinesWatcher(view.inputField, linesCount))
+        if (linesCount > 1) setSingleLine(false)
+        view.inputField.maxLines = linesCount
     }
 
-    private fun setMaxLinesFrame(linesCount: Int) {
-        view.inputField.maxLines = linesCount
+    private fun setMaxInputLines(linesCount: Int) {
+        view.inputField.addTextChangedListener(LimitedInputLinesWatcher(view.inputField, linesCount))
     }
 
     private fun setMinLines(linesCount: Int) {
