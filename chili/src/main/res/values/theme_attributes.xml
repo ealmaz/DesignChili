@@ -88,6 +88,15 @@
     <attr name="InAppPushBackground" format="color"/>
     <attr name="InAppPushCornerRadius" format="dimension"/>
 
+
+    <!-- Toolbar -->
+    <attr name="ToolbarAdditionalTextTextAppearance" format="reference"/>
+    <attr name="ToolbarTextAppearance" format="reference"/>
+    <attr name="ToolbarDividerColor" format="color"/>
+    <attr name="ToolbarDividerSize" format="dimension"/>
+    <attr name="ToolbarIconsTint" format="color"/>
+    <attr name="ToolbarBackground" format="color|reference"/>
+
     <!-- InputView attributes -->
     <attr name="BaseInputViewBackground" format="reference"/>
     <attr name="BaseInputViewBackgroundError" format="reference"/>

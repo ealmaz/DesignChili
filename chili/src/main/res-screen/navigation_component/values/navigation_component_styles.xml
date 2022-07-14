@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="BaseNavigationComponentsStyle" parent="BaseChiliViewStyle">
+
+    </style>
+
+    <style name="ChiliToolbarStyle" parent="BaseNavigationComponentsStyle">
+        <item name="isDividerVisible">true</item>
+        <item name="toolbarNavigationButtonStyle">@style/Toolbar.Button.Navigation.Tinted</item>
+
+    </style>
+
+    <style name="Toolbar.Button.Navigation.Tinted" parent="Widget.AppCompat.Toolbar.Button.Navigation">
+        <item name="tint">@color/magenta_1</item>
+    </style>
+
+</resources>

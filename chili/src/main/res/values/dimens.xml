@@ -39,6 +39,7 @@
 
     <!-- View_size-->
     <dimen name="view_0dp">0dp</dimen>
+    <dimen name="view_1dp">1dp</dimen>
     <dimen name="view_2dp">2dp</dimen>
     <dimen name="view_4dp">4dp</dimen>
     <dimen name="view_6dp">6dp</dimen>

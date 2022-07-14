@@ -71,6 +71,14 @@
         <item name="InAppPushBackground">@color/white_1</item>
         <item name="InAppPushCornerRadius">@dimen/radius_24dp</item>
 
+        <!-- Toolbar -->
+        <item name="ToolbarAdditionalTextTextAppearance">@style/H8.Secondary</item>
+        <item name="ToolbarTextAppearance">@style/H5.Marked.Bold</item>
+        <item name="ToolbarDividerColor">@color/gray_8</item>
+        <item name="ToolbarDividerSize">@dimen/view_1dp</item>
+        <item name="ToolbarIconsTint">@color/black_1</item>
+        <item name="ToolbarBackground">@color/white_1</item>
+
 
         <!-- Primary Button attributes -->
         <item name="PrimaryButtonBackgroundActive">@color/green_1</item>

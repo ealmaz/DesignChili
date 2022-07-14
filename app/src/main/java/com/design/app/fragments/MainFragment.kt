@@ -1,7 +1,9 @@
 package com.design.app.fragments
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
+import com.design.app.ToolbarActivity
 import com.design.app.base.BaseFragment
 import com.design.app.databinding.FragmentMainBinding
 
@@ -30,6 +32,9 @@ class MainFragment : BaseFragment<FragmentMainBinding>() {
         }
         vb.bottomSheet.setOnClickListener {
             openFragment(BottomSheetsFragment())
+        }
+        vb.toolbars.setOnClickListener {
+            startActivity(Intent(requireActivity(), ToolbarActivity::class.java))
         }
     }
 

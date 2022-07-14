@@ -12,6 +12,8 @@
         <attr name="tariffPackagesInfoCardViewDefaultStyle" format="reference"/>
         <attr name="logoTitleSubtitleCellDefaultStyle" format="reference"/>
 
+        <attr name="toolbarDefaultStyle" format="reference"/>
+
     </declare-styleable>
 
     <declare-styleable name="BaseInputView">
@@ -127,6 +129,14 @@
         <attr name="callArcFabVisibility" format="boolean"/>
         <attr name="callArcIcon" format="reference"/>
 
+    </declare-styleable>
+
+    <declare-styleable name="ChiliToolbar">
+        <attr name="title"/>
+        <attr name="additionalText" format="string"/>
+        <attr name="endIcon" format="reference"/>
+        <attr name="isDividerVisible"/>
+        <attr name="isTransparent" format="boolean"/>
     </declare-styleable>
 
     <declare-styleable name="LogoTitleSubtitleCell">
