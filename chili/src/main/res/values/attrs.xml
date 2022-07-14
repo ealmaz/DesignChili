@@ -44,6 +44,7 @@
     </declare-styleable>
 
     <declare-styleable name="MultilineInputView">
+        <attr name="maxLinesFrame" format="integer"/>
         <attr name="maxLines" format="integer"/>
         <attr name="minLines" format="integer"/>
         <attr name="maxLength" format="integer"/>

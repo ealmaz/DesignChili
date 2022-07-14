@@ -8,10 +8,6 @@ import com.design.chili.view.input.text_watchers.LimitedInputLinesWatcher
 
 class MultilineInputView : BaseInputView {
 
-    private val limitedInputLinesWatcher: LimitedInputLinesWatcher by lazy {
-        LimitedInputLinesWatcher(this.getInputField())
-    }
-
     constructor(context: Context) : super(context)
     constructor(context: Context, attrs: AttributeSet) : super(context, attrs) {
         obtainAttributes(attrs)
@@ -25,7 +21,9 @@ class MultilineInputView : BaseInputView {
             getInteger(R.styleable.MultilineInputView_maxLength, -1)
                 .takeIf { it != -1 }?.let { setMaxLength(it) }
             getInteger(R.styleable.MultilineInputView_maxLines, -1)
-                .takeIf { it != -1 }?.let { limitedInputLinesWatcher.setLimit(it) }
+                .takeIf { it != -1 }?.let { setMaxLines(it) }
+            getInteger(R.styleable.MultilineInputView_maxLinesFrame, -1)
+                .takeIf { it != -1 }?.let { setMaxLinesFrame(it) }
             getInteger(R.styleable.MultilineInputView_minLines, -1)
                 .takeIf { it != -1 }?.let { setMinLines(it) }
 
@@ -39,11 +37,18 @@ class MultilineInputView : BaseInputView {
         hideAction()
         hideMessage()
         enableMultiline()
-        view.inputField.addTextChangedListener(limitedInputLinesWatcher)
     }
 
     private fun enableMultiline() {
         view.inputField.isSingleLine = false
+    }
+
+    private fun setMaxLines(linesCount: Int) {
+        view.inputField.addTextChangedListener(LimitedInputLinesWatcher(view.inputField, linesCount))
+    }
+
+    private fun setMaxLinesFrame(linesCount: Int) {
+        view.inputField.maxLines = linesCount
     }
 
     private fun setMinLines(linesCount: Int) {

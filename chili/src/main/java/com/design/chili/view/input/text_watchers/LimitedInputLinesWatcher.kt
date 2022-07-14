@@ -5,9 +5,9 @@ import android.text.TextWatcher
 import com.design.chili.view.input.SelectionEditText
 
 class LimitedInputLinesWatcher(
-    private val field: SelectionEditText
+    private val field: SelectionEditText,
+    private val limitForLines: Int
 ) : TextWatcher {
-    private var limitForLines: Int = 1
     private var text: String? = null
     private var beforeCursorPosition = 0
 
@@ -23,9 +23,5 @@ class LimitedInputLinesWatcher(
             field.setText(text)
             field.setSelection(beforeCursorPosition)
         }
-    }
-
-    fun setLimit(newLimit: Int) {
-        limitForLines = newLimit
     }
 }
