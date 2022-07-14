@@ -4,11 +4,10 @@ import android.text.Editable
 import android.text.TextWatcher
 import com.design.chili.view.input.SelectionEditText
 
-class MaxLinesTextWatcher(
-    private val field: SelectionEditText,
-    private val NumberOfMaxLines: Int
+class LimitedInputLinesWatcher(
+    private val field: SelectionEditText
 ) : TextWatcher {
-
+    private var limitForLines: Int = 1
     private var text: String? = null
     private var beforeCursorPosition = 0
 
@@ -20,9 +19,13 @@ class MaxLinesTextWatcher(
     }
 
     override fun afterTextChanged(s: Editable) {
-        if (field.lineCount > NumberOfMaxLines) {
+        if (field.lineCount > limitForLines) {
             field.setText(text)
             field.setSelection(beforeCursorPosition)
         }
+    }
+
+    fun setLimit(newLimit: Int) {
+        limitForLines = newLimit
     }
 }
