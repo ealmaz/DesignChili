@@ -2,6 +2,7 @@ package com.design.chili.view.input
 
 import android.content.Context
 import android.graphics.drawable.Drawable
+import android.os.Build
 import android.os.Bundle
 import android.os.Parcelable
 import android.text.*
@@ -18,13 +19,12 @@ import android.widget.TextView
 import androidx.annotation.ColorInt
 import androidx.annotation.DrawableRes
 import androidx.annotation.StringRes
+import androidx.annotation.StyleRes
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.ContextCompat
 import androidx.core.view.updatePadding
 import com.design.chili.R
 import com.design.chili.extensions.*
-import com.design.chili.extensions.setOnSingleClickListener
-import com.design.chili.extensions.visible
 import com.design.chili.view.input.text_watchers.ClearTextIconTextWatcher
 import com.design.chili.view.input.text_watchers.SimpleTextWatcher
 import com.google.android.material.textfield.TextInputLayout
@@ -40,6 +40,8 @@ open class BaseInputView: ConstraintLayout {
     @ColorInt protected var hintTextColor: Int = -1
     @ColorInt protected var fieldBackground: Int = -1
     @ColorInt protected var fieldErrorBackground: Int = -1
+
+    @StyleRes protected var inputViewTextAppearanceRes: Int = -1
 
     @ColorInt protected var messageTextColor: Int = -1
     @ColorInt protected var errorMessageTextColor: Int = -1
@@ -121,6 +123,9 @@ open class BaseInputView: ConstraintLayout {
             }
             getInteger(R.styleable.BaseInputView_endIconMode, TextInputLayout.END_ICON_CUSTOM).let {
                 setupEndDrawableMode(it)
+            }
+            getResourceId(R.styleable.BaseInputView_android_textAppearance, -1).takeIf { it != -1 }?.let {
+                setupInputTextAppearance(it)
             }
             getInteger(R.styleable.BaseInputView_android_maxLength, -1)
                 .takeIf { it != -1 }?.let {
@@ -424,6 +429,13 @@ open class BaseInputView: ConstraintLayout {
         return view.ivEndIcon
     }
 
+    fun setupInputTextAppearance(@StyleRes inputViewTextAppearanceRes: Int) {
+        this.inputViewTextAppearanceRes = inputViewTextAppearanceRes
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            view.inputField.setTextAppearance(inputViewTextAppearanceRes)
+        }
+    }
+
     private fun setupEndDrawableMode(mode: Int) {
        when (mode) {
            TextInputLayout.END_ICON_CLEAR_TEXT -> setupClearTextButton()
@@ -435,8 +447,10 @@ open class BaseInputView: ConstraintLayout {
     fun setupAsPasswordField() {
         removeInputRightDrawable()
         view.textInputLayout.apply {
+            setInputType(InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_PASSWORD)
             endIconMode = TextInputLayout.END_ICON_PASSWORD_TOGGLE
             setEndIconDrawable(R.drawable.password_toggle_drawable)
+            setupInputTextAppearance(inputViewTextAppearanceRes)
         }
     }
 
