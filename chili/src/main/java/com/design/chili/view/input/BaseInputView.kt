@@ -433,6 +433,8 @@ open class BaseInputView: ConstraintLayout {
         this.inputViewTextAppearanceRes = inputViewTextAppearanceRes
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             view.inputField.setTextAppearance(inputViewTextAppearanceRes)
+        } else {
+            view.inputField.setTextAppearance(context, inputViewTextAppearanceRes)
         }
     }
 
