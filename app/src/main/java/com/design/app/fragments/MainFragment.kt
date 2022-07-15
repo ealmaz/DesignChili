@@ -36,6 +36,9 @@ class MainFragment : BaseFragment<FragmentMainBinding>() {
         vb.toolbars.setOnClickListener {
             startActivity(Intent(requireActivity(), ToolbarActivity::class.java))
         }
+        vb.pickers.setOnClickListener {
+            openFragment(DatePicker())
+        }
     }
 
     override fun inflateViewBinging(): FragmentMainBinding {

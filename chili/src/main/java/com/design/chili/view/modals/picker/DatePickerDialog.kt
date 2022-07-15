@@ -44,9 +44,13 @@ class DatePickerDialog : DialogFragment() {
             datePicker = view.findViewById(R.id.datePicker),
             btnDone = view.findViewById(R.id.btn_done)
         )
-        this.view.btnDone.setOnSingleClickListener {
-            setFragmentResult()
-            dismiss()
+        this.view.run {
+            tvTitle.text = arguments?.getString(ARG_TITLE)
+            btnDone.text = arguments?.getString(ARG_BUTTON_TEXT)
+            btnDone.setOnSingleClickListener {
+                setFragmentResult()
+                dismiss()
+            }
         }
     }
 
@@ -96,8 +100,12 @@ class DatePickerDialog : DialogFragment() {
         private const val ARG_CURRENT_DATE = "currentDate"
         private const val ARG_END_LIMIT_DATE = "endLimitDate"
         private const val ARG_START_LIMIT_DATE = "startLimitDate"
+        private const val ARG_TITLE = "title"
+        private const val ARG_BUTTON_TEXT = "buttonText"
 
         fun create(
+            buttonText: String,
+            titleText: String,
             currentDate: Calendar = Calendar.getInstance(),
             startLimitDate: Calendar? = null,
             endLimitDate: Calendar? = null,
@@ -106,7 +114,9 @@ class DatePickerDialog : DialogFragment() {
                 arguments = bundleOf(
                     ARG_CURRENT_DATE to currentDate,
                     ARG_END_LIMIT_DATE to endLimitDate,
-                    ARG_START_LIMIT_DATE to startLimitDate
+                    ARG_START_LIMIT_DATE to startLimitDate,
+                    ARG_TITLE to titleText,
+                    ARG_BUTTON_TEXT to buttonText
                 )
             }
         }

@@ -13,77 +13,68 @@
         tools:context=".MainActivity">
 
         <Button
-            android:id="@+id/buttons"
-            android:text="Buttons"
+            android:id="@+id/date"
+            android:text="Date picker"
             style="@style/ButtonStyle.Primary"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/padding_16dp"/>
 
         <Button
-            android:id="@+id/fileds"
-            android:text="Input fields"
+            android:id="@+id/range"
+            android:text="Date range picker"
+            style="@style/ButtonStyle.Primary"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            style="@style/ButtonStyle.Primary"
             android:layout_margin="@dimen/padding_16dp"/>
 
         <Button
-            android:id="@+id/cards"
-            android:text="Cards"
+            android:id="@+id/date_start"
+            android:text="Date picker with start limit"
+            style="@style/ButtonStyle.Primary"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            style="@style/ButtonStyle.Primary"
             android:layout_margin="@dimen/padding_16dp"/>
 
         <Button
-            android:id="@+id/cells"
-            android:text="Cells"
+            android:id="@+id/date_end"
+            android:text="Date picker with end limit"
+            style="@style/ButtonStyle.Primary"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            style="@style/ButtonStyle.Primary"
             android:layout_margin="@dimen/padding_16dp"/>
 
         <Button
-            android:id="@+id/snackbar"
-            android:text="Snackbar"
+            android:id="@+id/date_start_end"
+            android:text="Date picker with start and end limit"
+            style="@style/ButtonStyle.Primary"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            style="@style/ButtonStyle.Primary"
             android:layout_margin="@dimen/padding_16dp"/>
 
         <Button
-            android:id="@+id/common"
-            android:text="Common"
+            android:id="@+id/range_start"
+            android:text="Range picker with start limit"
+            style="@style/ButtonStyle.Primary"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            style="@style/ButtonStyle.Primary"
             android:layout_margin="@dimen/padding_16dp"/>
 
         <Button
-            android:id="@+id/bottom_sheet"
-            android:text="Bottom sheets"
+            android:id="@+id/range_end"
+            android:text="Range picker with end limit"
+            style="@style/ButtonStyle.Primary"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            style="@style/ButtonStyle.Primary"
             android:layout_margin="@dimen/padding_16dp"/>
 
         <Button
-            android:id="@+id/toolbars"
-            android:text="Toolbars"
+            android:id="@+id/range_start_end"
+            android:text="Range picker with start and end limit"
+            style="@style/ButtonStyle.Primary"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            style="@style/ButtonStyle.Primary"
             android:layout_margin="@dimen/padding_16dp"/>
-
-        <Button
-            android:id="@+id/pickers"
-            android:text="Pickers"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            style="@style/ButtonStyle.Primary"
-            android:layout_margin="@dimen/padding_16dp"/>
-
     </LinearLayout>
 
 </ScrollView>
