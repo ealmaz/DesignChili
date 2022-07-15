@@ -71,6 +71,11 @@
         <item name="InAppPushBackground">@color/white_1</item>
         <item name="InAppPushCornerRadius">@dimen/radius_24dp</item>
 
+        <!-- Picker dialog -->
+        <item name="PickerDialogControlColor">@color/black_5</item>
+        <item name="PickerDialogCornerRadius">@dimen/radius_4dp</item>
+        <item name="PickerDialogBackground">@color/white_1</item>
+
         <!-- Toolbar -->
         <item name="ToolbarAdditionalTextTextAppearance">@style/H8.Secondary</item>
         <item name="ToolbarTextAppearance">@style/H5.Marked.Bold</item>

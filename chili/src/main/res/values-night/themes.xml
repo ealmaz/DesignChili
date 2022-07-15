@@ -49,6 +49,10 @@
         <!-- InAppPush -->
         <item name="InAppPushBackground">@color/black_3</item>
 
+        <!-- Picker dialog -->
+        <item name="PickerDialogControlColor">@color/gray_3</item>
+        <item name="PickerDialogBackground">@color/black_3</item>
+
         <!-- Toolbar -->
         <item name="ToolbarDividerColor">@color/black_4</item>
         <item name="ToolbarIconsTint">@color/white_1</item>

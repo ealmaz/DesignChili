@@ -31,7 +31,7 @@ android {
     sourceSets {
         main {
             res {
-                srcDirs 'src/main/res', 'src/main/res-screen/buttons', 'src/main/res-screen/input_views', 'src/main/res-screen/card_views', 'src/main/res-screen/cells_views', 'src/main/res-screen/common', 'src/main/res-screen/bottom_sheets', 'src/main/res-screen/navigation_component'
+                srcDirs 'src/main/res', 'src/main/res-screen/buttons', 'src/main/res-screen/input_views', 'src/main/res-screen/card_views', 'src/main/res-screen/cells_views', 'src/main/res-screen/common', 'src/main/res-screen/modals', 'src/main/res-screen/navigation_component'
             }
         }
     }

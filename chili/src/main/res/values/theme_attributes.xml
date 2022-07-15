@@ -89,6 +89,12 @@
     <attr name="InAppPushCornerRadius" format="dimension"/>
 
 
+    <!-- Picker dialog -->
+    <attr name="PickerDialogControlColor" format="color"/>
+    <attr name="PickerDialogCornerRadius" format="dimension"/>
+    <attr name="PickerDialogBackground" format="color|reference"/>
+
+
     <!-- Toolbar -->
     <attr name="ToolbarAdditionalTextTextAppearance" format="reference"/>
     <attr name="ToolbarTextAppearance" format="reference"/>

@@ -62,6 +62,7 @@
     <dimen name="view_110dp">110dp</dimen>
     <dimen name="view_136dp">136dp</dimen>
     <dimen name="view_140dp">140dp</dimen>
+    <dimen name="view_150dp">150dp</dimen>
     <dimen name="view_200dp">200dp</dimen>
 
     <!-- Elevation   -->

@@ -32,7 +32,7 @@
         <com.design.chili.view.input.BaseInputView
             android:id="@+id/field_pass"
             android:hint="Password"
-            android:gravity="center_vertical|start"
+            android:gravity="start"
             style="@style/InputViewStyle.Simple.Password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

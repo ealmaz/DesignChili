@@ -1,4 +1,4 @@
-package com.design.chili.view.bottom_sheet.base
+package com.design.chili.view.modals.base
 
 import android.os.Bundle
 import android.view.LayoutInflater

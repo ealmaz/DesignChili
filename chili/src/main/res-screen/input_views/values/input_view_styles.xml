@@ -20,7 +20,6 @@
     </style>
 
     <style name="InputViewStyle.Simple.Password">
-        <item name="android:inputType">textPassword</item>
         <item name="endIconMode">password_toggle</item>
     </style>
 

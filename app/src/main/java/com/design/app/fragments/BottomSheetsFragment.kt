@@ -7,9 +7,9 @@ import androidx.fragment.app.Fragment
 import com.design.app.R
 import com.design.app.base.BaseFragment
 import com.design.app.databinding.FrgmentBottomSheetsBinding
-import com.design.chili.view.bottom_sheet.base.BaseFragmentBottomSheetDialogFragment
-import com.design.chili.view.bottom_sheet.bottom_sheet.*
-import com.design.chili.view.bottom_sheet.in_app.InAppPushBottomSheet
+import com.design.chili.view.modals.base.BaseFragmentBottomSheetDialogFragment
+import com.design.chili.view.modals.bottom_sheet.*
+import com.design.chili.view.modals.in_app.InAppPushBottomSheet
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 
 class BottomSheetsFragment : BaseFragment<FrgmentBottomSheetsBinding>() {

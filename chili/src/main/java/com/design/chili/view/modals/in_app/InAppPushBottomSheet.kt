@@ -1,4 +1,4 @@
-package com.design.chili.view.bottom_sheet.in_app
+package com.design.chili.view.modals.in_app
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -12,7 +12,7 @@ import com.design.chili.extensions.*
 import com.design.chili.extensions.gone
 import com.design.chili.extensions.setOnSingleClickListener
 import com.design.chili.extensions.visible
-import com.design.chili.view.bottom_sheet.base.BaseBottomSheetDialogFragment
+import com.design.chili.view.modals.base.BaseBottomSheetDialogFragment
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 
 class InAppPushBottomSheet private constructor() : BaseBottomSheetDialogFragment() {

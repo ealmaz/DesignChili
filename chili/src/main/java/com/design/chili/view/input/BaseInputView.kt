@@ -434,16 +434,9 @@ open class BaseInputView: ConstraintLayout {
 
     fun setupAsPasswordField() {
         removeInputRightDrawable()
-        setInputType(InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_PASSWORD)
         view.textInputLayout.apply {
             endIconMode = TextInputLayout.END_ICON_PASSWORD_TOGGLE
             setEndIconDrawable(R.drawable.password_toggle_drawable)
-            updatePadding(
-                paddingLeft,
-                resources.getDimension(R.dimen.padding_2dp).toInt(),
-                paddingRight,
-                resources.getDimension(R.dimen.padding_2dp).toInt()
-            )
         }
     }
 
@@ -510,8 +503,6 @@ open class BaseInputView: ConstraintLayout {
         view.textInputLayout.apply {
             if (endIconMode == TextInputLayout.END_ICON_PASSWORD_TOGGLE) {
                 endIconMode = TextInputLayout.END_ICON_NONE
-                updatePadding(top = resources.getDimensionPixelSize(R.dimen.padding_12dp),
-                    bottom = resources.getDimensionPixelSize(R.dimen.padding_12dp))
             }
         }
         if (!isInputRightDrawableExist()) setInputRightDrawable(R.drawable.ic_clear)
