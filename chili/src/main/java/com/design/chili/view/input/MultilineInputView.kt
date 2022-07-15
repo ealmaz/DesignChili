@@ -43,6 +43,7 @@ class MultilineInputView : BaseInputView {
     }
 
     private fun setMaxInputLines(linesCount: Int) {
+        if (linesCount > 1) setSingleLine(false)
         view.inputField.addTextChangedListener(LimitedInputLinesWatcher(view.inputField, linesCount))
     }
 
