@@ -56,6 +56,16 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/padding_16dp"/>
 
+        <com.design.chili.view.input.MultilineInputView
+            android:id="@+id/field_3"
+            android:maxLength="130"
+            android:hint="Введите комментарий"
+            app:minLines="3"
+            android:maxLines="5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding_16dp"/>
+
     </LinearLayout>
 
 </ScrollView>
