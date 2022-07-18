@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools">
 
-    <style name="CellViewStyle" parent="BaseChiliViewStyle"/>
+    <style name="Chili.CellViewStyle" parent="Chili.BaseChiliViewStyle"/>
 
-    <style name="Chili.BaseCellViewStyle" parent="CellViewStyle"/>
+    <style name="Chili.BaseCellViewStyle" parent="Chili.CellViewStyle"/>
 
-    <style name="CellViewStyle.LogoTitleSubtitleCell"/>
+    <style name="Chili.CellViewStyle.LogoTitleSubtitleCell"/>
 
-    <style name="CellViewStyle.LogoTitleActionCell"/>
+    <style name="Chili.CellViewStyle.LogoTitleActionCell"/>
 
 </resources>

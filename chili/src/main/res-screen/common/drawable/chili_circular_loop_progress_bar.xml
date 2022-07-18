@@ -4,6 +4,6 @@
     android:pivotY="50%"
     android:fromDegrees="0"
     android:toDegrees="1440"
-    android:drawable="@drawable/ic_progress_bg">
+    android:drawable="@drawable/chili_ic_progress_bg">
 
 </rotate>

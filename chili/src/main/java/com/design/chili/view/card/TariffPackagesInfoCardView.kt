@@ -39,7 +39,7 @@ class TariffPackagesInfoCardView : ConstraintLayout {
 
     private fun inflateViews() {
         val view =
-            LayoutInflater.from(context).inflate(R.layout.view_tariff_packages_info_card, this)
+            LayoutInflater.from(context).inflate(R.layout.chili_view_tariff_packages_info_card, this)
         this.view = TariffPackagesInfoCardViewVariables(
             rootView = view.findViewById(R.id.rootView),
             tvTitle = view.findViewById(R.id.tv_title),
@@ -62,7 +62,7 @@ class TariffPackagesInfoCardView : ConstraintLayout {
 
     private fun obtainAttributes(
         attrs: AttributeSet,
-        defStyle: Int = R.style.CardViewStyle_TariffPackagesInfoCardViewStyle
+        defStyle: Int = R.style.Chili_CardViewStyle_TariffPackagesInfoCardViewStyle
     ) {
         context?.obtainStyledAttributes(attrs, R.styleable.TariffPackagesInfoCardView, R.attr.tariffPackagesInfoCardViewDefaultStyle, defStyle)?.run {
 

@@ -36,7 +36,7 @@ class InfoBottomSheet private constructor(): BaseViewBottomSheetDialogFragment()
     override val hasCloseIcon: Boolean = true
 
     override fun createContentView(inflater: LayoutInflater, container: ViewGroup?): View {
-        val view = inflater.inflate(R.layout.view_info_bottom_sheet, container, false)
+        val view = inflater.inflate(R.layout.chili_view_info_bottom_sheet, container, false)
         tvText = view.findViewById(R.id.tv_text)
         ivIcon = view.findViewById(R.id.iv_icon)
         btnPrimary = view.findViewById(R.id.btn_primary)

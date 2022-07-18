@@ -32,7 +32,7 @@ class NavigatorCardView : ConstraintLayout {
     }
 
     private fun inflateViews() {
-        val view = LayoutInflater.from(context).inflate(R.layout.view_navigator_card, this)
+        val view = LayoutInflater.from(context).inflate(R.layout.chili_view_navigator_card, this)
         this.view = NavigatorCardViewVariables(
             root = view.findViewById(R.id.root_view),
             ivIcon = view.findViewById(R.id.iv_icon),
@@ -43,7 +43,7 @@ class NavigatorCardView : ConstraintLayout {
 
     private fun obtainAttributes(
         attrs: AttributeSet,
-        defStyle: Int = R.style.CardViewStyle_NavigatorCardView,
+        defStyle: Int = R.style.Chili_CardViewStyle_NavigatorCardView,
     ) {
         context?.obtainStyledAttributes(attrs, R.styleable.NavigatorCardView, R.attr.navigatorCardViewDefaultStyle, defStyle)?.run {
 
@@ -69,7 +69,7 @@ class NavigatorCardView : ConstraintLayout {
         view.root.isClickable = isClickable
         view.root.isFocusable = isClickable
         view.root.foreground = when (isClickable) {
-            true -> AppCompatResources.getDrawable(context, R.drawable.ripple_rounded_corner_foreground)
+            true -> AppCompatResources.getDrawable(context, R.drawable.chili_ripple_rounded_corner_foreground)
             else -> null
         }
     }

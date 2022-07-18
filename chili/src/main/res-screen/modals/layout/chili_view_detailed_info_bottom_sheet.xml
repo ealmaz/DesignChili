@@ -25,14 +25,14 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="@dimen/padding_16dp"
             android:layout_marginTop="@dimen/padding_24dp"
-            android:textAppearance="@style/H7.Primary"
+            android:textAppearance="@style/Chili.H7.Primary"
             android:visibility="gone"
             tools:text="@tools:sample/lorem/random"
             tools:visibility="visible" />
 
         <Button
             android:id="@+id/btn_primary"
-            style="@style/ButtonStyle.Primary"
+            style="@style/Chili.ButtonStyle.Primary"
             android:layout_marginHorizontal="@dimen/padding_16dp"
             android:layout_marginTop="@dimen/padding_24dp"
             android:visibility="gone"

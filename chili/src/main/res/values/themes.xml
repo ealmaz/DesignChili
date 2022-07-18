@@ -88,8 +88,8 @@
         <item name="PickerDialogBackground">@color/white_1</item>
 
         <!-- Toolbar -->
-        <item name="ToolbarAdditionalTextTextAppearance">@style/H8.Secondary</item>
-        <item name="ToolbarTextAppearance">@style/H5.Marked.Bold</item>
+        <item name="ToolbarAdditionalTextTextAppearance">@style/Chili.H8.Secondary</item>
+        <item name="ToolbarTextAppearance">@style/Chili.H5.Marked.Bold</item>
         <item name="ToolbarDividerColor">@color/gray_8</item>
         <item name="ToolbarDividerSize">@dimen/view_1dp</item>
         <item name="ToolbarIconsTint">@color/black_1</item>
@@ -163,13 +163,13 @@
 
         <!-- TariffPriceInfoView -->
         <item name="InternetLabel">Internet t</item>
-        <item name="InternetIcon">@drawable/ic_clear</item>
+        <item name="InternetIcon">@drawable/chili_ic_clear</item>
         <item name="VoiceInLabel">VoiceIn T</item>
-        <item name="VoiceInIcon">@drawable/ic_clear</item>
+        <item name="VoiceInIcon">@drawable/chili_ic_clear</item>
         <item name="VoiceOutLabel">VoiceOut T</item>
-        <item name="VoiceOutIcon">@drawable/ic_clear</item>
+        <item name="VoiceOutIcon">@drawable/chili_ic_clear</item>
         <item name="SmsLabel">Sms T</item>
-        <item name="SmsIcon">@drawable/ic_clear</item>
+        <item name="SmsIcon">@drawable/chili_ic_clear</item>
 
         <!-- TariffPackagesInfoView -->
         <item name="TariffPackagesInfoVerticalDivider">@color/gray_3</item>

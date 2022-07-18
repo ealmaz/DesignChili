@@ -40,7 +40,7 @@ class InAppPushBottomSheet private constructor() : BaseBottomSheetDialogFragment
         container: ViewGroup?,
         savedInstanceState: Bundle?,
     ): View? {
-        val view = inflater.inflate(R.layout.view_in_app_push, container, false)
+        val view = inflater.inflate(R.layout.chili_view_in_app_push, container, false)
         initViewVariables(view)
         return view
     }

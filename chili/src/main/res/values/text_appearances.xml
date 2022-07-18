@@ -1,36 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="BaseTextAppearance">
+    <style name="Chili.BaseTextAppearance">
         <item name="android:fontFamily">?RegularTextFont</item>
     </style>
 
 
     <!-- Buttons text appearance   -->
-    <style name="BaseButtonText" parent="BaseTextAppearance">
+    <style name="Chili.BaseButtonText" parent="Chili.BaseTextAppearance">
         <item name="android:textAllCaps">true</item>
         <item name="android:textAlignment">center</item>
     </style>
 
-    <style name="PrimaryButtonText" parent="BaseButtonText">
+    <style name="Chili.PrimaryButtonText" parent="Chili.BaseButtonText">
         <item name="android:textColor">@color/primary_button_text_color</item>
         <item name="android:fontFamily">?PrimaryButtonTextFont</item>
         <item name="android:textSize">?PrimaryButtonTextSize</item>
     </style>
 
-    <style name="SecondaryButtonText" parent="BaseButtonText">
+    <style name="Chili.SecondaryButtonText" parent="Chili.BaseButtonText">
         <item name="android:textColor">@color/secondary_button_text_color</item>
         <item name="android:fontFamily">?SecondaryButtonTextFont</item>
         <item name="android:textSize">?SecondaryButtonTextSize</item>
     </style>
 
-    <style name="AdditionalButtonText" parent="BaseButtonText">
+    <style name="Chili.AdditionalButtonText" parent="Chili.BaseButtonText">
         <item name="android:textColor">@color/additional_button_text_color</item>
         <item name="android:fontFamily">?AdditionalButtonTextFont</item>
         <item name="android:textSize">?AdditionalButtonTextSize</item>
     </style>
 
-    <style name="ComponentButtonText" parent="BaseButtonText">
+    <style name="Chili.ComponentButtonText" parent="Chili.BaseButtonText">
         <item name="android:textAllCaps">false</item>
         <item name="android:textColor">@color/component_button_text_color</item>
         <item name="android:fontFamily">?ComponentButtonTextFont</item>
@@ -39,541 +39,541 @@
 
 
     <!--    H1 -->
-    <style name="H1" parent="BaseTextAppearance">
+    <style name="Chili.H1" parent="Chili.BaseTextAppearance">
         <item name="android:textSize">?TextSizeH1</item>
     </style>
 
-    <style name="H1.Primary">
+    <style name="Chili.H1.Primary">
         <item name="android:textColor">?PrimaryTextColor</item>
     </style>
 
-    <style name="H1.Secondary">
+    <style name="Chili.H1.Secondary">
         <item name="android:textColor">?SecondaryTextColor</item>
     </style>
 
-    <style name="H1.Marked">
+    <style name="Chili.H1.Marked">
         <item name="android:textColor">?MarkedTextColor</item>
     </style>
 
-    <style name="H1.Error">
+    <style name="Chili.H1.Error">
         <item name="android:textColor">?ErrorTextColor</item>
     </style>
 
-    <style name="H1.Primary.Bold">
+    <style name="Chili.H1.Primary.Bold">
         <item name="android:fontFamily">?BoldTextFont</item>
     </style>
 
-    <style name="H1.Primary.Italic">
+    <style name="Chili.H1.Primary.Italic">
         <item name="android:fontFamily">?ItalicTextFont</item>
     </style>
 
-    <style name="H1.Secondary.Bold">
+    <style name="Chili.H1.Secondary.Bold">
         <item name="android:fontFamily">?BoldTextFont</item>
     </style>
 
-    <style name="H1.Secondary.Italic">
+    <style name="Chili.H1.Secondary.Italic">
         <item name="android:fontFamily">?ItalicTextFont</item>
     </style>
 
-    <style name="H1.Marked.Bold">
+    <style name="Chili.H1.Marked.Bold">
         <item name="android:fontFamily">?BoldTextFont</item>
     </style>
 
-    <style name="H1.Marked.Italic">
+    <style name="Chili.H1.Marked.Italic">
         <item name="android:fontFamily">?ItalicTextFont</item>
     </style>
 
-    <style name="H1.Error.Bold">
+    <style name="Chili.H1.Error.Bold">
         <item name="android:fontFamily">?BoldTextFont</item>
     </style>
 
-    <style name="H1.Error.Italic">
+    <style name="Chili.H1.Error.Italic">
         <item name="android:fontFamily">?ItalicTextFont</item>
     </style>
 
 
     <!--    H2 -->
-    <style name="H2" parent="BaseTextAppearance">
+    <style name="Chili.H2" parent="Chili.BaseTextAppearance">
         <item name="android:textSize">?TextSizeH2</item>
     </style>
 
-    <style name="H2.Primary">
+    <style name="Chili.H2.Primary">
         <item name="android:textColor">?PrimaryTextColor</item>
     </style>
 
-    <style name="H2.Secondary">
+    <style name="Chili.H2.Secondary">
         <item name="android:textColor">?SecondaryTextColor</item>
     </style>
 
-    <style name="H2.Marked">
+    <style name="Chili.H2.Marked">
         <item name="android:textColor">?MarkedTextColor</item>
     </style>
 
-    <style name="H2.Error">
+    <style name="Chili.H2.Error">
         <item name="android:textColor">?ErrorTextColor</item>
     </style>
 
-    <style name="H2.Primary.Bold">
+    <style name="Chili.H2.Primary.Bold">
         <item name="android:fontFamily">?BoldTextFont</item>
     </style>
 
-    <style name="H2.Primary.Italic">
+    <style name="Chili.H2.Primary.Italic">
         <item name="android:fontFamily">?ItalicTextFont</item>
     </style>
 
-    <style name="H2.Secondary.Bold">
+    <style name="Chili.H2.Secondary.Bold">
         <item name="android:fontFamily">?BoldTextFont</item>
     </style>
 
-    <style name="H2.Secondary.Italic">
+    <style name="Chili.H2.Secondary.Italic">
         <item name="android:fontFamily">?ItalicTextFont</item>
     </style>
 
-    <style name="H2.Marked.Bold">
+    <style name="Chili.H2.Marked.Bold">
         <item name="android:fontFamily">?BoldTextFont</item>
     </style>
 
-    <style name="H2.Marked.Italic">
+    <style name="Chili.H2.Marked.Italic">
         <item name="android:fontFamily">?ItalicTextFont</item>
     </style>
 
-    <style name="H2.Error.Bold">
+    <style name="Chili.H2.Error.Bold">
         <item name="android:fontFamily">?BoldTextFont</item>
     </style>
 
-    <style name="H2.Error.Italic">
+    <style name="Chili.H2.Error.Italic">
         <item name="android:fontFamily">?ItalicTextFont</item>
     </style>
 
 
     <!--    H3 -->
-    <style name="H3" parent="BaseTextAppearance">
+    <style name="Chili.H3" parent="Chili.BaseTextAppearance">
         <item name="android:textSize">?TextSizeH3</item>
     </style>
 
-    <style name="H3.Primary">
+    <style name="Chili.H3.Primary">
         <item name="android:textColor">?PrimaryTextColor</item>
     </style>
 
-    <style name="H3.Secondary">
+    <style name="Chili.H3.Secondary">
         <item name="android:textColor">?SecondaryTextColor</item>
     </style>
 
-    <style name="H3.Marked">
+    <style name="Chili.H3.Marked">
         <item name="android:textColor">?MarkedTextColor</item>
     </style>
 
-    <style name="H3.Error">
+    <style name="Chili.H3.Error">
         <item name="android:textColor">?ErrorTextColor</item>
     </style>
 
-    <style name="H3.Primary.Bold">
+    <style name="Chili.H3.Primary.Bold">
         <item name="android:fontFamily">?BoldTextFont</item>
     </style>
 
-    <style name="H3.Primary.Italic">
+    <style name="Chili.H3.Primary.Italic">
         <item name="android:fontFamily">?ItalicTextFont</item>
     </style>
 
-    <style name="H3.Secondary.Bold">
+    <style name="Chili.H3.Secondary.Bold">
         <item name="android:fontFamily">?BoldTextFont</item>
     </style>
 
-    <style name="H3.Secondary.Italic">
+    <style name="Chili.H3.Secondary.Italic">
         <item name="android:fontFamily">?ItalicTextFont</item>
     </style>
 
-    <style name="H3.Marked.Bold">
+    <style name="Chili.H3.Marked.Bold">
         <item name="android:fontFamily">?BoldTextFont</item>
     </style>
 
-    <style name="H3.Marked.Italic">
+    <style name="Chili.H3.Marked.Italic">
         <item name="android:fontFamily">?ItalicTextFont</item>
     </style>
 
-    <style name="H3.Error.Bold">
+    <style name="Chili.H3.Error.Bold">
         <item name="android:fontFamily">?BoldTextFont</item>
     </style>
 
-    <style name="H3.Error.Italic">
+    <style name="Chili.H3.Error.Italic">
         <item name="android:fontFamily">?ItalicTextFont</item>
     </style>
 
 
     <!--    H4 -->
-    <style name="H4" parent="BaseTextAppearance">
+    <style name="Chili.H4" parent="Chili.BaseTextAppearance">
         <item name="android:textSize">?TextSizeH4</item>
     </style>
 
-    <style name="H4.Primary">
+    <style name="Chili.H4.Primary">
         <item name="android:textColor">?PrimaryTextColor</item>
     </style>
 
-    <style name="H4.Secondary">
+    <style name="Chili.H4.Secondary">
         <item name="android:textColor">?SecondaryTextColor</item>
     </style>
 
-    <style name="H4.Marked">
+    <style name="Chili.H4.Marked">
         <item name="android:textColor">?MarkedTextColor</item>
     </style>
 
-    <style name="H4.Error">
+    <style name="Chili.H4.Error">
         <item name="android:textColor">?ErrorTextColor</item>
     </style>
 
-    <style name="H4.Primary.Bold">
+    <style name="Chili.H4.Primary.Bold">
         <item name="android:fontFamily">?BoldTextFont</item>
     </style>
 
-    <style name="H4.Primary.Italic">
+    <style name="Chili.H4.Primary.Italic">
         <item name="android:fontFamily">?ItalicTextFont</item>
     </style>
 
-    <style name="H4.Secondary.Bold">
+    <style name="Chili.H4.Secondary.Bold">
         <item name="android:fontFamily">?BoldTextFont</item>
     </style>
 
-    <style name="H4.Secondary.Italic">
+    <style name="Chili.H4.Secondary.Italic">
         <item name="android:fontFamily">?ItalicTextFont</item>
     </style>
 
-    <style name="H4.Marked.Bold">
+    <style name="Chili.H4.Marked.Bold">
         <item name="android:fontFamily">?BoldTextFont</item>
     </style>
 
-    <style name="H4.Marked.Italic">
+    <style name="Chili.H4.Marked.Italic">
         <item name="android:fontFamily">?ItalicTextFont</item>
     </style>
 
-    <style name="H4.Error.Bold">
+    <style name="Chili.H4.Error.Bold">
         <item name="android:fontFamily">?BoldTextFont</item>
     </style>
 
-    <style name="H4.Error.Italic">
+    <style name="Chili.H4.Error.Italic">
         <item name="android:fontFamily">?ItalicTextFont</item>
     </style>
 
 
     <!--    H5 -->
-    <style name="H5" parent="BaseTextAppearance">
+    <style name="Chili.H5" parent="Chili.BaseTextAppearance">
         <item name="android:textSize">?TextSizeH5</item>
     </style>
 
-    <style name="H5.Primary">
+    <style name="Chili.H5.Primary">
         <item name="android:textColor">?PrimaryTextColor</item>
     </style>
 
-    <style name="H5.Secondary">
+    <style name="Chili.H5.Secondary">
         <item name="android:textColor">?SecondaryTextColor</item>
     </style>
 
-    <style name="H5.Marked">
+    <style name="Chili.H5.Marked">
         <item name="android:textColor">?MarkedTextColor</item>
     </style>
 
-    <style name="H5.Error">
+    <style name="Chili.H5.Error">
         <item name="android:textColor">?ErrorTextColor</item>
     </style>
 
-    <style name="H5.Primary.Bold">
+    <style name="Chili.H5.Primary.Bold">
         <item name="android:fontFamily">?BoldTextFont</item>
     </style>
 
-    <style name="H5.Primary.Italic">
+    <style name="Chili.H5.Primary.Italic">
         <item name="android:fontFamily">?ItalicTextFont</item>
     </style>
 
-    <style name="H5.Secondary.Bold">
+    <style name="Chili.H5.Secondary.Bold">
         <item name="android:fontFamily">?BoldTextFont</item>
     </style>
 
-    <style name="H5.Secondary.Italic">
+    <style name="Chili.H5.Secondary.Italic">
         <item name="android:fontFamily">?ItalicTextFont</item>
     </style>
 
-    <style name="H5.Marked.Bold">
+    <style name="Chili.H5.Marked.Bold">
         <item name="android:fontFamily">?BoldTextFont</item>
     </style>
 
-    <style name="H5.Marked.Italic">
+    <style name="Chili.H5.Marked.Italic">
         <item name="android:fontFamily">?ItalicTextFont</item>
     </style>
 
-    <style name="H5.Error.Bold">
+    <style name="Chili.H5.Error.Bold">
         <item name="android:fontFamily">?BoldTextFont</item>
     </style>
 
-    <style name="H5.Error.Italic">
+    <style name="Chili.H5.Error.Italic">
         <item name="android:fontFamily">?ItalicTextFont</item>
     </style>
 
 
     <!--    H6 -->
-    <style name="H6" parent="BaseTextAppearance">
+    <style name="Chili.H6" parent="Chili.BaseTextAppearance">
         <item name="android:textSize">?TextSizeH6</item>
     </style>
 
-    <style name="H6.Primary">
+    <style name="Chili.H6.Primary">
         <item name="android:textColor">?PrimaryTextColor</item>
     </style>
 
-    <style name="H6.Secondary">
+    <style name="Chili.H6.Secondary">
         <item name="android:textColor">?SecondaryTextColor</item>
     </style>
 
-    <style name="H6.Marked">
+    <style name="Chili.H6.Marked">
         <item name="android:textColor">?MarkedTextColor</item>
     </style>
 
-    <style name="H6.Error">
+    <style name="Chili.H6.Error">
         <item name="android:textColor">?ErrorTextColor</item>
     </style>
 
-    <style name="H6.Primary.Bold">
+    <style name="Chili.H6.Primary.Bold">
         <item name="android:fontFamily">?BoldTextFont</item>
     </style>
 
-    <style name="H6.Primary.Italic">
+    <style name="Chili.H6.Primary.Italic">
         <item name="android:fontFamily">?ItalicTextFont</item>
     </style>
 
-    <style name="H6.Secondary.Bold">
+    <style name="Chili.H6.Secondary.Bold">
         <item name="android:fontFamily">?BoldTextFont</item>
     </style>
 
-    <style name="H6.Secondary.Italic">
+    <style name="Chili.H6.Secondary.Italic">
         <item name="android:fontFamily">?ItalicTextFont</item>
     </style>
 
-    <style name="H6.Marked.Bold">
+    <style name="Chili.H6.Marked.Bold">
         <item name="android:fontFamily">?BoldTextFont</item>
     </style>
 
-    <style name="H6.Marked.Italic">
+    <style name="Chili.H6.Marked.Italic">
         <item name="android:fontFamily">?ItalicTextFont</item>
     </style>
 
-    <style name="H6.Error.Bold">
+    <style name="Chili.H6.Error.Bold">
         <item name="android:fontFamily">?BoldTextFont</item>
     </style>
 
-    <style name="H6.Error.Italic">
+    <style name="Chili.H6.Error.Italic">
         <item name="android:fontFamily">?ItalicTextFont</item>
     </style>
 
 
     <!--    H7 -->
-    <style name="H7" parent="BaseTextAppearance">
+    <style name="Chili.H7" parent="Chili.BaseTextAppearance">
         <item name="android:textSize">?TextSizeH7</item>
     </style>
 
-    <style name="H7.Primary">
+    <style name="Chili.H7.Primary">
         <item name="android:textColor">?PrimaryTextColor</item>
     </style>
 
-    <style name="H7.Secondary">
+    <style name="Chili.H7.Secondary">
         <item name="android:textColor">?SecondaryTextColor</item>
     </style>
 
-    <style name="H7.Marked">
+    <style name="Chili.H7.Marked">
         <item name="android:textColor">?MarkedTextColor</item>
     </style>
 
-    <style name="H7.Error">
+    <style name="Chili.H7.Error">
         <item name="android:textColor">?ErrorTextColor</item>
     </style>
 
-    <style name="H7.Primary.Bold">
+    <style name="Chili.H7.Primary.Bold">
         <item name="android:fontFamily">?BoldTextFont</item>
     </style>
 
-    <style name="H7.Primary.Italic">
+    <style name="Chili.H7.Primary.Italic">
         <item name="android:fontFamily">?ItalicTextFont</item>
     </style>
 
-    <style name="H7.Secondary.Bold">
+    <style name="Chili.H7.Secondary.Bold">
         <item name="android:fontFamily">?BoldTextFont</item>
     </style>
 
-    <style name="H7.Secondary.Italic">
+    <style name="Chili.H7.Secondary.Italic">
         <item name="android:fontFamily">?ItalicTextFont</item>
     </style>
 
-    <style name="H7.Marked.Bold">
+    <style name="Chili.H7.Marked.Bold">
         <item name="android:fontFamily">?BoldTextFont</item>
     </style>
 
-    <style name="H7.Marked.Italic">
+    <style name="Chili.H7.Marked.Italic">
         <item name="android:fontFamily">?ItalicTextFont</item>
     </style>
 
-    <style name="H7.Error.Bold">
+    <style name="Chili.H7.Error.Bold">
         <item name="android:fontFamily">?BoldTextFont</item>
     </style>
 
-    <style name="H7.Error.Italic">
+    <style name="Chili.H7.Error.Italic">
         <item name="android:fontFamily">?ItalicTextFont</item>
     </style>
 
 
     <!--    H8 -->
-    <style name="H8" parent="BaseTextAppearance">
+    <style name="Chili.H8" parent="Chili.BaseTextAppearance">
         <item name="android:textSize">?TextSizeH8</item>
     </style>
 
-    <style name="H8.Primary">
+    <style name="Chili.H8.Primary">
         <item name="android:textColor">?PrimaryTextColor</item>
     </style>
 
-    <style name="H8.Secondary">
+    <style name="Chili.H8.Secondary">
         <item name="android:textColor">?SecondaryTextColor</item>
     </style>
 
-    <style name="H8.Marked">
+    <style name="Chili.H8.Marked">
         <item name="android:textColor">?MarkedTextColor</item>
     </style>
 
-    <style name="H8.Error">
+    <style name="Chili.H8.Error">
         <item name="android:textColor">?ErrorTextColor</item>
     </style>
 
-    <style name="H8.Primary.Bold">
+    <style name="Chili.H8.Primary.Bold">
         <item name="android:fontFamily">?BoldTextFont</item>
     </style>
 
-    <style name="H8.Primary.Italic">
+    <style name="Chili.H8.Primary.Italic">
         <item name="android:fontFamily">?ItalicTextFont</item>
     </style>
 
-    <style name="H8.Secondary.Bold">
+    <style name="Chili.H8.Secondary.Bold">
         <item name="android:fontFamily">?BoldTextFont</item>
     </style>
 
-    <style name="H8.Secondary.Italic">
+    <style name="Chili.H8.Secondary.Italic">
         <item name="android:fontFamily">?ItalicTextFont</item>
     </style>
 
-    <style name="H8.Marked.Bold">
+    <style name="Chili.H8.Marked.Bold">
         <item name="android:fontFamily">?BoldTextFont</item>
     </style>
 
-    <style name="H8.Marked.Italic">
+    <style name="Chili.H8.Marked.Italic">
         <item name="android:fontFamily">?ItalicTextFont</item>
     </style>
 
-    <style name="H8.Error.Bold">
+    <style name="Chili.H8.Error.Bold">
         <item name="android:fontFamily">?BoldTextFont</item>
     </style>
 
-    <style name="H8.Error.Italic">
+    <style name="Chili.H8.Error.Italic">
         <item name="android:fontFamily">?ItalicTextFont</item>
     </style>
 
 
     <!--    H9 -->
-    <style name="H9" parent="BaseTextAppearance">
+    <style name="Chili.H9" parent="Chili.BaseTextAppearance">
         <item name="android:textSize">?TextSizeH9</item>
     </style>
 
-    <style name="H9.Primary">
+    <style name="Chili.H9.Primary">
         <item name="android:textColor">?PrimaryTextColor</item>
     </style>
 
-    <style name="H9.Secondary">
+    <style name="Chili.H9.Secondary">
         <item name="android:textColor">?SecondaryTextColor</item>
     </style>
 
-    <style name="H9.Marked">
+    <style name="Chili.H9.Marked">
         <item name="android:textColor">?MarkedTextColor</item>
     </style>
 
-    <style name="H9.Error">
+    <style name="Chili.H9.Error">
         <item name="android:textColor">?ErrorTextColor</item>
     </style>
 
-    <style name="H9.Primary.Bold">
+    <style name="Chili.H9.Primary.Bold">
         <item name="android:fontFamily">?BoldTextFont</item>
     </style>
 
-    <style name="H9.Primary.Italic">
+    <style name="Chili.H9.Primary.Italic">
         <item name="android:fontFamily">?ItalicTextFont</item>
     </style>
 
-    <style name="H9.Secondary.Bold">
+    <style name="Chili.H9.Secondary.Bold">
         <item name="android:fontFamily">?BoldTextFont</item>
     </style>
 
-    <style name="H9.Secondary.Italic">
+    <style name="Chili.H9.Secondary.Italic">
         <item name="android:fontFamily">?ItalicTextFont</item>
     </style>
 
-    <style name="H9.Marked.Bold">
+    <style name="Chili.H9.Marked.Bold">
         <item name="android:fontFamily">?BoldTextFont</item>
     </style>
 
-    <style name="H9.Marked.Italic">
+    <style name="Chili.H9.Marked.Italic">
         <item name="android:fontFamily">?ItalicTextFont</item>
     </style>
 
-    <style name="H9.Error.Bold">
+    <style name="Chili.H9.Error.Bold">
         <item name="android:fontFamily">?BoldTextFont</item>
     </style>
 
-    <style name="H9.Error.Italic">
+    <style name="Chili.H9.Error.Italic">
         <item name="android:fontFamily">?ItalicTextFont</item>
     </style>
 
 
 <!--    H10 -->
-    <style name="H10" parent="BaseTextAppearance">
+    <style name="Chili.H10" parent="Chili.BaseTextAppearance">
         <item name="android:textSize">?TextSizeH10</item>
     </style>
 
-    <style name="H10.Primary">
+    <style name="Chili.H10.Primary">
         <item name="android:textColor">?PrimaryTextColor</item>
     </style>
 
-    <style name="H10.Secondary">
+    <style name="Chili.H10.Secondary">
         <item name="android:textColor">?SecondaryTextColor</item>
     </style>
 
-    <style name="H10.Marked">
+    <style name="Chili.H10.Marked">
         <item name="android:textColor">?MarkedTextColor</item>
     </style>
 
-    <style name="H10.Error">
+    <style name="Chili.H10.Error">
         <item name="android:textColor">?ErrorTextColor</item>
     </style>
 
-    <style name="H10.Primary.Bold">
+    <style name="Chili.H10.Primary.Bold">
         <item name="android:fontFamily">?BoldTextFont</item>
     </style>
 
-    <style name="H10.Primary.Italic">
+    <style name="Chili.H10.Primary.Italic">
         <item name="android:fontFamily">?ItalicTextFont</item>
     </style>
 
-    <style name="H10.Secondary.Bold">
+    <style name="Chili.H10.Secondary.Bold">
         <item name="android:fontFamily">?BoldTextFont</item>
     </style>
 
-    <style name="H10.Secondary.Italic">
+    <style name="Chili.H10.Secondary.Italic">
         <item name="android:fontFamily">?ItalicTextFont</item>
     </style>
 
-    <style name="H10.Marked.Bold">
+    <style name="Chili.H10.Marked.Bold">
         <item name="android:fontFamily">?BoldTextFont</item>
     </style>
 
-    <style name="H10.Marked.Italic">
+    <style name="Chili.H10.Marked.Italic">
         <item name="android:fontFamily">?ItalicTextFont</item>
     </style>
 
-    <style name="H10.Error.Bold">
+    <style name="Chili.H10.Error.Bold">
         <item name="android:fontFamily">?BoldTextFont</item>
     </style>
 
-    <style name="H10.Error.Italic">
+    <style name="Chili.H10.Error.Italic">
         <item name="android:fontFamily">?ItalicTextFont</item>
     </style>
 

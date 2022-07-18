@@ -4,13 +4,13 @@
     android:layout_height="wrap_content"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
-    android:background="@drawable/bg_picker_dialog">
+    android:background="@drawable/chili_bg_picker_dialog">
 
     <TextView
         android:id="@+id/tv_title_from"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textAppearance="@style/H7.Primary"
+        android:textAppearance="@style/Chili.H7.Primary"
         android:layout_marginHorizontal="@dimen/padding_16dp"
         android:layout_marginVertical="@dimen/padding_12dp"
         tools:text="From Title" />
@@ -22,8 +22,8 @@
 
     <DatePicker
         android:id="@+id/datePicker_from"
-        style="@style/DatePickerSpinnerStyle"
-        android:theme="@style/DatePickerSpinnerTheme"
+        style="@style/Chili.DatePickerSpinnerStyle"
+        android:theme="@style/Chili.DatePickerSpinnerTheme"
         android:layout_width="match_parent"
         android:layout_height="@dimen/view_150dp"
         android:layout_marginTop="@dimen/padding_12dp"
@@ -34,7 +34,7 @@
         android:id="@+id/tv_title_to"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textAppearance="@style/H7.Primary"
+        android:textAppearance="@style/Chili.H7.Primary"
         android:layout_marginHorizontal="@dimen/padding_16dp"
         android:layout_marginVertical="@dimen/padding_12dp"
         tools:text="From Title" />
@@ -46,8 +46,8 @@
 
     <DatePicker
         android:id="@+id/datePicker_to"
-        style="@style/DatePickerSpinnerStyle"
-        android:theme="@style/DatePickerSpinnerTheme"
+        style="@style/Chili.DatePickerSpinnerStyle"
+        android:theme="@style/Chili.DatePickerSpinnerTheme"
         android:layout_width="match_parent"
         android:layout_height="@dimen/view_150dp"
         android:layout_marginTop="@dimen/padding_12dp"
@@ -58,7 +58,7 @@
         android:id="@+id/btn_done"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        style="@style/ButtonStyle.Primary"
+        style="@style/Chili.ButtonStyle.Primary"
         tools:text="Готово"/>
 
 

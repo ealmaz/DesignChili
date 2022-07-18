@@ -27,7 +27,7 @@
 
         <TextView
             android:id="@+id/tv_text"
-            android:textAppearance="@style/H8.Primary"
+            android:textAppearance="@style/Chili.H8.Primary"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="@dimen/padding_16dp"
@@ -40,7 +40,7 @@
 
     <Button
         android:id="@+id/btn_secondary"
-        style="@style/ButtonStyle.Secondary"
+        style="@style/Chili.ButtonStyle.Secondary"
         android:layout_marginHorizontal="@dimen/padding_16dp"
         android:layout_marginBottom="@dimen/padding_8dp"
         android:visibility="gone"
@@ -49,7 +49,7 @@
 
     <Button
         android:id="@+id/btn_primary"
-        style="@style/ButtonStyle.Primary"
+        style="@style/Chili.ButtonStyle.Primary"
         android:visibility="gone"
         android:layout_marginHorizontal="@dimen/padding_16dp"
         tools:text="Primary"

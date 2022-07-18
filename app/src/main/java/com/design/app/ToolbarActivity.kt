@@ -34,7 +34,7 @@ class ToolbarActivity : AppCompatActivity() {
         vb.toolbar5.initForActivity(this as AppCompatActivity) {
             Toast.makeText(this, "onNavigationClick", Toast.LENGTH_SHORT).show()
         }
-        vb.toolbar5.changeNavigatorIcon(com.design.chili.R.drawable.ic_simple_plus)
+        vb.toolbar5.changeNavigatorIcon(com.design.chili.R.drawable.chili_ic_simple_plus)
         vb.toolbar5.setIconClickListener {
             Toast.makeText(this, "OnIconClick", Toast.LENGTH_SHORT).show()
         }

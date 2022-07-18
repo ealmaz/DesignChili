@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools">
 
-    <style name="CardViewStyle" parent="BaseChiliViewStyle"/>
+    <style name="Chili.CardViewStyle" parent="Chili.BaseChiliViewStyle"/>
 
-    <style name="CardViewStyle.BalanceCard"/>
+    <style name="Chili.CardViewStyle.BalanceCard"/>
 
-    <style name="CardViewStyle.CategoryItemViewStyle"/>
+    <style name="Chili.CardViewStyle.CategoryItemViewStyle"/>
 
-    <style name="CardViewStyle.NavigatorCardView"/>
+    <style name="Chili.CardViewStyle.NavigatorCardView"/>
 
-    <style name="CardViewStyle.PhoneNumberPickerCardViewStyle"/>
+    <style name="Chili.CardViewStyle.PhoneNumberPickerCardViewStyle"/>
 
-    <style name="CardViewStyle.TariffPriceInfoCardView"/>
+    <style name="Chili.CardViewStyle.TariffPriceInfoCardView"/>
 
 
-    <style name="NumberPickerStyle" parent="@android:style/Widget.Material.NumberPicker" tools:ignore="NewApi">
+    <style name="Chili.NumberPickerStyle" parent="@android:style/Widget.Material.NumberPicker" tools:ignore="NewApi">
         <item name="colorControlNormal">?CardViewPhonePickerDividerColor</item>
         <item name="android:textSize">?TextSizeH5</item>
         <item name="android:fontFamily">@font/roboto_regular</item>
     </style>
 
-    <style name="CardViewStyle.TariffPackagesInfoCardViewStyle"/>
+    <style name="Chili.CardViewStyle.TariffPackagesInfoCardViewStyle"/>
 
 </resources>

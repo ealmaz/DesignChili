@@ -5,6 +5,6 @@
         android:title="Oprion"
         android:id="@+id/dark"
         app:showAsAction="ifRoom"
-        android:icon="@drawable/ic_simple_plus"/>
+        android:icon="@drawable/chili_ic_simple_plus"/>
 
 </menu>

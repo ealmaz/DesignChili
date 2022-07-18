@@ -17,7 +17,7 @@ class MultilineInputView : BaseInputView {
     }
 
     private fun obtainAttributes(attrs: AttributeSet) {
-        context?.obtainStyledAttributes(attrs, R.styleable.MultilineInputView, R.attr.multilineInputDefaultStyle, R.style.InputViewStyle_Simple)?.run {
+        context?.obtainStyledAttributes(attrs, R.styleable.MultilineInputView, R.attr.multilineInputDefaultStyle, R.style.Chili_InputViewStyle_Simple)?.run {
             getInteger(R.styleable.MultilineInputView_maxLength, -1)
                 .takeIf { it != -1 }?.let { setMaxLength(it) }
             getInteger(R.styleable.MultilineInputView_maxInputLines, -1)

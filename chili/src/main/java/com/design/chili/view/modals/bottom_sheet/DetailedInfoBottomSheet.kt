@@ -34,7 +34,7 @@ class DetailedInfoBottomSheet private constructor(): BaseViewBottomSheetDialogFr
     override val topDrawableVisible = true
 
     override fun createContentView(inflater: LayoutInflater, container: ViewGroup?): View {
-        val view = inflater.inflate(R.layout.view_detailed_info_bottom_sheet, container, false)
+        val view = inflater.inflate(R.layout.chili_view_detailed_info_bottom_sheet, container, false)
         tvText = view.findViewById(R.id.tv_text)
         ivIcon = view.findViewById(R.id.iv_icon)
         btnPrimary = view.findViewById(R.id.btn_primary)
