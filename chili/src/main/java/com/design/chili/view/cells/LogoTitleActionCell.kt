@@ -107,12 +107,17 @@ class LogoTitleActionCell : ConstraintLayout {
         setOnSingleClickListener(action)
     }
 
-    fun setActionTitle(label: String) {
+    private fun setActionTitle(label: String) {
         view.action.text = label
     }
 
-    fun setActionTitle(@StringRes stringId: Int) {
+    private fun setActionTitle(@StringRes stringId: Int) {
         view.action.text = context.getString(stringId)
+    }
+
+    fun setAction(@StringRes stringId: Int, action: () -> Unit = {}) {
+        setActionTitle(stringId)
+        setActionListener(action)
     }
 
     fun setup(titleLabel: String?, subtitleLabel: String?, logo: Any?) {
