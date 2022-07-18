@@ -90,6 +90,61 @@
             />
 
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="LogoTitleActionCell разные состояния"
+            android:layout_margin="@dimen/padding_16dp"
+            />
+
+        <com.design.chili.view.cells.LogoTitleActionCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:icon="@drawable/ic_superellipse"
+            app:roundedCornerMode="single"
+            app:hide_divider="true"
+            app:subtitle="Подзаголовок"
+            app:title="Заголовок"
+            app:action="Изменить"/>
+
+        <com.design.chili.view.cells.LogoTitleActionCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:icon="@drawable/ic_superellipse"
+            app:roundedCornerMode="top"
+            android:layout_marginTop="@dimen/padding_16dp"
+            app:title="Заголовок"
+            app:action="Изменить"/>
+
+        <com.design.chili.view.cells.LogoTitleActionCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:icon="@drawable/ic_superellipse"
+            app:roundedCornerMode="bottom"
+            app:hide_divider="true"
+            app:title="Заголовок"
+            app:action="Изменить"/>
+
+        <com.design.chili.view.cells.LogoTitleActionCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding_16dp"
+            android:icon="@drawable/ic_superellipse"
+            app:roundedCornerMode="top"
+            app:subtitle="Подзаголовок"
+            app:title="Заголовок"
+            app:action="Изменить"/>
+
+        <com.design.chili.view.cells.LogoTitleActionCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:icon="@drawable/ic_superellipse"
+            app:roundedCornerMode="bottom"
+            app:hide_divider="true"
+            app:subtitle="Подзаголовок"
+            app:title="Заголовок"
+            app:action="Изменить"/>
+
     </LinearLayout>
 
 </ScrollView>

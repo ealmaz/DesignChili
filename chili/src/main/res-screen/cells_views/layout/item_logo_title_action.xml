@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root"
+    android:background="@drawable/card_rounded_top_background"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.design.chili.view.image.SquircleView
+        android:id="@+id/iv_icon"
+        android:layout_width="@dimen/view_46dp"
+        android:layout_height="@dimen/view_46dp"
+        android:layout_marginStart="@dimen/padding_8dp"
+        android:layout_marginTop="@dimen/padding_8dp"
+        android:layout_marginBottom="@dimen/padding_8dp"
+        app:layout_constraintBottom_toTopOf="@+id/view_divider"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <LinearLayout
+        android:id="@+id/ll_titles"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="@dimen/padding_8dp"
+        android:layout_marginStart="@dimen/padding_8dp"
+        android:layout_marginBottom="@dimen/padding_8dp"
+        app:layout_constraintRight_toLeftOf="@id/action"
+        app:layout_constraintHorizontal_weight="2"
+        app:layout_constraintStart_toEndOf="@id/iv_icon"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/view_divider">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="false"
+            android:textAppearance="@style/H7.Primary"
+            tools:text="Здесь основной текст" />
+
+        <TextView
+            android:id="@+id/tv_subtitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding_8dp"
+            android:singleLine="false"
+            android:visibility="gone"
+            android:textAppearance="@style/H8.Secondary"
+            tools:text="Здесь дополнительный текст" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/action"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/padding_16dp"
+        android:gravity="end"
+        tools:text="Изменить"
+        android:textColor="@color/blue_1"
+        android:enabled="true"
+        app:layout_constraintBottom_toTopOf="@id/view_divider"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/view_divider"
+        android:layout_width="0dp"
+        android:layout_height="?dividerHeightSize"
+        android:background="?dividerColor"
+        app:layout_constraintStart_toStartOf="@id/ll_titles"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
