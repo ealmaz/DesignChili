@@ -4,6 +4,7 @@
     <declare-styleable name="DefaultStyleTheme">
         <attr name="inputViewDefaultStyle" format="reference"/>
         <attr name="maskedInputDefaultStyle" format="reference"/>
+        <attr name="multilineInputDefaultStyle" format="reference"/>
         <attr name="balanceCardViewDefaultStyle" format="reference" />
         <attr name="categoryItemCardViewDefaultStyle" format="reference"/>
         <attr name="navigatorCardViewDefaultStyle" format="reference"/>
@@ -12,6 +13,8 @@
         <attr name="tariffPackagesInfoCardViewDefaultStyle" format="reference"/>
         <attr name="logoTitleSubtitleCellDefaultStyle" format="reference"/>
         <attr name="logoTitleActionCellDefaultStyle" format="reference"/>
+        
+        <attr name="toolbarDefaultStyle" format="reference"/>
     </declare-styleable>
 
     <declare-styleable name="BaseInputView">
@@ -21,6 +24,7 @@
         <attr name="android:enabled"/>
         <attr name="android:textAllCaps"/>
         <attr name="android:maxLength"/>
+        <attr name="android:textAppearance" format="reference"/>
         <attr name="message" format="string"/>
         <attr name="errorMessage" format="string"/>
         <attr name="actionButtonText" format="string"/>
@@ -37,6 +41,13 @@
     <declare-styleable name="MaskedInputView">
         <attr name="mask" format="string"/>
         <attr name="allowedInputSymbols" format="string"/>
+    </declare-styleable>
+
+    <declare-styleable name="MultilineInputView">
+        <attr name="maxInputLines" format="integer"/>
+        <attr name="android:maxLines"/>
+        <attr name="minLines" format="integer"/>
+        <attr name="maxLength" format="integer"/>
     </declare-styleable>
 
     <declare-styleable name="BalanceCardView">
@@ -127,6 +138,14 @@
         <attr name="callArcFabVisibility" format="boolean"/>
         <attr name="callArcIcon" format="reference"/>
 
+    </declare-styleable>
+
+    <declare-styleable name="ChiliToolbar">
+        <attr name="title"/>
+        <attr name="additionalText" format="string"/>
+        <attr name="endIcon" format="reference"/>
+        <attr name="isDividerVisible"/>
+        <attr name="isTransparent" format="boolean"/>
     </declare-styleable>
 
     <declare-styleable name="LogoTitleSubtitleCell">

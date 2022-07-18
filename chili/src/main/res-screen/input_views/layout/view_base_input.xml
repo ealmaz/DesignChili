@@ -9,10 +9,6 @@
         android:id="@+id/til_input_container"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingTop="@dimen/padding_12dp"
-        android:paddingBottom="@dimen/padding_12dp"
-        android:paddingStart="@dimen/padding_16dp"
-        android:paddingEnd="@dimen/padding_16dp"
         app:hintEnabled="false"
         app:errorEnabled="false"
         app:layout_constraintTop_toTopOf="parent"
@@ -32,6 +28,10 @@
             android:textAppearance="@style/H5.Primary.Bold"
             android:textCursorDrawable="@drawable/input_view_cursor_background"
             android:focusable="true"
+            android:paddingTop="@dimen/padding_12dp"
+            android:paddingBottom="@dimen/padding_12dp"
+            android:paddingStart="@dimen/padding_16dp"
+            android:paddingEnd="@dimen/padding_16dp"
             tools:text="+996 700 000 000" />
 
     </com.google.android.material.textfield.TextInputLayout>

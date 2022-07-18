@@ -12,59 +12,61 @@
         android:orientation="vertical"
         tools:context=".MainActivity">
 
-        <com.design.chili.view.input.BaseInputView
-            android:id="@+id/field_0"
-            app:message="Simple"
-            android:hint="Hint"
+        <com.design.chili.view.navigation_components.ChiliToolbar
+            android:id="@+id/toolbar1"
+            app:title="Title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/padding_16dp"/>
 
-        <com.design.chili.view.input.BaseInputView
-            android:id="@+id/field_1"
-            android:text="Buttons"
-            android:hint="Hint"
-            app:message="Simple with clear"
+        <com.design.chili.view.navigation_components.ChiliToolbar
+            android:id="@+id/toolbar2"
+            app:title="Title + additional text"
+            app:additionalText="SomeAdditionalText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/padding_16dp"/>
 
-        <com.design.chili.view.input.BaseInputView
-            android:id="@+id/field_pass"
-            android:hint="Password"
-            android:gravity="start"
-            style="@style/InputViewStyle.Simple.Password"
+        <com.design.chili.view.navigation_components.ChiliToolbar
+            android:id="@+id/toolbar3"
+            app:title="Title + End Icon"
+            app:endIcon="@drawable/ic_darkmode_false_"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/padding_16dp"/>
 
-        <com.design.chili.view.input.MaskedInputView
-            android:id="@+id/field_2"
-            app:errorMessage="ErrorMesage"
-            android:hint="Hint"
+
+        <com.design.chili.view.navigation_components.ChiliToolbar
+            android:id="@+id/toolbar4"
+            app:title="title + Additional + icon"
+            app:endIcon="@drawable/ic_combined_shape__2_"
+            app:additionalText="additionalText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/padding_16dp"/>
 
-        <com.design.chili.view.input.MaskedInputView
-            android:id="@+id/field_2_mask"
-            app:message="mask"
-            app:mask="+996 XXX XXX-XXX"
-            android:inputType="number"
-            app:allowedInputSymbols="0123456789"
+
+        <com.design.chili.view.navigation_components.ChiliToolbar
+            android:id="@+id/toolbar5"
+            app:title="title + EndIcon +custom navigationIcon"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            app:endIcon="@drawable/ic_darkmode_false_"
             android:layout_marginTop="@dimen/padding_16dp"/>
 
-        <com.design.chili.view.input.MultilineInputView
-            android:id="@+id/field_3"
-            android:maxLength="130"
-            android:hint="Введите комментарий"
-            app:minLines="3"
-            android:maxLines="5"
+        <com.design.chili.view.navigation_components.ChiliToolbar
+            android:id="@+id/toolbar6"
+            app:title="Tranparant"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            app:isDividerVisible="false"
+            app:isTransparent="true"
             android:layout_marginTop="@dimen/padding_16dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Transparent toolbar ^"/>
 
     </LinearLayout>
 

@@ -8,7 +8,7 @@ import com.design.app.base.BaseFragment
 import com.design.app.base.ViewInfo
 import com.design.app.databinding.FragmentMoreInfoBinding
 
-class MoreInfoFragment private constructor() : BaseFragment<FragmentMoreInfoBinding>() {
+class MoreInfoFragment : BaseFragment<FragmentMoreInfoBinding>() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)

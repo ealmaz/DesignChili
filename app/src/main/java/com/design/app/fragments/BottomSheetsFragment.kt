@@ -7,7 +7,9 @@ import androidx.fragment.app.Fragment
 import com.design.app.R
 import com.design.app.base.BaseFragment
 import com.design.app.databinding.FrgmentBottomSheetsBinding
-import com.design.chili.view.bottom_sheet.*
+import com.design.chili.view.modals.base.BaseFragmentBottomSheetDialogFragment
+import com.design.chili.view.modals.bottom_sheet.*
+import com.design.chili.view.modals.in_app.InAppPushBottomSheet
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 
 class BottomSheetsFragment : BaseFragment<FrgmentBottomSheetsBinding>() {
@@ -36,11 +38,7 @@ class BottomSheetsFragment : BaseFragment<FrgmentBottomSheetsBinding>() {
                 .setIcon(R.drawable.ic_cat)
                 .setMessage("Текстовый блок, который содержит много текста и не может уместиться в четыре строки (как в маленьком Bottom-sheet).\n\n" +
                         "Возможно имеет какую-то инструкцию или подробное описание функционал. Плюс тут есть картиночка. \n\n" +
-                        "Высота зависит от контента.\n\n" +
-                        "бла бла бла\n\n" +
-                        "fwefwefwefwefwefwef\n\n" +
-                        "bka bla bla \n\n" +
-                        "dwedwefwefwefwe")
+                        "Высота зависит от контента.")
                 .setPrimaryButton("Понятно" to {Toast.makeText(context, "Понятно", Toast.LENGTH_SHORT).show()})
                 .build()
                 .show(childFragmentManager)
@@ -57,6 +55,37 @@ class BottomSheetsFragment : BaseFragment<FrgmentBottomSheetsBinding>() {
         }
         vb.custom.setOnClickListener {
             CustomFragmentBottomSheet().show(childFragmentManager)
+        }
+        vb.inApp.setOnClickListener {
+            InAppPushBottomSheet.Builder()
+                .setBtnMoreInfo("Подробнее" to {
+                    dismiss()
+                })
+                .setDescription("Описание описания, которое описывает описанное описание описанного описания,\n" +
+                        "максимум из 190 символов, но если ничего \n\n" +
+                        "не помещается, не проблема, потому что у нас всегда есть спецсимвол такой как троеточиеef evremiv ervmeive ervnervn ervnervne enruvneuv eunrvuernv eurnvueirv eurnvuev eurnvuev ervneurv")
+                .setTitle("Максимальная длина заголовка равна 60 символам, а если не помещается то verververveverv erverv erverv erverv erve")
+                .setOnBannerClick {
+                    dismiss()
+                }
+                .build()
+                .show(childFragmentManager)
+        }
+        vb.inAppBanner.setOnClickListener {
+            InAppPushBottomSheet.Builder()
+                .setBannerUrl("https://cdn.pixabay.com/photo/2016/11/29/12/13/fence-1869401_1280.jpg")
+                .setBtnMoreInfo("Подробнее" to {
+                    dismiss()
+                })
+                .setDescription("Описание описания, которое описывает описанное описание описанного описания,\n" +
+                        "максимум из 190 символов, но если ничего \n\n" +
+                        "не помещается, не проблема, потому что у нас всегда есть спецсимвол такой как троеточиеef evremiv ervmeive ervnervn ervnervne enruvneuv eunrvuernv eurnvueirv eurnvuev eurnvuev ervneurv")
+                .setTitle("Максимальная длина заголовка равна 60 символам, а если не помещается то verververveverv erverv erverv erverv erve")
+                .setOnBannerClick {
+                    dismiss()
+                }
+                .build()
+                .show(childFragmentManager)
         }
     }
 

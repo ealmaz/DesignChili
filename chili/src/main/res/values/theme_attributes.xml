@@ -84,7 +84,24 @@
     <attr name="ActionBottomSheetButtonTextColor" format="color"/>
     <attr name="ActionBottomSheetAccentButtonTextColor" format="color"/>
 
+    <!-- InAppPush -->
+    <attr name="InAppPushBackground" format="color"/>
+    <attr name="InAppPushCornerRadius" format="dimension"/>
 
+
+    <!-- Picker dialog -->
+    <attr name="PickerDialogControlColor" format="color"/>
+    <attr name="PickerDialogCornerRadius" format="dimension"/>
+    <attr name="PickerDialogBackground" format="color|reference"/>
+
+
+    <!-- Toolbar -->
+    <attr name="ToolbarAdditionalTextTextAppearance" format="reference"/>
+    <attr name="ToolbarTextAppearance" format="reference"/>
+    <attr name="ToolbarDividerColor" format="color"/>
+    <attr name="ToolbarDividerSize" format="dimension"/>
+    <attr name="ToolbarIconsTint" format="color"/>
+    <attr name="ToolbarBackground" format="color|reference"/>
 
     <!-- InputView attributes -->
     <attr name="BaseInputViewBackground" format="reference"/>

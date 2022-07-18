@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
         android:title="DARK"
-        android:id="@+id/dark"/>
+        android:id="@+id/dark"
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/ic_dark_mode_fill0_wght400_grad0_opsz48"/>
     <item
         android:title="LIGHT"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_light_mode_fill0_wght400_grad0_opsz48"
         android:id="@+id/light"/>
 
 </menu>

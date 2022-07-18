@@ -1,4 +1,4 @@
-package com.design.chili.view.bottom_sheet
+package com.design.chili.view.modals.base
 
 import android.app.Dialog
 import android.graphics.Color
@@ -6,13 +6,8 @@ import android.os.Build
 import android.os.Bundle
 import android.util.DisplayMetrics
 import android.view.KeyEvent
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
 import android.widget.FrameLayout
-import android.widget.LinearLayout
-import androidx.annotation.NonNull
-import androidx.annotation.Nullable
 import androidx.annotation.RequiresApi
 import androidx.fragment.app.FragmentManager
 import com.design.chili.R
@@ -31,8 +26,8 @@ abstract class BaseBottomSheetDialogFragment : BottomSheetDialogFragment() {
     protected open val isHideable: Boolean = true
     protected open val isBackButtonEnabled: Boolean = true
 
-    abstract var topDrawableView: View
-    abstract var closeIconView: View
+    abstract var topDrawableView: View?
+    abstract var closeIconView: View?
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -66,7 +61,7 @@ abstract class BaseBottomSheetDialogFragment : BottomSheetDialogFragment() {
 
 
     private fun setupBottomSheetCloseIcon() {
-        closeIconView.apply {
+        closeIconView?.apply {
             when (hasCloseIcon) {
                 true -> {
                     visible()
@@ -79,8 +74,8 @@ abstract class BaseBottomSheetDialogFragment : BottomSheetDialogFragment() {
 
     private fun setupTopDrawableVisibility() {
         when (topDrawableVisible) {
-            true -> topDrawableView.visible()
-            else -> topDrawableView.gone()
+            true -> topDrawableView?.visible()
+            else -> topDrawableView?.gone()
         }
     }
 

@@ -1,4 +1,4 @@
-package com.design.chili.view.bottom_sheet
+package com.design.chili.view.modals.bottom_sheet
 
 import android.view.LayoutInflater
 import android.view.View
@@ -8,6 +8,7 @@ import android.widget.TextView
 import androidx.core.os.bundleOf
 import com.design.chili.R
 import com.design.chili.extensions.setOnSingleClickListener
+import com.design.chili.view.modals.base.BaseViewBottomSheetDialogFragment
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import java.io.Serializable
 
