@@ -37,17 +37,17 @@ class MultilineInputView : BaseInputView {
         hideMessage()
     }
 
-    private fun setMaxLines(linesCount: Int) {
+    fun setMaxLines(linesCount: Int) {
         if (linesCount > 1) setSingleLine(false)
         view.inputField.maxLines = linesCount
     }
 
-    private fun setMaxInputLines(linesCount: Int) {
+    fun setMaxInputLines(linesCount: Int) {
         if (linesCount > 1) setSingleLine(false)
         view.inputField.addTextChangedListener(LimitedInputLinesWatcher(view.inputField, linesCount))
     }
 
-    private fun setMinLines(linesCount: Int) {
+    fun setMinLines(linesCount: Int) {
         view.inputField.minLines = linesCount
     }
 }
