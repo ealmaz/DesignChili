@@ -3,7 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="@drawable/card_rounded_background"
+    android:background="@drawable/chili_card_rounded_background"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:id="@+id/root_view">
@@ -29,7 +29,7 @@
             android:layout_marginRight="@dimen/padding_8dp"
             android:layout_marginBottom="@dimen/padding_4dp"
             android:layout_marginLeft="@dimen/padding_8dp"
-            android:textAppearance="@style/H9.Primary"
+            android:textAppearance="@style/Chili.H9.Primary"
             android:ellipsize="end"
             android:gravity="center|top"
             android:lines="2"

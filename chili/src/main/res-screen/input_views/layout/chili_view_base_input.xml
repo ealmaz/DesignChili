@@ -25,8 +25,8 @@
             android:singleLine="true"
             android:ellipsize="end"
             android:saveEnabled="false"
-            android:textAppearance="@style/H5.Primary.Bold"
-            android:textCursorDrawable="@drawable/input_view_cursor_background"
+            android:textAppearance="@style/Chili.H5.Primary.Bold"
+            android:textCursorDrawable="@drawable/chili_input_view_cursor_background"
             android:focusable="true"
             android:paddingTop="@dimen/padding_12dp"
             android:paddingBottom="@dimen/padding_12dp"
@@ -42,7 +42,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/padding_16dp"
         android:layout_marginTop="@dimen/padding_8dp"
-        android:textAppearance="@style/H8.Primary"
+        android:textAppearance="@style/Chili.H8.Primary"
         app:layout_constraintTop_toBottomOf="@id/til_input_container"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toStartOf="@id/fl_action_bg"
@@ -69,7 +69,7 @@
             android:layout_gravity="end"
             android:gravity="end"
             android:ellipsize="end"
-            style="@style/ButtonStyle.Component"
+            style="@style/Chili.ButtonStyle.Component"
             tools:text="Action"/>
 
     </FrameLayout>

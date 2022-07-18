@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/root"
-    android:background="@drawable/card_rounded_top_background"
+    android:background="@drawable/chili_card_rounded_top_background"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
@@ -38,7 +38,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:singleLine="false"
-            android:textAppearance="@style/H7.Primary"
+            android:textAppearance="@style/Chili.H7.Primary"
             tools:text="Здесь основной текст" />
 
         <TextView
@@ -47,7 +47,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/padding_8dp"
             android:singleLine="false"
-            android:textAppearance="@style/H8.Secondary"
+            android:textAppearance="@style/Chili.H8.Secondary"
             android:visibility="gone"
             tools:text="Здесь дополнительный текст" />
 
@@ -60,7 +60,7 @@
         android:layout_height="@dimen/view_32dp"
         android:visibility="visible"
         android:scaleType="centerCrop"
-        android:src="@drawable/ic_chevron"
+        android:src="@drawable/chili_ic_chevron"
         android:layout_marginRight="@dimen/padding_8dp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toTopOf="@+id/view_divider"

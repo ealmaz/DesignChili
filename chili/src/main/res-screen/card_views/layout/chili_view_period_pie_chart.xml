@@ -29,7 +29,7 @@
         android:paddingTop="@dimen/padding_24dp"
         android:paddingEnd="@dimen/padding_8dp"
         android:paddingBottom="@dimen/padding_24dp"
-        android:src="@drawable/ic_chevron_right"
+        android:src="@drawable/chili_ic_chevron_right"
         app:layout_constraintBottom_toBottomOf="@id/pie_chart"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@id/pie_chart" />
@@ -59,7 +59,7 @@
         android:paddingTop="@dimen/padding_24dp"
         android:paddingEnd="@dimen/padding_8dp"
         android:paddingBottom="@dimen/padding_24dp"
-        android:src="@drawable/ic_chevron"
+        android:src="@drawable/chili_ic_chevron"
         app:layout_constraintBottom_toBottomOf="@id/pie_chart"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@id/pie_chart" />

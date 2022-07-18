@@ -1,7 +1,6 @@
 package com.design.chili.view.card
 
 import android.content.Context
-import android.graphics.Typeface
 import android.text.Spanned
 import android.util.AttributeSet
 import android.view.View
@@ -34,7 +33,7 @@ class PeriodPieChartView : CardView {
     }
 
     private fun setupView() {
-        val view = inflate(context, R.layout.view_period_pie_chart, this)
+        val view = inflate(context, R.layout.chili_view_period_pie_chart, this)
         this.view = PeriodPieChartVariables(
             tvDate = view.findViewById(R.id.tv_chart_date),
             ivPreviousPeriod = view.findViewById(R.id.iv_previous_period),

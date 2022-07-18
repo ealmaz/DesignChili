@@ -1,42 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="ButtonStyle" parent="BaseChiliViewStyle">
+    <style name="Chili.ButtonStyle" parent="Chili.BaseChiliViewStyle">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:paddingTop">@dimen/padding_14dp</item>
         <item name="android:paddingBottom">@dimen/padding_14dp</item>
         <item name="android:paddingStart">@dimen/padding_24dp</item>
         <item name="android:paddingEnd">@dimen/padding_24dp</item>
-        <item name="android:foreground">@drawable/ripple_rounded_corner_foreground</item>
+        <item name="android:foreground">@drawable/chili_ripple_rounded_corner_foreground</item>
         <item name="android:gravity">center</item>
         <item name="android:clickable">true</item>
         <item name="android:focusable">true</item>
         <item name="android:stateListAnimator">@null</item>
     </style>
 
-    <style name="ButtonStyle.Primary">
-        <item name="android:foreground">@drawable/primary_button_ripple</item>
-        <item name="android:background">@drawable/primary_button_background</item>
-        <item name="android:textAppearance">@style/PrimaryButtonText</item>
+    <style name="Chili.ButtonStyle.Primary">
+        <item name="android:foreground">@drawable/chili_primary_button_ripple</item>
+        <item name="android:background">@drawable/chili_primary_button_background</item>
+        <item name="android:textAppearance">@style/Chili.PrimaryButtonText</item>
     </style>
 
-    <style name="ButtonStyle.Secondary">
-        <item name="android:background">@drawable/secondary_button_background</item>
-        <item name="android:textAppearance">@style/SecondaryButtonText</item>
-    </style>
-
-
-    <style name="ButtonStyle.Additional">
-        <item name="android:background">@drawable/additional_button_background</item>
-        <item name="android:textAppearance">@style/AdditionalButtonText</item>
+    <style name="Chili.ButtonStyle.Secondary">
+        <item name="android:background">@drawable/chili_secondary_button_background</item>
+        <item name="android:textAppearance">@style/Chili.SecondaryButtonText</item>
     </style>
 
 
-    <style name="ButtonStyle.Component">
+    <style name="Chili.ButtonStyle.Additional">
+        <item name="android:background">@drawable/chili_additional_button_background</item>
+        <item name="android:textAppearance">@style/Chili.AdditionalButtonText</item>
+    </style>
+
+
+    <style name="Chili.ButtonStyle.Component">
         <item name="android:layout_width">wrap_content</item>
-        <item name="android:background">@drawable/component_button_background</item>
-        <item name="android:textAppearance">@style/ComponentButtonText</item>
+        <item name="android:background">@drawable/chili_component_button_background</item>
+        <item name="android:textAppearance">@style/Chili.ComponentButtonText</item>
         <item name="android:paddingTop">@dimen/padding_0dp</item>
         <item name="android:paddingBottom">@dimen/padding_0dp</item>
         <item name="android:paddingStart">@dimen/padding_0dp</item>

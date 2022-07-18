@@ -33,8 +33,8 @@ class ActionBottomSheet : BaseViewBottomSheetDialogFragment() {
 
     private fun createActionButtonView(buttonInfo: ActionBottomSheetButton): TextView {
         val buttonStyle = when(buttonInfo.type) {
-            ActionBottomSheetButtonType.SIMPLE -> R.style.ActionBottomSheetButtonStyle
-            ActionBottomSheetButtonType.ACCENT -> R.style.ActionBottomSheetAccentButtonStyle
+            ActionBottomSheetButtonType.SIMPLE -> R.style.Chili_ActionBottomSheetButtonStyle
+            ActionBottomSheetButtonType.ACCENT -> R.style.Chili_ActionBottomSheetAccentButtonStyle
         }
         return TextView(context, null, 0, buttonStyle).apply {
             text = buttonInfo.title

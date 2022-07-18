@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:paddingStart="@dimen/padding_8dp"
         android:paddingEnd="@dimen/padding_8dp"
-        android:background="@drawable/bg_in_app_push"
+        android:background="@drawable/chili_bg_in_app_push"
         android:layout_marginStart="@dimen/padding_16dp"
         android:layout_marginEnd="@dimen/padding_16dp"
         android:layout_marginBottom="@dimen/padding_24dp"
@@ -25,7 +25,7 @@
             android:layout_height="@dimen/view_24dp"
             android:layout_gravity="end"
             android:layout_marginTop="@dimen/padding_8dp"
-            android:src="@drawable/ic_clear" />
+            android:src="@drawable/chili_ic_clear" />
 
         <androidx.cardview.widget.CardView
             android:id="@+id/banner_container"
@@ -49,7 +49,7 @@
             android:maxLength="60"
             android:maxLines="2"
             android:ellipsize="end"
-            android:textAppearance="@style/H7.Primary.Bold"
+            android:textAppearance="@style/Chili.H7.Primary.Bold"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginTop="@dimen/padding_16dp"
@@ -62,7 +62,7 @@
             android:maxLength="190"
             android:maxLines="5"
             android:ellipsize="end"
-            android:textAppearance="@style/H8.Secondary"
+            android:textAppearance="@style/Chili.H8.Secondary"
             android:layout_marginBottom="@dimen/padding_8dp"
             android:layout_marginTop="@dimen/padding_8dp"
             tools:text="Этот рекламный текст, настолько хорош, что ты должен непременно нажать и про–
@@ -70,7 +70,7 @@
 
         <Button
             android:id="@+id/btn_more"
-            style="@style/ButtonStyle.Secondary"
+            style="@style/Chili.ButtonStyle.Secondary"
             android:layout_marginBottom="@dimen/padding_8dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

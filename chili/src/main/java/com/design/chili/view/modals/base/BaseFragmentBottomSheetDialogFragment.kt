@@ -19,7 +19,7 @@ abstract class BaseFragmentBottomSheetDialogFragment : BaseBottomSheetDialogFrag
         @NonNull inflater: LayoutInflater, @Nullable container: ViewGroup?,
         @Nullable savedInstanceState: Bundle?,
     ): View? {
-        val view = inflater.inflate(R.layout.view_base_fragment_bottom_sheet, container, false)
+        val view = inflater.inflate(R.layout.chili_view_base_fragment_bottom_sheet, container, false)
         initViewVariables(view)
         childFragmentManager.beginTransaction()
             .replace(R.id.bottom_sheet_container, createFragment())

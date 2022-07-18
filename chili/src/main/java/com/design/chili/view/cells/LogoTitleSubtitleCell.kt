@@ -36,7 +36,7 @@ class LogoTitleSubtitleCell : ConstraintLayout {
     }
 
     private fun setupView() {
-        val view = LayoutInflater.from(context).inflate(R.layout.item_logo_title_subtitle, this)
+        val view = LayoutInflater.from(context).inflate(R.layout.chili_item_logo_title_subtitle, this)
         this.view = LogoTitleSubtitleCellVariables(
             tvTitle = view.findViewById(R.id.tv_title),
             tvSubtitle = view.findViewById(R.id.tv_subtitle),
@@ -49,7 +49,7 @@ class LogoTitleSubtitleCell : ConstraintLayout {
 
     private fun obtainAttributes(
         attrs: AttributeSet,
-        defStyle: Int = R.style.CellViewStyle_LogoTitleSubtitleCell
+        defStyle: Int = R.style.Chili_CellViewStyle_LogoTitleSubtitleCell
     ) {
         context?.obtainStyledAttributes(attrs, R.styleable.LogoTitleSubtitleCell, R.attr.logoTitleSubtitleCellDefaultStyle, defStyle)?.run {
 
