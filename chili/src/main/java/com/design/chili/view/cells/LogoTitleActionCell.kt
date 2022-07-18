@@ -7,7 +7,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
-import androidx.annotation.ColorInt
 import androidx.annotation.ColorRes
 import androidx.annotation.DrawableRes
 import androidx.annotation.StringRes
@@ -60,7 +59,7 @@ class LogoTitleActionCell : ConstraintLayout {
             }
             getString(R.styleable.LogoTitleActionCell_title)?.let { setTitle(it) }
             getString(R.styleable.LogoTitleActionCell_subtitle)?.let { setSubtitle(it) }
-            getString(R.styleable.LogoTitleActionCell_action)?.let { setAction(it) }
+            getString(R.styleable.LogoTitleActionCell_action)?.let { setActionTitle(it) }
             getBoolean(R.styleable.LogoTitleActionCell_hide_divider, false).let {
                 view.divider.isVisible = !it
             }
@@ -104,19 +103,16 @@ class LogoTitleActionCell : ConstraintLayout {
         changeSubtitleColor(colorId)
     }
 
-    private fun setAction(label: String, action: () -> Unit = {}) {
+    fun setActionListener(action: () -> Unit = {}) {
+        setOnSingleClickListener(action)
+    }
+
+    fun setActionTitle(label: String) {
         view.action.text = label
-        setOnSingleClickListener(action)
     }
 
-    private fun setAction(@StringRes stringId: Int, action: () -> Unit = {}) {
+    fun setActionTitle(@StringRes stringId: Int) {
         view.action.text = context.getString(stringId)
-        setOnSingleClickListener(action)
-    }
-
-    private fun setActionWithColor(label: String, @ColorInt textColor: Int, action: () -> Unit = {}) {
-        setAction(label, action)
-        view.action.setTextColor(textColor)
     }
 
     fun setup(titleLabel: String?, subtitleLabel: String?, logo: Any?) {
