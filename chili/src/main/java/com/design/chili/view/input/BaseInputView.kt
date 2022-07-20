@@ -65,6 +65,7 @@ open class BaseInputView: ConstraintLayout {
             textInputLayout = view.findViewById(R.id.til_input_container),
             tvMessage = view.findViewById(R.id.tv_message),
             tvAction = view.findViewById(R.id.tv_action),
+            flActionBg = view.findViewById(R.id.fl_action_bg),
             ivEndIcon = view.findViewById(R.id.iv_end_icon))
     }
 
@@ -457,6 +458,7 @@ open class BaseInputView: ConstraintLayout {
     }
 
     fun setAction(title: String, action: () -> Unit = {}) {
+        view.flActionBg.visible()
         view.tvAction.apply {
             text = title
             setOnSingleClickListener(action)
@@ -473,7 +475,10 @@ open class BaseInputView: ConstraintLayout {
     }
 
     fun hideAction() {
-        view.tvAction.visibility = View.GONE
+        view.apply {
+            tvAction.gone()
+            flActionBg.gone()
+        }
     }
 
     fun setMessage(@StringRes resId: Int) {
@@ -541,5 +546,6 @@ data class BaseInputViewVariables(
     var textInputLayout: TextInputLayout,
     var tvMessage: TextView,
     var tvAction: TextView,
+    var flActionBg: FrameLayout,
     var ivEndIcon: ImageView
 )
