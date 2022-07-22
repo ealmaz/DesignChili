@@ -11,6 +11,9 @@ class MainFragment : BaseFragment<FragmentMainBinding>() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        vb.text.setOnClickListener {
+            openFragment(TextAppearancesFragment())
+        }
         vb.buttons.setOnClickListener {
             openFragment(ButtonsFragment())
         }
@@ -24,11 +27,14 @@ class MainFragment : BaseFragment<FragmentMainBinding>() {
         vb.cells.setOnClickListener {
             openFragment(CellsFragment())
         }
+        vb.cellsNew.setOnClickListener {
+            openFragment(BaseCellViewsFragment())
+        }
         vb.snackbar.setOnClickListener {
             openFragment(SnackbarFragment())
         }
         vb.common.setOnClickListener {
-            openFragment(CommonViews())
+            openFragment(CommonViewsFragment())
         }
         vb.bottomSheet.setOnClickListener {
             openFragment(BottomSheetsFragment())
@@ -37,7 +43,7 @@ class MainFragment : BaseFragment<FragmentMainBinding>() {
             startActivity(Intent(requireActivity(), ToolbarActivity::class.java))
         }
         vb.pickers.setOnClickListener {
-            openFragment(DatePicker())
+            openFragment(DatePickerFargment())
         }
     }
 

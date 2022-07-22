@@ -15,7 +15,6 @@ import com.design.chili.extensions.*
 import com.design.chili.extensions.gone
 import com.design.chili.extensions.setTextOrHide
 import com.design.chili.extensions.visible
-import com.design.chili.util.RoundedCornerMode
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class TariffPackagesInfoCardView : ConstraintLayout {
@@ -76,7 +75,7 @@ class TariffPackagesInfoCardView : ConstraintLayout {
             }
 
             getInteger(R.styleable.TariffPackagesInfoCardView_roundedCornerMode, 0).let {
-                view.rootView.setupRoundedCornersMode(it)
+                view.rootView.setupRoundedCardCornersMode(it)
             }
 
             getString(R.styleable.TariffPackagesInfoCardView_internetArcTitle).let {

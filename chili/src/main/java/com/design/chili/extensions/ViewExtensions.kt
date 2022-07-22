@@ -1,10 +1,13 @@
 package com.design.chili.extensions
 
 import android.graphics.drawable.Drawable
+import android.os.Build
 import android.view.View
+import android.view.ViewGroup
 import android.widget.EditText
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.appcompat.content.res.AppCompatResources
 import androidx.core.widget.addTextChangedListener
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.DataSource
@@ -144,7 +147,7 @@ private fun getGlideOnLoadListener(onSuccess: ((Drawable) -> Unit)?, onError: ((
     }
 }
 
-fun View.setupRoundedCornersMode(modeValue: Int) {
+fun View.setupRoundedCardCornersMode(modeValue: Int) {
     this.setBackgroundResource(
         when (modeValue) {
             RoundedCornerMode.TOP.value -> R.drawable.card_rounded_top_background
@@ -153,4 +156,26 @@ fun View.setupRoundedCornersMode(modeValue: Int) {
             else -> R.drawable.card_rounded_background
         }
     )
+}
+
+fun View.setupRoundedCellCornersMode(modeValue: Int) {
+    this.setBackgroundResource(
+        when (modeValue) {
+            RoundedCornerMode.TOP.value -> R.drawable.chili_cell_rounded_top_background
+            RoundedCornerMode.MIDDLE.value -> R.drawable.chili_cell_rounded_middle_background
+            RoundedCornerMode.BOTTOM.value -> R.drawable.chili_cell_rounded_bottom_background
+            else -> R.drawable.chili_cell_rounded_background
+        }
+    )
+}
+
+fun ViewGroup.setIsSurfaceClickable(isSurfaceClickable: Boolean) {
+    isClickable = isSurfaceClickable
+    isFocusable = isSurfaceClickable
+    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+        foreground = when (isSurfaceClickable) {
+            true -> AppCompatResources.getDrawable(context, R.drawable.ripple_rounded_corner_foreground)
+            else -> null
+        }
+    }
 }

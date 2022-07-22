@@ -77,6 +77,10 @@
         <item name="TariffPackagesInfoVerticalDivider">@color/black_4</item>
         <item name="TariffPackagesInfoAddButtonTint">@color/black_4</item>
 
+        <!-- CellView attributes -->
+        <item name="CellViewBackground">@color/black_3</item>
+        <item name="CellSquircleIconBackground">@color/black_2</item>
+
     </style>
 
     <style name="ChiliDesignTheme" parent="BaseChiliDesignTheme.Night"/>

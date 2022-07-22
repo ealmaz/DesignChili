@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?screenBackground"
+    android:paddingBottom="@dimen/padding_16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginHorizontal="@dimen/padding_16dp"
+        android:layout_marginTop="@dimen/padding_16dp"
+        android:paddingBottom="220dp"
+        tools:context=".MainActivity">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="BaseCellView with icon"
+            android:layout_margin="@dimen/padding_16dp" />
+
+        <com.design.chili.view.cells.BaseCellView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding_16dp"
+            app:isDividerVisible="false"
+            app:title="Заголовок"/>
+
+        <com.design.chili.view.cells.BaseCellView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding_16dp"
+            app:roundedCornerMode="top"
+            app:title="Заголовок" />
+
+        <com.design.chili.view.cells.BaseCellView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:roundedCornerMode="middle"
+            app:title="Заголовок" />
+
+        <com.design.chili.view.cells.BaseCellView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:roundedCornerMode="bottom"
+            app:isDividerVisible="false"
+            app:title="Заголовок" />
+
+
+        <com.design.chili.view.cells.BaseCellView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding_16dp"
+            app:isDividerVisible="false"
+            app:title="Заголовок"
+            app:subtitle="Подзаголовок"/>
+
+        <com.design.chili.view.cells.BaseCellView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding_16dp"
+            app:roundedCornerMode="top"
+            app:title="Заголовок"
+            app:subtitle="Подзаголовок" />
+
+        <com.design.chili.view.cells.BaseCellView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:roundedCornerMode="middle"
+            app:title="Заголовок"
+            app:subtitle="Подзаголовок" />
+
+        <com.design.chili.view.cells.BaseCellView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:roundedCornerMode="bottom"
+            app:isDividerVisible="false"
+            app:title="Заголовок"
+            app:subtitle="Подзаголовок" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="BaseCellView iconSize = SMALL (32dp)"
+            android:layout_marginTop="@dimen/padding_32dp"/>
+
+        <com.design.chili.view.cells.BaseCellView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding_16dp"
+            android:icon="@drawable/ic_success"
+            app:cellIconSize="small"
+            app:isDividerVisible="false"
+            app:title="Заголовок" />
+
+        <com.design.chili.view.cells.BaseCellView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding_16dp"
+            android:icon="@drawable/ic_squircle_phone"
+            app:roundedCornerMode="top"
+            app:title="Заголовок" />
+
+        <com.design.chili.view.cells.BaseCellView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:icon="@drawable/ic_squircle_phone"
+            app:roundedCornerMode="middle"
+            app:title="Заголовок" />
+
+        <com.design.chili.view.cells.BaseCellView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:icon="@drawable/ic_squircle_phone"
+            app:roundedCornerMode="bottom"
+            app:isDividerVisible="false"
+            app:title="Заголовок" />
+
+
+        <com.design.chili.view.cells.BaseCellView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding_16dp"
+            android:icon="@drawable/ic_squircle_phone"
+            app:isDividerVisible="false"
+            app:title="Заголовок"
+            app:subtitle="Подзаголовок"/>
+
+        <com.design.chili.view.cells.BaseCellView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding_16dp"
+            android:icon="@drawable/ic_squircle_phone"
+            app:roundedCornerMode="top"
+            app:title="Заголовок"
+            app:subtitle="Подзаголовок" />
+
+        <com.design.chili.view.cells.BaseCellView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:icon="@drawable/ic_squircle_phone"
+            app:roundedCornerMode="middle"
+            app:title="Заголовок"
+            app:subtitle="Подзаголовок" />
+
+        <com.design.chili.view.cells.BaseCellView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:roundedCornerMode="bottom"
+            app:isDividerVisible="false"
+            android:icon="@drawable/ic_squircle_phone"
+            app:title="Заголовок"
+            app:subtitle="Подзаголовок" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="BaseCellView iconSize = MEDIUM (46dp)"
+            android:layout_marginTop="@dimen/padding_32dp"/>
+
+        <com.design.chili.view.cells.BaseCellView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding_16dp"
+            android:icon="@drawable/ic_squircle_phone"
+            app:cellIconSize="medium"
+            app:isDividerVisible="false"
+            app:title="Заголовок" />
+
+        <com.design.chili.view.cells.BaseCellView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding_16dp"
+            android:icon="@drawable/ic_squircle_phone"
+            app:cellIconSize="medium"
+            app:roundedCornerMode="top"
+            app:title="Заголовок" />
+
+        <com.design.chili.view.cells.BaseCellView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:icon="@drawable/ic_squircle_phone"
+            app:cellIconSize="medium"
+            app:roundedCornerMode="middle"
+            app:title="Заголовок" />
+
+        <com.design.chili.view.cells.BaseCellView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:icon="@drawable/ic_squircle_phone"
+            app:cellIconSize="medium"
+            app:roundedCornerMode="bottom"
+            app:isDividerVisible="false"
+            app:title="Заголовок" />
+
+
+        <com.design.chili.view.cells.BaseCellView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding_16dp"
+            android:icon="@drawable/ic_squircle_phone"
+            app:cellIconSize="medium"
+            app:isDividerVisible="false"
+            app:title="Заголовок"
+            app:subtitle="Подзаголовок"/>
+
+        <com.design.chili.view.cells.BaseCellView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding_16dp"
+            android:icon="@drawable/ic_squircle_phone"
+            app:cellIconSize="medium"
+            app:roundedCornerMode="top"
+            app:title="Заголовок"
+            app:subtitle="Подзаголовок" />
+
+        <com.design.chili.view.cells.BaseCellView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:icon="@drawable/ic_squircle_phone"
+            app:cellIconSize="medium"
+            app:roundedCornerMode="middle"
+            app:title="Заголовок"
+            app:subtitle="Подзаголовок" />
+
+        <com.design.chili.view.cells.BaseCellView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:icon="@drawable/ic_squircle_phone"
+            app:cellIconSize="medium"
+            app:roundedCornerMode="bottom"
+            app:isDividerVisible="false"
+            app:title="Заголовок"
+            app:subtitle="Подзаголовок" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="BaseCellView iconSize = LARGE (48dp)"
+            android:layout_marginTop="@dimen/padding_32dp"/>
+
+        <com.design.chili.view.cells.BaseCellView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding_16dp"
+            android:icon="@drawable/ic_squircle_phone"
+            app:cellIconSize="@dimen/view_48dp"
+            app:cellIconVerticalMargin="@dimen/padding_14dp"
+            app:isDividerVisible="false"
+            app:title="Заголовок" />
+
+        <com.design.chili.view.cells.BaseCellView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding_16dp"
+            android:icon="@drawable/ic_squircle_phone"
+            app:cellIconSize="large"
+            app:roundedCornerMode="top"
+            app:title="Заголовок" />
+
+        <com.design.chili.view.cells.BaseCellView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:icon="@drawable/ic_squircle_phone"
+            app:cellIconSize="large"
+            app:roundedCornerMode="middle"
+            app:title="Заголовок" />
+
+        <com.design.chili.view.cells.BaseCellView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:icon="@drawable/ic_squircle_phone"
+            app:cellIconSize="large"
+            app:roundedCornerMode="bottom"
+            app:isDividerVisible="false"
+            app:title="Заголовок" />
+
+
+        <com.design.chili.view.cells.BaseCellView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding_16dp"
+            android:icon="@drawable/ic_squircle_phone"
+            app:cellIconSize="large"
+            app:isDividerVisible="false"
+            app:title="Заголовок"
+            app:subtitle="Подзаголовок"/>
+
+        <com.design.chili.view.cells.BaseCellView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:icon="@drawable/ic_squircle_phone"
+            app:cellIconSize="large"
+            android:layout_marginTop="@dimen/padding_16dp"
+            app:roundedCornerMode="top"
+            app:title="Заголовок"
+            app:subtitle="Подзаголовок" />
+
+        <com.design.chili.view.cells.BaseCellView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:icon="@drawable/ic_squircle_phone"
+            app:cellIconSize="large"
+            app:roundedCornerMode="middle"
+            app:title="Заголовок"
+            app:subtitle="Подзаголовок" />
+
+        <com.design.chili.view.cells.BaseCellView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:icon="@drawable/ic_squircle_phone"
+            app:cellIconSize="large"
+            app:roundedCornerMode="bottom"
+            app:isDividerVisible="false"
+            app:title="Заголовок"
+            app:subtitle="Подзаголовок" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="BaseCellView icon custom size 72 dp"
+            android:layout_marginTop="@dimen/padding_32dp"/>
+
+        <com.design.chili.view.cells.BaseCellView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding_16dp"
+            android:icon="@drawable/ic_squircle_phone"
+            app:cellIconSize="@dimen/view_72dp"
+            app:isDividerVisible="false"
+            app:title="Заголовок" />
+
+        <com.design.chili.view.cells.BaseCellView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding_8dp"
+            android:icon="@drawable/ic_success"
+            app:squircleIconBackgroundColor="@android:color/transparent"
+            app:cellIconSize="@dimen/view_72dp"
+            app:isDividerVisible="false"
+            app:title="Заголовок"
+            app:subtitle="Подзаголовок"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="BaseCellView max char"
+            android:layout_marginTop="@dimen/padding_32dp"/>
+
+        <com.design.chili.view.cells.BaseCellView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding_16dp"
+            app:isDividerVisible="false"
+            android:icon="@drawable/ic_squircle_phone"
+            app:cellIconSize="large"
+            app:title="Заголовок максимальное кол-во строк 2, ауцацу ацу ацу ацу а цу ацу ацу ацу а уца цу ацу а ацу ац уа цуа ц уа ц ацу а цуау а цу ацу"
+            app:subtitle="Заголовок максимальное кол-во строк 2, ауцацу ацу ацу ацу а цу ацу ацу ацу а уца цу ацу а ацу ац уа цуа ц уа ц ацу а цуау а цу ацу" />
+
+
+    </LinearLayout>
+
+</ScrollView>

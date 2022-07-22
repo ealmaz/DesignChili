@@ -11,7 +11,7 @@ import com.design.chili.view.modals.picker.RangeDatePickerDialog
 import java.text.SimpleDateFormat
 import java.util.*
 
-class DatePicker : BaseFragment<FragmentDatePickerBinding>(), FragmentResultListener {
+class DatePickerFargment : BaseFragment<FragmentDatePickerBinding>(), FragmentResultListener {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)

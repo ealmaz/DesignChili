@@ -8,8 +8,7 @@ import android.widget.TextView
 import androidx.annotation.StringRes
 import androidx.constraintlayout.widget.ConstraintLayout
 import com.design.chili.R
-import com.design.chili.extensions.setupRoundedCornersMode
-import com.design.chili.util.RoundedCornerMode
+import com.design.chili.extensions.setupRoundedCardCornersMode
 
 class TariffPriceInfoCardView : ConstraintLayout {
 
@@ -65,7 +64,7 @@ class TariffPriceInfoCardView : ConstraintLayout {
                 setDividerVisibility(it)
             }
             getInteger(R.styleable.TariffPriceInfoCardView_roundedCornerMode, 0).let {
-                view.rootView.setupRoundedCornersMode(it)
+                view.rootView.setupRoundedCardCornersMode(it)
             }
 
             recycle()

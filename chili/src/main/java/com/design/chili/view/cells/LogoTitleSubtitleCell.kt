@@ -62,7 +62,7 @@ class LogoTitleSubtitleCell : ConstraintLayout {
                     view.divider.isVisible = !it
                 }
                 getInteger(R.styleable.LogoTitleSubtitleCell_roundedCornerMode, 0).let {
-                    view.rootView.setupRoundedCornersMode(it)
+                    view.rootView.setupRoundedCardCornersMode(it)
                 }
 
             recycle()

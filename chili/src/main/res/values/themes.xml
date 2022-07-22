@@ -166,6 +166,11 @@
         <item name="TariffPackagesInfoInternetProgress">@color/cyan_1</item>
         <item name="TariffPackagesInfoCallProgress">@color/green_1</item>
 
+        <!-- CellView attributes -->
+        <item name="CellViewBackground">@color/white_1</item>
+        <item name="CellCornerRadius">@dimen/radius_4dp</item>
+        <item name="CellSquircleIconBackground">@color/gray_3</item>
+
     </style>
 
 

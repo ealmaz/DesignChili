@@ -4,7 +4,6 @@ import android.content.Context
 import android.graphics.drawable.Drawable
 import android.text.Spanned
 import android.util.AttributeSet
-import android.util.TypedValue
 import android.view.LayoutInflater
 import android.widget.FrameLayout
 import android.widget.ImageView
@@ -14,7 +13,7 @@ import androidx.annotation.StringRes
 import androidx.appcompat.content.res.AppCompatResources
 import androidx.core.view.isVisible
 import com.design.chili.R
-import com.design.chili.extensions.setupRoundedCornersMode
+import com.design.chili.extensions.setupRoundedCardCornersMode
 import com.design.chili.util.IconType
 
 class BalanceCardView : FrameLayout {
@@ -64,7 +63,7 @@ class BalanceCardView : FrameLayout {
                 setIconDrawable(it)
             }
             getInt(R.styleable.BalanceCardView_roundedCornerMode, 0).let {
-                view.root.setupRoundedCornersMode(it)
+                view.root.setupRoundedCardCornersMode(it)
             }
             getBoolean(R.styleable.BalanceCardView_isSurfaceClickable, false).let {
                 setIsSurfaceClickable(it)

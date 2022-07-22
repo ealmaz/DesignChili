@@ -48,9 +48,8 @@
 
     <!-- CellView attributes -->
     <attr name="CellViewBackground" format="reference"/>
-    <attr name="CellViewDividerColor" format="color"/>
     <attr name="CellCornerRadius" format="dimension"/>
-
+    <attr name="CellSquircleIconBackground" format="dimension"/>
 
 
     <!-- Snackbar attributes -->

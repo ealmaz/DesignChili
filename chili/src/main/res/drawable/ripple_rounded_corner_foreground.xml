@@ -2,6 +2,6 @@
 <!-- A red ripple masked against an opaque rectangle. -->
 <ripple android:color="?rippleForegroundColor"
     xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:id="@android:id/mask" android:drawable="@drawable/primary_button_background">
+    <item android:id="@android:id/mask" android:drawable="@drawable/cell_rounded_background">
     </item>
 </ripple>

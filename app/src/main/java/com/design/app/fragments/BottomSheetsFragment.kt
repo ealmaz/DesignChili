@@ -113,7 +113,7 @@ class CustomFragmentBottomSheet : BaseFragmentBottomSheetDialogFragment() {
     }
 
     override fun createFragment(): Fragment {
-        return CommonViews()
+        return CommonViewsFragment()
     }
 
 }

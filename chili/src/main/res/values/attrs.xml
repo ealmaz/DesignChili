@@ -13,6 +13,8 @@
         <attr name="tariffPackagesInfoCardViewDefaultStyle" format="reference"/>
         <attr name="logoTitleSubtitleCellDefaultStyle" format="reference"/>
         <attr name="logoTitleActionCellDefaultStyle" format="reference"/>
+
+        <attr name="cellViewDefaultStyle" format="reference"/>
         
         <attr name="toolbarDefaultStyle" format="reference"/>
     </declare-styleable>
@@ -164,6 +166,22 @@
         <attr name="action" format="string" />
         <attr name="hide_divider"/>
         <attr name="roundedCornerMode" />
+    </declare-styleable>
+
+    <declare-styleable name="BaseCellView">
+        <attr name="android:icon"/>
+        <attr name="title"/>
+        <attr name="subtitle"/>
+        <attr name="cellIconSize" format="dimension">
+            <enum name="small" value="-1"/>
+            <enum name="medium" value="-2"/>
+            <enum name="large" value="-3"/>
+        </attr>
+        <attr name="cellIconVerticalMargin" format="dimension"/>
+        <attr name="roundedCornerMode"/>
+        <attr name="isDividerVisible"/>
+        <attr name="isSurfaceClickable"/>
+        <attr name="squircleIconBackgroundColor" format="color"/>
     </declare-styleable>
 
 </resources>
