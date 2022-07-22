@@ -67,5 +67,6 @@
     <color name="gray_1_alpha_50">#808A8A8E</color>
     <color name="black_1_alpha_20">#33010101</color>
     <color name="blue_1_alpha_50">#80007AFF</color>
+    <color name="magenta_1_alpha_40">#66F0047F</color>
 
 </resources>

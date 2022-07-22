@@ -59,6 +59,17 @@
         <item name="RadioButtonUncheckedColor">@color/black_5</item>
         <item name="RadioButtonDisabledColor">@color/gray_2</item>
 
+
+        <!--  Switch box -->
+        <item name="ChiliSwitchBoxCheckedBg">@color/magenta_1_alpha_40</item>
+        <item name="ChiliSwitchBoxUncheckedBg">@color/gray_2</item>
+        <item name="ChiliSwitchBoxCheckedToggleColor">@color/magenta_1</item>
+        <item name="ChiliSwitchBoxUncheckedToggleColor">@color/white_1</item>
+
+        <item name="colorControlActivated">?ChiliSwitchBoxCheckedToggleColor</item>
+        <item name="colorSwitchThumbNormal">?ChiliSwitchBoxUncheckedToggleColor</item>
+        <item name="trackTint">@drawable/bg_switch</item>
+
         <!-- Bottom sheet -->
         <item name="BottomSheetBackgroundColor">@color/white_1</item>
         <item name="BottomSheetTopCornersRadius">@dimen/radius_8dp</item>

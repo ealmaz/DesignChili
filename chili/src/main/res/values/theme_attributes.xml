@@ -74,6 +74,12 @@
     <attr name="RadioButtonCheckedColor" format="color"/>
     <attr name="RadioButtonUncheckedColor" format="color"/>
     <attr name="RadioButtonDisabledColor" format="color"/>
+    
+    <!--  Switch box -->
+    <attr name="ChiliSwitchBoxCheckedBg" format="color"/>
+    <attr name="ChiliSwitchBoxUncheckedBg" format="color"/>
+    <attr name="ChiliSwitchBoxCheckedToggleColor" format="color"/>
+    <attr name="ChiliSwitchBoxUncheckedToggleColor" format="color"/>
 
     <!-- Bottom sheet -->
     <attr name="BottomSheetBackgroundColor" format="color"/>

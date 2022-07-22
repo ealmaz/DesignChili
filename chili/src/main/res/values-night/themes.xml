@@ -40,6 +40,10 @@
         <item name="RadioButtonUncheckedColor">@color/gray_3</item>
         <item name="RadioButtonDisabledColor">@color/gray_1_alpha_50</item>
 
+        <!--  Switch box -->
+        <item name="ChiliSwitchBoxUncheckedBg">@color/black_4</item>
+        <item name="ChiliSwitchBoxUncheckedToggleColor">@color/black_5</item>
+
         <!-- Bottom sheet -->
         <item name="BottomSheetBackgroundColor">@color/black_2</item>
         <item name="BottomSheetTopDrawableColor">@color/black_3</item>
