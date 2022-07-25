@@ -6,6 +6,7 @@ import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.view.View
 import android.widget.FrameLayout
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.annotation.ColorInt
 import androidx.annotation.DimenRes
@@ -17,7 +18,7 @@ import com.design.chili.extensions.*
 import com.design.chili.util.RoundedCornerMode
 import com.design.chili.view.image.SquircleView
 
-class BaseCellView @JvmOverloads constructor(
+open class BaseCellView @JvmOverloads constructor(
     context: Context,
     attrs: AttributeSet? = null,
     defStyleAttr: Int = R.attr.cellViewDefaultStyle,
@@ -31,7 +32,7 @@ class BaseCellView @JvmOverloads constructor(
         obtainAttributes(context, attrs, defStyleAttr, defStyleRes)
     }
 
-    private fun inflateView(context: Context) {
+    protected open fun inflateView(context: Context) {
         val view = LayoutInflater.from(context).inflate(R.layout.chili_view_base_cell, this)
         this.view = BaseCellViewVariables(
             flStartPlaceholder = view.findViewById(R.id.fl_start_place_holder),
@@ -41,10 +42,11 @@ class BaseCellView @JvmOverloads constructor(
             tvSubtitle = view.findViewById(R.id.tv_subtitle),
             divider = view.findViewById(R.id.divider),
             rootView = view.findViewById(R.id.root_view),
+            chevron = view.findViewById(R.id.iv_chevron)
         )
     }
 
-    private fun obtainAttributes(context: Context, attrs: AttributeSet?, defStyleAttr: Int, defStyleRes: Int) {
+    protected open fun obtainAttributes(context: Context, attrs: AttributeSet?, defStyleAttr: Int, defStyleRes: Int) {
         context.obtainStyledAttributes(attrs, R.styleable.BaseCellView, defStyleAttr, defStyleRes)
             .run {
                 getResourceId(R.styleable.BaseCellView_android_icon, -1).takeIf { it != -1 }?.let {
@@ -74,6 +76,9 @@ class BaseCellView @JvmOverloads constructor(
                 }
                 getColor(R.styleable.BaseCellView_squircleIconBackgroundColor, -1).takeIf { it != -1 }?.let {
                     setSquircleIconBackgroundColor(it)
+                }
+                getBoolean(R.styleable.BaseCellView_isChevronVisible, true).let {
+                    setIsChevronVisible(it)
                 }
                 recycle()
             }
@@ -191,6 +196,13 @@ class BaseCellView @JvmOverloads constructor(
     fun setIsSurfaceClickable(isSurfaceClickable: Boolean) {
         view.rootView.setIsSurfaceClickable(isSurfaceClickable)
     }
+
+    fun setIsChevronVisible(isVisible: Boolean) {
+        view.chevron.visibility = when (isVisible) {
+            true -> View.VISIBLE
+            else -> View.GONE
+        }
+    }
 }
 
 enum class IconSize(val value: Int) {
@@ -204,5 +216,6 @@ data class BaseCellViewVariables(
     var tvTitle: TextView,
     var tvSubtitle: TextView,
     var divider: View,
-    var rootView: ConstraintLayout
+    var rootView: ConstraintLayout,
+    var chevron: ImageView
 )

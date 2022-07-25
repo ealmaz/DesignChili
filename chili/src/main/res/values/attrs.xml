@@ -182,6 +182,7 @@
         <attr name="isDividerVisible"/>
         <attr name="isSurfaceClickable"/>
         <attr name="squircleIconBackgroundColor" format="color"/>
+        <attr name="isChevronVisible" format="boolean"/>
     </declare-styleable>
 
 </resources>

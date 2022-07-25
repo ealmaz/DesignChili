@@ -247,7 +247,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/padding_16dp"
             android:icon="@drawable/ic_squircle_phone"
-            app:cellIconSize="@dimen/view_48dp"
+            app:cellIconSize="large"
             app:cellIconVerticalMargin="@dimen/padding_14dp"
             app:isDividerVisible="false"
             app:title="Заголовок" />
@@ -361,6 +361,11 @@
             app:title="Заголовок максимальное кол-во строк 2, ауцацу ацу ацу ацу а цу ацу ацу ацу а уца цу ацу а ацу ац уа цуа ц уа ц ацу а цуау а цу ацу"
             app:subtitle="Заголовок максимальное кол-во строк 2, ауцацу ацу ацу ацу а цу ацу ацу ацу а уца цу ацу а ацу ац уа цуа ц уа ц ацу а цуау а цу ацу" />
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="BaseCellView indicators"
+            android:layout_marginTop="@dimen/padding_32dp"/>
 
     </LinearLayout>
 
