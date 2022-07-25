@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- A red ripple masked against an opaque rectangle. -->
+<ripple android:color="?attr/ChiliRippleForegroundColor"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@android:id/mask" android:drawable="@drawable/chili_card_rounded_background">
+    </item>
+</ripple>

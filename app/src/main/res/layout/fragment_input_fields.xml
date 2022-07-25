@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="?screenBackground"
+    android:background="?attr/ChiliScreenBackground"
     android:layout_height="match_parent">
 
     <LinearLayout
@@ -33,7 +33,7 @@
             android:id="@+id/field_pass"
             android:hint="Password"
             android:gravity="start"
-            style="@style/InputViewStyle.Simple.Password"
+            style="@style/Chili.InputViewStyle.Simple.Password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/padding_16dp"/>

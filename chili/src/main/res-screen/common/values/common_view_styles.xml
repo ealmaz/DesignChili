@@ -1,33 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="SegmentedPickerViewStyle" parent="BaseChiliViewStyle">
+    <style name="Chili.SegmentedPickerViewStyle" parent="Chili.BaseChiliViewStyle">
         <item name="android:padding">@dimen/padding_2dp</item>
-        <item name="android:background">?SegmentedPickerBackgroundColor</item>
-        <item name="tabIndicator">@drawable/bg_segmented_picker_tab</item>
-        <item name="tabIndicatorColor">?SegmentedPickerTabIndicatorColor</item>
+        <item name="android:background">?attr/ChiliSegmentedPickerBackgroundColor</item>
+        <item name="tabIndicator">@drawable/chili_bg_segmented_picker_tab</item>
+        <item name="tabIndicatorColor">?attr/ChiliSegmentedPickerTabIndicatorColor</item>
         <item name="tabIndicatorGravity">stretch</item>
         <item name="tabRippleColor">@null</item>
         <item name="tabMode">fixed</item>
-        <item name="tabTextColor">?SegmentedPickerTabTextColor</item>
+        <item name="tabTextColor">?attr/ChiliSegmentedPickerTabTextColor</item>
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">@dimen/view_32dp</item>
     </style>
 
-    <style name="CheckBoxStyle" parent="BaseChiliViewStyle">
-        <item name="android:buttonTint">@drawable/check_box_color</item>
+    <style name="Chili.CheckBoxStyle" parent="Chili.BaseChiliViewStyle">
+        <item name="android:buttonTint">@drawable/chili_check_box_color</item>
     </style>
 
-    <style name="RadioButtonStyle" parent="BaseChiliViewStyle">
-        <item name="android:buttonTint">@drawable/radio_button_color</item>
+    <style name="Chili.RadioButtonStyle" parent="Chili.BaseChiliViewStyle">
+        <item name="android:buttonTint">@drawable/chili_radio_button_color</item>
         <item name="android:padding">8dp</item>
         <item name="android:layout_marginStart">@dimen/padding_8dp</item>
         <item name="android:textAlignment">textStart</item>
     </style>
 
-    <style name="RadioButtonRltStyle" parent="BaseChiliViewStyle">
+    <style name="Chili.RadioButtonRltStyle" parent="Chili.BaseChiliViewStyle">
         <item name="android:layoutDirection">rtl</item>
-        <item name="android:buttonTint">@drawable/radio_button_color</item>
+        <item name="android:buttonTint">@drawable/chili_radio_button_color</item>
         <item name="android:padding">8dp</item>
         <item name="android:layout_marginStart">@dimen/padding_8dp</item>
         <item name="android:textAlignment">textStart</item>

@@ -15,6 +15,7 @@ import androidx.annotation.StringRes
 import androidx.constraintlayout.widget.ConstraintLayout
 import com.design.chili.R
 import com.design.chili.extensions.*
+import com.design.chili.util.IconSize
 import com.design.chili.util.RoundedCornerMode
 import com.design.chili.view.image.SquircleView
 
@@ -22,7 +23,7 @@ open class BaseCellView @JvmOverloads constructor(
     context: Context,
     attrs: AttributeSet? = null,
     defStyleAttr: Int = R.attr.cellViewDefaultStyle,
-    defStyleRes: Int = R.style.Chili_BaseCellViewStyle
+    defStyleRes: Int = R.style.Chili_CellViewStyle_BaseCellViewStyle
 ) : ConstraintLayout(context, attrs, defStyleAttr, defStyleRes) {
 
     lateinit var view: BaseCellViewVariables
@@ -203,10 +204,6 @@ open class BaseCellView @JvmOverloads constructor(
             else -> View.GONE
         }
     }
-}
-
-enum class IconSize(val value: Int) {
-    SMALL(-1), MEDIUM(-2), LARGE(-3)
 }
 
 data class BaseCellViewVariables(

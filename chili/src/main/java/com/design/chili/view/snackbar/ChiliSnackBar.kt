@@ -1,7 +1,6 @@
 package com.design.chili.view.snackbar
 
 import android.os.CountDownTimer
-import android.os.Message
 import android.view.View
 import android.view.ViewGroup
 import android.widget.FrameLayout
@@ -60,7 +59,7 @@ class ChiliSnackBar private constructor(
         content.apply {
             ivIcon.invisible()
             tvSecondsLeft.gone()
-            pbProgress.indeterminateDrawable = context?.drawable(R.drawable.circular_loop_progress_bar)
+            pbProgress.indeterminateDrawable = context?.drawable(R.drawable.chili_circular_loop_progress_bar)
             pbProgress.isIndeterminate = true
             pbProgress.visible()
         }
@@ -115,7 +114,7 @@ class ChiliSnackBar private constructor(
         content.pbProgress.apply {
             visible()
             max = timerInfo.durationMills.toInt()
-            progressDrawable = context?.drawable(R.drawable.circular_progress_bar)
+            progressDrawable = context?.drawable(R.drawable.chili_circular_progress_bar)
         }
         return object : CountDownTimer(timerInfo.durationMills, 1000) {
             override fun onTick(millisUntilFinished: Long) {

@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="?screenBackground"
+    android:background="?attr/ChiliScreenBackground"
     android:layout_height="match_parent">
 
     <LinearLayout
@@ -15,13 +15,13 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textAppearance="@style/H8.Primary"
+            android:textAppearance="@style/Chili.H8.Primary"
             android:text="SegmentedPicker"
             android:layout_margin="@dimen/padding_16dp"/>
 
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/tl_vaccine_pcr"
-            style="@style/SegmentedPickerViewStyle"
+            style="@style/Chili.SegmentedPickerViewStyle"
             android:layout_marginHorizontal="@dimen/padding_16dp"
             android:layout_marginBottom="@dimen/padding_8dp">
 
@@ -46,7 +46,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textAppearance="@style/H8.Primary"
+            android:textAppearance="@style/Chili.H8.Primary"
             android:text="CheckBox"
             android:layout_marginStart="@dimen/padding_16dp"
             android:layout_marginTop="@dimen/padding_8dp"/>
@@ -58,7 +58,7 @@
             android:orientation="horizontal">
 
             <CheckBox
-                style="@style/CheckBoxStyle"
+                style="@style/Chili.CheckBoxStyle"
                 android:checked="true"
                 android:layout_marginStart="@dimen/padding_16dp"
                 android:layout_width="wrap_content"
@@ -67,7 +67,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAppearance="@style/H8.Primary"
+                android:textAppearance="@style/Chili.H8.Primary"
                 android:text="CheckBox checked"/>
 
         </LinearLayout>
@@ -80,7 +80,7 @@
             android:orientation="horizontal">
 
             <CheckBox
-                style="@style/CheckBoxStyle"
+                style="@style/Chili.CheckBoxStyle"
                 android:checked="false"
                 android:layout_marginStart="@dimen/padding_16dp"
                 android:layout_width="wrap_content"
@@ -89,7 +89,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAppearance="@style/H8.Primary"
+                android:textAppearance="@style/Chili.H8.Primary"
                 android:text="CheckBox uncheked"/>
 
         </LinearLayout>
@@ -100,7 +100,7 @@
             android:orientation="horizontal">
 
             <CheckBox
-                style="@style/CheckBoxStyle"
+                style="@style/Chili.CheckBoxStyle"
                 android:checked="true"
                 android:enabled="false"
                 android:layout_marginStart="@dimen/padding_16dp"
@@ -110,7 +110,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAppearance="@style/H8.Primary"
+                android:textAppearance="@style/Chili.H8.Primary"
                 android:text="CheckBox check disabled"/>
 
         </LinearLayout>
@@ -121,7 +121,7 @@
             android:orientation="horizontal">
 
             <CheckBox
-                style="@style/CheckBoxStyle"
+                style="@style/Chili.CheckBoxStyle"
                 android:checked="false"
                 android:enabled="false"
                 android:layout_marginStart="@dimen/padding_16dp"
@@ -131,7 +131,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAppearance="@style/H8.Primary"
+                android:textAppearance="@style/Chili.H8.Primary"
                 android:text="CheckBox uncheck disapled"/>
 
         </LinearLayout>
@@ -145,7 +145,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textAppearance="@style/H8.Primary"
+            android:textAppearance="@style/Chili.H8.Primary"
             android:text="Switch"
             android:layout_marginStart="@dimen/padding_16dp"
             android:layout_marginTop="@dimen/padding_8dp"/>
@@ -170,14 +170,14 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textAppearance="@style/H8.Primary"
+            android:textAppearance="@style/Chili.H8.Primary"
             android:text="RadioButton"
             android:layout_marginStart="@dimen/padding_16dp"
             android:layout_marginTop="@dimen/padding_8dp"/>
 
         <RadioGroup
             android:layout_margin="@dimen/padding_16dp"
-            android:background="@drawable/card_rounded_background"
+            android:background="@drawable/chili_card_rounded_background"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <RadioButton
@@ -185,21 +185,21 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/padding_8dp"
                 android:text="RadioButton - RadioButtonStyle"
-                style="@style/RadioButtonStyle"/>
+                style="@style/Chili.RadioButtonStyle"/>
 
             <RadioButton
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/padding_8dp"
                 android:text="RadioButton - RadioButtonStyle"
-                style="@style/RadioButtonStyle"/>
+                style="@style/Chili.RadioButtonStyle"/>
 
             <RadioButton
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/padding_8dp"
                 android:text="RadioButton - RadioButtonRltStyle"
-                style="@style/RadioButtonRltStyle"/>
+                style="@style/Chili.RadioButtonRltStyle"/>
 
         </RadioGroup>
     </LinearLayout>

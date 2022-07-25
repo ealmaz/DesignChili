@@ -31,7 +31,7 @@ abstract class BaseBottomSheetDialogFragment : BottomSheetDialogFragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setStyle(STYLE_NORMAL, R.style.BottomSheetStyle)
+        setStyle(STYLE_NORMAL, R.style.Chili_BottomSheetStyle)
     }
 
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {

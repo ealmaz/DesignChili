@@ -35,7 +35,7 @@ class BalanceCardView : FrameLayout {
     }
 
     private fun inflateViews() {
-        val view = LayoutInflater.from(context).inflate(R.layout.view_balance_card, this)
+        val view = LayoutInflater.from(context).inflate(R.layout.chili_view_balance_card, this)
         this.view = BalanceCardViewVariables(
             root = view.findViewById(R.id.root_view),
             title = view.findViewById(R.id.tv_title),
@@ -44,7 +44,7 @@ class BalanceCardView : FrameLayout {
         )
     }
 
-    private fun obtainAttributes(attrs: AttributeSet, defStyle: Int = R.style.CardViewStyle_BalanceCard) {
+    private fun obtainAttributes(attrs: AttributeSet, defStyle: Int = R.style.Chili_CardViewStyle_BalanceCard) {
         context?.obtainStyledAttributes(attrs, R.styleable.BalanceCardView, R.attr.balanceCardViewDefaultStyle, defStyle)?.run {
             getString(R.styleable.BalanceCardView_title)?.let {
                 setTitleText(it)
@@ -79,7 +79,7 @@ class BalanceCardView : FrameLayout {
         view.root.isClickable = isClickable
         view.root.isFocusable = isClickable
         view.root.foreground = when (isClickable) {
-            true -> AppCompatResources.getDrawable(context, R.drawable.ripple_rounded_corner_foreground)
+            true -> AppCompatResources.getDrawable(context, R.drawable.chili_ripple_rounded_corner_foreground)
             else -> null
         }
     }
@@ -116,8 +116,8 @@ class BalanceCardView : FrameLayout {
 
     fun setIconType(type: IconType) {
         when (type) {
-            IconType.PLUS -> setIconDrawableRes(R.drawable.ic_magenta_plus)
-            IconType.CHEVRON -> setIconDrawableRes(R.drawable.ic_chevron)
+            IconType.PLUS -> setIconDrawableRes(R.drawable.chili_ic_magenta_plus)
+            IconType.CHEVRON -> setIconDrawableRes(R.drawable.chili_ic_chevron)
         }
     }
 
@@ -137,7 +137,7 @@ class BalanceCardView : FrameLayout {
         view.icon.isClickable = isClickable
         view.icon.isFocusable = isClickable
         if (isClickable) {
-            view.icon.setBackgroundResource(R.drawable.card_circle_ripple)
+            view.icon.setBackgroundResource(R.drawable.chili_card_circle_ripple)
         }
     }
 }

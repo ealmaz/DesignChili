@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/chili_card_rounded_top_background"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootView">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/Chili.SingleLineTextView"
+        android:textAppearance="@style/Chili.H9.Primary"
+        android:layout_margin="@dimen/padding_8dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:text="Пакетов нет. Ваш тариф - Оной!" />
+
+    <com.design.chili.view.card.ItemInfoCardView
+        android:id="@+id/iicv_out_call"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/padding_8dp"
+        android:layout_marginStart="@dimen/view_16dp"
+        app:title="?attr/ChiliVoiceOutLabel"
+        app:icon="?attr/ChiliVoiceOutIcon"
+        app:layout_constraintTop_toBottomOf="@id/tv_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/iicv_in_call"/>
+
+    <com.design.chili.view.card.ItemInfoCardView
+        android:id="@+id/iicv_in_call"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/padding_16dp"
+        app:title="?attr/ChiliVoiceInLabel"
+        app:icon="?attr/ChiliVoiceInIcon"
+        app:layout_constraintTop_toTopOf="@id/iicv_out_call"
+        app:layout_constraintStart_toEndOf="@id/iicv_out_call"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <com.design.chili.view.card.ItemInfoCardView
+        android:id="@+id/iicv_internet"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/padding_8dp"
+        android:layout_marginBottom="@dimen/padding_8dp"
+        app:title="?attr/ChiliInternetLabel"
+        app:icon="?attr/ChiliInternetIcon"
+        app:layout_constraintTop_toBottomOf="@id/iicv_out_call"
+        app:layout_constraintStart_toStartOf="@id/iicv_out_call"
+        app:layout_constraintEnd_toStartOf="@id/iicv_sms"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <com.design.chili.view.card.ItemInfoCardView
+        android:id="@+id/iicv_sms"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:title="?attr/ChiliSmsLabel"
+        app:icon="?attr/ChiliSmsIcon"
+        app:layout_constraintTop_toTopOf="@id/iicv_internet"
+        app:layout_constraintStart_toEndOf="@id/iicv_internet"
+        app:layout_constraintEnd_toEndOf="@id/iicv_in_call"
+        app:layout_constraintBottom_toBottomOf="@id/iicv_internet"/>
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/ChiliDividerHeightSize"
+        android:background="?attr/ChiliDividerColor"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

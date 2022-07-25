@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="@drawable/chili_ripple_rounded_corner_foreground"
+    android:background="@drawable/chili_card_rounded_background">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/iv_notification"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/chili_ic_notification_magenta"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/sv_icon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/tv_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding_8dp"
+            android:layout_marginEnd="@dimen/padding_8dp"
+            android:textAppearance="@style/Chili.H9.Secondary"
+            android:visibility="gone"
+            app:layout_constraintEnd_toStartOf="@id/iv_notification"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            tools:text="550" />
+
+        <com.design.chili.view.image.SquircleView
+            android:id="@+id/sv_icon"
+            android:layout_width="@dimen/view_24dp"
+            android:layout_height="@dimen/view_24dp"
+            android:layout_marginStart="@dimen/padding_8dp"
+            android:layout_marginTop="@dimen/padding_4dp"
+            app:civ_circle_background_color="?attr/ChiliCardViewSquircleBackground"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/padding_8dp"
+            android:layout_marginTop="@dimen/padding_4dp"
+            android:layout_marginEnd="@dimen/padding_16dp"
+            android:layout_marginBottom="@dimen/padding_8dp"
+            android:ellipsize="end"
+            android:gravity="left"
+            android:lines="2"
+            android:maxLines="2"
+            android:paddingEnd="@dimen/padding_4dp"
+            android:textAppearance="@style/Chili.H9.Primary"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sv_icon"
+            tools:text="@tools:sample/lorem/random" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

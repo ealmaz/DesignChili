@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/chili_card_rounded_background"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/root_view">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/iv_icon"
+            android:layout_width="@dimen/view_32dp"
+            android:layout_height="@dimen/view_32dp"
+            android:layout_marginTop="@dimen/padding_4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding_4dp"
+            android:layout_marginRight="@dimen/padding_8dp"
+            android:layout_marginBottom="@dimen/padding_4dp"
+            android:layout_marginLeft="@dimen/padding_8dp"
+            android:textAppearance="@style/Chili.H9.Primary"
+            android:ellipsize="end"
+            android:gravity="center|top"
+            android:lines="2"
+            android:maxLines="2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iv_icon"
+            tools:text="Комунальные услуги" />
+
+        <ImageView
+            android:id="@+id/iv_count"
+            android:layout_width="@dimen/view_16dp"
+            android:layout_height="@dimen/view_16dp"
+            android:visibility="visible"
+            android:scaleType="centerCrop"
+            app:layout_constraintTop_toTopOf="@id/iv_icon"
+            app:layout_constraintStart_toEndOf="@id/iv_icon"
+            app:layout_constraintEnd_toEndOf="@id/iv_icon"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

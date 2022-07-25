@@ -23,7 +23,7 @@ class SnackbarLayoutView @JvmOverloads constructor(
     var tvAction: TextView
 
     init {
-        View.inflate(context, R.layout.view_snackbar_layout, this)
+        View.inflate(context, R.layout.chili_view_snackbar_layout, this)
         this.pbProgress = findViewById(R.id.pb_progress)
         this.tvMessage = findViewById(R.id.tv_message)
         this.tvSecondsLeft = findViewById(R.id.tv_seconds_left)

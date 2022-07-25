@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tv_chart_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/padding_8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="23.02.1111 - 23.03.1111" />
+
+    <ImageView
+        android:id="@+id/iv_previous_period"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/padding_8dp"
+        android:layout_marginLeft="@dimen/padding_16dp"
+        android:background="?selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true"
+        android:paddingStart="@dimen/padding_8dp"
+        android:paddingTop="@dimen/padding_24dp"
+        android:paddingEnd="@dimen/padding_8dp"
+        android:paddingBottom="@dimen/padding_24dp"
+        android:src="@drawable/chili_ic_chevron_right"
+        app:layout_constraintBottom_toBottomOf="@id/pie_chart"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/pie_chart" />
+
+    <com.github.mikephil.charting.charts.PieChart
+        android:id="@+id/pie_chart"
+        android:layout_width="@dimen/view_200dp"
+        android:layout_height="@dimen/view_200dp"
+        android:layout_marginTop="@dimen/padding_8dp"
+        android:layout_marginBottom="@dimen/padding_16dp"
+        android:background="?attr/ChiliCardViewBackground"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_chart_date" />
+
+    <ImageView
+        android:id="@+id/iv_next_period"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/padding_8dp"
+        android:layout_marginRight="@dimen/padding_16dp"
+        android:background="?selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true"
+        android:paddingStart="@dimen/padding_8dp"
+        android:paddingTop="@dimen/padding_24dp"
+        android:paddingEnd="@dimen/padding_8dp"
+        android:paddingBottom="@dimen/padding_24dp"
+        android:src="@drawable/chili_ic_chevron"
+        app:layout_constraintBottom_toBottomOf="@id/pie_chart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/pie_chart" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

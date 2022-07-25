@@ -32,7 +32,7 @@ class CategoryItemView : FrameLayout {
     }
 
     private fun inflateViews() {
-        val view = LayoutInflater.from(context).inflate(R.layout.view_category_item, this)
+        val view = LayoutInflater.from(context).inflate(R.layout.chili_view_category_item, this)
         this.view = CategoryItemViewVariables(
             svIcon = view.findViewById(R.id.sv_icon),
             ivNotification = view.findViewById(R.id.iv_notification),
@@ -41,7 +41,7 @@ class CategoryItemView : FrameLayout {
         )
     }
 
-    private fun obtainAttributes(attrs: AttributeSet, defStyle: Int = R.style.CardViewStyle_CategoryItemViewStyle) {
+    private fun obtainAttributes(attrs: AttributeSet, defStyle: Int = R.style.Chili_CardViewStyle_CategoryItemViewStyle) {
         context?.obtainStyledAttributes(attrs, R.styleable.CategoryItemView, R.attr.categoryItemCardViewDefaultStyle, defStyle)?.run {
             getString(R.styleable.CategoryItemView_title)?.let {
                 setTitle(it)

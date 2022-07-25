@@ -12,14 +12,14 @@
         android:padding="@dimen/padding_16dp">
 
         <TextView
-            style="@style/H3.Primary.Bold"
+            style="@style/Chili.H3.Primary.Bold"
             android:id="@+id/title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             tools:text="Title"/>
 
         <TextView
-            style="@style/H6.Primary"
+            style="@style/Chili.H6.Primary"
             android:id="@+id/content"
             android:textIsSelectable="true"
             android:layout_width="match_parent"

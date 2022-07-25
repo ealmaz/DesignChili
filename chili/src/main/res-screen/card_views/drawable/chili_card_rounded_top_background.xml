@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <solid
+        android:color="?attr/ChiliCardViewBackground"
+        tools:color="#fff" />
+    <corners
+        android:topLeftRadius="?attr/ChiliCardViewCornerRadius"
+        android:topRightRadius="?attr/ChiliCardViewCornerRadius"
+        tools:topLeftRadius="4dp"
+        tools:topRightRadius="4dp" />
+</shape>

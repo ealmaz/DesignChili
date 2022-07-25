@@ -1,14 +1,11 @@
 package com.design.chili.extensions
 
 import android.view.View
-import androidx.annotation.DrawableRes
 import androidx.appcompat.app.AppCompatActivity
-import androidx.fragment.app.Fragment
 import com.design.chili.R
 import com.design.chili.view.snackbar.ActionInfo
 import com.design.chili.view.snackbar.ChiliSnackBar
 import com.design.chili.view.snackbar.TimerInfo
-import com.google.android.material.snackbar.BaseTransientBottomBar
 
 fun AppCompatActivity.showSimpleSnackbar(view: View, message: String) {
     ChiliSnackBar.Builder(view)
@@ -39,7 +36,7 @@ fun AppCompatActivity.showTimerActionBeforeSuccessCnackbar(
         .setSnackbarDurationMills(timerDurationMills + 2000)
         .setSnackbarMessage(timerMessage)
         .setSnackbarTimerInfo(TimerInfo(timerDurationMills, {
-            it.setSnackbarIcon(R.drawable.ic_success)
+            it.setSnackbarIcon(R.drawable.chili_ic_success)
             it.setMessage(successMessage)
             onTimerExpire()
         }))

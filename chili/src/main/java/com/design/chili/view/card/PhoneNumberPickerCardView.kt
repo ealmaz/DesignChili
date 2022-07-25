@@ -34,7 +34,7 @@ class PhoneNumberPickerCardView : ConstraintLayout {
     }
 
     private fun inflateViews() {
-        val view = LayoutInflater.from(context).inflate(R.layout.view_phone_number_picker_card, this)
+        val view = LayoutInflater.from(context).inflate(R.layout.chili_view_phone_number_picker_card, this)
         this.view = PhoneNumberPickerCardViewVariables(
             tvTitle = view.findViewById(R.id.tv_title),
             ivTitleImage = view.findViewById(R.id.iv_title_icon),
@@ -44,7 +44,7 @@ class PhoneNumberPickerCardView : ConstraintLayout {
         )
     }
 
-    private fun obtainAttributes(attrs: AttributeSet, defStyle: Int = R.style.CardViewStyle_PhoneNumberPickerCardViewStyle) {
+    private fun obtainAttributes(attrs: AttributeSet, defStyle: Int = R.style.Chili_CardViewStyle_PhoneNumberPickerCardViewStyle) {
         context?.obtainStyledAttributes(attrs, R.styleable.PhoneNumberPickerCardView, R.attr.phoneNumberPickerCardViewDefaultStyle, defStyle)?.run {
 
             getString(R.styleable.PhoneNumberPickerCardView_title)?.let {

@@ -25,6 +25,7 @@ import androidx.core.content.ContextCompat
 import androidx.core.view.updatePadding
 import com.design.chili.R
 import com.design.chili.extensions.*
+import com.design.chili.util.cyrillicRegex
 import com.design.chili.view.input.text_watchers.ClearTextIconTextWatcher
 import com.design.chili.view.input.text_watchers.SimpleTextWatcher
 import com.google.android.material.textfield.TextInputLayout
@@ -59,7 +60,7 @@ open class BaseInputView: ConstraintLayout {
     }
 
     private fun inflateViews(context: Context) {
-        val view = LayoutInflater.from(context).inflate(R.layout.view_base_input, this)
+        val view = LayoutInflater.from(context).inflate(R.layout.chili_view_base_input, this)
         this.view = BaseInputViewVariables(
             inputField = view.findViewById(R.id.et_input),
             textInputLayout = view.findViewById(R.id.til_input_container),
@@ -70,7 +71,7 @@ open class BaseInputView: ConstraintLayout {
     }
 
     private fun obtainAttributes(attrs: AttributeSet) {
-        context?.obtainStyledAttributes(attrs, R.styleable.BaseInputView, R.attr.inputViewDefaultStyle, R.style.InputViewStyle_Simple)?.run {
+        context?.obtainStyledAttributes(attrs, R.styleable.BaseInputView, R.attr.inputViewDefaultStyle, R.style.Chili_InputViewStyle_Simple)?.run {
 
             getColor(R.styleable.BaseInputView_errorFieldBackground, ContextCompat.getColor(context, R.color.red_3)).let {
                 setupErrorFieldBackground(it)
@@ -316,7 +317,7 @@ open class BaseInputView: ConstraintLayout {
     }
 
     fun setupForCyrillicInput() {
-        addRegexFilter("^([а-яА-ЯҢңӨөҮүёЁ]|-| )+".toRegex())
+        addRegexFilter(cyrillicRegex)
     }
 
     fun setDigitKeyListener(symbols: String) {
@@ -452,7 +453,7 @@ open class BaseInputView: ConstraintLayout {
         view.textInputLayout.apply {
             setInputType(InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_PASSWORD)
             endIconMode = TextInputLayout.END_ICON_PASSWORD_TOGGLE
-            setEndIconDrawable(R.drawable.password_toggle_drawable)
+            setEndIconDrawable(R.drawable.chili_password_toggle_drawable)
             setupInputTextAppearance(inputViewTextAppearanceRes)
         }
     }
@@ -526,7 +527,7 @@ open class BaseInputView: ConstraintLayout {
                 endIconMode = TextInputLayout.END_ICON_NONE
             }
         }
-        if (!isInputRightDrawableExist()) setInputRightDrawable(R.drawable.ic_clear)
+        if (!isInputRightDrawableExist()) setInputRightDrawable(R.drawable.chili_ic_clear)
         view.inputField.addTextChangedListener(
             ClearTextIconTextWatcher(
                 getInputRightImageView(),

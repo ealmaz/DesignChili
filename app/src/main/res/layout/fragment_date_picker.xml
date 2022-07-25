@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="?screenBackground"
+    android:background="?attr/ChiliScreenBackground"
     android:layout_height="match_parent">
 
     <LinearLayout
@@ -15,7 +15,7 @@
         <Button
             android:id="@+id/date"
             android:text="Date picker"
-            style="@style/ButtonStyle.Primary"
+            style="@style/Chili.ButtonStyle.Primary"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/padding_16dp"/>
@@ -23,7 +23,7 @@
         <Button
             android:id="@+id/range"
             android:text="Date range picker"
-            style="@style/ButtonStyle.Primary"
+            style="@style/Chili.ButtonStyle.Primary"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/padding_16dp"/>
@@ -31,7 +31,7 @@
         <Button
             android:id="@+id/date_start"
             android:text="Date picker with start limit"
-            style="@style/ButtonStyle.Primary"
+            style="@style/Chili.ButtonStyle.Primary"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/padding_16dp"/>
@@ -39,7 +39,7 @@
         <Button
             android:id="@+id/date_end"
             android:text="Date picker with end limit"
-            style="@style/ButtonStyle.Primary"
+            style="@style/Chili.ButtonStyle.Primary"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/padding_16dp"/>
@@ -47,7 +47,7 @@
         <Button
             android:id="@+id/date_start_end"
             android:text="Date picker with start and end limit"
-            style="@style/ButtonStyle.Primary"
+            style="@style/Chili.ButtonStyle.Primary"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/padding_16dp"/>
@@ -55,7 +55,7 @@
         <Button
             android:id="@+id/range_start"
             android:text="Range picker with start limit"
-            style="@style/ButtonStyle.Primary"
+            style="@style/Chili.ButtonStyle.Primary"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/padding_16dp"/>
@@ -63,7 +63,7 @@
         <Button
             android:id="@+id/range_end"
             android:text="Range picker with end limit"
-            style="@style/ButtonStyle.Primary"
+            style="@style/Chili.ButtonStyle.Primary"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/padding_16dp"/>
@@ -71,7 +71,7 @@
         <Button
             android:id="@+id/range_start_end"
             android:text="Range picker with start and end limit"
-            style="@style/ButtonStyle.Primary"
+            style="@style/Chili.ButtonStyle.Primary"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/padding_16dp"/>

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="BaseNavigationComponentsStyle" parent="BaseChiliViewStyle">
+    <style name="Chili.BaseNavigationComponentsStyle" parent="Chili.BaseChiliViewStyle">
 
     </style>
 
-    <style name="ChiliToolbarStyle" parent="BaseNavigationComponentsStyle">
+    <style name="Chili.ToolbarStyle" parent="Chili.BaseNavigationComponentsStyle">
         <item name="isDividerVisible">true</item>
         <item name="toolbarNavigationButtonStyle">@style/Toolbar.Button.Navigation.Tinted</item>
 

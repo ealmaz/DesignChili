@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    android:orientation="vertical"
+    android:id="@+id/ll_root">
+
+    <ImageView
+        android:id="@+id/iv_top_drawable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/padding_8dp"
+        android:layout_marginBottom="@dimen/padding_8dp"
+        android:visibility="gone"
+        android:background="@drawable/chili_bottom_sheet_top_drawable"
+        android:backgroundTint="?attr/ChiliBottomSheetTopDrawableColor"/>
+
+    <LinearLayout
+        android:id="@+id/ll_content"
+        android:background="@drawable/chili_bg_rounded_bottom_sheet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/padding_8dp"
+        android:paddingBottom="@dimen/padding_8dp">
+
+        <ImageView
+            android:id="@+id/iv_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|right"
+            android:layout_marginEnd="@dimen/padding_8dp"
+            android:layout_marginBottom="@dimen/padding_8dp"
+            android:background="@drawable/chili_ic_clear"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+</LinearLayout>

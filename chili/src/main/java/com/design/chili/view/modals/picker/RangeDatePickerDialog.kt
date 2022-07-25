@@ -29,7 +29,7 @@ class RangeDatePickerDialog : DialogFragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?,
     ): View? {
-        return inflater.inflate(R.layout.view_range_date_picker_dialog, container, false)
+        return inflater.inflate(R.layout.chili_view_range_date_picker_dialog, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

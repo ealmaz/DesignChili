@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="?screenBackground"
+    android:background="?attr/ChiliScreenBackground"
     android:paddingBottom="@dimen/padding_16dp">
 
     <LinearLayout
@@ -85,8 +85,8 @@
             android:id="@+id/divider"
             android:layout_marginTop="@dimen/padding_16dp"
             android:layout_width="match_parent"
-            android:layout_height="?dividerHeightSize"
-            android:background="?dividerColor"
+            android:layout_height="?attr/ChiliDividerHeightSize"
+            android:background="?attr/ChiliDividerColor"
             />
 
 

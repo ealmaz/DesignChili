@@ -30,7 +30,7 @@ class ItemInfoCardView : ConstraintLayout {
     }
 
     private fun inflateViews() {
-        val view = LayoutInflater.from(context).inflate(R.layout.view_item_info_card, this)
+        val view = LayoutInflater.from(context).inflate(R.layout.chili_view_item_info_card, this)
         this.view = ItemInfoCardViewVariables(
             tvTitle = view.findViewById(R.id.tv_title),
             tvValue = view.findViewById(R.id.tv_value),

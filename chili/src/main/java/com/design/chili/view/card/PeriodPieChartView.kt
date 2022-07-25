@@ -1,7 +1,6 @@
 package com.design.chili.view.card
 
 import android.content.Context
-import android.graphics.Typeface
 import android.text.Spanned
 import android.util.AttributeSet
 import android.view.View
@@ -34,7 +33,7 @@ class PeriodPieChartView : CardView {
     }
 
     private fun setupView() {
-        val view = inflate(context, R.layout.view_period_pie_chart, this)
+        val view = inflate(context, R.layout.chili_view_period_pie_chart, this)
         this.view = PeriodPieChartVariables(
             tvDate = view.findViewById(R.id.tv_chart_date),
             ivPreviousPeriod = view.findViewById(R.id.iv_previous_period),
@@ -43,7 +42,7 @@ class PeriodPieChartView : CardView {
         )
         cardElevation = 0.0f
         radius = resources.getDimension(R.dimen.radius_8dp)
-        setCardBackgroundColor(context.getColorFromAttr(R.attr.CardViewBackground))
+        setCardBackgroundColor(context.getColorFromAttr(R.attr.ChiliCardViewBackground))
         setupPieChart()
         this.view.pieChart.setCenterTextTypeface(ResourcesCompat.getFont(context, R.font.roboto_medium))
     }
@@ -74,10 +73,10 @@ class PeriodPieChartView : CardView {
 
     private fun setupPieChart() {
         view.pieChart.run {
-            setCenterTextColor(context.getColorFromAttr(R.attr.PrimaryTextColor))
+            setCenterTextColor(context.getColorFromAttr(R.attr.ChiliPrimaryTextColor))
             setCenterTextSize(16f)
             isDrawHoleEnabled = true
-            setHoleColor(context.getColorFromAttr(R.attr.CardViewBackground))
+            setHoleColor(context.getColorFromAttr(R.attr.ChiliCardViewBackground))
             holeRadius = 70f
             description.isEnabled = false
             legend.isEnabled = false

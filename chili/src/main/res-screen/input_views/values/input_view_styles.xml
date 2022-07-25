@@ -1,26 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="InputViewStyle" parent="BaseChiliViewStyle">
-        <item name="errorFieldBackground">?InputViewBackgroundErrorColor</item>
-        <item name="fieldBackground">?InputViewBackgroundColor</item>
-        <item name="hintTextColor">?InputViewHintTextColor</item>
-        <item name="errorMessageTextColor">?InputViewErrorMessageTextColor</item>
-        <item name="messageTextColor">?InputViewMessageTextColor</item>
-        <item name="android:textAppearance">@style/H5.Primary.Bold</item>
+    <style name="Chili.InputViewStyle" parent="Chili.BaseChiliViewStyle">
+        <item name="errorFieldBackground">?attr/ChiliInputViewBackgroundErrorColor</item>
+        <item name="fieldBackground">?attr/ChiliInputViewBackgroundColor</item>
+        <item name="hintTextColor">?attr/ChiliInputViewHintTextColor</item>
+        <item name="errorMessageTextColor">?attr/ChiliInputViewErrorMessageTextColor</item>
+        <item name="messageTextColor">?attr/ChiliInputViewMessageTextColor</item>
+        <item name="android:textAppearance">@style/Chili.H5.Primary.Bold</item>
     </style>
 
 
-    <style name="InputViewStyle.Simple"></style>
-    <style name="InputViewStyle.Masked"></style>
+    <style name="Chili.InputViewStyle.Simple"></style>
+    <style name="Chili.InputViewStyle.Masked"></style>
 
-    <style name="InputViewStyle.Masked.PhoneMask">
+    <style name="Chili.InputViewStyle.Masked.PhoneMask">
         <item name="android:inputType">number</item>
         <item name="allowedInputSymbols">1234567890</item>
         <item name="mask">+996 XXX XXX XXX</item>
     </style>
 
-    <style name="InputViewStyle.Simple.Password">
+    <style name="Chili.InputViewStyle.Simple.Password">
         <item name="endIconMode">password_toggle</item>
     </style>
 

@@ -2,11 +2,11 @@
 <shape xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
     <solid
-        android:color="?CellViewBackground"
+        android:color="?attr/ChiliCellViewBackground"
         tools:color="#fff" />
     <corners
-        android:topLeftRadius="?CellCornerRadius"
-        android:topRightRadius="?CellCornerRadius"
+        android:topLeftRadius="?attr/ChiliCellCornerRadius"
+        android:topRightRadius="?attr/ChiliCellCornerRadius"
         tools:topLeftRadius="4dp"
         tools:topRightRadius="4dp" />
 </shape>

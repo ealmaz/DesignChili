@@ -2,7 +2,7 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="?screenBackground"
+    android:background="?attr/ChiliScreenBackground"
     android:layout_height="match_parent">
 
     <LinearLayout
@@ -14,7 +14,7 @@
         <Button
             android:id="@+id/action"
             android:text="Action bottom sheet"
-            style="@style/ButtonStyle.Primary"
+            style="@style/Chili.ButtonStyle.Primary"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/padding_16dp"/>
@@ -22,7 +22,7 @@
         <Button
             android:id="@+id/info"
             android:text="Info bottom sheet"
-            style="@style/ButtonStyle.Primary"
+            style="@style/Chili.ButtonStyle.Primary"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/padding_16dp"/>
@@ -30,7 +30,7 @@
         <Button
             android:id="@+id/detail"
             android:text="Detailed info bottom sheet"
-            style="@style/ButtonStyle.Primary"
+            style="@style/Chili.ButtonStyle.Primary"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/padding_16dp"/>
@@ -38,7 +38,7 @@
         <Button
             android:id="@+id/description"
             android:text="Description bottom sheet"
-            style="@style/ButtonStyle.Primary"
+            style="@style/Chili.ButtonStyle.Primary"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/padding_16dp"/>
@@ -46,7 +46,7 @@
         <Button
             android:id="@+id/custom"
             android:text="Custom fragment sheet"
-            style="@style/ButtonStyle.Primary"
+            style="@style/Chili.ButtonStyle.Primary"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/padding_16dp"/>
@@ -54,7 +54,7 @@
         <Button
             android:id="@+id/in_app"
             android:text="In App push"
-            style="@style/ButtonStyle.Primary"
+            style="@style/Chili.ButtonStyle.Primary"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/padding_16dp"/>
@@ -62,7 +62,7 @@
         <Button
             android:id="@+id/in_app_banner"
             android:text="In App push with banner"
-            style="@style/ButtonStyle.Primary"
+            style="@style/Chili.ButtonStyle.Primary"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/padding_16dp"/>
