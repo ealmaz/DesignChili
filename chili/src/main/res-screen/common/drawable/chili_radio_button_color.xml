@@ -3,17 +3,17 @@
     <item
         android:state_enabled="true"
         android:state_checked="true"
-        android:color="?attr/RadioButtonCheckedColor"/>
+        android:color="?attr/ChiliRadioButtonCheckedColor"/>
     <item
         android:state_enabled="true"
         android:state_checked="false"
-        android:color="?attr/RadioButtonUncheckedColor"/>
+        android:color="?attr/ChiliRadioButtonUncheckedColor"/>
     <item
         android:state_enabled="false"
         android:state_checked="true"
-        android:color="?attr/RadioButtonDisabledColor"/>
+        android:color="?attr/ChiliRadioButtonDisabledColor"/>
     <item
         android:state_enabled="false"
         android:state_checked="false"
-        android:color="?attr/RadioButtonDisabledColor"/>
+        android:color="?attr/ChiliRadioButtonDisabledColor"/>
 </selector>

@@ -40,7 +40,7 @@ fun Window.updateNavigationBarColor() {
     val dimDrawable = GradientDrawable()
     val navigationBarDrawable = GradientDrawable()
     navigationBarDrawable.shape = GradientDrawable.RECTANGLE
-    navigationBarDrawable.setColor(context.getColorFromAttr(R.attr.screenBackground))
+    navigationBarDrawable.setColor(context.getColorFromAttr(R.attr.ChiliScreenBackground))
     val layers: Array<Drawable> = arrayOf(dimDrawable, navigationBarDrawable)
     val windowBackground = LayerDrawable(layers)
     windowBackground.setLayerInsetTop(1, metrics.heightPixels)

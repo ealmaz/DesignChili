@@ -38,7 +38,7 @@ class PieChartTitledView : CardView {
         )
         cardElevation = 0.0f
         radius = resources.getDimension(R.dimen.radius_4dp)
-        setCardBackgroundColor(context.getColorFromAttr(R.attr.CardViewBackground))
+        setCardBackgroundColor(context.getColorFromAttr(R.attr.ChiliCardViewBackground))
         setupPieChart()
     }
 
@@ -57,7 +57,7 @@ class PieChartTitledView : CardView {
     private fun setupPieChart() {
         view.pieChart.run {
             isDrawHoleEnabled = true
-            setHoleColor(context.getColorFromAttr(R.attr.CardViewBackground))
+            setHoleColor(context.getColorFromAttr(R.attr.ChiliCardViewBackground))
             holeRadius = 70f
             description.isEnabled = false
             legend.isEnabled = false

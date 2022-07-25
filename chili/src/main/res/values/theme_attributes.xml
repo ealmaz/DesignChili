@@ -2,78 +2,78 @@
 <resources>
 
     <!-- Text size attributes   -->
-    <attr name="TextSizeH1" format="dimension"/>
-    <attr name="TextSizeH2" format="dimension"/>
-    <attr name="TextSizeH3" format="dimension"/>
-    <attr name="TextSizeH4" format="dimension"/>
-    <attr name="TextSizeH5" format="dimension"/>
-    <attr name="TextSizeH6" format="dimension"/>
-    <attr name="TextSizeH7" format="dimension"/>
-    <attr name="TextSizeH8" format="dimension"/>
-    <attr name="TextSizeH9" format="dimension"/>
-    <attr name="TextSizeH10" format="dimension"/>
+    <attr name="ChiliTextSizeH1" format="dimension"/>
+    <attr name="ChiliTextSizeH2" format="dimension"/>
+    <attr name="ChiliTextSizeH3" format="dimension"/>
+    <attr name="ChiliTextSizeH4" format="dimension"/>
+    <attr name="ChiliTextSizeH5" format="dimension"/>
+    <attr name="ChiliTextSizeH6" format="dimension"/>
+    <attr name="ChiliTextSizeH7" format="dimension"/>
+    <attr name="ChiliTextSizeH8" format="dimension"/>
+    <attr name="ChiliTextSizeH9" format="dimension"/>
+    <attr name="ChiliTextSizeH10" format="dimension"/>
 
     <!-- Text color attributes   -->
-    <attr name="PrimaryTextColor" format="color"/>
-    <attr name="SecondaryTextColor" format="color"/>
-    <attr name="MarkedTextColor" format="color"/>
-    <attr name="ErrorTextColor" format="color"/>
+    <attr name="ChiliPrimaryTextColor" format="color"/>
+    <attr name="ChiliSecondaryTextColor" format="color"/>
+    <attr name="ChiliMarkedTextColor" format="color"/>
+    <attr name="ChiliErrorTextColor" format="color"/>
 
     <!-- Text font attributes   -->
-    <attr name="RegularTextFont" format="string"/>
-    <attr name="BoldTextFont" format="string"/>
-    <attr name="ItalicTextFont" format="string"/>
+    <attr name="ChiliRegularTextFont" format="string"/>
+    <attr name="ChiliBoldTextFont" format="string"/>
+    <attr name="ChiliItalicTextFont" format="string"/>
 
 
     <!-- ScreenBackground -->
-    <attr name="screenBackground" format="reference"/>
+    <attr name="ChiliScreenBackground" format="reference"/>
 
     <!-- Ripple-->
-    <attr name="rippleForegroundColor" format="dimension"/>
-    <attr name="rippleForegroundCornerRadius" format="dimension"/>
+    <attr name="ChiliRippleForegroundColor" format="dimension"/>
+    <attr name="ChiliRippleForegroundCornerRadius" format="dimension"/>
 
     <!-- Divider -->
-    <attr name="dividerColor" format="color"/>
-    <attr name="dividerHeightSize" format="dimension"/>
+    <attr name="ChiliDividerColor" format="color"/>
+    <attr name="ChiliDividerHeightSize" format="dimension"/>
 
 
 
     <!-- CardView attributes -->
-    <attr name="CardViewBackground" format="reference"/>
-    <attr name="CardViewCornerRadius" format="dimension"/>
-    <attr name="CardViewSquircleBackground" format="reference"/>
-    <attr name="CardViewPhonePickerDividerColor" format="color"/>
-    <attr name="AnimatedLeftoverAddButtonBackground" format="color"/>
+    <attr name="ChiliCardViewBackground" format="reference"/>
+    <attr name="ChiliCardViewCornerRadius" format="dimension"/>
+    <attr name="ChiliCardViewSquircleBackground" format="reference"/>
+    <attr name="ChiliCardViewPhonePickerDividerColor" format="color"/>
+    <attr name="ChiliAnimatedLeftoverAddButtonBackground" format="color"/>
 
 
     <!-- CellView attributes -->
-    <attr name="CellViewBackground" format="reference"/>
-    <attr name="CellCornerRadius" format="dimension"/>
-    <attr name="CellSquircleIconBackground" format="dimension"/>
+    <attr name="ChiliCellViewBackground" format="reference"/>
+    <attr name="ChiliCellCornerRadius" format="dimension"/>
+    <attr name="ChiliCellSquircleIconBackground" format="dimension"/>
 
 
     <!-- Snackbar attributes -->
-    <attr name="SnackbarBackground" format="reference"/>
-    <attr name="SnackbarCornerRadius" format="dimension"/>
-    <attr name="SnackbarElevation" format="dimension"/>
-    <attr name="SnackbarTextColor" format="color"/>
+    <attr name="ChiliSnackbarBackground" format="reference"/>
+    <attr name="ChiliSnackbarCornerRadius" format="dimension"/>
+    <attr name="ChiliSnackbarElevation" format="dimension"/>
+    <attr name="ChiliSnackbarTextColor" format="color"/>
 
 
     <!-- Segmented Picker   -->
-    <attr name="SegmentedPickerBackgroundColor" format="color"/>
-    <attr name="SegmentedPickerTabIndicatorColor" format="color"/>
-    <attr name="SegmentedPickerTabTextColor" format="color"/>
+    <attr name="ChiliSegmentedPickerBackgroundColor" format="color"/>
+    <attr name="ChiliSegmentedPickerTabIndicatorColor" format="color"/>
+    <attr name="ChiliSegmentedPickerTabTextColor" format="color"/>
 
 
     <!-- CheckBox  -->
-    <attr name="CheckBoxCheckedColor" format="color"/>
-    <attr name="CheckBoxUncheckedColor" format="color"/>
-    <attr name="CheckBoxDisabledColor" format="color"/>
+    <attr name="ChiliCheckBoxCheckedColor" format="color"/>
+    <attr name="ChiliCheckBoxUncheckedColor" format="color"/>
+    <attr name="ChiliCheckBoxDisabledColor" format="color"/>
 
     <!-- RadioButton  -->
-    <attr name="RadioButtonCheckedColor" format="color"/>
-    <attr name="RadioButtonUncheckedColor" format="color"/>
-    <attr name="RadioButtonDisabledColor" format="color"/>
+    <attr name="ChiliRadioButtonCheckedColor" format="color"/>
+    <attr name="ChiliRadioButtonUncheckedColor" format="color"/>
+    <attr name="ChiliRadioButtonDisabledColor" format="color"/>
     
     <!--  Switch box -->
     <attr name="ChiliSwitchBoxCheckedBg" format="color"/>
@@ -82,110 +82,114 @@
     <attr name="ChiliSwitchBoxUncheckedToggleColor" format="color"/>
 
     <!-- Bottom sheet -->
-    <attr name="BottomSheetBackgroundColor" format="color"/>
-    <attr name="BottomSheetTopCornersRadius" format="dimension"/>
-    <attr name="BottomSheetTopDrawableColor" format="color"/>
+    <attr name="ChiliBottomSheetBackgroundColor" format="color"/>
+    <attr name="ChiliBottomSheetTopCornersRadius" format="dimension"/>
+    <attr name="ChiliBottomSheetTopDrawableColor" format="color"/>
     <!-- Bottom sheet >>> ActionBottomSheet   -->
-    <attr name="ActionBottomSheetButtonTextColor" format="color"/>
-    <attr name="ActionBottomSheetAccentButtonTextColor" format="color"/>
+    <attr name="ChiliActionBottomSheetButtonTextColor" format="color"/>
+    <attr name="ChiliActionBottomSheetAccentButtonTextColor" format="color"/>
 
     <!-- InAppPush -->
-    <attr name="InAppPushBackground" format="color"/>
-    <attr name="InAppPushCornerRadius" format="dimension"/>
+    <attr name="ChiliInAppPushBackground" format="color"/>
+    <attr name="ChiliInAppPushCornerRadius" format="dimension"/>
 
 
     <!-- Picker dialog -->
-    <attr name="PickerDialogControlColor" format="color"/>
-    <attr name="PickerDialogCornerRadius" format="dimension"/>
-    <attr name="PickerDialogBackground" format="color|reference"/>
+    <attr name="ChiliPickerDialogControlColor" format="color"/>
+    <attr name="ChiliPickerDialogCornerRadius" format="dimension"/>
+    <attr name="ChiliPickerDialogBackground" format="color|reference"/>
 
 
     <!-- Toolbar -->
-    <attr name="ToolbarAdditionalTextTextAppearance" format="reference"/>
-    <attr name="ToolbarTextAppearance" format="reference"/>
-    <attr name="ToolbarDividerColor" format="color"/>
-    <attr name="ToolbarDividerSize" format="dimension"/>
-    <attr name="ToolbarIconsTint" format="color"/>
-    <attr name="ToolbarBackground" format="color|reference"/>
+    <attr name="ChiliToolbarAdditionalTextTextAppearance" format="reference"/>
+    <attr name="ChiliToolbarTextAppearance" format="reference"/>
+    <attr name="ChiliToolbarDividerColor" format="color"/>
+    <attr name="ChiliToolbarDividerSize" format="dimension"/>
+    <attr name="ChiliToolbarIconsTint" format="color"/>
+    <attr name="ChiliToolbarBackground" format="color|reference"/>
 
     <!-- InputView attributes -->
-    <attr name="BaseInputViewBackground" format="reference"/>
-    <attr name="BaseInputViewBackgroundError" format="reference"/>
-    <attr name="BaseInputViewCursorColor" format="color"/>
-    <attr name="BaseInputViewIconTint" format="color"/>
+    <attr name="ChiliBaseInputViewBackground" format="reference"/>
+    <attr name="ChiliBaseInputViewBackgroundError" format="reference"/>
+    <attr name="ChiliBaseInputViewCursorColor" format="color"/>
+    <attr name="ChiliBaseInputViewIconTint" format="color"/>
 
 
 
     <!-- Primary Button attributes -->
-    <attr name="PrimaryButtonBackgroundActive" format="color"/>
-    <attr name="PrimaryButtonBackgroundDisabled" format="color"/>
-    <attr name="PrimaryButtonCornerRadius" format="dimension"/>
-    <attr name="PrimaryButtonTextSize" format="dimension"/>
-    <attr name="PrimaryButtonTextFont" format="string"/>
-    <attr name="PrimaryButtonTextColorActive" format="color"/>
-    <attr name="PrimaryButtonTextColorPressed" format="color"/>
-    <attr name="PrimaryButtonTextColorDisabled" format="color"/>
+    <attr name="ChiliPrimaryButtonBackgroundActive" format="color"/>
+    <attr name="ChiliPrimaryButtonBackgroundDisabled" format="color"/>
+    <attr name="ChiliPrimaryButtonCornerRadius" format="dimension"/>
+    <attr name="ChiliPrimaryButtonTextSize" format="dimension"/>
+    <attr name="ChiliPrimaryButtonTextFont" format="string"/>
+    <attr name="ChiliPrimaryButtonTextColorActive" format="color"/>
+    <attr name="ChiliPrimaryButtonTextColorPressed" format="color"/>
+    <attr name="ChiliPrimaryButtonTextColorDisabled" format="color"/>
+    <attr name="ChiliPrimaryButtonTextAllCaps" format="boolean"/>
 
-    <attr name="PrimaryButtonRippleColor" format="color"/>
+    <attr name="ChiliPrimaryButtonRippleColor" format="color"/>
 
     <!-- Secondary Button attributes -->
-    <attr name="SecondaryButtonBackgroundActive" format="color"/>
-    <attr name="SecondaryButtonBackgroundDisabled" format="color"/>
-    <attr name="SecondaryButtonCornerRadius" format="dimension"/>
-    <attr name="SecondaryButtonTextSize" format="dimension"/>
-    <attr name="SecondaryButtonTextFont" format="string"/>
-    <attr name="SecondaryButtonTextColorActive" format="color"/>
-    <attr name="SecondaryButtonTextColorPressed" format="color"/>
-    <attr name="SecondaryButtonTextColorDisabled" format="color"/>
+    <attr name="ChiliSecondaryButtonBackgroundActive" format="color"/>
+    <attr name="ChiliSecondaryButtonBackgroundDisabled" format="color"/>
+    <attr name="ChiliSecondaryButtonCornerRadius" format="dimension"/>
+    <attr name="ChiliSecondaryButtonTextSize" format="dimension"/>
+    <attr name="ChiliSecondaryButtonTextFont" format="string"/>
+    <attr name="ChiliSecondaryButtonTextColorActive" format="color"/>
+    <attr name="ChiliSecondaryButtonTextColorPressed" format="color"/>
+    <attr name="ChiliSecondaryButtonTextColorDisabled" format="color"/>
+    <attr name="ChiliSecondaryButtonTextAllCaps" format="boolean"/>
 
     <!-- Additional Button attributes -->
-    <attr name="AdditionalButtonBackgroundActive" format="color"/>
-    <attr name="AdditionalButtonBackgroundDisabled" format="color"/>
-    <attr name="AdditionalButtonCornerRadius" format="dimension"/>
-    <attr name="AdditionalButtonTextSize" format="dimension"/>
-    <attr name="AdditionalButtonTextFont" format="string"/>
-    <attr name="AdditionalButtonTextColorActive" format="color"/>
-    <attr name="AdditionalButtonTextColorPressed" format="color"/>
-    <attr name="AdditionalButtonTextColorDisabled" format="color"/>
+    <attr name="ChiliAdditionalButtonBackgroundActive" format="color"/>
+    <attr name="ChiliAdditionalButtonBackgroundDisabled" format="color"/>
+    <attr name="ChiliAdditionalButtonCornerRadius" format="dimension"/>
+    <attr name="ChiliAdditionalButtonTextSize" format="dimension"/>
+    <attr name="ChiliAdditionalButtonTextFont" format="string"/>
+    <attr name="ChiliAdditionalButtonTextColorActive" format="color"/>
+    <attr name="ChiliAdditionalButtonTextColorPressed" format="color"/>
+    <attr name="ChiliAdditionalButtonTextColorDisabled" format="color"/>
+    <attr name="ChiliAdditionalButtonTextAllCaps" format="boolean"/>
 
-    <attr name="AdditionalButtonBorderColor" format="color"/>
-    <attr name="AdditionalButtonDisabledBorderColor" format="color"/>
+    <attr name="ChiliAdditionalButtonBorderColor" format="color"/>
+    <attr name="ChiliAdditionalButtonDisabledBorderColor" format="color"/>
 
     <!-- Component Button attributes -->
-    <attr name="ComponentButtonBackgroundActive" format="color"/>
-    <attr name="ComponentButtonBackgroundDisabled" format="color"/>
-    <attr name="ComponentButtonCornerRadius" format="dimension"/>
-    <attr name="ComponentButtonTextSize" format="dimension"/>
-    <attr name="ComponentButtonTextFont" format="string"/>
-    <attr name="ComponentButtonTextColorActive" format="color"/>
-    <attr name="ComponentButtonTextColorPressed" format="color"/>
-    <attr name="ComponentButtonTextColorDisabled" format="color"/>
+    <attr name="ChiliComponentButtonBackgroundActive" format="color"/>
+    <attr name="ChiliComponentButtonBackgroundDisabled" format="color"/>
+    <attr name="ChiliComponentButtonCornerRadius" format="dimension"/>
+    <attr name="ChiliComponentButtonTextSize" format="dimension"/>
+    <attr name="ChiliComponentButtonTextFont" format="string"/>
+    <attr name="ChiliComponentButtonTextColorActive" format="color"/>
+    <attr name="ChiliComponentButtonTextColorPressed" format="color"/>
+    <attr name="ChiliComponentButtonTextColorDisabled" format="color"/>
+    <attr name="ChiliComponentButtonTextAllCaps" format="boolean"/>
 
 
     <!-- InputView   -->
-    <attr name="InputViewEndIconTint" format="color"/>
-    <attr name="InputViewHintTextColor" format="color"/>
-    <attr name="InputViewBackgroundColor" format="color"/>
-    <attr name="InputViewBackgroundErrorColor" format="color"/>
-    <attr name="InputViewCursorColor" format="color"/>
-    <attr name="InputViewErrorMessageTextColor" format="color"/>
-    <attr name="InputViewMessageTextColor" format="color"/>
+    <attr name="ChiliInputViewEndIconTint" format="color"/>
+    <attr name="ChiliInputViewHintTextColor" format="color"/>
+    <attr name="ChiliInputViewBackgroundColor" format="color"/>
+    <attr name="ChiliInputViewBackgroundErrorColor" format="color"/>
+    <attr name="ChiliInputViewCursorColor" format="color"/>
+    <attr name="ChiliInputViewErrorMessageTextColor" format="color"/>
+    <attr name="ChiliInputViewMessageTextColor" format="color"/>
 
 
     <!-- TariffPriceInfoView -->
-    <attr name="InternetLabel" format="string"/>
-    <attr name="InternetIcon" format="reference"/>
-    <attr name="VoiceInLabel" format="string"/>
-    <attr name="VoiceInIcon" format="reference"/>
-    <attr name="VoiceOutLabel" format="string"/>
-    <attr name="VoiceOutIcon" format="reference"/>
-    <attr name="SmsLabel" format="string"/>
-    <attr name="SmsIcon" format="reference"/>
+    <attr name="ChiliInternetLabel" format="string"/>
+    <attr name="ChiliInternetIcon" format="reference"/>
+    <attr name="ChiliVoiceInLabel" format="string"/>
+    <attr name="ChiliVoiceInIcon" format="reference"/>
+    <attr name="ChiliVoiceOutLabel" format="string"/>
+    <attr name="ChiliVoiceOutIcon" format="reference"/>
+    <attr name="ChiliSmsLabel" format="string"/>
+    <attr name="ChiliSmsIcon" format="reference"/>
 
     <!-- TariffPackagesInfoView -->
-    <attr name="TariffPackagesInfoVerticalDivider" format="color"/>
-    <attr name="TariffPackagesInfoAddButtonTint" format="color"/>
-    <attr name="TariffPackagesInfoInternetProgress" format="color"/>
-    <attr name="TariffPackagesInfoCallProgress" format="color"/>
+    <attr name="ChiliTariffPackagesInfoVerticalDivider" format="color"/>
+    <attr name="ChiliTariffPackagesInfoAddButtonTint" format="color"/>
+    <attr name="ChiliTariffPackagesInfoInternetProgress" format="color"/>
+    <attr name="ChiliTariffPackagesInfoCallProgress" format="color"/>
 
 </resources>

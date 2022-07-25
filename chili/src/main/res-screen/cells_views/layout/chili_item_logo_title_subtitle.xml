@@ -72,8 +72,8 @@
     <View
         android:id="@+id/view_divider"
         android:layout_width="0dp"
-        android:layout_height="?dividerHeightSize"
-        android:background="?dividerColor"
+        android:layout_height="?attr/ChiliDividerHeightSize"
+        android:background="?attr/ChiliDividerColor"
         app:layout_constraintStart_toStartOf="@+id/ll_titles"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"/>

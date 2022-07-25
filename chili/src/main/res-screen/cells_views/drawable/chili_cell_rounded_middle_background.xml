@@ -2,6 +2,6 @@
 <shape xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
     <solid
-        android:color="?CellViewBackground"
+        android:color="?attr/ChiliCellViewBackground"
         tools:color="#fff" />
 </shape>

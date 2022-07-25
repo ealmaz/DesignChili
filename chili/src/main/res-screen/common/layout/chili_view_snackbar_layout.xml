@@ -13,9 +13,9 @@
         android:layout_marginStart="@dimen/padding_16dp"
         android:layout_marginEnd="@dimen/padding_16dp"
         android:layout_marginBottom="@dimen/padding_16dp"
-        app:cardBackgroundColor="?SnackbarBackground"
-        app:cardElevation="?SnackbarElevation"
-        app:cardCornerRadius="?SnackbarCornerRadius">
+        app:cardBackgroundColor="?attr/ChiliSnackbarBackground"
+        app:cardElevation="?attr/ChiliSnackbarElevation"
+        app:cardCornerRadius="?attr/ChiliSnackbarCornerRadius">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -51,7 +51,7 @@
                 android:layout_gravity="center"
                 android:visibility="gone"
                 style="?android:attr/progressBarStyleHorizontal"
-                android:indeterminateTint="?SnackbarTextColor"
+                android:indeterminateTint="?attr/ChiliSnackbarTextColor"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"/>
@@ -62,7 +62,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/padding_8dp"
                 android:textAppearance="@style/Chili.H9.Primary"
-                android:textColor="?SnackbarTextColor"
+                android:textColor="?attr/ChiliSnackbarTextColor"
                 app:layout_constraintEnd_toStartOf="@id/tv_action"
                 app:layout_constraintStart_toEndOf="@id/iv_icon"
                 app:layout_constraintTop_toTopOf="parent"

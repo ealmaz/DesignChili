@@ -3,9 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:ignore="MissingDefaultResource">
     <solid
-        android:color="?CardViewBackground"
+        android:color="?attr/ChiliCardViewBackground"
         tools:color="#fff" />
     <corners
-        android:radius="?CardViewCornerRadius"
+        android:radius="?attr/ChiliCardViewCornerRadius"
         tools:radius="4dp" />
 </shape>

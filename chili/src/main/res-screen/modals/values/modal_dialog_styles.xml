@@ -12,8 +12,8 @@
     </style>
 
     <style name="Chili.DatePickerSpinnerTheme" parent="@android:style/Widget.Material.DatePicker">
-        <item name="colorControlNormal">?PickerDialogControlColor</item>
-        <item name="android:textSize">?TextSizeH7</item>
+        <item name="colorControlNormal">?attr/ChiliPickerDialogControlColor</item>
+        <item name="android:textSize">?attr/ChiliTextSizeH7</item>
     </style>
 
 

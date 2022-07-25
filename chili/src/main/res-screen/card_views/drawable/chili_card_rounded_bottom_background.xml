@@ -2,11 +2,11 @@
 <shape xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
     <solid
-        android:color="?CardViewBackground"
+        android:color="?attr/ChiliCardViewBackground"
         tools:color="#fff" />
     <corners
-        android:bottomLeftRadius="?CardViewCornerRadius"
-        android:bottomRightRadius="?CardViewCornerRadius"
+        android:bottomLeftRadius="?attr/ChiliCardViewCornerRadius"
+        android:bottomRightRadius="?attr/ChiliCardViewCornerRadius"
         tools:bottomLeftRadius="4dp"
         tools:bottomRightRadius="4dp" />
 </shape>

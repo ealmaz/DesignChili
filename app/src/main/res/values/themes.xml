@@ -18,13 +18,13 @@
         <item name="windowColor">@color/gray_4</item>
 
 
-        <item name="InternetLabel">Вне сети</item>
-        <item name="InternetIcon">@drawable/ic_darkmode_false_</item>
-        <item name="VoiceInLabel">Интернет</item>
-        <item name="VoiceInIcon">@drawable/ic_darkmode_false_</item>
-        <item name="VoiceOutLabel">Внутри сети</item>
-        <item name="VoiceOutIcon">@drawable/ic_darkmode_false_</item>
-        <item name="SmsLabel">СМС</item>
-        <item name="SmsIcon">@drawable/ic_darkmode_false_</item>
+        <item name="ChiliInternetLabel">Вне сети</item>
+        <item name="ChiliInternetIcon">@drawable/ic_darkmode_false_</item>
+        <item name="ChiliVoiceInLabel">Интернет</item>
+        <item name="ChiliVoiceInIcon">@drawable/ic_darkmode_false_</item>
+        <item name="ChiliVoiceOutLabel">Внутри сети</item>
+        <item name="ChiliVoiceOutIcon">@drawable/ic_darkmode_false_</item>
+        <item name="ChiliSmsLabel">СМС</item>
+        <item name="ChiliSmsIcon">@drawable/ic_darkmode_false_</item>
     </style>
 </resources>

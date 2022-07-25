@@ -2,11 +2,11 @@
 <resources>
 
     <style name="Chili.InputViewStyle" parent="Chili.BaseChiliViewStyle">
-        <item name="errorFieldBackground">?InputViewBackgroundErrorColor</item>
-        <item name="fieldBackground">?InputViewBackgroundColor</item>
-        <item name="hintTextColor">?InputViewHintTextColor</item>
-        <item name="errorMessageTextColor">?InputViewErrorMessageTextColor</item>
-        <item name="messageTextColor">?InputViewMessageTextColor</item>
+        <item name="errorFieldBackground">?attr/ChiliInputViewBackgroundErrorColor</item>
+        <item name="fieldBackground">?attr/ChiliInputViewBackgroundColor</item>
+        <item name="hintTextColor">?attr/ChiliInputViewHintTextColor</item>
+        <item name="errorMessageTextColor">?attr/ChiliInputViewErrorMessageTextColor</item>
+        <item name="messageTextColor">?attr/ChiliInputViewMessageTextColor</item>
         <item name="android:textAppearance">@style/Chili.H5.Primary.Bold</item>
     </style>
 

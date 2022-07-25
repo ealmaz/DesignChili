@@ -3,20 +3,20 @@
     <item android:state_enabled="false">
         <shape android:shape="rectangle">
             <corners
-                android:radius="?PrimaryButtonCornerRadius"
+                android:radius="?attr/ChiliPrimaryButtonCornerRadius"
                 tools:radius="4dp"/>
             <solid
-                android:color="?PrimaryButtonBackgroundDisabled"
+                android:color="?attr/ChiliPrimaryButtonBackgroundDisabled"
                 tools:color="@color/green_3"/>
         </shape>
     </item>
     <item android:state_enabled="true">
         <shape android:shape="rectangle">
             <corners
-                android:radius="?PrimaryButtonCornerRadius"
+                android:radius="?attr/ChiliPrimaryButtonCornerRadius"
                 tools:radius="4dp"/>
             <solid
-                android:color="?PrimaryButtonBackgroundActive"
+                android:color="?attr/ChiliPrimaryButtonBackgroundActive"
                 tools:color="@color/green_1"/>
         </shape>
     </item>

@@ -15,7 +15,7 @@
         android:layout_marginBottom="@dimen/padding_8dp"
         android:visibility="gone"
         android:background="@drawable/chili_bottom_sheet_top_drawable"
-        android:backgroundTint="?BottomSheetTopDrawableColor"/>
+        android:backgroundTint="?attr/ChiliBottomSheetTopDrawableColor"/>
 
     <LinearLayout
         android:id="@+id/ll_content"

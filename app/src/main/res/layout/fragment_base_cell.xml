@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="?screenBackground"
+    android:background="?attr/ChiliScreenBackground"
     android:paddingBottom="@dimen/padding_16dp">
 
     <LinearLayout
@@ -358,8 +358,8 @@
             app:isDividerVisible="false"
             android:icon="@drawable/ic_squircle_phone"
             app:cellIconSize="large"
-            app:title="Заголовок максимальное кол-во строк 2, ауцацу ацу ацу ацу а цу ацу ацу ацу а уца цу ацу а ацу ац уа цуа ц уа ц ацу а цуау а цу ацу"
-            app:subtitle="Заголовок максимальное кол-во строк 2, ауцацу ацу ацу ацу а цу ацу ацу ацу а уца цу ацу а ацу ац уа цуа ц уа ц ацу а цуау а цу ацу" />
+            app:title="Заголовок максимальное кол-во строк 2, строк строк строк строк строк строк строк строк строк строк строк строк строк строк строк строк"
+            app:subtitle="Заголовок максимальное кол-во строк 2, строк строк строк строк строк строк строк строк строк строк строк строк строк строк строк" />
 
         <TextView
             android:layout_width="wrap_content"

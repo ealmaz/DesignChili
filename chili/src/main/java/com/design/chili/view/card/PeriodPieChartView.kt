@@ -42,7 +42,7 @@ class PeriodPieChartView : CardView {
         )
         cardElevation = 0.0f
         radius = resources.getDimension(R.dimen.radius_8dp)
-        setCardBackgroundColor(context.getColorFromAttr(R.attr.CardViewBackground))
+        setCardBackgroundColor(context.getColorFromAttr(R.attr.ChiliCardViewBackground))
         setupPieChart()
         this.view.pieChart.setCenterTextTypeface(ResourcesCompat.getFont(context, R.font.roboto_medium))
     }
@@ -73,10 +73,10 @@ class PeriodPieChartView : CardView {
 
     private fun setupPieChart() {
         view.pieChart.run {
-            setCenterTextColor(context.getColorFromAttr(R.attr.PrimaryTextColor))
+            setCenterTextColor(context.getColorFromAttr(R.attr.ChiliPrimaryTextColor))
             setCenterTextSize(16f)
             isDrawHoleEnabled = true
-            setHoleColor(context.getColorFromAttr(R.attr.CardViewBackground))
+            setHoleColor(context.getColorFromAttr(R.attr.ChiliCardViewBackground))
             holeRadius = 70f
             description.isEnabled = false
             legend.isEnabled = false

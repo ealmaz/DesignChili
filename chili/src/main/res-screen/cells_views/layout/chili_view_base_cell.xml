@@ -23,7 +23,7 @@
         android:layout_marginTop="@dimen/padding_8dp"
         android:layout_marginBottom="@dimen/padding_8dp"
         android:visibility="gone"
-        app:civ_circle_background_color="?CellSquircleIconBackground"
+        app:civ_circle_background_color="?attr/ChiliCellSquircleIconBackground"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@id/fl_start_place_holder"
         app:layout_constraintTop_toTopOf="parent"
@@ -85,8 +85,8 @@
     <View
         android:id="@+id/divider"
         android:layout_width="0dp"
-        android:layout_height="?dividerHeightSize"
-        android:background="?dividerColor"
+        android:layout_height="?attr/ChiliDividerHeightSize"
+        android:background="?attr/ChiliDividerColor"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@id/tv_title" />

@@ -3,17 +3,17 @@
     <item
         android:state_enabled="true"
         android:state_checked="true"
-        android:color="?attr/CheckBoxCheckedColor"/>
+        android:color="?attr/ChiliCheckBoxCheckedColor"/>
     <item
         android:state_enabled="true"
         android:state_checked="false"
-        android:color="?attr/CheckBoxUncheckedColor"/>
+        android:color="?attr/ChiliCheckBoxUncheckedColor"/>
     <item
         android:state_enabled="false"
         android:state_checked="true"
-        android:color="?attr/CheckBoxDisabledColor"/>
+        android:color="?attr/ChiliCheckBoxDisabledColor"/>
     <item
         android:state_enabled="false"
         android:state_checked="false"
-        android:color="?attr/CheckBoxDisabledColor"/>
+        android:color="?attr/ChiliCheckBoxDisabledColor"/>
 </selector>

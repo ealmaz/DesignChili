@@ -15,8 +15,8 @@
 
 
     <style name="Chili.NumberPickerStyle" parent="@android:style/Widget.Material.NumberPicker" tools:ignore="NewApi">
-        <item name="colorControlNormal">?CardViewPhonePickerDividerColor</item>
-        <item name="android:textSize">?TextSizeH5</item>
+        <item name="colorControlNormal">?attr/ChiliCardViewPhonePickerDividerColor</item>
+        <item name="android:textSize">?attr/ChiliTextSizeH5</item>
         <item name="android:fontFamily">@font/roboto_regular</item>
     </style>
 

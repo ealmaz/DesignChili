@@ -13,11 +13,11 @@
     </style>
 
     <style name="Chili.ActionBottomSheetButtonStyle" parent="Chili.ButtonStyle.Secondary">
-        <item name="android:textColor">?ActionBottomSheetButtonTextColor</item>
+        <item name="android:textColor">?attr/ChiliActionBottomSheetButtonTextColor</item>
     </style>
 
     <style name="Chili.ActionBottomSheetAccentButtonStyle" parent="Chili.ButtonStyle.Secondary">
-        <item name="android:textColor">?ActionBottomSheetAccentButtonTextColor</item>
+        <item name="android:textColor">?attr/ChiliActionBottomSheetAccentButtonTextColor</item>
     </style>
 
 </resources>

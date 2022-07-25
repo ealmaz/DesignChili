@@ -17,8 +17,8 @@
 
     <View
         android:layout_width="match_parent"
-        android:layout_height="?dividerHeightSize"
-        android:background="?dividerColor"/>
+        android:layout_height="?attr/ChiliDividerHeightSize"
+        android:background="?attr/ChiliDividerColor"/>
 
     <DatePicker
         android:id="@+id/datePicker"

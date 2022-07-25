@@ -22,7 +22,7 @@
         <View
             android:layout_width="wrap_content"
             android:layout_height="1dp"
-            android:background="?dividerColor"/>
+            android:background="?attr/ChiliDividerColor"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -34,7 +34,7 @@
         <View
             android:layout_width="wrap_content"
             android:layout_height="1dp"
-            android:background="?dividerColor"/>
+            android:background="?attr/ChiliDividerColor"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -46,7 +46,7 @@
         <View
             android:layout_width="wrap_content"
             android:layout_height="1dp"
-            android:background="?dividerColor"/>
+            android:background="?attr/ChiliDividerColor"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -58,7 +58,7 @@
         <View
             android:layout_width="wrap_content"
             android:layout_height="1dp"
-            android:background="?dividerColor"/>
+            android:background="?attr/ChiliDividerColor"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -70,7 +70,7 @@
         <View
             android:layout_width="wrap_content"
             android:layout_height="1dp"
-            android:background="?dividerColor"/>
+            android:background="?attr/ChiliDividerColor"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -82,7 +82,7 @@
         <View
             android:layout_width="wrap_content"
             android:layout_height="1dp"
-            android:background="?dividerColor"/>
+            android:background="?attr/ChiliDividerColor"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -94,7 +94,7 @@
         <View
             android:layout_width="wrap_content"
             android:layout_height="1dp"
-            android:background="?dividerColor"/>
+            android:background="?attr/ChiliDividerColor"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -106,7 +106,7 @@
         <View
             android:layout_width="wrap_content"
             android:layout_height="1dp"
-            android:background="?dividerColor"/>
+            android:background="?attr/ChiliDividerColor"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -118,7 +118,7 @@
         <View
             android:layout_width="wrap_content"
             android:layout_height="1dp"
-            android:background="?dividerColor"/>
+            android:background="?attr/ChiliDividerColor"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -130,7 +130,7 @@
         <View
             android:layout_width="wrap_content"
             android:layout_height="1dp"
-            android:background="?dividerColor"/>
+            android:background="?attr/ChiliDividerColor"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -142,7 +142,7 @@
         <View
             android:layout_width="wrap_content"
             android:layout_height="1dp"
-            android:background="?dividerColor"/>
+            android:background="?attr/ChiliDividerColor"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -154,7 +154,7 @@
         <View
             android:layout_width="wrap_content"
             android:layout_height="1dp"
-            android:background="?dividerColor"/>
+            android:background="?attr/ChiliDividerColor"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -166,7 +166,7 @@
         <View
             android:layout_width="wrap_content"
             android:layout_height="1dp"
-            android:background="?dividerColor"/>
+            android:background="?attr/ChiliDividerColor"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -178,7 +178,7 @@
         <View
             android:layout_width="wrap_content"
             android:layout_height="1dp"
-            android:background="?dividerColor"/>
+            android:background="?attr/ChiliDividerColor"/>
 
 
         <TextView
@@ -191,7 +191,7 @@
         <View
             android:layout_width="wrap_content"
             android:layout_height="1dp"
-            android:background="?dividerColor"/>
+            android:background="?attr/ChiliDividerColor"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -203,7 +203,7 @@
         <View
             android:layout_width="wrap_content"
             android:layout_height="1dp"
-            android:background="?dividerColor"
+            android:background="?attr/ChiliDividerColor"
             android:layout_marginBottom="120dp"/>
 
 
