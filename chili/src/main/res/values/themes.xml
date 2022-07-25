@@ -68,7 +68,7 @@
 
         <item name="colorControlActivated">?ChiliSwitchBoxCheckedToggleColor</item>
         <item name="colorSwitchThumbNormal">?ChiliSwitchBoxUncheckedToggleColor</item>
-        <item name="trackTint">@drawable/bg_switch</item>
+        <item name="trackTint">@drawable/chili_bg_switch</item>
 
         <!-- Bottom sheet -->
         <item name="BottomSheetBackgroundColor">@color/white_1</item>

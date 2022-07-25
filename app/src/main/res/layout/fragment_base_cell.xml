@@ -90,7 +90,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/padding_16dp"
-            android:icon="@drawable/ic_success"
+            android:icon="@drawable/chili_ic_success"
             app:cellIconSize="small"
             app:isDividerVisible="false"
             app:title="Заголовок" />
@@ -337,7 +337,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/padding_8dp"
-            android:icon="@drawable/ic_success"
+            android:icon="@drawable/chili_ic_success"
             app:squircleIconBackgroundColor="@android:color/transparent"
             app:cellIconSize="@dimen/view_72dp"
             app:isDividerVisible="false"

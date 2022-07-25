@@ -22,7 +22,7 @@ open class BaseCellView @JvmOverloads constructor(
     context: Context,
     attrs: AttributeSet? = null,
     defStyleAttr: Int = R.attr.cellViewDefaultStyle,
-    defStyleRes: Int = R.style.Chili_BaseCellViewStyle
+    defStyleRes: Int = R.style.Chili_CellViewStyle_BaseCellViewStyle
 ) : ConstraintLayout(context, attrs, defStyleAttr, defStyleRes) {
 
     lateinit var view: BaseCellViewVariables

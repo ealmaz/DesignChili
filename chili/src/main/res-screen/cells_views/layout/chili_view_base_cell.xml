@@ -39,7 +39,7 @@
         android:layout_marginBottom="@dimen/padding_4dp"
         android:ellipsize="end"
         android:maxLines="2"
-        android:textAppearance="@style/H7.Primary"
+        android:textAppearance="@style/Chili.H7.Primary"
         app:layout_constraintBottom_toTopOf="@id/tv_subtitle"
         app:layout_constraintEnd_toStartOf="@id/fl_end_place_holder"
         app:layout_constraintStart_toEndOf="@id/iv_icon"
@@ -55,7 +55,7 @@
         android:layout_marginBottom="@dimen/padding_8dp"
         android:ellipsize="end"
         android:maxLines="2"
-        android:textAppearance="@style/H8.Secondary"
+        android:textAppearance="@style/Chili.H8.Secondary"
         android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@id/tv_title"
@@ -80,7 +80,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:src="@drawable/ic_chevron"/>
+        android:src="@drawable/chili_ic_chevron"/>
 
     <View
         android:id="@+id/divider"

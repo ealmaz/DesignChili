@@ -30,7 +30,7 @@ class PieChartTitledView : CardView {
     }
 
     private fun setupView() {
-        val view = inflate(context, R.layout.chiliview_titled_pie_chart, this)
+        val view = inflate(context, R.layout.chili_view_titled_pie_chart, this)
         this.view = PieChartViewVariables(
             tvTitle = view.findViewById(R.id.tv_title),
             tvAmount = view.findViewById(R.id.tv_amount),

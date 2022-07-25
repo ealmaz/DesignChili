@@ -3,7 +3,7 @@
 
     <style name="Chili.CellViewStyle" parent="Chili.BaseChiliViewStyle"/>
 
-    <style name="Chili.BaseCellViewStyle" parent="Chili.CellViewStyle"/>
+    <style name="Chili.CellViewStyle.BaseCellViewStyle"/>
 
     <style name="Chili.CellViewStyle.LogoTitleSubtitleCell"/>
 

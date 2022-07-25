@@ -174,7 +174,7 @@ fun ViewGroup.setIsSurfaceClickable(isSurfaceClickable: Boolean) {
     isFocusable = isSurfaceClickable
     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
         foreground = when (isSurfaceClickable) {
-            true -> AppCompatResources.getDrawable(context, R.drawable.ripple_rounded_corner_foreground)
+            true -> AppCompatResources.getDrawable(context, R.drawable.chili_ripple_rounded_corner_foreground)
             else -> null
         }
     }
