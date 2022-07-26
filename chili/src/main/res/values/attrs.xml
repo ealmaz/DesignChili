@@ -185,4 +185,12 @@
         <attr name="isChevronVisible" format="boolean"/>
     </declare-styleable>
 
+    <declare-styleable name="ToggleCellView">
+        <attr name="switch_text" format="string"/>
+        <attr name="switch_textOn" format="string"/>
+        <attr name="switch_textOff" format="string"/>
+        <attr name="isSwitchVisible" format="boolean"/>
+        <attr name="isSwitchChecked" format="boolean"/>
+    </declare-styleable>
+
 </resources>
