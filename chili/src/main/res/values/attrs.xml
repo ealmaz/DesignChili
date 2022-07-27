@@ -16,6 +16,7 @@
 
         <attr name="cellViewDefaultStyle" format="reference"/>
         <attr name="toggleCellViewDefaultStyle" format="reference"/>
+        <attr name="additionalTextCellViewDefaultStyle" format="reference"/>
 
         <attr name="toolbarDefaultStyle" format="reference"/>
     </declare-styleable>
@@ -192,6 +193,11 @@
         <attr name="switch_textOff" format="string"/>
         <attr name="isSwitchVisible" format="boolean"/>
         <attr name="isSwitchChecked" format="boolean"/>
+    </declare-styleable>
+
+    <declare-styleable name="AdditionalTextCellView">
+        <attr name="additionalText"/>
+        <attr name="additionalTextTextAppearance" format="reference"/>
     </declare-styleable>
 
 </resources>

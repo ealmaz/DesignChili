@@ -10,6 +10,8 @@ class InputFields : BaseFragment<FragmentInputFieldsBinding>() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         vb.field1.setupClearTextButton()
+        vb.field2Mask.setupNewMask("12313123123XXXXXXXXX")
+        vb.field2Mask.requestFocus()
     }
 
     override fun inflateViewBinging(): FragmentInputFieldsBinding {

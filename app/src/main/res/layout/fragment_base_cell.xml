@@ -439,6 +439,69 @@
             app:cellIconSize="large"
             app:roundedCornerMode="bottom"/>
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="AdditionalTextCellView разные состояния"
+            android:layout_margin="@dimen/padding_16dp"
+            />
+
+        <com.design.chili.view.cells.AdditionalTextCellView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:isDividerVisible="false"
+            app:title="Заголовок"
+            app:roundedCornerMode="single"
+            app:additionalText="Additional text"/>
+
+        <com.design.chili.view.cells.AdditionalTextCellView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:isDividerVisible="false"
+            app:title="Заголовок"
+            app:isChevronVisible="false"
+            app:roundedCornerMode="single"
+            android:layout_marginTop="@dimen/padding_8dp"
+            app:additionalText="Additional text no chevron"/>
+
+        <com.design.chili.view.cells.AdditionalTextCellView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:isDividerVisible="false"
+            app:title="Заголовок"
+            android:icon="@drawable/ic_darkmode_false_"
+            app:cellIconSize="medium"
+            app:roundedCornerMode="single"
+            android:layout_marginTop="@dimen/padding_8dp"
+            app:additionalText="Additional text icon"/>
+
+
+        <com.design.chili.view.cells.AdditionalTextCellView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:title="simple"
+            android:layout_marginTop="@dimen/padding_8dp"
+            app:isChevronVisible="false"
+            app:roundedCornerMode="top"
+            app:additionalText="Value"/>
+
+        <com.design.chili.view.cells.AdditionalTextCellView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:title="simple"
+            app:isChevronVisible="false"
+            app:roundedCornerMode="middle"
+            app:additionalText="Value"/>
+
+        <com.design.chili.view.cells.AdditionalTextCellView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:isDividerVisible="false"
+            app:title="simple"
+            app:isChevronVisible="false"
+            app:roundedCornerMode="bottom"
+            app:additionalText="Value"/>
+
     </LinearLayout>
 
 </ScrollView>

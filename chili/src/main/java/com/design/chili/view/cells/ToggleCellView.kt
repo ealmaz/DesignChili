@@ -7,7 +7,7 @@ import android.widget.CompoundButton
 import androidx.appcompat.widget.SwitchCompat
 import com.design.chili.R
 
-open class ToggleCellView @JvmOverloads constructor(
+class ToggleCellView @JvmOverloads constructor(
     context: Context,
     attrs: AttributeSet? = null,
     defStyleAttr: Int = R.attr.toggleCellViewDefaultStyle,

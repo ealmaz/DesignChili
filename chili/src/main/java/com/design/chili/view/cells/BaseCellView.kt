@@ -198,7 +198,7 @@ open class BaseCellView @JvmOverloads constructor(
         view.rootView.setIsSurfaceClickable(isSurfaceClickable)
     }
 
-    fun setIsChevronVisible(isVisible: Boolean) {
+    open fun setIsChevronVisible(isVisible: Boolean) {
         view.chevron.visibility = when (isVisible) {
             true -> View.VISIBLE
             else -> View.GONE
