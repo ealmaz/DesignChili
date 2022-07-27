@@ -15,7 +15,8 @@
         <attr name="logoTitleActionCellDefaultStyle" format="reference"/>
 
         <attr name="cellViewDefaultStyle" format="reference"/>
-        
+        <attr name="toggleCellViewDefaultStyle" format="reference"/>
+
         <attr name="toolbarDefaultStyle" format="reference"/>
     </declare-styleable>
 

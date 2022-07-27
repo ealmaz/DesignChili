@@ -5,6 +5,10 @@
 
     <style name="Chili.CellViewStyle.BaseCellViewStyle"/>
 
+    <style name="Chili.CellViewStyle.BaseCellViewStyle.Toggle">
+        <item name="isChevronVisible">false</item>
+    </style>
+
     <style name="Chili.CellViewStyle.LogoTitleSubtitleCell"/>
 
     <style name="Chili.CellViewStyle.LogoTitleActionCell"/>
