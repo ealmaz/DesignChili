@@ -10,12 +10,8 @@ import android.text.method.DigitsKeyListener
 import android.util.AttributeSet
 import android.view.Gravity
 import android.view.LayoutInflater
-import android.view.View
 import android.view.inputmethod.InputMethodManager
-import android.widget.EditText
-import android.widget.FrameLayout
-import android.widget.ImageView
-import android.widget.TextView
+import android.widget.*
 import androidx.annotation.ColorInt
 import androidx.annotation.DrawableRes
 import androidx.annotation.StringRes
@@ -376,7 +372,9 @@ open class BaseInputView: ConstraintLayout {
                 FrameLayout.LayoutParams.WRAP_CONTENT,
                 FrameLayout.LayoutParams.WRAP_CONTENT
             )
-            frameLayoutParams.gravity = Gravity.CENTER_HORIZONTAL or Gravity.CENTER_VERTICAL
+            if (view.inputField.gravity in listOf(Gravity.CENTER, Gravity.CENTER_HORIZONTAL, Gravity.CENTER_VERTICAL)) {
+                frameLayoutParams.gravity = Gravity.CENTER_HORIZONTAL or Gravity.CENTER_VERTICAL
+            }
             this.layoutParams = frameLayoutParams
             minEms = 1
         }
@@ -389,7 +387,9 @@ open class BaseInputView: ConstraintLayout {
                 FrameLayout.LayoutParams.WRAP_CONTENT,
                 FrameLayout.LayoutParams.WRAP_CONTENT
             )
-            frameLayoutParams.gravity = Gravity.CENTER_HORIZONTAL or Gravity.CENTER_VERTICAL
+            if (view.inputField.gravity in listOf(Gravity.CENTER, Gravity.CENTER_HORIZONTAL, Gravity.CENTER_VERTICAL)) {
+                frameLayoutParams.gravity = Gravity.CENTER_HORIZONTAL or Gravity.CENTER_VERTICAL
+            }
             this.layoutParams = frameLayoutParams
             minEms = 1
         }
@@ -514,7 +514,7 @@ open class BaseInputView: ConstraintLayout {
     }
 
     fun hideMessage() {
-        view.tvMessage.invisible()
+        view.tvMessage.gone()
     }
 
     fun setupClearTextButton(
@@ -540,6 +540,12 @@ open class BaseInputView: ConstraintLayout {
     fun setPasteTextListener(onPasteListener: PasteListener) {
         view.inputField.setPasteListener(onPasteListener)
     }
+
+    fun setActionWithColor(title: String, @ColorInt textColor: Int, action: () -> Unit = {}) {
+        setAction(title, action)
+        view.tvAction.setTextColor(textColor)
+    }
+
 
     companion object {
         const val SUPER_STATE = "superState"

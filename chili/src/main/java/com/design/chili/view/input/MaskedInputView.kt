@@ -85,6 +85,10 @@ class MaskedInputView : BaseInputView {
         maskTextWatcher.setupField()
     }
 
+    fun isInputMaskFilled(): Boolean {
+        return !(getInputText().contains(maskTextWatcher.representation))
+    }
+
 
     override fun isInputEmpty(): Boolean {
         return try {

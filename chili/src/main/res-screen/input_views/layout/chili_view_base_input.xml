@@ -44,8 +44,6 @@
         android:layout_marginTop="@dimen/padding_8dp"
         android:paddingEnd="@dimen/padding_8dp"
         android:textAppearance="@style/Chili.H8.Primary"
-        android:maxLines="2"
-        android:ellipsize="end"
         app:layout_constraintTop_toBottomOf="@id/til_input_container"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toStartOf="@id/fl_action_bg"
