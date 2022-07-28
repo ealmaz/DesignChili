@@ -6,12 +6,17 @@
         <attr name="maskedInputDefaultStyle" format="reference"/>
         <attr name="multilineInputDefaultStyle" format="reference"/>
         <attr name="balanceCardViewDefaultStyle" format="reference" />
+        <attr name="titleLogoCardViewDefaultStyle" format="reference" />
         <attr name="categoryItemCardViewDefaultStyle" format="reference"/>
         <attr name="navigatorCardViewDefaultStyle" format="reference"/>
         <attr name="phoneNumberPickerCardViewDefaultStyle" format="reference"/>
         <attr name="tariffPriceInfoCardViewDefaultStyle" format="reference"/>
         <attr name="tariffPackagesInfoCardViewDefaultStyle" format="reference"/>
         <attr name="logoTitleSubtitleCellDefaultStyle" format="reference"/>
+        <attr name="logoTitleCellDefaultStyle" format="reference"/>
+
+        <attr name="multiLineRightIconCellDefaultStyle" format="reference"/>
+
         <attr name="logoTitleActionCellDefaultStyle" format="reference"/>
 
         <attr name="cellViewDefaultStyle" format="reference"/>
@@ -62,6 +67,7 @@
             <enum name="chevron" value="1"/>
         </attr>
         <attr name="iconDrawable" format="reference"/>
+        <attr name="logoDrawable" format="reference"/>
         <attr name="roundedCornerMode" format="enum">
             <enum name="single" value="0"/>
             <enum name="top" value="1"/>
@@ -152,12 +158,25 @@
         <attr name="isTransparent" format="boolean"/>
     </declare-styleable>
 
+    <declare-styleable name="MultiLineRightIconCell">
+        <attr name="android:icon" format="reference"/>
+        <attr name="title"  />
+        <attr name="subtitle"  />
+        <attr name="roundedCornerMode" />
+    </declare-styleable>
+
     <declare-styleable name="LogoTitleSubtitleCell">
         <attr name="android:icon" format="reference"/>
         <attr name="themed_icon" format="reference" />
         <attr name="title" format="string" />
         <attr name="subtitle" format="string" />
         <attr name="hide_divider" format="boolean" />
+        <attr name="roundedCornerMode" />
+    </declare-styleable>
+
+    <declare-styleable name="LogoTitleCell">
+        <attr name="android:icon" format="reference"/>
+        <attr name="title" />
         <attr name="roundedCornerMode" />
     </declare-styleable>
 

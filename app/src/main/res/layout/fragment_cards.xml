@@ -57,6 +57,18 @@
             app:roundedCornerMode="top"
             android:layout_marginTop="@dimen/padding_16dp"/>
 
+        <com.design.chili.view.card.TitleLogoCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding_16dp"
+            app:title="Баланс"
+            app:iconType="chevron"
+            app:isSurfaceClickable="true"
+            app:isIconClickable="false"
+            app:logoDrawable="@drawable/chili_ic_bank_cards"
+            app:roundedCornerMode="single"
+            />
+
         <com.design.chili.view.card.PieChartTitledView
             android:id="@+id/pieChart"
             android:layout_width="@dimen/view_200dp"

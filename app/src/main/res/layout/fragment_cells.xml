@@ -145,6 +145,53 @@
             app:title="Заголовок"
             app:action="Изменить"/>
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="MultiLineRightIconCell"
+            android:layout_margin="@dimen/padding_16dp"
+            />
+
+        <com.design.chili.view.cells.MultiLineRightIconCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:icon="@drawable/ic_scaner_48"
+            app:title="Сканер квитанций и QR"
+            app:subtitle="Для оплаты и еще чего-нибудь"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="LogoTitleCellView"
+            android:layout_margin="@dimen/padding_16dp"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="3"
+            android:orientation="horizontal">
+
+            <com.design.chili.view.cells.LogoTitleCellView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.8"
+                android:layout_marginEnd="@dimen/padding_8dp"
+                android:icon="@drawable/ic_transfers"
+                app:title="Переводы"/>
+
+            <com.design.chili.view.cells.LogoTitleCellView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.2"
+                android:icon="@drawable/ic_payment"
+                app:title="Оплата"/>
+
+        </LinearLayout>
+
+
+
     </LinearLayout>
 
 </ScrollView>

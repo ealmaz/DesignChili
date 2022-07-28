@@ -14,6 +14,9 @@
     </style>
 
     <style name="Chili.CellViewStyle.LogoTitleSubtitleCell"/>
+    <style name="Chili.CellViewStyle.LogoTitleCell"/>
+
+    <style name="Chili.CellViewStyle.MultiLineRightIconCell"/>
 
     <style name="Chili.CellViewStyle.LogoTitleActionCell"/>
 
