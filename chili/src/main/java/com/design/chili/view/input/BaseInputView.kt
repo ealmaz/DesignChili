@@ -537,6 +537,10 @@ open class BaseInputView: ConstraintLayout {
         )
     }
 
+    fun setPasteTextListener(onPasteListener: PasteListener) {
+        view.inputField.setPasteListener(onPasteListener)
+    }
+
     companion object {
         const val SUPER_STATE = "superState"
     }
