@@ -11,6 +11,11 @@
         <item name="android:calendarViewShown">false</item>
     </style>
 
+    <style name="Chili.TimePickerSpinnerStyle" parent="Widget.MaterialComponents.TimePicker">
+        <item name="android:timePickerMode">spinner</item>
+        <item name="android:calendarViewShown">false</item>
+    </style>
+
     <style name="Chili.DatePickerSpinnerTheme" parent="@android:style/Widget.Material.DatePicker">
         <item name="colorControlNormal">?attr/ChiliPickerDialogControlColor</item>
         <item name="android:textSize">?attr/ChiliTextSizeH7</item>
