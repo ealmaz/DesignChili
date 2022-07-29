@@ -70,7 +70,7 @@ open class BaseCellView @JvmOverloads constructor(
                     }
                 }
                 getBoolean(R.styleable.BaseCellView_isSurfaceClickable, true).let {
-                    setIsSurfaceClickable(it)
+                    setupIsSurfaceClickable(it)
                 }
                 getDimensionPixelSize(R.styleable.BaseCellView_cellIconVerticalMargin, -1).takeIf { it != -1 }?.let {
                     updateIconMargin(topMarginPx = it, bottomMarginPx = it)
@@ -194,8 +194,12 @@ open class BaseCellView @JvmOverloads constructor(
         view.rootView.setupRoundedCellCornersMode(mode.value)
     }
 
-    fun setIsSurfaceClickable(isSurfaceClickable: Boolean) {
-        view.rootView.setIsSurfaceClickable(isSurfaceClickable)
+    fun setupIsSurfaceClickable(isSurfaceClickable: Boolean) {
+        this.setIsSurfaceClickable(isSurfaceClickable)
+    }
+
+    fun setupCornerRoundedMode(mode: RoundedCornerMode) {
+        view.rootView.setupRoundedCellCornersMode(mode.value)
     }
 
     open fun setIsChevronVisible(isVisible: Boolean) {
