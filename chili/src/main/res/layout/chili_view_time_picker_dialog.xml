@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:background="@drawable/chili_bg_picker_dialog">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/Chili.H7.Primary"
+        android:layout_marginHorizontal="@dimen/padding_16dp"
+        android:layout_marginVertical="@dimen/padding_12dp"
+        tools:text="Title" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="?attr/ChiliDividerHeightSize"
+        android:background="?attr/ChiliDividerColor"/>
+
+    <TimePicker
+        android:id="@+id/timePicker"
+        style="@style/Chili.TimePickerSpinnerStyle"
+        android:theme="@style/Chili.DatePickerSpinnerTheme"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/view_150dp"
+        android:layout_marginTop="@dimen/padding_12dp"
+        android:layout_marginBottom="@dimen/padding_12dp"
+        android:descendantFocusability="blocksDescendants"/>
+
+    <Button
+        android:id="@+id/btn_done"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Chili.ButtonStyle.Primary"
+        tools:text="Готово"/>
+
+
+</LinearLayout>

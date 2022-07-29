@@ -8,6 +8,7 @@ import com.design.app.base.BaseFragment
 import com.design.app.databinding.FragmentDatePickerBinding
 import com.design.chili.view.modals.picker.DatePickerDialog
 import com.design.chili.view.modals.picker.RangeDatePickerDialog
+import com.design.chili.view.modals.picker.TimePickerDialog
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -17,6 +18,7 @@ class DatePickerFargment : BaseFragment<FragmentDatePickerBinding>(), FragmentRe
         super.onViewCreated(view, savedInstanceState)
         childFragmentManager.setFragmentResultListener(DatePickerDialog.PICKER_DIALOG_RESULT, this, this)
         childFragmentManager.setFragmentResultListener(RangeDatePickerDialog.RANGE_PICKER_DIALOG_RESULT, this, this)
+        childFragmentManager.setFragmentResultListener(TimePickerDialog.TIME_PICKER_DIALOG_RESULT, this, this)
 
         vb.date.setOnClickListener { DatePickerDialog.create("Готово", "Дата").show(childFragmentManager, "") }
         vb.range.setOnClickListener { RangeDatePickerDialog.create("Готово", "Дата", "Date").show(childFragmentManager, "") }
@@ -49,6 +51,11 @@ class DatePickerFargment : BaseFragment<FragmentDatePickerBinding>(), FragmentRe
             startLimitDate = Calendar.getInstance(),
             endLimitDate = Calendar.getInstance().apply { add(Calendar.DAY_OF_MONTH, 5) }
         ).show(childFragmentManager, "") }
+
+        vb.timePicker.setOnClickListener {
+            TimePickerDialog.create("Готово", "Установить время")
+                .show(childFragmentManager, "")
+        }
     }
 
     override fun inflateViewBinging(): FragmentDatePickerBinding {
@@ -66,6 +73,11 @@ class DatePickerFargment : BaseFragment<FragmentDatePickerBinding>(), FragmentRe
                 val calendarStart = result.getSerializable(RangeDatePickerDialog.ARG_SELECTED_START_DATE) as Calendar
                 val calendarEnd = result.getSerializable(RangeDatePickerDialog.ARG_SELECTED_END_DATE) as Calendar
                 Toast.makeText(requireContext(), "${formatter.format(calendarStart.time)} - ${formatter.format(calendarEnd.time)}", Toast.LENGTH_LONG).show()
+            }
+
+            TimePickerDialog.TIME_PICKER_DIALOG_RESULT -> {
+                val calendar = result.getSerializable(TimePickerDialog.TIME_ARG_SELECTED_TIME) as Calendar
+                Toast.makeText(requireContext(), formatter.format(calendar.time), Toast.LENGTH_SHORT).show()
             }
         }
     }
