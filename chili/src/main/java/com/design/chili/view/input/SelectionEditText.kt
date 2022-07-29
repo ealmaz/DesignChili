@@ -20,7 +20,7 @@ class SelectionEditText(context: Context, attributeSet: AttributeSet) : androidx
             selStart == selEnd && selStart < startSelectionLimit -> {
                 setSelection(startSelectionLimit)
             }
-            selStart == selEnd && endSelectionLimit > -1 && selEnd > endSelectionLimit -> {
+            selStart == selEnd && endSelectionLimit < length() && endSelectionLimit > -1 && selEnd > endSelectionLimit -> {
                 setSelection(endSelectionLimit)
             }
             else -> super.onSelectionChanged(selStart, selEnd)
@@ -35,9 +35,10 @@ class SelectionEditText(context: Context, attributeSet: AttributeSet) : androidx
         ViewCompat.setOnReceiveContentListener(this, arrayOf("text/plain")) { _, payload, ->
             if (pasteListener == null) return@setOnReceiveContentListener payload
             val pasteText = payload.clip.getItemAt(0).text.toString()
-            val resultText = pasteListener?.onPasteText(text?.toString() ?: "", pasteText, startSelectionLimit)
+            val resultText = pasteListener?.onPasteText(text?.toString() ?: "", pasteText, selectionStart)
                 ?: return@setOnReceiveContentListener payload
             setText(resultText)
+            setSelection(selectionStart + resultText.length)
             null
         }
     }

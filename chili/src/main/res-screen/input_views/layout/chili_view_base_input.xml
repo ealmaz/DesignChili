@@ -48,6 +48,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toStartOf="@id/fl_action_bg"
         app:layout_constraintHorizontal_weight="6"
+        android:visibility="gone"
+        tools:visibility="visible"
         tools:text="Message text"/>
 
     <FrameLayout
