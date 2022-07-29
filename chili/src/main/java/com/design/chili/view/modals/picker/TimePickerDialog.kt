@@ -71,7 +71,7 @@ class TimePickerDialog: DialogFragment() {
         val result = Calendar.getInstance()
         view.timePicker.run {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-                result.set(Calendar.HOUR, hour)
+                result.set(Calendar.HOUR_OF_DAY, hour)
                 result.set(Calendar.MINUTE, minute)
             }
         }

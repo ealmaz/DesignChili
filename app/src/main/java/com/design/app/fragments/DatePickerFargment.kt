@@ -77,7 +77,9 @@ class DatePickerFargment : BaseFragment<FragmentDatePickerBinding>(), FragmentRe
 
             TimePickerDialog.TIME_PICKER_DIALOG_RESULT -> {
                 val calendar = result.getSerializable(TimePickerDialog.TIME_ARG_SELECTED_TIME) as Calendar
-                Toast.makeText(requireContext(), formatter.format(calendar.time), Toast.LENGTH_SHORT).show()
+                val formatter = SimpleDateFormat("HH:mm")
+                val time = formatter.format(calendar.time)
+                Toast.makeText(requireContext(), time, Toast.LENGTH_SHORT).show()
             }
         }
     }
