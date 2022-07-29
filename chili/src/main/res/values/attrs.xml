@@ -21,7 +21,7 @@
 
         <attr name="cellViewDefaultStyle" format="reference"/>
         <attr name="toggleCellViewDefaultStyle" format="reference"/>
-        <attr name="endDrawableCellViewDefaultStyle" format="reference"/>
+        <attr name="endIconCellViewDefaultStyle" format="reference"/>
         <attr name="additionalTextCellViewDefaultStyle" format="reference"/>
 
         <attr name="toolbarDefaultStyle" format="reference"/>
@@ -216,12 +216,12 @@
         <attr name="isSwitchChecked" format="boolean"/>
     </declare-styleable>
 
-    <declare-styleable name="EndDrawableCellView">
-        <attr name="endDrawable" format="reference"/>
-        <attr name="isEndDrawableVisible" format="boolean"/>
-        <attr name="endDrawableSize" format="reference"/>
-        <attr name="isEndDrawableClickable" format="boolean"/>
-        <attr name="endDrawableEndMargin" format="dimension"/>
+    <declare-styleable name="EndIconCellView">
+        <attr name="endIcon"/>
+        <attr name="isEndIconVisible" format="boolean"/>
+        <attr name="endIconSize" format="reference"/>
+        <attr name="isEndIconClickable" format="boolean"/>
+        <attr name="endIconEndMargin" format="dimension"/>
     </declare-styleable>
 
     <declare-styleable name="AdditionalTextCellView">
