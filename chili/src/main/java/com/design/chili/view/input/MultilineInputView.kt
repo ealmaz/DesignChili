@@ -26,6 +26,9 @@ class MultilineInputView : BaseInputView {
                 .takeIf { it != -1 }?.let { setMaxLines(it) }
             getInteger(R.styleable.MultilineInputView_minLines, -1)
                 .takeIf { it != -1 }?.let { setMinLines(it) }
+            getBoolean(R.styleable.MultilineInputView_android_singleLine, false).let {
+                setSingleLine(it)
+            }
             setupViews()
             recycle()
         }
@@ -38,13 +41,13 @@ class MultilineInputView : BaseInputView {
     }
 
     fun setMaxLines(linesCount: Int) {
-        if (linesCount > 1) setSingleLine(false)
         view.inputField.maxLines = linesCount
     }
 
     fun setMaxInputLines(linesCount: Int) {
-        if (linesCount > 1) setSingleLine(false)
-        view.inputField.addTextChangedListener(LimitedInputLinesWatcher(view.inputField, linesCount))
+        view.inputField.addTextChangedListener(
+            LimitedInputLinesWatcher(view.inputField, linesCount)
+        )
     }
 
     fun setMinLines(linesCount: Int) {

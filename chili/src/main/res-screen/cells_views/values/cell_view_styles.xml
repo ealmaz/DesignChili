@@ -9,6 +9,10 @@
         <item name="isChevronVisible">false</item>
     </style>
 
+    <style name="Chili.CellViewStyle.BaseCellViewStyle.EndIcon">
+        <item name="isChevronVisible">false</item>
+    </style>
+
     <style name="Chili.CellViewStyle.BaseCellViewStyle.AdditionalText">
         <item name="additionalTextTextAppearance">@style/Chili.H7.Secondary</item>
     </style>

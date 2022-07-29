@@ -21,6 +21,7 @@
 
         <attr name="cellViewDefaultStyle" format="reference"/>
         <attr name="toggleCellViewDefaultStyle" format="reference"/>
+        <attr name="endIconCellViewDefaultStyle" format="reference"/>
         <attr name="additionalTextCellViewDefaultStyle" format="reference"/>
 
         <attr name="toolbarDefaultStyle" format="reference"/>
@@ -53,6 +54,7 @@
     </declare-styleable>
 
     <declare-styleable name="MultilineInputView">
+        <attr name="android:singleLine" format="boolean" />
         <attr name="maxInputLines" format="integer"/>
         <attr name="android:maxLines"/>
         <attr name="minLines" format="integer"/>
@@ -212,6 +214,14 @@
         <attr name="switch_textOff" format="string"/>
         <attr name="isSwitchVisible" format="boolean"/>
         <attr name="isSwitchChecked" format="boolean"/>
+    </declare-styleable>
+
+    <declare-styleable name="EndIconCellView">
+        <attr name="endIcon"/>
+        <attr name="isEndIconVisible" format="boolean"/>
+        <attr name="endIconSize" format="reference"/>
+        <attr name="isEndIconClickable" format="boolean"/>
+        <attr name="endIconEndMargin" format="dimension"/>
     </declare-styleable>
 
     <declare-styleable name="AdditionalTextCellView">

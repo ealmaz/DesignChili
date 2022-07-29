@@ -24,4 +24,8 @@
         <item name="endIconMode">password_toggle</item>
     </style>
 
+    <style name="Chili.InputViewStyle.Multiline">
+        <item name="android:singleLine">false</item>
+    </style>
+
 </resources>
