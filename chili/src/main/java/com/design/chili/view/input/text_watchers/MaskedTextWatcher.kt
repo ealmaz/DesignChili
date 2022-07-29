@@ -16,11 +16,8 @@ class MaskedTextWatcher private constructor(
     var maskSymbols: List<Char>,
     var allowedInputSymbols: String) : TextWatcher {
 
-    private var representationsCount: Int = 0
-
     init {
         updateSelectionLimits()
-        representationsCount = mask.count { it == representation }
     }
 
     private var isEditing = false
@@ -67,12 +64,7 @@ class MaskedTextWatcher private constructor(
         return this.filter { allowedInputSymbols.contains(it) }
     }
 
-    fun mergeStrings(rawText: String, isDelete: Boolean): String {
-        val rawTextLength = rawText.length
-        val inputText = when (rawTextLength > representationsCount) {
-            true -> rawText.subSequence(rawTextLength - representationsCount, rawTextLength)
-            else -> rawText
-        }
+    fun mergeStrings(inputText: String, isDelete: Boolean): String {
 
         val maskedText = StringBuilder()
         var maskIndex = 0
@@ -128,7 +120,6 @@ class MaskedTextWatcher private constructor(
         if (mask != newMask) {
             mask = newMask.takeIf { it.isNotEmpty() } ?: "*"
             updateSelectionLimits()
-            representationsCount = mask.count { it == representation }
         }
         setupField()
     }
