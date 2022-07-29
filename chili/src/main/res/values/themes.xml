@@ -20,6 +20,7 @@
         <item name="ChiliSecondaryTextColor">@color/gray_1</item>
         <item name="ChiliMarkedTextColor">@color/black_1</item>
         <item name="ChiliErrorTextColor">@color/red_1</item>
+        <item name="android:textColorHint">@color/gray_1_alpha_50</item>
 
         <item name="ChiliRegularTextFont">@font/roboto_regular</item>
         <item name="ChiliBoldTextFont">@font/roboto_medium</item>
