@@ -62,7 +62,8 @@ class TimePickerDialog: DialogFragment() {
     }
 
     private fun setFragmentResult() {
-        parentFragmentManager.setFragmentResult(TIME_PICKER_DIALOG_RESULT, bundleOf(
+        val requestKey = arguments?.getString(TIME_PICKER_DIALOG_RESULT) ?: TIME_PICKER_DIALOG_RESULT
+        parentFragmentManager.setFragmentResult(requestKey, bundleOf(
             TIME_ARG_SELECTED_TIME to getSelectedTime())
         )
     }
@@ -100,12 +101,14 @@ class TimePickerDialog: DialogFragment() {
             buttonText: String,
             titleText: String,
             currentTime: Calendar = Calendar.getInstance(),
+            requestKey: String
         ): TimePickerDialog {
             return TimePickerDialog().apply {
                 arguments = bundleOf(
                     TIME_ARG_CURRENT_TIME to currentTime,
                     TIME_ARG_TITLE to titleText,
-                    TIME_ARG_BUTTON_TEXT to buttonText
+                    TIME_ARG_BUTTON_TEXT to buttonText,
+                    TIME_PICKER_DIALOG_RESULT to requestKey
                 )
             }
         }

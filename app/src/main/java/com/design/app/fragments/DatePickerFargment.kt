@@ -53,7 +53,8 @@ class DatePickerFargment : BaseFragment<FragmentDatePickerBinding>(), FragmentRe
         ).show(childFragmentManager, "") }
 
         vb.timePicker.setOnClickListener {
-            TimePickerDialog.create("Готово", "Установить время")
+            TimePickerDialog.create("Готово", "Установить время",
+                requestKey = TimePickerDialog.TIME_PICKER_DIALOG_RESULT)
                 .show(childFragmentManager, "")
         }
     }
