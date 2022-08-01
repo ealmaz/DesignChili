@@ -2,12 +2,11 @@ package com.design.chili.view.cells
 
 import android.content.Context
 import android.os.Build
-import android.text.Spanned
 import android.util.AttributeSet
 import android.view.View
 import android.widget.TextView
 import androidx.annotation.StringRes
-import androidx.annotation.StyleRes
+import androidx.appcompat.content.res.AppCompatResources
 import com.design.chili.R
 import com.design.chili.extensions.setOnSingleClickListener
 
@@ -29,11 +28,8 @@ class ActionCellView @JvmOverloads constructor(
         super.obtainAttributes(context, attrs, defStyleAttr, defStyleRes)
         context.obtainStyledAttributes(attrs, R.styleable.ActionCellView, defStyleAttr, defStyleRes)
             .run {
-                getString(R.styleable.ActionCellView_label)?.let {
-                    setActionLabel(it)
-                }
-                getResourceId(R.styleable.ActionCellView_actionTextAppearance, -1).takeIf { it != -1 }?.let {
-                    setActionTextAppearance(it)
+                getString(R.styleable.ActionCellView_actionText)?.let {
+                    setActionText(it)
                 }
                 getBoolean(R.styleable.ActionCellView_isActionVisible, true).let {
                     setIsActionVisible(it)
@@ -46,35 +42,23 @@ class ActionCellView @JvmOverloads constructor(
     }
 
     private fun inflateAction() {
-        tvAction = TextView(context).apply {
-            setPadding(0, 0, resources.getDimensionPixelSize(R.dimen.padding_8dp), 0)
+        tvAction = TextView(context, null, R.attr.componentButtonDefaultStyle, R.style.Chili_ButtonStyle_Component).apply {
+            setPadding(resources.getDimensionPixelSize(R.dimen.padding_8dp), 0, resources.getDimensionPixelSize(R.dimen.padding_8dp), 0)
         }
         view.flEndPlaceholder.addView(tvAction)
     }
 
-    fun setActionLabel(text: String?) {
+    fun setActionText(text: String?) {
         tvAction?.text = text
     }
 
-    fun setActionLabel(spanned: Spanned) {
-        tvAction?.text = spanned
-    }
-
-    fun setActionLabel(@StringRes textResId: Int) {
+    fun setActionText(@StringRes textResId: Int) {
         tvAction?.setText(textResId)
     }
 
     override fun setIsChevronVisible(isVisible: Boolean) {
         super.setIsChevronVisible(isVisible)
         if (isVisible) tvAction?.setPadding(0, 0,0, 0)
-    }
-
-    fun setActionTextAppearance(@StyleRes resId: Int) {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            tvAction?.setTextAppearance(resId)
-        } else {
-            tvAction?.setTextAppearance(context, resId)
-        }
     }
 
     fun setActionClickListener(action: () -> Unit) {
@@ -91,5 +75,12 @@ class ActionCellView @JvmOverloads constructor(
     fun setIsActionClickable(isClickable: Boolean) {
         tvAction?.isFocusable = isClickable
         tvAction?.isClickable = isClickable
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            tvAction?.foreground = when (isClickable) {
+                true -> AppCompatResources.getDrawable(context, R.drawable.chili_ripple_rounded_corner_foreground)
+                else -> null
+            }
+        }
     }
 }

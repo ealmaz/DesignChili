@@ -22,9 +22,7 @@
         <item name="additionalTextTextAppearance">@style/Chili.H7.Secondary</item>
     </style>
 
-    <style name="Chili.CellViewStyle.BaseCellViewStyle.Action">
-        <item name="actionTextAppearance">@style/Chili.ComponentButtonText</item>
-    </style>
+    <style name="Chili.CellViewStyle.BaseCellViewStyle.Action"/>
 
     <style name="Chili.CellViewStyle.LogoTitleSubtitleCell"/>
     <style name="Chili.CellViewStyle.LogoTitleCell"/>

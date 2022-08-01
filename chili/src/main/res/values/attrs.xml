@@ -26,6 +26,8 @@
         <attr name="additionalTextCellViewDefaultStyle" format="reference"/>
         <attr name="actionCellViewDefaultStyle" format="reference"/>
 
+        <attr name="componentButtonDefaultStyle" format="reference"/>
+
         <attr name="toolbarDefaultStyle" format="reference"/>
     </declare-styleable>
 
@@ -242,8 +244,7 @@
     </declare-styleable>
 
     <declare-styleable name="ActionCellView">
-        <attr name="label" format="string"/>
-        <attr name="actionTextAppearance" format="reference"/>
+        <attr name="actionText" format="string"/>
         <attr name="isActionVisible" format="boolean"/>
         <attr name="isActionClickable" format="boolean"/>
     </declare-styleable>
