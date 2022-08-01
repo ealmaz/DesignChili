@@ -43,12 +43,12 @@ class EndIconCellView @JvmOverloads constructor(
                 getResourceId(R.styleable.EndIconCellView_endIconEndMargin, R.dimen.view_8dp).let {
                     setEndIconEndMargin(it)
                 }
-                getLayoutDimension(R.styleable.EndIconCellView_endIconSize, R.dimen.view_24dp).let {
+                getLayoutDimension(R.styleable.EndIconCellView_endIconSize, IconSize.SMALL.value).let {
                     when (it) {
                         IconSize.SMALL.value -> setEndIconSize(IconSize.SMALL)
                         IconSize.MEDIUM.value -> setEndIconSize(IconSize.MEDIUM)
                         IconSize.LARGE.value -> setEndIconSize(IconSize.LARGE)
-                        else -> setEndIconSize(it,it)
+                        else -> setupEndIconSize(it,it)
                     }
                 }
                 recycle()

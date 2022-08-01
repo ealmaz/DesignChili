@@ -558,11 +558,11 @@
             app:roundedCornerMode="single"/>
 
         <com.design.chili.view.cells.EndIconCellView
-            android:id="@+id/end_icon_cell"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/padding_16dp"
             app:title="Заголовок"
+            app:endIconSize="@dimen/view_30dp"
             app:endIcon="@drawable/ic_squircle_phone"
             app:roundedCornerMode="top"/>
 
@@ -611,7 +611,6 @@
             app:roundedCornerMode="top"/>
 
         <com.design.chili.view.cells.CheckBoxCellView
-            android:id="@+id/check_box_cell"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:title="Заголовок"

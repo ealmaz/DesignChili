@@ -11,6 +11,7 @@
 
     <style name="Chili.CellViewStyle.BaseCellViewStyle.EndIcon">
         <item name="isChevronVisible">false</item>
+        <item name="endIconSize">@dimen/view_24dp</item>
     </style>
 
     <style name="Chili.CellViewStyle.BaseCellViewStyle.CheckBox">
