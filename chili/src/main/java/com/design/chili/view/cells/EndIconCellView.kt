@@ -114,6 +114,10 @@ class EndIconCellView @JvmOverloads constructor(
     fun setEndIconSize(@DimenRes widthDimenRes: Int, @DimenRes heightDimenRes: Int) {
         val widthPx = resources.getDimensionPixelSize(widthDimenRes)
         val heightPx = resources.getDimensionPixelSize(heightDimenRes)
+        setupEndIconSize(widthPx, heightPx)
+    }
+
+    private fun setupEndIconSize(widthPx: Int, heightPx: Int) {
         val params = endIcon?.layoutParams
         params?.height = heightPx
         params?.width = widthPx
