@@ -2,17 +2,16 @@ package com.design.chili.view.cells
 
 import android.content.Context
 import android.graphics.drawable.Drawable
-import android.os.Build
 import android.util.AttributeSet
 import android.view.View
 import android.widget.ImageView
 import androidx.annotation.DimenRes
 import androidx.annotation.DrawableRes
-import androidx.appcompat.content.res.AppCompatResources
 import com.design.chili.R
 import com.design.chili.extensions.drawable
 import com.design.chili.extensions.setImageByUrl
 import com.design.chili.extensions.setOnSingleClickListener
+import com.design.chili.util.IconSize
 
 class EndIconCellView @JvmOverloads constructor(
     context: Context,
@@ -41,11 +40,16 @@ class EndIconCellView @JvmOverloads constructor(
                 getBoolean(R.styleable.EndIconCellView_isEndIconClickable, true).let {
                     setIsEndIconClickable(it)
                 }
-                getResourceId(R.styleable.EndIconCellView_endIconSize, R.dimen.view_24dp).let {
-                    setEndIconSize(it, it)
-                }
                 getResourceId(R.styleable.EndIconCellView_endIconEndMargin, R.dimen.view_8dp).let {
                     setEndIconEndMargin(it)
+                }
+                getLayoutDimension(R.styleable.EndIconCellView_endIconSize, IconSize.SMALL.value).let {
+                    when (it) {
+                        IconSize.SMALL.value -> setEndIconSize(IconSize.SMALL)
+                        IconSize.MEDIUM.value -> setEndIconSize(IconSize.MEDIUM)
+                        IconSize.LARGE.value -> setEndIconSize(IconSize.LARGE)
+                        else -> setupEndIconSize(it,it)
+                    }
                 }
                 recycle()
             }
@@ -90,13 +94,21 @@ class EndIconCellView @JvmOverloads constructor(
     }
 
     fun setIsEndIconClickable(isClickable: Boolean) {
-        //TODO check animation
         endIcon?.isFocusable = isClickable
         endIcon?.isClickable = isClickable
     }
 
     fun setEndIconClickListener(action: () -> Unit) {
         endIcon?.setOnSingleClickListener(action)
+    }
+
+    fun setEndIconSize(iconSize: IconSize) {
+        val size = when(iconSize) {
+            IconSize.LARGE -> R.dimen.view_48dp
+            IconSize.MEDIUM -> R.dimen.view_46dp
+            IconSize.SMALL -> R.dimen.view_32dp
+        }
+        setEndIconSize(size, size)
     }
 
     fun setEndIconSize(@DimenRes widthDimenRes: Int, @DimenRes heightDimenRes: Int) {
