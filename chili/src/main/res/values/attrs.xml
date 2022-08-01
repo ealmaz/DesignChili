@@ -22,6 +22,7 @@
         <attr name="cellViewDefaultStyle" format="reference"/>
         <attr name="toggleCellViewDefaultStyle" format="reference"/>
         <attr name="endIconCellViewDefaultStyle" format="reference"/>
+        <attr name="checkBoxCellViewDefaultStyle" format="reference"/>
         <attr name="additionalTextCellViewDefaultStyle" format="reference"/>
 
         <attr name="toolbarDefaultStyle" format="reference"/>
@@ -222,6 +223,12 @@
         <attr name="endIconSize" format="reference"/>
         <attr name="isEndIconClickable" format="boolean"/>
         <attr name="endIconEndMargin" format="dimension"/>
+    </declare-styleable>
+
+    <declare-styleable name="CheckBoxCellView">
+        <attr name="isCheckBoxVisible" format="boolean"/>
+        <attr name="isCheckBoxChecked" format="boolean"/>
+        <attr name="checkBoxEndMargin" format="dimension"/>
     </declare-styleable>
 
     <declare-styleable name="AdditionalTextCellView">

@@ -90,7 +90,6 @@ class EndIconCellView @JvmOverloads constructor(
     }
 
     fun setIsEndIconClickable(isClickable: Boolean) {
-        //TODO check animation
         endIcon?.isFocusable = isClickable
         endIcon?.isClickable = isClickable
     }
