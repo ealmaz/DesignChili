@@ -220,7 +220,11 @@
     <declare-styleable name="EndIconCellView">
         <attr name="endIcon"/>
         <attr name="isEndIconVisible" format="boolean"/>
-        <attr name="endIconSize" format="reference"/>
+        <attr name="endIconSize" format="dimension">
+            <enum name="small" value="-1"/>
+            <enum name="medium" value="-2"/>
+            <enum name="large" value="-3"/>
+        </attr>
         <attr name="isEndIconClickable" format="boolean"/>
         <attr name="endIconEndMargin" format="dimension"/>
     </declare-styleable>
