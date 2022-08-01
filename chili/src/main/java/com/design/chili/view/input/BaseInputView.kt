@@ -488,10 +488,15 @@ open class BaseInputView: ConstraintLayout {
 
     fun setMessage(text: String?) {
         messageText = text
-        view.tvMessage.apply {
-            setText(messageText)
-            setTextColor(messageTextColor)
-            visible()
+        when (text.isNullOrBlank()) {
+            true -> view.tvMessage.gone()
+            else -> {
+                view.tvMessage.apply {
+                    setText(messageText)
+                    setTextColor(messageTextColor)
+                    visible()
+                }
+            }
         }
     }
 
