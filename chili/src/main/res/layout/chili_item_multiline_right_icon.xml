@@ -27,7 +27,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:singleLine="false"
-            android:textAppearance="@style/Chili.H7.Primary.Bold"
+            android:textAppearance="@style/Chili.H7.Marked.Bold"
             tools:text="Здесь основной текст" />
 
         <TextView
@@ -36,7 +36,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/padding_4dp"
             android:singleLine="false"
-            android:textAppearance="@style/Chili.H9.Primary"
+            android:textAppearance="@style/Chili.H9.Marked"
             android:visibility="visible"
             tools:text="Здесь дополнительный текст" />
 
