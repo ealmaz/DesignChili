@@ -679,6 +679,7 @@
             android:layout_height="wrap_content"
             app:isDividerVisible="false"
             app:title="simple"
+            app:isActionEnabled="false"
             app:isChevronVisible="false"
             app:roundedCornerMode="bottom"
             app:actionText="Value"/>

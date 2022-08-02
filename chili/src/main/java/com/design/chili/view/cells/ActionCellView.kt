@@ -1,12 +1,10 @@
 package com.design.chili.view.cells
 
 import android.content.Context
-import android.os.Build
 import android.util.AttributeSet
 import android.view.View
 import android.widget.TextView
 import androidx.annotation.StringRes
-import androidx.appcompat.content.res.AppCompatResources
 import com.design.chili.R
 import com.design.chili.extensions.setOnSingleClickListener
 
@@ -34,8 +32,8 @@ class ActionCellView @JvmOverloads constructor(
                 getBoolean(R.styleable.ActionCellView_isActionVisible, true).let {
                     setIsActionVisible(it)
                 }
-                getBoolean(R.styleable.ActionCellView_isActionClickable, true).let {
-                    setIsActionClickable(it)
+                getBoolean(R.styleable.ActionCellView_isActionEnabled, true).let {
+                    setIsActionEnabled(it)
                 }
                 recycle()
             }
@@ -72,15 +70,7 @@ class ActionCellView @JvmOverloads constructor(
         }
     }
 
-    fun setIsActionClickable(isClickable: Boolean) {
-        tvAction?.isFocusable = isClickable
-        tvAction?.isClickable = isClickable
-
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            tvAction?.foreground = when (isClickable) {
-                true -> AppCompatResources.getDrawable(context, R.drawable.chili_ripple_rounded_corner_foreground)
-                else -> null
-            }
-        }
+    fun setIsActionEnabled(isEnabled: Boolean) {
+        tvAction?.isEnabled = isEnabled
     }
 }

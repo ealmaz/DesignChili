@@ -246,7 +246,7 @@
     <declare-styleable name="ActionCellView">
         <attr name="actionText" format="string"/>
         <attr name="isActionVisible" format="boolean"/>
-        <attr name="isActionClickable" format="boolean"/>
+        <attr name="isActionEnabled" format="boolean"/>
     </declare-styleable>
 
 </resources>
