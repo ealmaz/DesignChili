@@ -620,6 +620,70 @@
             app:cellIconSize="medium"
             app:roundedCornerMode="bottom"/>
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ActionCellView разные состояния"
+            android:layout_margin="@dimen/padding_16dp"
+            />
+
+        <com.design.chili.view.cells.ActionCellView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:isDividerVisible="false"
+            app:title="Заголовок"
+            app:roundedCornerMode="single"
+            app:actionText="Action"/>
+
+        <com.design.chili.view.cells.ActionCellView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:isDividerVisible="false"
+            app:title="Заголовок"
+            app:isChevronVisible="false"
+            app:roundedCornerMode="single"
+            android:layout_marginTop="@dimen/padding_8dp"
+            app:actionText="Action no chevron"/>
+
+        <com.design.chili.view.cells.ActionCellView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:isDividerVisible="false"
+            app:title="Заголовок"
+            android:icon="@drawable/ic_darkmode_false_"
+            app:cellIconSize="medium"
+            app:roundedCornerMode="single"
+            android:layout_marginTop="@dimen/padding_8dp"
+            app:actionText="Action icon"/>
+
+
+        <com.design.chili.view.cells.ActionCellView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:title="simple"
+            android:layout_marginTop="@dimen/padding_8dp"
+            app:isChevronVisible="false"
+            app:roundedCornerMode="top"
+            app:actionText="Value"/>
+
+        <com.design.chili.view.cells.ActionCellView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:title="simple"
+            app:isChevronVisible="false"
+            app:roundedCornerMode="middle"
+            app:actionText="Value"/>
+
+        <com.design.chili.view.cells.ActionCellView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:isDividerVisible="false"
+            app:title="simple"
+            app:isActionEnabled="false"
+            app:isChevronVisible="false"
+            app:roundedCornerMode="bottom"
+            app:actionText="Value"/>
+
     </LinearLayout>
 
 </ScrollView>
