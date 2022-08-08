@@ -13,6 +13,7 @@ import androidx.annotation.DimenRes
 import androidx.annotation.DrawableRes
 import androidx.annotation.StringRes
 import androidx.constraintlayout.widget.ConstraintLayout
+import com.bumptech.glide.Glide
 import com.design.chili.R
 import com.design.chili.extensions.*
 import com.design.chili.util.IconSize
@@ -112,6 +113,17 @@ open class BaseCellView @JvmOverloads constructor(
         view.ivIcon.apply {
             visible()
             setImageDrawable(drawable)
+        }
+    }
+
+    fun setIcon(url: String?, placeHolderResId: Int? = null) {
+        view.ivIcon.apply {
+            visible()
+            Glide.with(this)
+                .load(url)
+                .placeholder(context.drawable(placeHolderResId?:R.drawable.chili_ic_stub))
+                .dontTransform()
+                .into(view.ivIcon)
         }
     }
 
