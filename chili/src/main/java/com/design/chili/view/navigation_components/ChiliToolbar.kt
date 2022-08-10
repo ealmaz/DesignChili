@@ -83,6 +83,8 @@ open class ChiliToolbar : LinearLayout {
             title?.let { supportActionBar?.title = it }
         }
     }
+    
+    fun getToolbar(): Toolbar = view.toolbar
 
     protected fun AppCompatActivity.setupSupportActionBar(onBackClick: () -> Unit) {
         setSupportActionBar(view.toolbar)
