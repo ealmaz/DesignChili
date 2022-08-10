@@ -31,4 +31,6 @@
 
     <style name="Chili.CellViewStyle.LogoTitleActionCell"/>
 
+    <style name="Chili.CellViewStyle.InfoCellView"/>
+
 </resources>

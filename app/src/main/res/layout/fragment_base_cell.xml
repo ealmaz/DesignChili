@@ -684,6 +684,48 @@
             app:roundedCornerMode="bottom"
             app:actionText="Value"/>
 
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="InfoCellView"
+            android:layout_marginTop="@dimen/padding_16dp"/>
+
+        <com.design.chili.view.cells.InfoCellView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:title="Title"
+            app:roundedCornerMode="single"
+            android:layout_marginBottom="@dimen/padding_16dp"
+            app:subtitle="subtitle"/>
+
+        <com.design.chili.view.cells.InfoCellView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:title="Title"
+            app:subtitle="subtitle"
+            app:roundedCornerMode="top"
+            app:isDividerVisible="true"/>
+
+        <com.design.chili.view.cells.InfoCellView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:title="Title"
+            app:subtitle="subtitle"
+            app:isDividerVisible="true"
+            app:roundedCornerMode="middle"/>
+
+        <com.design.chili.view.cells.InfoCellView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:title="Title"
+            app:subtitle="subtitle"
+            app:isDividerVisible="false"
+            app:roundedCornerMode="bottom"/>
+
+
+
+
     </LinearLayout>
 
 </ScrollView>

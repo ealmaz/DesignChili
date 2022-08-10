@@ -14,6 +14,7 @@
         <attr name="tariffPackagesInfoCardViewDefaultStyle" format="reference"/>
         <attr name="logoTitleSubtitleCellDefaultStyle" format="reference"/>
         <attr name="logoTitleCellDefaultStyle" format="reference"/>
+        <attr name="infoCellViewDefaultStyle" format="reference"/>
 
         <attr name="multiLineRightIconCellDefaultStyle" format="reference"/>
 
@@ -247,6 +248,14 @@
         <attr name="actionText" format="string"/>
         <attr name="isActionVisible" format="boolean"/>
         <attr name="isActionEnabled" format="boolean"/>
+    </declare-styleable>
+
+    <declare-styleable name="InfoCellView">
+        <attr name="roundedCornerMode"/>
+        <attr name="isDividerVisible"/>
+        <attr name="isSurfaceClickable"/>
+        <attr name="title"/>
+        <attr name="subtitle"/>
     </declare-styleable>
 
 </resources>
