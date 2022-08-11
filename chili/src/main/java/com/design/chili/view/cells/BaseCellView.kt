@@ -2,16 +2,14 @@ package com.design.chili.view.cells
 
 import android.content.Context
 import android.graphics.drawable.Drawable
+import android.os.Build
 import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.view.View
 import android.widget.FrameLayout
 import android.widget.ImageView
 import android.widget.TextView
-import androidx.annotation.ColorInt
-import androidx.annotation.DimenRes
-import androidx.annotation.DrawableRes
-import androidx.annotation.StringRes
+import androidx.annotation.*
 import androidx.constraintlayout.widget.ConstraintLayout
 import com.bumptech.glide.Glide
 import com.design.chili.R
@@ -82,6 +80,12 @@ open class BaseCellView @JvmOverloads constructor(
                 getBoolean(R.styleable.BaseCellView_isChevronVisible, true).let {
                     setIsChevronVisible(it)
                 }
+                getResourceId(R.styleable.BaseCellView_titleTextAppearance, -1).takeIf { it != -1 }?.let {
+                    setTitleTextAppearance(it)
+                }
+                getResourceId(R.styleable.BaseCellView_subtitleTextAppearance, -1).takeIf { it != -1 }?.let {
+                    setSubtitleTextAppearance(it)
+                }
                 recycle()
             }
     }
@@ -94,12 +98,28 @@ open class BaseCellView @JvmOverloads constructor(
         view.tvTitle.setText(resId)
     }
 
+    fun setTitleTextAppearance(@StyleRes resId: Int) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            view.tvTitle.setTextAppearance(resId)
+        } else {
+            view.tvTitle.setTextAppearance(context, resId)
+        }
+    }
+
     fun setSubtitle(text: String?) {
         view.tvSubtitle.setTextOrHide(text)
     }
 
     fun setSubtitle(@StringRes resId: Int) {
         view.tvSubtitle.setTextOrHide(resId)
+    }
+
+    fun setSubtitleTextAppearance(@StyleRes resId: Int) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            view.tvSubtitle.setTextAppearance(resId)
+        } else {
+            view.tvSubtitle.setTextAppearance(context, resId)
+        }
     }
 
     fun setIcon(@DrawableRes drawableRes: Int) {

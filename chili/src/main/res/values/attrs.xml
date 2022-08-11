@@ -211,6 +211,8 @@
         <attr name="isSurfaceClickable"/>
         <attr name="squircleIconBackgroundColor" format="color"/>
         <attr name="isChevronVisible" format="boolean"/>
+        <attr name="titleTextAppearance"/>
+        <attr name="subtitleTextAppearance"/>
     </declare-styleable>
 
     <declare-styleable name="ToggleCellView">
