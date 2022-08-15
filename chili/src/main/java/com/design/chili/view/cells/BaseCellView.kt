@@ -222,6 +222,17 @@ open class BaseCellView @JvmOverloads constructor(
         view.ivIcon.layoutParams = params
     }
 
+    fun setupRoundedModeByPosition(isFirst: Boolean, isLast: Boolean) {
+        val roundedMode = when {
+            isFirst && isLast -> RoundedCornerMode.SINGLE
+            isFirst -> RoundedCornerMode.TOP
+            isLast -> RoundedCornerMode.BOTTOM
+            else -> RoundedCornerMode.MIDDLE
+        }
+        setupCornerRoundedMode(roundedMode)
+        setDividerVisibility(!isLast)
+    }
+
     fun setRoundedMode(mode: RoundedCornerMode) {
         view.rootView.setupRoundedCellCornersMode(mode.value)
     }
