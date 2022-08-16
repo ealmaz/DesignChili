@@ -64,6 +64,10 @@ class MaskedTextWatcher private constructor(
         return this.filter { allowedInputSymbols.contains(it) }
     }
 
+    fun getTextWithoutMaskSymbols(): String {
+        return clearMaskSymbols(field.text?.toString() ?: "")
+    }
+
     fun mergeStrings(inputText: String, isDelete: Boolean): String {
 
         val maskedText = StringBuilder()

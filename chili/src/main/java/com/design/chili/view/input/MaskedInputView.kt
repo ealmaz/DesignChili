@@ -89,6 +89,10 @@ class MaskedInputView : BaseInputView {
         return !(getInputText().contains(maskTextWatcher.representation))
     }
 
+    fun getTextWithoutMaskSymbols(): String {
+        return maskTextWatcher.getTextWithoutMaskSymbols()
+    }
+
 
     override fun isInputEmpty(): Boolean {
         return try {
