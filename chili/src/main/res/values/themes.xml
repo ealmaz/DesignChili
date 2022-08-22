@@ -46,7 +46,7 @@
         <item name="ChiliSnackbarTextColor">@color/black_5</item>
 
         <!-- Segmented Picker   -->
-        <item name="ChiliSegmentedPickerBackgroundColor">@color/gray_3</item>
+        <item name="ChiliSegmentedPickerBackgroundColor">@color/gray_6</item>
         <item name="ChiliSegmentedPickerTabIndicatorColor">@color/white_1</item>
         <item name="ChiliSegmentedPickerTabTextColor">@color/black_5</item>
 

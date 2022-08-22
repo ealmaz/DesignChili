@@ -22,6 +22,7 @@
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/tl_vaccine_pcr"
             style="@style/Chili.SegmentedPickerViewStyle"
+            app:tabTextAppearance="@android:style/TextAppearance.Widget.TabWidget"
             android:layout_marginHorizontal="@dimen/padding_16dp"
             android:layout_marginBottom="@dimen/padding_8dp">
 
