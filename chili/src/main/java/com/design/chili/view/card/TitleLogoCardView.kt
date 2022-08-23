@@ -111,7 +111,7 @@ class TitleLogoCardView : FrameLayout {
     fun setIconType(type: IconType) {
         when (type) {
             IconType.PLUS -> setIconDrawableRes(R.drawable.chili_ic_magenta_plus)
-            IconType.CHEVRON -> setIconDrawableRes(R.drawable.chili_ic_chevron)
+            IconType.CHEVRON -> setIconDrawableRes(R.drawable.chili_ic_chevron_light)
         }
     }
 

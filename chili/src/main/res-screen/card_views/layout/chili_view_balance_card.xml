@@ -44,16 +44,14 @@
             android:id="@+id/iv_action_icon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/chili_ic_chevron"
-            android:layout_marginTop="@dimen/padding_16dp"
-            android:layout_marginBottom="@dimen/padding_16dp"
+            tools:src="@drawable/chili_ic_chevron_light"
             android:layout_marginEnd="@dimen/padding_4dp"
             android:layout_marginStart="@dimen/padding_8dp"
-            android:layout_marginRight="@dimen/padding_8dp"
+            android:visibility="visible"
+            app:layout_constraintLeft_toRightOf="@+id/tv_title"
             app:layout_constraintTop_toTopOf="@+id/tv_title"
             app:layout_constraintBottom_toBottomOf="@+id/tv_title"
-            app:layout_constraintLeft_toRightOf="@+id/tv_title"
-             />
+            />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
