@@ -12,12 +12,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_marginTop="@dimen/padding_16dp"
-        android:layout_marginStart="@dimen/padding_16dp"
-        android:layout_marginBottom="@dimen/padding_16dp"
-        android:layout_marginRight="@dimen/padding_14dp"
+        android:layout_margin="@dimen/padding_12dp"
         app:layout_constraintRight_toLeftOf="@+id/iv_icon"
-        app:layout_constraintHorizontal_weight="2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent">
