@@ -26,6 +26,7 @@
         <attr name="checkBoxCellViewDefaultStyle" format="reference"/>
         <attr name="additionalTextCellViewDefaultStyle" format="reference"/>
         <attr name="actionCellViewDefaultStyle" format="reference"/>
+        <attr name="expandableCellViewDefaultStyle" format="reference"/>
 
         <attr name="componentButtonDefaultStyle" format="reference"/>
 
@@ -258,6 +259,12 @@
         <attr name="isSurfaceClickable"/>
         <attr name="title"/>
         <attr name="subtitle"/>
+    </declare-styleable>
+
+    <declare-styleable name="ExpandableCellView">
+        <attr name="title"/>
+        <attr name="description" format="string"/>
+        <attr name="isExpanded" format="boolean"/>
     </declare-styleable>
 
 </resources>

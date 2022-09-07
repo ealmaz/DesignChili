@@ -33,4 +33,6 @@
 
     <style name="Chili.CellViewStyle.InfoCellView"/>
 
+    <style name="Chili.CellViewStyle.ExpandableCellView"/>
+
 </resources>

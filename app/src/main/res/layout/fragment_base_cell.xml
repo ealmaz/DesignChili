@@ -724,7 +724,40 @@
             app:roundedCornerMode="bottom"/>
 
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="ExpandableCellView"
+            android:layout_marginTop="@dimen/padding_16dp"/>
 
+        <com.design.chili.view.cells.ExpandableCellView
+            android:layout_marginTop="@dimen/padding_16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:title="Могу ли я оплатить товар через О!Деньги"
+            app:description="В данный момент оплата через O!Деньги находится в стадии разработки и будет доступна в ближайших обновлениях приложения."/>
+
+
+        <com.design.chili.view.cells.ExpandableCellView
+            android:layout_marginTop="@dimen/padding_16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:title="Могу ли я оплатить товар через О!Деньги"
+            app:description="В данный момент оплата через O!Деньги находится в стадии разработки и будет доступна в ближайших обновлениях приложения."/>
+
+        <com.design.chili.view.cells.ExpandableCellView
+            android:layout_marginTop="@dimen/padding_16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:title="Могу ли я оплатить товар через О!Деньги"
+            app:description="В данный момент оплата через O!Деньги находится в стадии разработки и будет доступна в ближайших обновлениях приложения."/>
+
+        <com.design.chili.view.cells.ExpandableCellView
+            android:layout_marginTop="@dimen/padding_16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:title="Могу ли я оплатить товар через О!Деньги"
+            app:description="В данный момент оплата через O!Деньги находится в стадии разработки и будет доступна в ближайших обновлениях приложения."/>
 
     </LinearLayout>
 
