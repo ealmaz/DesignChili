@@ -15,6 +15,7 @@ import com.design.chili.extensions.*
 import com.design.chili.extensions.gone
 import com.design.chili.extensions.setTextOrHide
 import com.design.chili.extensions.visible
+import com.design.chili.view.common.AnimatedArcProgressView
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class TariffPackagesInfoCardView : ConstraintLayout {

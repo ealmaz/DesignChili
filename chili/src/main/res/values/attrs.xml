@@ -141,6 +141,13 @@
         <attr name="arcProgressStrokeWidth" format="dimension"/>
     </declare-styleable>
 
+    <declare-styleable name="AnimatedProgressLine">
+        <attr name="progressBackgroundColor" format="color"/>
+        <attr name="progressColor" format="color"/>
+        <attr name="progressPercent" format="integer"/>
+        <attr name="animateProgress" format="boolean"/>
+    </declare-styleable>
+
     <declare-styleable name="TariffPackagesInfoCardView">
         <attr name="title"/>
         <attr name="isDividerVisible"/>

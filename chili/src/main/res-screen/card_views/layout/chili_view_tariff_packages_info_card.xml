@@ -30,7 +30,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
 
-    <com.design.chili.view.card.AnimatedArcProgressView
+    <com.design.chili.view.common.AnimatedArcProgressView
         android:id="@+id/internet_arc"
         android:layout_width="@dimen/view_110dp"
         android:layout_height="@dimen/view_96dp"
@@ -42,7 +42,7 @@
         app:layout_constraintEnd_toStartOf="@id/vertical_divider"
         app:layout_constraintTop_toBottomOf="@id/tv_title"/>
 
-    <com.design.chili.view.card.AnimatedArcProgressView
+    <com.design.chili.view.common.AnimatedArcProgressView
         android:id="@+id/call_arc"
         android:layout_width="@dimen/view_110dp"
         android:layout_height="@dimen/view_96dp"

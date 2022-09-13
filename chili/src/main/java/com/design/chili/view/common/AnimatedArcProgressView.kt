@@ -1,4 +1,4 @@
-package com.design.chili.view.card
+package com.design.chili.view.common
 
 import android.animation.ValueAnimator
 import android.content.Context
