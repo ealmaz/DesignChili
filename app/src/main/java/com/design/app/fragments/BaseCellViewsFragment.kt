@@ -10,6 +10,18 @@ class BaseCellViewsFragment : BaseFragment<FragmentBaseCellBinding>() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        vb.btnP1.setOnClickListener {
+            vb.progress.setProgressPercent(100)
+        }
+        vb.btnP2.setOnClickListener {
+            vb.progress.setProgressPercent(0)
+        }
+        vb.btnP4.setOnClickListener {
+            vb.progress4.setProgressPercent(80)
+        }
+        vb.btnP5.setOnClickListener {
+            vb.progress4.setProgressPercent(20)
+        }
     }
 
     override fun inflateViewBinging(): FragmentBaseCellBinding {

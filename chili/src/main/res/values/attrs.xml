@@ -27,6 +27,7 @@
         <attr name="additionalTextCellViewDefaultStyle" format="reference"/>
         <attr name="actionCellViewDefaultStyle" format="reference"/>
         <attr name="expandableCellViewDefaultStyle" format="reference"/>
+        <attr name="progressCellViewDefaultStyle" format="reference"/>
 
         <attr name="componentButtonDefaultStyle" format="reference"/>
 
@@ -272,6 +273,15 @@
         <attr name="title"/>
         <attr name="description" format="string"/>
         <attr name="isExpanded" format="boolean"/>
+    </declare-styleable>
+
+    <declare-styleable name="ProgressCellView">
+        <attr name="title"/>
+        <attr name="description"/>
+        <attr name="progressBackgroundColor" />
+        <attr name="progressColor"/>
+        <attr name="progressPercent"/>
+        <attr name="animateProgress"/>
     </declare-styleable>
 
 </resources>

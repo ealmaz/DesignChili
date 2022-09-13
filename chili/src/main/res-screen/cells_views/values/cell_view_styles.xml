@@ -35,4 +35,6 @@
 
     <style name="Chili.CellViewStyle.ExpandableCellView"/>
 
+    <style name="Chili.CellViewStyle.ProgressCellView"/>
+
 </resources>

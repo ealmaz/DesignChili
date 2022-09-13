@@ -759,6 +759,90 @@
             app:title="Могу ли я оплатить товар через О!Деньги"
             app:description="В данный момент оплата через O!Деньги находится в стадии разработки и будет доступна в ближайших обновлениях приложения."/>
 
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="ProgressCellView"
+            android:layout_marginTop="@dimen/padding_16dp"/>
+
+        <com.design.chili.view.cells.ProgressCellView
+            android:id="@+id/progress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:progressColor="@color/orange_1"
+            android:layout_marginTop="@dimen/padding_8dp"
+            app:progressBackgroundColor="@color/gray_2"
+            app:progressPercent="50"
+            app:title="98 000,00 с из 100 000 с"
+            app:description="Доступный объем кошелька"/>
+
+        <Button
+            android:id="@+id/btn_p1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding_8dp"
+            android:text="set progress to up 100"/>
+
+        <Button
+            android:id="@+id/btn_p2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding_8dp"
+            android:text="set progress to up 0"/>
+
+
+        <com.design.chili.view.cells.ProgressCellView
+            android:id="@+id/progress2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:progressColor="@color/orange_1"
+            app:progressBackgroundColor="@color/gray_2"
+            android:layout_marginTop="@dimen/padding_8dp"
+            app:progressPercent="50"
+            app:title="98 000,00 с из 100 000 с"
+            app:description="Доступный объем кошелька"/>
+
+        <com.design.chili.view.cells.ProgressCellView
+            android:id="@+id/progress3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:progressColor="@color/orange_1"
+            app:progressBackgroundColor="@color/gray_2"
+            android:layout_marginTop="@dimen/padding_8dp"
+            app:progressPercent="80"
+            app:title="98 000,00 с из 100 000 с"
+            app:description="Доступный объем кошелька"/>
+
+
+        <com.design.chili.view.cells.ProgressCellView
+            android:id="@+id/progress4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:progressColor="@color/orange_1"
+            app:progressBackgroundColor="@color/gray_2"
+            app:progressPercent="50"
+            app:animateProgress="true"
+            android:layout_marginTop="@dimen/padding_8dp"
+            app:title="Animated progress"
+            app:description="Доступный объем кошелька"/>
+
+        <Button
+            android:id="@+id/btn_p4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding_8dp"
+            android:text="set progress to up 80"/>
+
+        <Button
+            android:id="@+id/btn_p5"
+            android:layout_marginTop="@dimen/padding_8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="set progress to up 20"/>
+
+
+
     </LinearLayout>
 
 </ScrollView>

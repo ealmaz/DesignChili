@@ -18,7 +18,7 @@ class AnimatedProgressLine(context: Context, private val attrs: AttributeSet) : 
     @ColorInt private var progressBackgroundColor: Int = Color.GRAY
     @ColorInt private var progressColor: Int = Color.GREEN
 
-    private var progressPercent: Int = 50
+    private var progressPercent: Int = 0
     private var isProgressAnimated: Boolean = false
 
     init {
@@ -33,7 +33,7 @@ class AnimatedProgressLine(context: Context, private val attrs: AttributeSet) : 
     private fun initViews() {
         context?.obtainStyledAttributes(attrs, R.styleable.AnimatedProgressLine)?.run {
             getBoolean(R.styleable.AnimatedProgressLine_animateProgress, false).let {
-                isProgressAnimated = it
+                setIsProgressAnimated(it)
             }
             getColor(R.styleable.AnimatedProgressLine_progressColor, Color.GREEN).let {
                 setProgressColor(it)
@@ -108,6 +108,10 @@ class AnimatedProgressLine(context: Context, private val attrs: AttributeSet) : 
             addUpdateListener { setProgressPercent(it.animatedValue as Int) }
             start()
         }
+    }
+
+    fun setIsProgressAnimated(isAnimated: Boolean) {
+        this.isProgressAnimated = isAnimated
     }
 
     fun setProgress(progress: Int) {
