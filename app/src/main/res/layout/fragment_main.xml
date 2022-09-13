@@ -45,16 +45,8 @@
             android:layout_margin="@dimen/padding_16dp"/>
 
         <Button
-            android:id="@+id/cells"
-            android:text="Cells"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            style="@style/Chili.ButtonStyle.Primary"
-            android:layout_margin="@dimen/padding_16dp"/>
-
-        <Button
             android:id="@+id/cells_new"
-            android:text="Cells New"
+            android:text="Cells ALL"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             style="@style/Chili.ButtonStyle.Primary"

@@ -3,10 +3,10 @@ package com.design.app.fragments
 import android.os.Bundle
 import android.view.View
 import com.design.app.base.BaseFragment
-import com.design.app.databinding.FragmentBaseCellBinding
+import com.design.app.databinding.FragmentCellBinding
 
 
-class BaseCellViewsFragment : BaseFragment<FragmentBaseCellBinding>() {
+class CellViewsFragment : BaseFragment<FragmentCellBinding>() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -24,7 +24,7 @@ class BaseCellViewsFragment : BaseFragment<FragmentBaseCellBinding>() {
         }
     }
 
-    override fun inflateViewBinging(): FragmentBaseCellBinding {
-        return FragmentBaseCellBinding.inflate(layoutInflater)
+    override fun inflateViewBinging(): FragmentCellBinding {
+        return FragmentCellBinding.inflate(layoutInflater)
     }
 }

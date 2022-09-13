@@ -12,13 +12,10 @@
         <attr name="phoneNumberPickerCardViewDefaultStyle" format="reference"/>
         <attr name="tariffPriceInfoCardViewDefaultStyle" format="reference"/>
         <attr name="tariffPackagesInfoCardViewDefaultStyle" format="reference"/>
-        <attr name="logoTitleSubtitleCellDefaultStyle" format="reference"/>
         <attr name="logoTitleCellDefaultStyle" format="reference"/>
         <attr name="infoCellViewDefaultStyle" format="reference"/>
 
         <attr name="multiLineRightIconCellDefaultStyle" format="reference"/>
-
-        <attr name="logoTitleActionCellDefaultStyle" format="reference"/>
 
         <attr name="cellViewDefaultStyle" format="reference"/>
         <attr name="toggleCellViewDefaultStyle" format="reference"/>
@@ -181,27 +178,9 @@
         <attr name="roundedCornerMode" />
     </declare-styleable>
 
-    <declare-styleable name="LogoTitleSubtitleCell">
-        <attr name="android:icon" format="reference"/>
-        <attr name="themed_icon" format="reference" />
-        <attr name="title" format="string" />
-        <attr name="subtitle" format="string" />
-        <attr name="hide_divider" format="boolean" />
-        <attr name="roundedCornerMode" />
-    </declare-styleable>
-
     <declare-styleable name="LogoTitleCell">
         <attr name="android:icon" format="reference"/>
         <attr name="title" />
-        <attr name="roundedCornerMode" />
-    </declare-styleable>
-
-    <declare-styleable name="LogoTitleActionCell">
-        <attr name="android:icon" format="reference"/>
-        <attr name="title"/>
-        <attr name="subtitle"/>
-        <attr name="action" format="string" />
-        <attr name="hide_divider"/>
         <attr name="roundedCornerMode" />
     </declare-styleable>
 

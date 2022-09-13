@@ -24,11 +24,8 @@ class MainFragment : BaseFragment<FragmentMainBinding>() {
         vb.cards.setOnClickListener {
             openFragment(CardsFragment())
         }
-        vb.cells.setOnClickListener {
-            openFragment(CellsFragment())
-        }
         vb.cellsNew.setOnClickListener {
-            openFragment(BaseCellViewsFragment())
+            openFragment(CellViewsFragment())
         }
         vb.snackbar.setOnClickListener {
             openFragment(SnackbarFragment())
