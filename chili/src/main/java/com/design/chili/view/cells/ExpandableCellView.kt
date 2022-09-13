@@ -93,7 +93,7 @@ class ExpandableCellView @JvmOverloads constructor(
                 }
             })
 
-        view.ivChevron.animate().rotation(180F)
+        view.ivChevron.animate().rotation(0F)
         view.divider.visible()
     }
 
@@ -110,7 +110,7 @@ class ExpandableCellView @JvmOverloads constructor(
                     view.tvDescription.gone()
                 }
             })
-        view.ivChevron.animate().rotation(0F)
+        view.ivChevron.animate().rotation(180F)
     }
 
     override fun onSaveInstanceState(): Parcelable? {

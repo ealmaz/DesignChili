@@ -12,39 +12,6 @@
         android:orientation="vertical"
         tools:context=".MainActivity">
 
-        <com.design.chili.view.common.AnimatedProgressLine
-            android:layout_width="match_parent"
-            android:layout_height="8dp"
-            app:progressPercent="100"
-            app:animateProgress="true"
-            app:progressBackgroundColor="@color/gray_2"
-            app:progressColor="@color/orange_1"
-            android:layout_margin="@dimen/padding_16dp"/>
-
-        <com.design.chili.view.common.AnimatedProgressLine
-            android:layout_width="match_parent"
-            android:layout_height="8dp"
-            app:progressPercent="50"
-            app:progressBackgroundColor="@color/gray_2"
-            app:progressColor="@color/orange_1"
-            android:layout_margin="@dimen/padding_16dp"/>
-
-        <com.design.chili.view.common.AnimatedProgressLine
-            android:layout_width="match_parent"
-            android:layout_height="8dp"
-            app:progressPercent="0"
-            app:progressBackgroundColor="@color/gray_2"
-            app:progressColor="@color/orange_1"
-            android:layout_margin="@dimen/padding_16dp"/>
-
-        <com.design.chili.view.common.AnimatedProgressLine
-            android:layout_width="match_parent"
-            android:layout_height="8dp"
-            app:progressPercent="1"
-            app:progressBackgroundColor="@color/gray_2"
-            app:progressColor="@color/orange_1"
-            android:layout_margin="@dimen/padding_16dp"/>
-
         <Button
             android:id="@+id/text"
             android:text="Text Appearances"
