@@ -842,6 +842,65 @@
             android:text="set progress to up 20"/>
 
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Additional double buttions"
+            android:layout_marginTop="@dimen/padding_32dp"/>
+
+        <com.design.chili.view.cells.BaseCellView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding_16dp"
+            android:icon="@drawable/ic_squircle_phone"
+            app:roundedCornerMode="top"
+            app:cellIconSize="medium"
+            app:isDividerVisible="false"
+            app:title="Заголовок" />
+
+        <com.design.chili.view.common.AdditionalDoubleButtonsView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:firstButtonText="ОТМЕНИТЬ"
+            app:secondButtonText="ОПЛАТИТЬ"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Additional text view"
+            android:layout_marginTop="@dimen/padding_32dp"/>
+
+        <com.design.chili.view.cells.BaseCellView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding_16dp"
+            android:icon="@drawable/ic_squircle_phone"
+            app:roundedCornerMode="top"
+            app:cellIconSize="medium"
+            app:isDividerVisible="false"
+            app:title="Заголовок" />
+
+        <com.design.chili.view.common.AdditionalTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/Chili.H8.Secondary"
+            android:text="Поле ввода комментария вмещает в себя такое же количество символов, сколько поле поле ввода комментария - 130 символов"/>
+
+        <com.design.chili.view.cells.BaseCellView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding_16dp"
+            android:icon="@drawable/ic_squircle_phone"
+            app:roundedCornerMode="top"
+            app:cellIconSize="medium"
+            app:isDividerVisible="false"
+            app:title="Заголовок" />
+
+        <com.design.chili.view.common.AdditionalTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/Chili.H8.Error"
+            android:text="Поле ввода комментария вмещает в себя такое же количество символов, сколько поле поле ввода комментария - 130 символов"/>
 
     </LinearLayout>
 

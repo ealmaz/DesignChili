@@ -284,4 +284,14 @@
         <attr name="animateProgress"/>
     </declare-styleable>
 
+    <declare-styleable name="AdditionalDoubleButtonsView">
+        <attr name="firstButtonText" format="string"/>
+        <attr name="secondButtonText" format="string"/>
+    </declare-styleable>
+
+    <declare-styleable name="AdditionalTextView">
+        <attr name="android:text"/>
+        <attr name="android:textAppearance"/>
+    </declare-styleable>
+
 </resources>

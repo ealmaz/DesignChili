@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/chili_cell_rounded_bottom_background"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="?attr/ChiliDividerHeightSize"
+        android:background="?attr/ChiliDividerColor"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btn_first"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            tools:text="ОТМЕНИТЬ"
+            style="@style/Chili.ButtonStyle.Component"/>
+
+        <View
+            android:layout_width="?attr/ChiliDividerHeightSize"
+            android:layout_height="match_parent"
+            android:background="?attr/ChiliDividerColor"/>
+
+        <Button
+            android:id="@+id/btn_second"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            tools:text="ОПЛАЛИТЬ"
+            style="@style/Chili.ButtonStyle.Component"/>
+
+    </LinearLayout>
+
+</LinearLayout>
