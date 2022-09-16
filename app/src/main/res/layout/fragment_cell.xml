@@ -947,6 +947,47 @@
 
         </LinearLayout>
 
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DetailCellView"
+            android:layout_margin="@dimen/padding_16dp" />
+
+        <com.design.chili.view.cells.DetailCellView
+            android:id="@+id/dcv_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:title="Заголовок"
+            app:subtitle="+ 996 700 500 430"
+            app:value="- 140"
+            app:status="В обработке"
+            app:icon="@drawable/chili_ic_success" />
+
+        <com.design.chili.view.cells.DetailCellView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding_8dp"
+            app:title="Заголовок"
+            app:subtitle="+ 996 700 500 430"
+            app:icon="@drawable/chili_ic_success" />
+
+
+        <com.design.chili.view.cells.DetailCellView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding_8dp"
+            app:title="Заголовок"
+            app:status="В обработке"
+            app:icon="@drawable/chili_ic_success" />
+
+        <com.design.chili.view.cells.DetailCellView
+            android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/padding_8dp"
+            android:layout_height="wrap_content"
+            app:title="Заголовок"
+            app:icon="@drawable/chili_ic_success" />
+
     </LinearLayout>
 
 </ScrollView>

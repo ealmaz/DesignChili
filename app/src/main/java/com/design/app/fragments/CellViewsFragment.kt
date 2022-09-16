@@ -22,6 +22,7 @@ class CellViewsFragment : BaseFragment<FragmentCellBinding>() {
         vb.btnP5.setOnClickListener {
             vb.progress4.setProgressPercent(20)
         }
+        vb.dcv1.setValueTextColor(resources.getColor(com.design.chili.R.color.red_1))
     }
 
     override fun inflateViewBinging(): FragmentCellBinding {

@@ -25,6 +25,7 @@
         <attr name="actionCellViewDefaultStyle" format="reference"/>
         <attr name="expandableCellViewDefaultStyle" format="reference"/>
         <attr name="progressCellViewDefaultStyle" format="reference"/>
+        <attr name="detailCellViewDefaultStyle" format="reference"/>
 
         <attr name="componentButtonDefaultStyle" format="reference"/>
 
@@ -271,6 +272,16 @@
     <declare-styleable name="AdditionalTextView">
         <attr name="android:text"/>
         <attr name="android:textAppearance"/>
+    </declare-styleable>
+
+    <declare-styleable name="DetailCellView">
+        <attr name="title"/>
+        <attr name="subtitle"/>
+        <attr name="value"/>
+        <attr name="status" format="string"/>
+        <attr name="icon"/>
+        <attr name="isSurfaceClickable"/>
+        <attr name="roundedCornerMode"/>
     </declare-styleable>
 
 </resources>
