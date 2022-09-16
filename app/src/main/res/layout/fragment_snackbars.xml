@@ -3,7 +3,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="?attr/ChiliScreenBackground">
+    android:background="?attr/ChiliScreenBackground"
+    android:id="@+id/snackbars_sv">
 
     <Button
         android:id="@+id/load_snackbar"

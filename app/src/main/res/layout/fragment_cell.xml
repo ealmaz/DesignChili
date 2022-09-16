@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="?attr/ChiliScreenBackground"
-    android:paddingBottom="@dimen/padding_16dp">
+    android:paddingBottom="@dimen/padding_16dp"
+    android:id="@+id/cell_cv">
 
     <LinearLayout
         android:layout_width="match_parent"
