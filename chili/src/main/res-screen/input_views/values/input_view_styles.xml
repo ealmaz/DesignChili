@@ -15,7 +15,7 @@
     <style name="Chili.InputViewStyle.Masked"></style>
 
     <style name="Chili.InputViewStyle.Masked.PhoneMask">
-        <item name="android:inputType">number</item>
+        <item name="android:inputType">phone</item>
         <item name="allowedInputSymbols">1234567890</item>
         <item name="mask">+996 XXX XXX XXX</item>
     </style>
