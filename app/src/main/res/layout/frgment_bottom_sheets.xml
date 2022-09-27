@@ -68,6 +68,15 @@
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/padding_16dp"/>
 
+        <Button
+            android:id="@+id/visbile_bottom_sheet"
+            android:text="Interactive bottom sheet"
+            style="@style/Chili.ButtonStyle.Primary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_margin="@dimen/padding_16dp"/>
+
     </LinearLayout>
 
 </ScrollView>

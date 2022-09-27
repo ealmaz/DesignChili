@@ -7,6 +7,14 @@
     android:id="@+id/snackbars_sv">
 
     <Button
+        android:id="@+id/simple"
+        android:text="Simple snackbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Chili.ButtonStyle.Primary"
+        android:layout_margin="@dimen/padding_16dp"/>
+
+    <Button
         android:id="@+id/load_snackbar"
         android:text="Loading snackbar"
         android:layout_width="match_parent"
@@ -17,6 +25,15 @@
     <Button
         android:id="@+id/timer_action_snackbar"
         android:text="Timer + action snackbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Chili.ButtonStyle.Primary"
+        android:layout_margin="@dimen/padding_16dp"/>
+
+
+    <Button
+        android:id="@+id/custom_warining"
+        android:text="Custom warning snackbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         style="@style/Chili.ButtonStyle.Primary"

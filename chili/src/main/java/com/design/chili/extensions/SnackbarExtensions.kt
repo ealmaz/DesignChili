@@ -7,16 +7,16 @@ import com.design.chili.view.snackbar.ActionInfo
 import com.design.chili.view.snackbar.ChiliSnackBar
 import com.design.chili.view.snackbar.TimerInfo
 
-fun AppCompatActivity.showSimpleSnackbar(view: View, message: String) {
-    ChiliSnackBar.Builder(view)
+fun AppCompatActivity.showSimpleSnackbar(rootView: View, message: String) {
+    ChiliSnackBar.Builder(rootView)
         .setSnackbarMessage(message)
         .build()
         .show()
 }
 
 
-fun AppCompatActivity.showInfinitiveLoaderSnackbar(view: View, message: String) {
-    ChiliSnackBar.Builder(view)
+fun AppCompatActivity.showInfinitiveLoaderSnackbar(rootView: View, message: String) {
+    ChiliSnackBar.Builder(rootView)
         .setSnackbarMessage(message)
         .setIsInfiniteLoaderSnackbar(true)
         .build()
@@ -24,7 +24,7 @@ fun AppCompatActivity.showInfinitiveLoaderSnackbar(view: View, message: String) 
 }
 
 fun AppCompatActivity.showTimerActionBeforeSuccessCnackbar(
-    view: View,
+    rootView: View,
     timerMessage: String,
     successMessage: String,
     actionText: String,
@@ -32,7 +32,7 @@ fun AppCompatActivity.showTimerActionBeforeSuccessCnackbar(
     onTimerExpire: () -> Unit,
     timerDurationMills: Long
 ) {
-    ChiliSnackBar.Builder(view)
+    ChiliSnackBar.Builder(rootView)
         .setSnackbarDurationMills(timerDurationMills + 2000)
         .setSnackbarMessage(timerMessage)
         .setSnackbarTimerInfo(TimerInfo(timerDurationMills, {

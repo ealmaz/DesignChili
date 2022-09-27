@@ -10,9 +10,6 @@ import androidx.coordinatorlayout.widget.CoordinatorLayout
 import androidx.core.content.ContextCompat
 import com.design.chili.R
 import com.design.chili.extensions.*
-import com.design.chili.extensions.invisible
-import com.design.chili.extensions.setOnSingleClickListener
-import com.design.chili.extensions.visible
 import com.google.android.material.snackbar.BaseTransientBottomBar
 
 class ChiliSnackBar private constructor(
@@ -173,7 +170,7 @@ class ChiliSnackBar private constructor(
             val snackbarLayoutView = SnackbarLayoutView(parent.context)
             return ChiliSnackBar(parent, snackbarLayoutView).apply {
                 setMessage(snackbarMessage)
-                duration = snackbarDurationMills?.toInt() ?: 5000
+                duration = snackbarDurationMills?.toInt() ?: 3000
                 setupActionButton(snackbarActionInfo)
                 setupVisibilityCallback(snackbarVisibilityStateListener)
                 setupTimer(snackbarTimerInfo)

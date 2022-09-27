@@ -21,6 +21,14 @@
         <item name="android:textSize">?attr/ChiliTextSizeH7</item>
     </style>
 
+    <style name="Chili.InAppPushStyle" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/Chili.Modal</item>
+    </style>
+
+    <style name="Chili.Modal" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
 
 
 </resources>

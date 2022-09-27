@@ -7,11 +7,9 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.fragment.app.DialogFragment
 import com.design.chili.R
 import com.design.chili.extensions.*
-import com.design.chili.extensions.gone
-import com.design.chili.extensions.setOnSingleClickListener
-import com.design.chili.extensions.visible
 import com.design.chili.view.modals.base.BaseBottomSheetDialogFragment
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 
@@ -34,6 +32,10 @@ class InAppPushBottomSheet private constructor() : BaseBottomSheetDialogFragment
     private var description: String? = null
     private var btnMoreInfo: Pair<String, InAppPushBottomSheet.() -> Unit>? = null
 
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setStyle(DialogFragment.STYLE_NORMAL, R.style.Chili_InAppPushStyle)
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater,

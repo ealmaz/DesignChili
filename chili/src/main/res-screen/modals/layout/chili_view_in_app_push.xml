@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     android:orientation="vertical"
     tools:background="@color/gray_2"
     android:id="@+id/fl_root_view">
@@ -14,6 +14,7 @@
         android:paddingStart="@dimen/padding_8dp"
         android:paddingEnd="@dimen/padding_8dp"
         android:background="@drawable/chili_bg_in_app_push"
+        android:layout_gravity="bottom"
         android:layout_marginStart="@dimen/padding_16dp"
         android:layout_marginEnd="@dimen/padding_16dp"
         android:layout_marginBottom="@dimen/padding_24dp"

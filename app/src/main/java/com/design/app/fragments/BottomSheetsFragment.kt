@@ -87,6 +87,9 @@ class BottomSheetsFragment : BaseFragment<FrgmentBottomSheetsBinding>() {
                 .build()
                 .show(childFragmentManager)
         }
+        vb.visbileBottomSheet.setOnClickListener {
+            openFragment(InteractiveBottomSheetFragment())
+        }
     }
 
     override fun inflateViewBinging(): FrgmentBottomSheetsBinding {
