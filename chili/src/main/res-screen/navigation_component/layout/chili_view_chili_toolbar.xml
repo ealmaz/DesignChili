@@ -12,13 +12,15 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar"
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar_view"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="?actionBarSize"
+            android:layout_gravity="center_vertical"
             app:titleTextAppearance="?attr/ChiliToolbarTextAppearance"
-            tools:title="Toolbar"/>
+            tools:title="Toolbar" />
 
         <TextView
             android:id="@+id/tv_additional_text"
@@ -38,8 +40,8 @@
             android:layout_gravity="center_vertical"
             android:layout_marginEnd="@dimen/padding_16dp"
             android:visibility="gone"
-            app:tint="?attr/ChiliToolbarIconsTint"
             tools:src="@tools:sample/avatars"/>
+
     </LinearLayout>
 
     <View

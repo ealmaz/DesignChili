@@ -1,26 +1,26 @@
 package com.design.chili.view.navigation_components
 
 import android.content.Context
-import android.graphics.Color
 import android.graphics.drawable.Drawable
+import android.os.Build
 import android.util.AttributeSet
 import android.view.LayoutInflater
-import android.view.MenuItem
 import android.view.View
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
+import androidx.annotation.ColorInt
 import androidx.annotation.DrawableRes
 import androidx.annotation.StringRes
+import androidx.annotation.StyleRes
 import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.widget.Toolbar
+import androidx.fragment.app.FragmentActivity
 import com.design.chili.R
-import com.design.chili.extensions.drawable
 import com.design.chili.extensions.setOnSingleClickListener
 import com.design.chili.extensions.setTextOrHide
-import com.design.chili.extensions.visible
+import com.google.android.material.appbar.MaterialToolbar
 
-open class ChiliToolbar : LinearLayout {
+class ChiliToolbar : LinearLayout {
 
     private lateinit var view: ChiliToolbarViewVariables
 
@@ -41,7 +41,7 @@ open class ChiliToolbar : LinearLayout {
     private fun setupView() {
         val view = LayoutInflater.from(context).inflate(R.layout.chili_view_chili_toolbar, this)
         this.view = ChiliToolbarViewVariables(
-            toolbar = view.findViewById(R.id.toolbar),
+            toolbar = view.findViewById(R.id.toolbar_view),
             tvAdditionalText = view.findViewById(R.id.tv_additional_text),
             ivEndIcon = view.findViewById(R.id.iv_icon),
             rootView = view.findViewById(R.id.ll_root),
@@ -49,60 +49,70 @@ open class ChiliToolbar : LinearLayout {
         )
     }
 
-    private fun obtainAttributes(attrs: AttributeSet, defStyle: Int = R.style.Chili_ToolbarStyle) {
+    private fun obtainAttributes(attrs: AttributeSet, defStyle: Int = R.style.Chili_BaseNavigationComponentsStyle_ChiliToolbar) {
         context?.obtainStyledAttributes(attrs, R.styleable.ChiliToolbar, R.attr.toolbarDefaultStyle, defStyle)?.run {
-            getText(R.styleable.ChiliToolbar_title)?.let {
-                updateTitle(it.toString())
-            }
-            getText(R.styleable.ChiliToolbar_additionalText)?.let {
-                setAdditionalText(it.toString())
-            }
+            setTitle(getString(R.styleable.ChiliToolbar_title))
+            setAdditionalText(getString(R.styleable.ChiliToolbar_additionalText))
             getBoolean(R.styleable.ChiliToolbar_isDividerVisible, true).let {
                 setupDividerVisibility(it)
             }
-            getResourceId(R.styleable.ChiliToolbar_endIcon, -1).takeIf { it != -1 }?.let {
+            getResourceId(R.styleable.ChiliToolbar_toolbarEndIcon, -1).takeIf { it != -1 }?.let {
                 setEndIcon(it)
             }
-            getBoolean(R.styleable.ChiliToolbar_isTransparent, false).let {
-                if (it) setupToolbarTransparentBackground()
+            getDimensionPixelSize(R.styleable.ChiliToolbar_toolbarEndIconSize, -1).takeIf { it != -1 }?.let {
+                setEndIconSize(it, it)
+            }
+            getResourceId(R.styleable.ChiliToolbar_toolbarTextAppearance, -1).takeIf { it != -1 }?.let {
+                setTitleTextAppearance(it)
+            }
+            getResourceId(R.styleable.ChiliToolbar_additionalTextTextAppearance, -1).takeIf { it != -1 }?.let {
+                setAdditionalTextTextAppearance(it)
+            }
+            getColor(R.styleable.ChiliToolbar_background, -1).takeIf { it != -1 }?.let {
+                setToolbarBackgroundColor(it)
+            }
+            getResourceId(R.styleable.ChiliToolbar_navigationIcon, -1).takeIf { it != -1 }?.let {
+                setNavigationIcon(it)
+            }
+            getBoolean(R.styleable.ChiliToolbar_titleCentered, false).let {
+                setIsTitleCentered(it)
             }
             recycle()
         }
     }
 
-    fun setupToolbarTransparentBackground() {
-        view.apply {
-            rootView.setBackgroundColor(Color.TRANSPARENT)
-            toolbar.setTitleTextColor(Color.TRANSPARENT)
+    fun initToolbar(config: Configuration) {
+        configureToolbar(config)
+        (config.hostActivity as? AppCompatActivity)?.run {
+            setSupportActionBar(view.toolbar)
+            supportActionBar?.setDisplayHomeAsUpEnabled(config.isNavigateUpButtonEnabled)
+            supportActionBar?.setHomeButtonEnabled(config.isNavigateUpButtonEnabled)
+        }
+        view.toolbar.setNavigationOnClickListener { config.onNavigateUpClick.invoke(config.hostActivity) }
+    }
+
+    private fun configureToolbar(config: Configuration) {
+        view.toolbar.apply {
+            config.navigationIconRes?.let { this@ChiliToolbar.setNavigationIcon(it) }
+            config.title?.let { this@ChiliToolbar.setTitle(it) }
+            config.centeredTitle?.let { setIsTitleCentered(it) }
         }
     }
 
-    open fun initForActivity(activity: AppCompatActivity?, title: String? = null, onBackClick: () -> Unit = { activity?.finish() }) {
-        activity?.run {
-            setupSupportActionBar(onBackClick)
-            title?.let { supportActionBar?.title = it }
-        }
-    }
-    
-    fun getToolbar(): Toolbar = view.toolbar
-
-    protected fun AppCompatActivity.setupSupportActionBar(onBackClick: () -> Unit) {
-        setSupportActionBar(view.toolbar)
-        supportActionBar?.setHomeButtonEnabled(true)
-        supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        setOnBackPressListener(onBackClick)
+    private fun setNavigationIcon(@DrawableRes drawableRes: Int) {
+        view.toolbar.setNavigationIcon(drawableRes)
     }
 
-    fun changeNavigatorIcon(@DrawableRes drawableId: Int) {
-        view.toolbar.navigationIcon = context.drawable(drawableId)
-    }
-
-    fun setOnBackPressListener(onBackClick: () -> Unit) {
-        view.toolbar.setNavigationOnClickListener { onBackClick() }
-    }
-
-    fun updateTitle(title: String) {
+    private fun setTitle(title: String?) {
         view.toolbar.title = title
+    }
+
+    private fun setTitleTextAppearance(@StyleRes textAppearanceRes: Int) {
+        view.toolbar.setTitleTextAppearance(context, textAppearanceRes)
+    }
+
+    private fun setIsTitleCentered(centered: Boolean) {
+        view.toolbar.isTitleCentered = centered
     }
 
     fun setAdditionalText(@StringRes resId: Int?) {
@@ -113,12 +123,22 @@ open class ChiliToolbar : LinearLayout {
         view.tvAdditionalText.setTextOrHide(text)
     }
 
-    fun getIconView(): View {
-        return view.ivEndIcon
+    fun setAdditionalTextTextAppearance(@StyleRes resId: Int) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            view.tvAdditionalText.setTextAppearance(resId)
+        } else {
+            view.tvAdditionalText.setTextAppearance(context, resId)
+        }
     }
 
-    fun findMenuItemById(itemId: Int): MenuItem {
-        return view.toolbar.menu.findItem(itemId)
+    fun setEndIcon(@DrawableRes drawableId: Int) {
+        setIconVisibility(true)
+        view.ivEndIcon.setImageResource(drawableId)
+    }
+
+    fun setEndIcon(drawable: Drawable?) {
+        setIconVisibility(true)
+        view.ivEndIcon.setImageDrawable(drawable)
     }
 
     fun setIconVisibility(isVisible: Boolean) {
@@ -128,22 +148,20 @@ open class ChiliToolbar : LinearLayout {
         }
     }
 
-    fun setEndIcon(@DrawableRes drawableId: Int) {
-        view.ivEndIcon.apply {
-            visible()
-            setImageResource(drawableId)
-        }
+    fun setEndIconClickListener(action: () -> Unit) {
+        view.ivEndIcon.setOnSingleClickListener { action.invoke() }
     }
 
-    fun setEndIcon(drawable: Drawable?) {
-        view.ivEndIcon.apply {
-            visible()
-            setImageDrawable(drawable)
-        }
+    fun setEndIconSize(widthPx: Int, heightPx: Int) {
+        val layoutParams = view.ivEndIcon.layoutParams?.apply {
+            width = widthPx
+            height = heightPx
+        } ?: LayoutParams(widthPx, heightPx)
+        view.ivEndIcon.layoutParams = layoutParams
     }
 
-    fun setIconClickListener(action: () -> Unit) {
-        view.ivEndIcon.setOnSingleClickListener { action() }
+    fun setToolbarBackgroundColor(@ColorInt colorInt: Int) {
+        view.rootView.setBackgroundColor(colorInt)
     }
 
     fun setupDividerVisibility(isVisible: Boolean) {
@@ -153,11 +171,21 @@ open class ChiliToolbar : LinearLayout {
         }
     }
 
+    data class Configuration(
+        val hostActivity: FragmentActivity,
+        val title: String? = null,
+        val centeredTitle: Boolean? = null,
+        val navigationIconRes: Int? = null,
+        val onNavigateUpClick: FragmentActivity.() -> Unit = { onBackPressed() },
+        val isNavigateUpButtonEnabled: Boolean = false,
+    )
 }
+
+
 
 data class ChiliToolbarViewVariables(
     val rootView: LinearLayout,
-    val toolbar: Toolbar,
+    val toolbar: MaterialToolbar,
     val tvAdditionalText: TextView,
     val ivEndIcon: ImageView,
     val divider: View)

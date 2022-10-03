@@ -166,10 +166,15 @@
 
     <declare-styleable name="ChiliToolbar">
         <attr name="title"/>
+        <attr name="titleCentered"/>
+        <attr name="toolbarTextAppearance" format="reference"/>
         <attr name="additionalText" format="string"/>
-        <attr name="endIcon" format="reference"/>
+        <attr name="additionalTextTextAppearance" format="reference"/>
+        <attr name="toolbarEndIcon" format="reference"/>
+        <attr name="toolbarEndIconSize" format="dimension"/>
         <attr name="isDividerVisible"/>
-        <attr name="isTransparent" format="boolean"/>
+        <attr name="background"/>
+        <attr name="navigationIcon"/>
     </declare-styleable>
 
     <declare-styleable name="MultiLineRightIconCell">
@@ -213,7 +218,7 @@
     </declare-styleable>
 
     <declare-styleable name="EndIconCellView">
-        <attr name="endIcon"/>
+        <attr name="endIcon" format="reference"/>
         <attr name="isEndIconVisible" format="boolean"/>
         <attr name="endIconSize" format="dimension">
             <enum name="small" value="-1"/>
@@ -232,7 +237,7 @@
 
     <declare-styleable name="AdditionalTextCellView">
         <attr name="additionalText"/>
-        <attr name="additionalTextTextAppearance" format="reference"/>
+        <attr name="additionalTextTextAppearance" />
     </declare-styleable>
 
     <declare-styleable name="ActionCellView">

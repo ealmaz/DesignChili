@@ -1,17 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="Chili.BaseNavigationComponentsStyle" parent="Chili.BaseChiliViewStyle">
+    <style name="Chili.BaseNavigationComponentsStyle" parent="Chili.BaseChiliViewStyle"/>
 
-    </style>
-
-    <style name="Chili.ToolbarStyle" parent="Chili.BaseNavigationComponentsStyle">
+    <style name="Chili.BaseNavigationComponentsStyle.ChiliToolbar">
+        <item name="toolbarTextAppearance">@style/Chili.H5.Marked.Bold</item>
+        <item name="additionalTextTextAppearance">@style/Chili.H8.Secondary</item>
+        <item name="toolbarEndIconSize">@dimen/view_24dp</item>
         <item name="isDividerVisible">true</item>
-        <item name="toolbarNavigationButtonStyle">@style/Toolbar.Button.Navigation.Tinted</item>
-
+        <item name="background">@color/white_1</item>
+        <item name="navigationIcon">@drawable/chili_ic_back_arrow</item>
     </style>
-
-    <style name="Toolbar.Button.Navigation.Tinted" parent="Widget.AppCompat.Toolbar.Button.Navigation">
-        <item name="tint">@color/magenta_1</item>
-    </style>
-
 </resources>
