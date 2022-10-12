@@ -9,5 +9,5 @@ enum class IconSize(val value: Int) {
 }
 
 enum class RoundedCornerMode(var value: Int) {
-    SINGLE(0), TOP(1), MIDDLE(2), BOTTOM(3)
+    SINGLE(0), TOP(1), MIDDLE(2), BOTTOM(3),WITHOUT_ROUNDS(4)
 }
