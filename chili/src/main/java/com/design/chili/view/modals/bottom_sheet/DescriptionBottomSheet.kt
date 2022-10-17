@@ -180,6 +180,8 @@ class DescriptionBottomSheet : BaseViewBottomSheetDialogFragment() {
         private var secondaryButton: Pair<String, (DescriptionBottomSheet.() -> Unit)>? = null
         private var secondaryButtonRes: Pair<Int, (DescriptionBottomSheet.() -> Unit)>? = null
 
+        private var isHideable: Boolean = true
+
         fun setTitle(title: String): Builder {
             this.title = title
             return this
@@ -240,6 +242,11 @@ class DescriptionBottomSheet : BaseViewBottomSheetDialogFragment() {
             return this
         }
 
+        fun setIsHideable(isHideable: Boolean): Builder {
+            this.isHideable = isHideable
+            return this
+        }
+
         fun build(): DescriptionBottomSheet {
             return DescriptionBottomSheet().apply {
                 this.title = this@Builder.title
@@ -254,6 +261,7 @@ class DescriptionBottomSheet : BaseViewBottomSheetDialogFragment() {
                 this.iconRes = this@Builder.iconRes
                 this.secondaryButton = this@Builder.secondaryButton
                 this.secondaryButtonRes = this@Builder.secondaryButtonRes
+                this.isHideable = this@Builder.isHideable
             }
         }
     }

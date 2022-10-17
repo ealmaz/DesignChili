@@ -23,7 +23,7 @@ abstract class BaseBottomSheetDialogFragment : BottomSheetDialogFragment() {
 
     protected open val topDrawableVisible: Boolean = false
     protected open val hasCloseIcon: Boolean = false
-    protected open val isHideable: Boolean = true
+    protected open var isHideable: Boolean = true
     protected open val isBackButtonEnabled: Boolean = true
 
     abstract var topDrawableView: View?

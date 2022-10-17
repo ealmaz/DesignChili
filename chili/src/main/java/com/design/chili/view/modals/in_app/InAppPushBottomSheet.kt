@@ -16,7 +16,6 @@ import com.google.android.material.bottomsheet.BottomSheetBehavior
 class InAppPushBottomSheet private constructor() : BaseBottomSheetDialogFragment() {
 
     override val hasCloseIcon: Boolean = true
-    override val isHideable: Boolean = false
 
     var rootView: View? = null
     var tvTitle: TextView? = null
@@ -112,6 +111,7 @@ class InAppPushBottomSheet private constructor() : BaseBottomSheetDialogFragment
         private var title: String? = null
         private var description: String? = null
         private var btnMoreInfo: Pair<String, InAppPushBottomSheet.() -> Unit>? = null
+        private var isHideable: Boolean = false
 
         fun setTitle(title: String): Builder {
             this.title = title
@@ -138,6 +138,11 @@ class InAppPushBottomSheet private constructor() : BaseBottomSheetDialogFragment
             return this
         }
 
+        fun setIsHideable(isHideable: Boolean): Builder {
+            this.isHideable = isHideable
+            return this
+        }
+
         fun build(): InAppPushBottomSheet {
             return InAppPushBottomSheet().apply {
                 bannerUrl = this@Builder.bannerUrl
@@ -145,6 +150,7 @@ class InAppPushBottomSheet private constructor() : BaseBottomSheetDialogFragment
                 title = this@Builder.title
                 description = this@Builder.description
                 btnMoreInfo = this@Builder.btnMoreInfo
+                isHideable = this@Builder.isHideable
             }
         }
     }

@@ -134,6 +134,8 @@ class InfoBottomSheet private constructor(): BaseViewBottomSheetDialogFragment()
         private var primaryButtonRes: Pair<Int, (InfoBottomSheet.() -> Unit)>? = null
         private var secondaryButtonRes: Pair<Int, (InfoBottomSheet.() -> Unit)>? = null
 
+        private var isHideable: Boolean = true
+
         fun setMessage(text: String): Builder {
             this.text = text
             return this
@@ -174,6 +176,11 @@ class InfoBottomSheet private constructor(): BaseViewBottomSheetDialogFragment()
             return this
         }
 
+        fun setIsHideable(isHideable: Boolean): Builder {
+            this.isHideable = isHideable
+            return this
+        }
+
         fun build(): InfoBottomSheet {
             return InfoBottomSheet().apply {
                 this.text = this@Builder.text
@@ -184,6 +191,7 @@ class InfoBottomSheet private constructor(): BaseViewBottomSheetDialogFragment()
                 this.secondaryButton = this@Builder.secondaryButton
                 this.primaryButtonRes = this@Builder.primaryButtonRes
                 this.secondaryButtonRes = this@Builder.secondaryButtonRes
+                this.isHideable = this@Builder.isHideable
             }
         }
     }

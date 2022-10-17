@@ -103,8 +103,7 @@ class CustomFragmentBottomSheet : BaseFragmentBottomSheetDialogFragment() {
         get() = true
     override val hasCloseIcon: Boolean
         get() = true
-    override val isHideable: Boolean
-        get() = false
+    override var isHideable: Boolean = false
     override val isBackButtonEnabled: Boolean
         get() = false
 
