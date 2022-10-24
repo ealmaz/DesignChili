@@ -64,7 +64,7 @@ class DatePickerFargment : BaseFragment<FragmentDatePickerBinding>(), FragmentRe
     }
 
     override fun onFragmentResult(requestKey: String, result: Bundle) {
-        val formatter = SimpleDateFormat("yyyy MMM d")
+        val formatter = SimpleDateFormat("yyyy MMM d HH:mm:ss")
         when (requestKey) {
             DatePickerDialog.PICKER_DIALOG_RESULT -> {
                 val calendar = result.getSerializable(DatePickerDialog.ARG_SELECTED_DATE) as Calendar

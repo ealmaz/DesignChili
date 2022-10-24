@@ -72,12 +72,14 @@ class RangeDatePickerDialog : DialogFragment() {
 
     private fun getSelectedDate(type: DateType): Calendar {
         val result = Calendar.getInstance()
-        val picker = when (type) {
-            DateType.FROM -> view.datePickerFrom
-            DateType.TO -> view.datePickerTo
-        }
-        picker.run {
-            result.set(year, month, dayOfMonth)
+        when (type) {
+            DateType.FROM -> view.datePickerFrom.apply {
+                result.set(year, month, dayOfMonth, 0, 0, 0)
+
+            }
+            DateType.TO -> view.datePickerTo.apply {
+                result.set(year, month, dayOfMonth, 23, 59, 59)
+            }
         }
         return result
     }

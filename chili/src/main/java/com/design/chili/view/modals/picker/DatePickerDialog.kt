@@ -68,7 +68,7 @@ class DatePickerDialog : DialogFragment() {
     private fun getSelectedDate(): Calendar {
         val result = Calendar.getInstance()
         view.datePicker.run {
-            result.set(year, month, dayOfMonth)
+            result.set(year, month, dayOfMonth, 0, 0, 0)
         }
         return result
     }
