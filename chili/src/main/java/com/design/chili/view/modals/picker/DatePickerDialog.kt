@@ -78,7 +78,7 @@ class DatePickerDialog : DialogFragment() {
             true -> savedInstanceState.getSerializable(ARG_CURRENT_DATE) as? Calendar
             else -> requireArguments().getSerializable(ARG_CURRENT_DATE) as? Calendar
         }
-        currentDate ?: Calendar.getInstance().run {
+        (currentDate ?: Calendar.getInstance()).run {
             view.datePicker.updateDate(
                 get(Calendar.YEAR),
                 get(Calendar.MONTH),

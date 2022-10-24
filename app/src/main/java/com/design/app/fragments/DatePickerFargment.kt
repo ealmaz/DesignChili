@@ -14,6 +14,8 @@ import java.util.*
 
 class DatePickerFargment : BaseFragment<FragmentDatePickerBinding>(), FragmentResultListener {
 
+    var selected: Calendar? = null
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         childFragmentManager.setFragmentResultListener(DatePickerDialog.PICKER_DIALOG_RESULT, this, this)
@@ -48,7 +50,7 @@ class DatePickerFargment : BaseFragment<FragmentDatePickerBinding>(), FragmentRe
         ).show(childFragmentManager, "") }
         vb.rangeStartEnd.setOnClickListener { RangeDatePickerDialog.create(
             "Готово", "Дата", "Date",
-            startLimitDate = Calendar.getInstance(),
+            currentStartDate = selected ?: Calendar.getInstance(),
             endLimitDate = Calendar.getInstance().apply { add(Calendar.DAY_OF_MONTH, 5) }
         ).show(childFragmentManager, "") }
 
@@ -73,6 +75,7 @@ class DatePickerFargment : BaseFragment<FragmentDatePickerBinding>(), FragmentRe
             RangeDatePickerDialog.RANGE_PICKER_DIALOG_RESULT -> {
                 val calendarStart = result.getSerializable(RangeDatePickerDialog.ARG_SELECTED_START_DATE) as Calendar
                 val calendarEnd = result.getSerializable(RangeDatePickerDialog.ARG_SELECTED_END_DATE) as Calendar
+                selected = calendarStart
                 Toast.makeText(requireContext(), "${formatter.format(calendarStart.time)} - ${formatter.format(calendarEnd.time)}", Toast.LENGTH_LONG).show()
             }
 

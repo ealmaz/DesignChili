@@ -89,7 +89,7 @@ class RangeDatePickerDialog : DialogFragment() {
             true -> savedInstanceState.getSerializable(ARG_CURRENT_START_DATE) as? Calendar
             else -> requireArguments().getSerializable(ARG_CURRENT_START_DATE) as? Calendar
         }
-        currentStartDate ?: Calendar.getInstance().run {
+        (currentStartDate ?: Calendar.getInstance()).run {
             view.datePickerFrom.updateDate(
                 get(Calendar.YEAR),
                 get(Calendar.MONTH),
@@ -97,11 +97,11 @@ class RangeDatePickerDialog : DialogFragment() {
             )
         }
 
-        val currentStartEnd = when (savedInstanceState != null) {
+        val currentEndDate = when (savedInstanceState != null) {
             true -> savedInstanceState.getSerializable(ARG_CURRENT_END_DATE) as? Calendar
             else -> requireArguments().getSerializable(ARG_CURRENT_END_DATE) as? Calendar
         }
-        currentStartEnd ?: Calendar.getInstance().run {
+        (currentEndDate ?: Calendar.getInstance()).run {
             view.datePickerTo.updateDate(
                 get(Calendar.YEAR),
                 get(Calendar.MONTH),
