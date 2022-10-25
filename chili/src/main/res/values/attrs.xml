@@ -30,6 +30,8 @@
         <attr name="componentButtonDefaultStyle" format="reference"/>
 
         <attr name="toolbarDefaultStyle" format="reference"/>
+
+        <attr name="loaderButtonDefaultStyle" format="reference"/>
     </declare-styleable>
 
     <declare-styleable name="BaseInputView">
@@ -288,6 +290,11 @@
         <attr name="icon"/>
         <attr name="isSurfaceClickable"/>
         <attr name="roundedCornerMode"/>
+    </declare-styleable>
+
+    <declare-styleable name="LoaderButton">
+        <attr name="android:text"/>
+        <attr name="isLoading" format="boolean"/>
     </declare-styleable>
 
 </resources>

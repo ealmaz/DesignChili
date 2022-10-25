@@ -43,5 +43,9 @@
         <item name="android:paddingEnd">@dimen/padding_0dp</item>
     </style>
 
+    <style name="Chili.ButtonStyle.LoaderButton">
+
+    </style>
+
 
 </resources>
