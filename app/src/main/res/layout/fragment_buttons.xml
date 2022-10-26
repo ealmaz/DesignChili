@@ -13,7 +13,6 @@
 
         <com.design.chili.view.buttons.LoaderButton
             android:id="@+id/loader"
-            style="@style/Chili.ButtonStyle.Secondary"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
 
