@@ -294,6 +294,7 @@
 
     <declare-styleable name="LoaderButton">
         <attr name="android:text"/>
+        <attr name="android:enabled"/>
         <attr name="isLoading" format="boolean"/>
     </declare-styleable>
 

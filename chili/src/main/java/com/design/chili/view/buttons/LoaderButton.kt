@@ -37,6 +37,7 @@ class LoaderButton @JvmOverloads constructor(
     private fun obtainAttributes(context: Context, attributeSet: AttributeSet?, defStyleAttr: Int, defStyle: Int) {
         context.obtainStyledAttributes(attributeSet, R.styleable.LoaderButton, defStyleAttr, defStyle).run {
             setText(getString(R.styleable.LoaderButton_android_text))
+            setEnabled(getBoolean(R.styleable.LoaderButton_android_enabled, true))
             setIsLoading(getBoolean(R.styleable.LoaderButton_isLoading, false))
             recycle()
         }
@@ -69,6 +70,14 @@ class LoaderButton @JvmOverloads constructor(
 
     override fun setOnClickListener(l: OnClickListener?) {
         view.button.setOnClickListener(l)
+    }
+
+    override fun isEnabled(): Boolean {
+        return view.button.isEnabled
+    }
+
+    override fun setEnabled(enabled: Boolean) {
+        view.button.isEnabled = enabled
     }
 }
 

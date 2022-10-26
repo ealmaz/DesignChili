@@ -19,6 +19,7 @@ class ButtonsFragment : BaseFragment<FragmentButtonsBinding>() {
         vb.loader.setOnClickListener {
             vb.loader.setIsLoading(true)
         }
+        vb.loader.setEnabled(false)
     }
 
     override fun inflateViewBinging(): FragmentButtonsBinding {
