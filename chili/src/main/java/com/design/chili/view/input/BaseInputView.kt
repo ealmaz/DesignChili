@@ -11,7 +11,10 @@ import android.util.AttributeSet
 import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.inputmethod.InputMethodManager
-import android.widget.*
+import android.widget.EditText
+import android.widget.FrameLayout
+import android.widget.ImageView
+import android.widget.TextView
 import androidx.annotation.ColorInt
 import androidx.annotation.DrawableRes
 import androidx.annotation.StringRes
@@ -20,13 +23,21 @@ import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.ContextCompat
 import androidx.core.view.updatePadding
 import com.design.chili.R
-import com.design.chili.extensions.*
+import com.design.chili.extensions.gone
+import com.design.chili.extensions.setOnDoubleClickListener
+import com.design.chili.extensions.setOnSingleClickListener
+import com.design.chili.extensions.visible
 import com.design.chili.util.cyrillicRegex
 import com.design.chili.view.input.text_watchers.ClearTextIconTextWatcher
 import com.design.chili.view.input.text_watchers.SimpleTextWatcher
 import com.google.android.material.textfield.TextInputLayout
 
-open class BaseInputView: ConstraintLayout {
+open class BaseInputView @JvmOverloads constructor(
+    context: Context,
+    attrs: AttributeSet? = null,
+    defStyleAttr: Int = R.attr.inputViewDefaultStyle,
+    defStyle: Int = R.style.Chili_InputViewStyle_Simple
+): ConstraintLayout(context, attrs, defStyleAttr, defStyle) {
 
     lateinit var view: BaseInputViewVariables
 
@@ -43,16 +54,9 @@ open class BaseInputView: ConstraintLayout {
     @ColorInt protected var messageTextColor: Int = -1
     @ColorInt protected var errorMessageTextColor: Int = -1
 
-    constructor(context: Context) : super(context) {
+    init {
         inflateViews(context)
-    }
-    constructor(context: Context, attrs: AttributeSet) : super(context, attrs) {
-        inflateViews(context)
-        obtainAttributes(attrs)
-    }
-    constructor(context: Context, attrs: AttributeSet, defStyle: Int) : super(context, attrs, defStyle) {
-        inflateViews(context)
-        obtainAttributes(attrs)
+        obtainAttributes(attrs, defStyleAttr, defStyle)
     }
 
     private fun inflateViews(context: Context) {
@@ -66,8 +70,8 @@ open class BaseInputView: ConstraintLayout {
             ivEndIcon = view.findViewById(R.id.iv_end_icon))
     }
 
-    private fun obtainAttributes(attrs: AttributeSet) {
-        context?.obtainStyledAttributes(attrs, R.styleable.BaseInputView, R.attr.inputViewDefaultStyle, R.style.Chili_InputViewStyle_Simple)?.run {
+    private fun obtainAttributes(attrs: AttributeSet?, defStyleAttr: Int, defStyle: Int) {
+        context?.obtainStyledAttributes(attrs, R.styleable.BaseInputView, defStyleAttr, defStyle)?.run {
 
             getColor(R.styleable.BaseInputView_errorFieldBackground, ContextCompat.getColor(context, R.color.red_3)).let {
                 setupErrorFieldBackground(it)
