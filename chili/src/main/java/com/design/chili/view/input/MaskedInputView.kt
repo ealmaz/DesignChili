@@ -6,9 +6,13 @@ import android.os.Parcelable
 import android.util.AttributeSet
 import com.design.chili.R
 import com.design.chili.view.input.text_watchers.MaskedTextWatcher
-import java.lang.Exception
 
-class MaskedInputView : BaseInputView {
+class MaskedInputView @JvmOverloads constructor(
+    context: Context,
+    attrs: AttributeSet? = null,
+    defStyleAttr: Int = R.attr.maskedInputDefaultStyle,
+    defStyle: Int = R.style.Chili_InputViewStyle_Masked
+) : BaseInputView(context, attrs, defStyleAttr, defStyle) {
 
     private val maskTextWatcher: MaskedTextWatcher by lazy {
         MaskedTextWatcher.Builder()
@@ -16,19 +20,12 @@ class MaskedInputView : BaseInputView {
             .build(this.getInputField())
     }
 
-    constructor(context: Context) : super(context)
-    constructor(context: Context, attrs: AttributeSet) : super(context, attrs) {
-        obtainAttributes(attrs)
+    init {
+        obtainAttributes(attrs, defStyleAttr, defStyle)
     }
 
-    constructor(context: Context, attrs: AttributeSet, defStyle: Int) : super(context,
-        attrs,
-        defStyle) {
-        obtainAttributes(attrs)
-    }
-
-    private fun obtainAttributes(attrs: AttributeSet) {
-        context?.obtainStyledAttributes(attrs, R.styleable.MaskedInputView, R.attr.maskedInputDefaultStyle, R.style.Chili_InputViewStyle_Masked)?.run {
+    private fun obtainAttributes(attrs: AttributeSet?, defStyleAttr: Int, defStyle: Int) {
+        context?.obtainStyledAttributes(attrs, R.styleable.MaskedInputView, defStyleAttr, defStyle)?.run {
             getString(R.styleable.MaskedInputView_mask).let {
                 maskTextWatcher.setupNewMask(newMask = it.takeIf { !it.isNullOrEmpty() } ?: "*")
             }
