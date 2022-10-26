@@ -16,7 +16,7 @@ class LoaderButton @JvmOverloads constructor(
     context: Context,
     attributeSet: AttributeSet? = null,
     defStyleAttr: Int = R.attr.loaderButtonDefaultStyle,
-    defStyle: Int = R.style.Chili_ButtonStyle_LoaderButton
+    defStyle: Int = R.style.Chili_LoaderButton
 ) : FrameLayout(context, attributeSet, defStyleAttr, defStyle) {
 
     private lateinit var view: LoaderButtonViewVariables

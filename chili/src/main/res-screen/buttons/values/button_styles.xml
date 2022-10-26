@@ -43,11 +43,7 @@
         <item name="android:paddingEnd">@dimen/padding_0dp</item>
     </style>
 
-    <style name="Chili.ButtonStyle.LoaderButton">
-        <item name="android:paddingTop">@dimen/padding_0dp</item>
-        <item name="android:paddingBottom">@dimen/padding_0dp</item>
-        <item name="android:paddingStart">@dimen/padding_0dp</item>
-        <item name="android:paddingEnd">@dimen/padding_0dp</item>
+    <style name="Chili.LoaderButton">
     </style>
 
 

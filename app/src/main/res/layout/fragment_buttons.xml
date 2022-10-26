@@ -12,9 +12,11 @@
         tools:context=".MainActivity">
 
         <com.design.chili.view.buttons.LoaderButton
+            android:text="Action"
             android:id="@+id/loader"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/padding_16dp"/>
 
         <Button
             android:id="@+id/primary"
