@@ -55,8 +55,13 @@ class DatePickerFargment : BaseFragment<FragmentDatePickerBinding>(), FragmentRe
         ).show(childFragmentManager, "") }
 
         vb.timePicker.setOnClickListener {
+            val calendar = Calendar.getInstance()
+            calendar.add(Calendar.HOUR_OF_DAY, 3)
+            calendar.add(Calendar.MINUTE, 15)
+
             TimePickerDialog.create("Готово", "Установить время",
-                requestKey = TimePickerDialog.TIME_PICKER_DIALOG_RESULT)
+                requestKey = TimePickerDialog.TIME_PICKER_DIALOG_RESULT,
+            currentTime = calendar)
                 .show(childFragmentManager, "")
         }
     }

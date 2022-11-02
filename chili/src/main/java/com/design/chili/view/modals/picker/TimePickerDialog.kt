@@ -84,8 +84,26 @@ class TimePickerDialog: DialogFragment() {
             true -> savedInstanceState.getSerializable(TIME_ARG_CURRENT_TIME) as? Calendar
             else -> requireArguments().getSerializable(TIME_ARG_CURRENT_TIME) as? Calendar
         }
-        currentDate ?: Calendar.getInstance().run {
+        (currentDate ?: Calendar.getInstance()).run {
             view.timePicker.setIs24HourView(true)
+            setPickerCurrentHour(get(Calendar.HOUR_OF_DAY))
+            setPickerCurrentMinute(get(Calendar.MINUTE))
+        }
+    }
+
+    private fun setPickerCurrentHour(currentHour: Int) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            view.timePicker.hour = currentHour
+        } else {
+            view.timePicker.currentHour = currentHour
+        }
+    }
+
+    private fun setPickerCurrentMinute(currentMinute: Int) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            view.timePicker.minute = currentMinute
+        } else {
+            view.timePicker.currentMinute = currentMinute
         }
     }
 
