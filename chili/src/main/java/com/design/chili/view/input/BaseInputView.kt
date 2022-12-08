@@ -195,7 +195,7 @@ open class BaseInputView @JvmOverloads constructor(
         }
     }
 
-    open fun getInputText() = view.inputField.text.toString()
+    open fun getInputText() = view.inputField.text?.toString() ?: ""
 
     open fun isInputEmpty() = getInputText().isEmpty()
 
