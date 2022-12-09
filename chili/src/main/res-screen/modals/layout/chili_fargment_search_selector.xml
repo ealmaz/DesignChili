@@ -18,15 +18,15 @@
     <LinearLayout
         android:id="@+id/ll_search"
         android:layout_width="match_parent"
-        android:layout_height="40dp"
+        android:layout_height="wrap_content"
         android:layout_margin="@dimen/padding_16dp"
+        android:padding="@dimen/padding_8dp"
         android:background="@drawable/chili_card_rounded_background">
 
         <ImageView
             android:layout_width="@dimen/padding_24dp"
             android:layout_height="@dimen/padding_24dp"
             android:layout_gravity="center"
-            android:layout_marginStart="@dimen/padding_16dp"
             android:layout_marginTop="@dimen/padding_4dp"
             android:layout_marginEnd="@dimen/padding_16dp"
             android:layout_marginBottom="@dimen/padding_4dp"
@@ -44,7 +44,8 @@
             android:inputType="text"
             android:lines="1"
             android:maxLines="1"
-            android:textAppearance="@style/Chili.H8.Primary" />
+            android:textCursorDrawable="@drawable/chili_input_view_cursor_background"
+            style="@style/Chili.H8.Primary" />
     </LinearLayout>
 
 

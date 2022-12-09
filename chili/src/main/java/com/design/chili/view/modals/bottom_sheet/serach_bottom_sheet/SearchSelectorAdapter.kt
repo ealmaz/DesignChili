@@ -6,10 +6,9 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 
-class SearchSelectorAdapter(private var listener: SearchSelectorItemListener) : ListAdapter<Pair<Type, Any>, RecyclerView.ViewHolder>(AsyncDifferConfig.Builder(SelectorItemsDiffUtil()).build()) {
+class SearchSelectorAdapter(private var listener: SearchSelectorItemListener, val isHeaderVisible: Boolean) : ListAdapter<Pair<Type, Any>, RecyclerView.ViewHolder>(AsyncDifferConfig.Builder(SelectorItemsDiffUtil()).build()) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
-
         return when (viewType) {
             Type.HEADER.value -> SearchSelectorHeaderVH.create(parent)
             else -> SearchSelectorItemVH.create(parent) { listener.onItemSelection(it) }
@@ -36,9 +35,9 @@ class SearchSelectorAdapter(private var listener: SearchSelectorItemListener) : 
         val sortedList = filteredList.groupBy { it.value.firstOrNull()?.uppercase() ?: "" }
         val newList = mutableListOf<Pair<Type, Any>>()
         sortedList.forEach {
-            newList.add(Type.HEADER to it.key)
+            if (isHeaderVisible) newList.add(Type.HEADER to it.key)
             it.value.forEach { item ->
-                newList.add(Type.ITEM to item)
+                newList.add(Type.ITEM to item.copy())
             }
         }
         submitList(newList)
@@ -46,7 +45,7 @@ class SearchSelectorAdapter(private var listener: SearchSelectorItemListener) : 
 }
 
 interface SearchSelectorItemListener {
-    fun onItemSelection(selectedItem: Option?)
+    fun onItemSelection(selectedId: String)
 }
 
 enum class Type(var value: Int) {
@@ -68,5 +67,4 @@ class SelectorItemsDiffUtil : DiffUtil.ItemCallback<Pair<Type, Any>>() {
             false
         }
     }
-
 }

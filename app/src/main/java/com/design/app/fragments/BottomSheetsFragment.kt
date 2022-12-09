@@ -101,9 +101,10 @@ class BottomSheetsFragment : BaseFragment<FrgmentBottomSheetsBinding>() {
             openFragment(InteractiveBottomSheetFragment())
         }
         vb.serachBottomSheet.setOnClickListener {
-            val bs = SearchSelectorBottomSheet(requireContext(),
-            options,
-            true)
+            val bs = SearchSelectorBottomSheet.Builder()
+                .setIsSingleSelection(false)
+                .setIsHeaderVisible(false)
+                .build(requireContext(), options)
             bs.setOnDismissListener {
                 Toast.makeText(requireContext(), options.toString(), Toast.LENGTH_LONG).show()
             }

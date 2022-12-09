@@ -10,7 +10,6 @@ import android.widget.TextView
 import androidx.core.view.isVisible
 import androidx.recyclerview.widget.RecyclerView
 import com.design.chili.R
-import com.design.chili.extensions.setOnSingleClickListener
 
 class SearchSelectorItemVH(val view: SearchSelectorItemVHViewData): RecyclerView.ViewHolder(view.rootView) {
 
@@ -24,16 +23,19 @@ class SearchSelectorItemVH(val view: SearchSelectorItemVHViewData): RecyclerView
     }
 
     companion object{
-        fun create(parent: ViewGroup, onClick: (Option?) -> Unit): SearchSelectorItemVH {
-            val itemView = LayoutInflater.from(parent.context).inflate(R.layout.chili_item_search_selector, parent, false)
+        fun create(parent: ViewGroup, onItemSelect: (selectedId: String) -> Unit): SearchSelectorItemVH {
+            val view = LayoutInflater.from(parent.context).inflate(R.layout.chili_item_search_selector, parent, false)
             val holder = SearchSelectorItemVH(SearchSelectorItemVHViewData(
-                itemView,
-                itemView.findViewById(R.id.tv_title),
-                itemView.findViewById(R.id.iv_choice),
-                itemView.findViewById(R.id.divider))
+                view,
+                view.findViewById(R.id.tv_title),
+                view.findViewById(R.id.iv_choice),
+                view.findViewById(R.id.divider))
             )
-            holder.itemView.setOnSingleClickListener { onClick(holder.item) }
-            return holder
+            return holder.apply {
+                itemView.setOnClickListener {
+                    item?.id?.let { onItemSelect(it) }
+                }
+            }
         }
     }
 }
@@ -62,7 +64,6 @@ class SearchSelectorHeaderVH(itemView: View) : RecyclerView.ViewHolder(itemView)
                 } else {
                     setTextAppearance(context, R.style.Chili_H8_Primary)
                 }
-                setBackgroundResource(R.color.gray_4)
             }
             return SearchSelectorHeaderVH(itemView)
         }
