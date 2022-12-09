@@ -15,6 +15,7 @@ import com.design.chili.R
 import com.design.chili.extensions.setImageByUrl
 import com.design.chili.extensions.visible
 import com.design.chili.model.Option
+import com.design.chili.util.IconStatus
 import com.design.chili.view.cells.BaseCellView
 import com.design.chili.view.cells.LogoTitleCellView
 
@@ -31,13 +32,18 @@ class ConfigSelectorCardView : ConstraintLayout {
         obtainAttributes(attrs)
     }
 
-    constructor(context: Context, attrs: AttributeSet, defStyle: Int) : super(context, attrs, defStyle) {
+    constructor(context: Context, attrs: AttributeSet, defStyle: Int) : super(
+        context,
+        attrs,
+        defStyle
+    ) {
         inflateViews()
         obtainAttributes(attrs, defStyle)
     }
 
     private fun inflateViews() {
-        val view = LayoutInflater.from(context).inflate(R.layout.chili_view_config_selector_card, this)
+        val view =
+            LayoutInflater.from(context).inflate(R.layout.chili_view_config_selector_card, this)
         this.view = ConfigSelectorCardViewVariables(
             root = view.findViewById(R.id.root_view),
             tvTitle = view.findViewById(R.id.tv_title),
@@ -46,8 +52,16 @@ class ConfigSelectorCardView : ConstraintLayout {
         )
     }
 
-    private fun obtainAttributes(attrs: AttributeSet, defStyle: Int = R.style.Chili_CardViewStyle_SingleSelectedCard) {
-        context?.obtainStyledAttributes(attrs, R.styleable.SingleSelectedCardView, R.attr.singleSelectedCardViewDefaultStyle, defStyle)?.run {
+    private fun obtainAttributes(
+        attrs: AttributeSet,
+        defStyle: Int = R.style.Chili_CardViewStyle_SingleSelectedCard
+    ) {
+        context?.obtainStyledAttributes(
+            attrs,
+            R.styleable.SingleSelectedCardView,
+            R.attr.singleSelectedCardViewDefaultStyle,
+            defStyle
+        )?.run {
             getString(R.styleable.SingleSelectedCardView_title)?.let {
                 setTitleText(it)
             }
@@ -64,9 +78,13 @@ class ConfigSelectorCardView : ConstraintLayout {
         view.ivIcon.setImageByUrl(imgUrl)
     }
 
-    fun setSelectors(items: ArrayList<Option<*>>) {
-        val adapter = SingleSelectorAdapter()
-        view.rvItems.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
+    fun setSelectors(
+        items: ArrayList<Option<*>>,
+        listener: SingleSelectorAdapter.SingleSelectedListener
+    ) {
+        val adapter = SingleSelectorAdapter(listener)
+        view.rvItems.layoutManager =
+            LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
         view.rvItems.adapter = adapter
         adapter.addItems(items)
     }
@@ -79,7 +97,8 @@ private data class ConfigSelectorCardViewVariables(
     var rvItems: RecyclerView
 )
 
-class SingleSelectorAdapter() : RecyclerView.Adapter<SingleSelectorAdapter.SingleSelectorVH>() {
+class SingleSelectorAdapter(val listener: SingleSelectedListener) :
+    RecyclerView.Adapter<SingleSelectorAdapter.SingleSelectorVH>() {
 
     val items = ArrayList<Option<*>>()
 
@@ -88,12 +107,23 @@ class SingleSelectorAdapter() : RecyclerView.Adapter<SingleSelectorAdapter.Singl
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SingleSelectorVH {
         val view = SingleSelectedCardView(parent.context).apply {
-            layoutParams = ViewGroup.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT)
+            layoutParams = ViewGroup.LayoutParams(
+                ViewGroup.LayoutParams.WRAP_CONTENT,
+                ViewGroup.LayoutParams.WRAP_CONTENT
+            )
         }
-        return SingleSelectorVH(view)
+        return SingleSelectorVH(view, listener, ::onSelected)
     }
 
     override fun onBindViewHolder(holder: SingleSelectorVH, position: Int) {
+        if (position == selectedItemPosition) (holder.itemView as SingleSelectedCardView).apply {
+            setStatus(IconStatus.SELECTED)
+            items[position].color?.let {
+                setupBorder(it)
+                setupBackground(it)
+            }
+        }
+        else (holder.itemView as SingleSelectedCardView).setStatus(IconStatus.UNSELECTED)
         holder.bind(items[position])
     }
 
@@ -107,12 +137,34 @@ class SingleSelectorAdapter() : RecyclerView.Adapter<SingleSelectorAdapter.Singl
         notifyDataSetChanged()
     }
 
-    class SingleSelectorVH(view: View): RecyclerView.ViewHolder(view) {
+    fun onSelected(position: Int) {
+        selectedItemPosition = position
+        lastSelectedItemPosition = if (lastSelectedItemPosition == -1) selectedItemPosition
+        else {
+            notifyItemChanged(lastSelectedItemPosition)
+            selectedItemPosition
+        }
+        notifyItemChanged(selectedItemPosition)
+    }
+
+    class SingleSelectorVH(
+        view: View,
+        val listener: SingleSelectedListener,
+        val onSelected: (Int) -> Unit = {}
+    ) : RecyclerView.ViewHolder(view) {
         fun bind(item: Option<*>) {
             (itemView as SingleSelectedCardView).apply {
                 item.title?.let { setTitleText(it) }
                 item.description?.let { setValue(it) }
+                setOnClickListener {
+                    onSelected(adapterPosition)
+                    listener.onSelection(adapterPosition)
+                }
             }
         }
+    }
+
+    interface SingleSelectedListener {
+        fun onSelection(position: Int)
     }
 }

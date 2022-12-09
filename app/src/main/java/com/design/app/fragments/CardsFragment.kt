@@ -10,8 +10,9 @@ import com.design.app.base.BaseFragment
 import com.design.app.databinding.FragmentCardsBinding
 import com.design.chili.model.Option
 import com.design.chili.util.IconStatus
+import com.design.chili.view.card.SingleSelectorAdapter
 
-class CardsFragment : BaseFragment<FragmentCardsBinding>() {
+class CardsFragment : BaseFragment<FragmentCardsBinding>(), SingleSelectorAdapter.SingleSelectedListener {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -70,23 +71,26 @@ class CardsFragment : BaseFragment<FragmentCardsBinding>() {
         }
 
         val items = arrayListOf<Option<*>>()
-        items.add(Option(String, "Видео", "148 с / 1 неделя", true, icons))
-        items.add(Option(String, "Соцсети", "148 с / 1 неделя", true, icons))
-        items.add(Option(String, "Мессенджеры", "148 с / 1 неделя", true, icons))
-        items.add(Option(String, "Видеомессенджеры", "148 с / 1 неделя", true, icons))
-        items.add(Option(String, "Музыка", "148 с / 1 неделя", true, icons))
+        items.add(Option(String, "Видео", "148 с / 1 неделя", true, icons, "#5AC8FA"))
+        items.add(Option(String, "Соцсети", "148 с / 1 неделя", true, icons, "#5AC8FA"))
+        items.add(Option(String, "Мессенджеры", "148 с / 1 неделя", true, icons, "#5AC8FA"))
+        items.add(Option(String, "Видеомессенджеры", "148 с / 1 неделя", true, icons, "#5AC8FA"))
+        items.add(Option(String, "Музыка", "148 с / 1 неделя", true, icons, "#5AC8FA"))
         vb.configToggledCardView.apply {
             setTitleText("Безлимит")
             setInfoBtnVisibilty(true)
             setToggles(items)
         }
 
-
         vb.configSelectorCardView.apply {
             setTitleText("Длительность")
             setIcon("https://minio.o.kg/catalog/logos/elsom.png")
-            setSelectors(items)
+            setSelectors(items, this@CardsFragment)
         }
+    }
+
+    override fun onSelection(position: Int) {
+        Toast.makeText(context, "Clicked $position", Toast.LENGTH_SHORT).show()
     }
 
     override fun inflateViewBinging(): FragmentCardsBinding {

@@ -122,6 +122,10 @@ class SingleSelectedCardView : FrameLayout {
         view.icon.setImageResource(resId)
     }
 
+    fun setStatus(status: IconStatus) {
+        setIconStatus(status)
+    }
+
     private fun setIconStatus(status: IconStatus) {
         when (status) {
             IconStatus.SELECTED -> setIconDrawableRes(R.drawable.chili_ic_clear)
@@ -151,7 +155,7 @@ class SingleSelectedCardView : FrameLayout {
     }
 
     fun setOnIconClickListener(onClick: () -> Unit) {
-        view.icon.setOnClickListener { onClick.invoke() }
+        view.icon.setOnClickListener { reset() }
     }
 
     fun setActionIconVisibility(isVisible: Boolean){
