@@ -1,0 +1,12 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+
+    <solid android:color="?attr/ChiliCardViewBackground" />
+
+    <stroke
+        android:width="2dp"
+        android:color="?attr/ChiliCardViewBackground" />
+
+    <corners android:radius="?attr/ChiliCardViewCornerRadius12" />
+
+</shape>

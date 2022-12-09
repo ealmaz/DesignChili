@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root_view"
+    android:background="@drawable/chili_card_rounded_border"
+    tools:backgroundTint="@color/blue_1_alpha_50"
+    android:layout_marginBottom="@dimen/padding_12dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_margin="@dimen/padding_2dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/cl_view">
+
+        <com.design.chili.view.cells.MultiIconedTitleCellView
+            android:id="@+id/mitcv_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:isDividerVisible="true"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <com.design.chili.view.cells.ToggleCellView
+            android:id="@+id/tcv_toggle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/mitcv_view"
+            app:layout_constraintStart_toStartOf="parent"
+            app:isDividerVisible="false"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

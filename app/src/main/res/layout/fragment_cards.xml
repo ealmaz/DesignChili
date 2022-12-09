@@ -46,7 +46,43 @@
                 app:isSurfaceClickable="true"
                 app:roundedCornerMode="single"/>
 
+            <com.design.chili.view.card.SingleSelectedCardView
+                android:id="@+id/singleSelectedCardView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding_16dp"
+                android:layout_marginStart="@dimen/padding_4dp"
+                app:title="5 weeks"
+                app:value="100 c/2 days"/>
+
         </LinearLayout>
+
+        <com.design.chili.view.cells.MultiIconedTitleCellView
+            android:id="@+id/multiIconedTitleCellView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding_16dp"
+            app:title="Title"
+            app:isDividerVisible="true" />
+
+        <com.design.chili.view.card.TitledToggleCardView
+            android:id="@+id/titledToggleCardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding_16dp"
+            app:title="Title"
+            app:value="148 с / 1 неделя" />
+
+
+        <com.design.chili.view.card.ConfigToggledCardView
+            android:id="@+id/configToggledCardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <com.design.chili.view.card.ConfigSelectorCardView
+            android:id="@+id/configSelectorCardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
 
         <com.design.chili.view.card.BalanceCardView
             android:layout_width="match_parent"

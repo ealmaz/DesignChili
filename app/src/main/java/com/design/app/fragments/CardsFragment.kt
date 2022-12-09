@@ -5,8 +5,11 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import com.design.app.base.BaseFragment
 import com.design.app.databinding.FragmentCardsBinding
+import com.design.chili.model.Option
+import com.design.chili.util.IconStatus
 
 class CardsFragment : BaseFragment<FragmentCardsBinding>() {
 
@@ -35,7 +38,55 @@ class CardsFragment : BaseFragment<FragmentCardsBinding>() {
             setInternetRemain(0, 73)
             setCallRemain(0, 100)
         }
+        vb.singleSelectedCardView.apply {
+            setOnClickListener {
+                setupBorder("#FBA82B")
+                setupBackground("#FBA82B")
+            }
+            setOnIconClickListener {
+                reset()
+            }
+        }
+        val icons = arrayListOf<String>()
+        icons.add("https://minio.o.kg/catalog/logos/elsom.png")
+        icons.add("https://minio.o.kg/catalog/logos/kbkyrgyzstan.png")
+        icons.add("https://minio.o.kg/catalog/logos/demirbank.png")
+        icons.add("https://minio.o.kg/catalog/logos/mbank.png")
+        icons.add("https://minio.o.kg/catalog/logos/elcart.png")
+        icons.add("https://minio.o.kg/catalog/logos/odengi_w.png")
+        vb.multiIconedTitleCellView.apply {
+            setIcons(icons)
+            setIsInfoButtonVisible(true)
+        }
 
+        vb.titledToggleCardView.apply {
+            setIcons(icons)
+            setIsInfoButtonVisible(true)
+            setInfoButtonClickListener { Toast.makeText(context, "Click", Toast.LENGTH_SHORT).show() }
+            setValue("148 с / 2 неделя")
+            setOnCheckChangeListener { compoundButton, b ->
+                if (b) Toast.makeText(context, "Checked", Toast.LENGTH_SHORT).show()
+            }
+        }
+
+        val items = arrayListOf<Option<*>>()
+        items.add(Option(String, "Видео", "148 с / 1 неделя", true, icons))
+        items.add(Option(String, "Соцсети", "148 с / 1 неделя", true, icons))
+        items.add(Option(String, "Мессенджеры", "148 с / 1 неделя", true, icons))
+        items.add(Option(String, "Видеомессенджеры", "148 с / 1 неделя", true, icons))
+        items.add(Option(String, "Музыка", "148 с / 1 неделя", true, icons))
+        vb.configToggledCardView.apply {
+            setTitleText("Безлимит")
+            setInfoBtnVisibilty(true)
+            setToggles(items)
+        }
+
+
+        vb.configSelectorCardView.apply {
+            setTitleText("Длительность")
+            setIcon("https://minio.o.kg/catalog/logos/elsom.png")
+            setSelectors(items)
+        }
     }
 
     override fun inflateViewBinging(): FragmentCardsBinding {
