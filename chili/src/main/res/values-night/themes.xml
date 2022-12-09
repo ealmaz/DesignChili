@@ -47,6 +47,7 @@
         <!-- Bottom sheet -->
         <item name="ChiliBottomSheetBackgroundColor">@color/black_2</item>
         <item name="ChiliBottomSheetTopDrawableColor">@color/black_3</item>
+        <item name="ChiliBottomSheetGrayBackgroundColor">@color/black_2</item>
         <!-- Bottom sheet >>> ActionBottomSheet   -->
         <item name="ChiliActionBottomSheetButtonTextColor">@color/gray_3</item>
 

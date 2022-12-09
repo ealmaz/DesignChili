@@ -12,6 +12,7 @@ class InputFields : BaseFragment<FragmentInputFieldsBinding>() {
         vb.field1.setupClearTextButton()
         vb.field2Mask.setupNewMask("12313123123XXXXXXXXX")
         vb.field2Mask.requestFocus()
+        vb.field0.setMaxLength(3)
     }
 
     override fun inflateViewBinging(): FragmentInputFieldsBinding {

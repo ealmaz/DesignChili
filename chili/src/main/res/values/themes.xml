@@ -75,6 +75,8 @@
         <item name="ChiliBottomSheetBackgroundColor">@color/white_1</item>
         <item name="ChiliBottomSheetTopCornersRadius">@dimen/radius_8dp</item>
         <item name="ChiliBottomSheetTopDrawableColor">@color/white_1</item>
+        <item name="ChiliBottomSheetGrayBackgroundColor">@color/gray_4</item>
+
         <!-- Bottom sheet >>> ActionBottomSheet   -->
         <item name="ChiliActionBottomSheetButtonTextColor">@color/black_5</item>
         <item name="ChiliActionBottomSheetAccentButtonTextColor">@color/blue_1</item>

@@ -9,10 +9,20 @@ import com.design.app.base.BaseFragment
 import com.design.app.databinding.FrgmentBottomSheetsBinding
 import com.design.chili.view.modals.base.BaseFragmentBottomSheetDialogFragment
 import com.design.chili.view.modals.bottom_sheet.*
+import com.design.chili.view.modals.bottom_sheet.serach_bottom_sheet.Option
+import com.design.chili.view.modals.bottom_sheet.serach_bottom_sheet.SearchSelectorBottomSheet
 import com.design.chili.view.modals.in_app.InAppPushBottomSheet
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 
 class BottomSheetsFragment : BaseFragment<FrgmentBottomSheetsBinding>() {
+
+    val options = listOf(
+        Option("1", "1Item1", false),
+        Option("2", "2Item1", false),
+        Option("3", "3Item1", false),
+        Option("4", "4Item1", false),
+        Option("5", "6Item1", false),
+    )
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -89,6 +99,15 @@ class BottomSheetsFragment : BaseFragment<FrgmentBottomSheetsBinding>() {
         }
         vb.visbileBottomSheet.setOnClickListener {
             openFragment(InteractiveBottomSheetFragment())
+        }
+        vb.serachBottomSheet.setOnClickListener {
+            val bs = SearchSelectorBottomSheet(requireContext(),
+            options,
+            true)
+            bs.setOnDismissListener {
+                Toast.makeText(requireContext(), options.toString(), Toast.LENGTH_LONG).show()
+            }
+            bs.show()
         }
     }
 

@@ -83,6 +83,7 @@
 
     <!-- Bottom sheet -->
     <attr name="ChiliBottomSheetBackgroundColor" format="color"/>
+    <attr name="ChiliBottomSheetGrayBackgroundColor" format="color"/>
     <attr name="ChiliBottomSheetTopCornersRadius" format="dimension"/>
     <attr name="ChiliBottomSheetTopDrawableColor" format="color"/>
     <!-- Bottom sheet >>> ActionBottomSheet   -->

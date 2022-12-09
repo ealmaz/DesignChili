@@ -13,6 +13,13 @@
         android:orientation="vertical"
         tools:context=".MainActivity">
 
+        <com.design.chili.view.modals.drop_down.DropDownInputField
+            android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/padding_16dp"
+            android:layout_height="wrap_content"
+            android:hint="Select"
+            android:id="@+id/drop_down"/>
+
         <com.design.chili.view.input.MaskedInputView
             android:id="@+id/field_123"
             app:message="Simple"
