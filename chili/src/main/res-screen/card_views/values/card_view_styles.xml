@@ -5,6 +5,8 @@
 
     <style name="Chili.CardViewStyle.BalanceCard"/>
 
+    <style name="Chili.CardViewStyle.SingleSelectedCard"/>
+
     <style name="Chili.CardViewStyle.TitleLogoCard"/>
 
     <style name="Chili.CardViewStyle.CategoryItemViewStyle"/>

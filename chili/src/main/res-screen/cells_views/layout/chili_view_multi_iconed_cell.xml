@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/padding_12dp"
+        android:layout_marginTop="@dimen/padding_12dp"
+        android:layout_marginEnd="@dimen/padding_12dp"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:textAppearance="@style/Chili.H7.Primary.Bold"
+        app:layout_constraintBottom_toTopOf="@id/rv_icons"
+        app:layout_constraintEnd_toStartOf="@id/iv_info"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_goneMarginBottom="@dimen/padding_8dp"
+        tools:text="Заголовок" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_icons"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="@dimen/padding_12dp"
+        android:layout_marginStart="@dimen/padding_12dp"
+        android:layout_marginEnd="@dimen/padding_12dp"
+        app:layout_constraintBottom_toTopOf="@id/divider"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/iv_info"
+        app:layout_constraintTop_toBottomOf="@id/tv_title"/>
+
+
+    <ImageView
+        android:id="@+id/iv_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/padding_12dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:visibility="gone"
+        android:src="@drawable/chili_ic_info"/>
+
+    <TextView
+        android:id="@+id/tv_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/Chili.H7.Primary"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:visibility="gone"/>
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="0dp"
+        android:layout_height="?attr/ChiliDividerHeightSize"
+        android:background="?attr/ChiliDividerColor"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/rv_icons"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

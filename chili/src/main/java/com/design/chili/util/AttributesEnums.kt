@@ -4,6 +4,10 @@ enum class IconType {
     PLUS, CHEVRON
 }
 
+enum class IconStatus {
+    SELECTED, ACTIVE, UNSELECTED, UNAVAILABLE
+}
+
 enum class IconSize(val value: Int) {
     SMALL(-1), MEDIUM(-2), LARGE(-3)
 }

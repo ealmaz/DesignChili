@@ -6,6 +6,7 @@
         <attr name="maskedInputDefaultStyle" format="reference"/>
         <attr name="multilineInputDefaultStyle" format="reference"/>
         <attr name="balanceCardViewDefaultStyle" format="reference" />
+        <attr name="singleSelectedCardViewDefaultStyle" format="reference" />
         <attr name="titleLogoCardViewDefaultStyle" format="reference" />
         <attr name="categoryItemCardViewDefaultStyle" format="reference"/>
         <attr name="navigatorCardViewDefaultStyle" format="reference"/>
@@ -86,6 +87,11 @@
         </attr>
         <attr name="isSurfaceClickable" format="boolean"/>
         <attr name="isIconClickable" format="boolean"/>
+    </declare-styleable>
+
+    <declare-styleable name="SingleSelectedCardView">
+        <attr name="title"/>
+        <attr name="value"/>
     </declare-styleable>
 
     <declare-styleable name="CategoryItemView">

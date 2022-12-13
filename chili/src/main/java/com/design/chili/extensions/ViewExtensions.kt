@@ -180,3 +180,10 @@ fun ViewGroup.setIsSurfaceClickable(isSurfaceClickable: Boolean) {
         }
     }
 }
+
+
+fun View.setLeftMargin(margin: Int) {
+    val params = layoutParams as ViewGroup.MarginLayoutParams
+    params.setMargins(margin, params.topMargin, params.rightMargin, params.bottomMargin)
+    layoutParams = params
+}
