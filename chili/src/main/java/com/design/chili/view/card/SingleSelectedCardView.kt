@@ -4,6 +4,7 @@ import android.annotation.SuppressLint
 import android.content.Context
 import android.graphics.Color
 import android.graphics.drawable.GradientDrawable
+import android.os.Build
 import android.text.Spanned
 import android.util.AttributeSet
 import android.view.LayoutInflater
@@ -11,12 +12,14 @@ import android.widget.FrameLayout
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.annotation.DrawableRes
+import androidx.annotation.RequiresApi
 import androidx.annotation.StringRes
+import androidx.cardview.widget.CardView
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.view.isVisible
 import com.design.chili.R
+import com.design.chili.extensions.*
 import com.design.chili.extensions.getColorFromAttr
-import com.design.chili.extensions.gone
 import com.design.chili.extensions.invisible
 import com.design.chili.extensions.visible
 import com.design.chili.util.IconStatus
@@ -25,7 +28,9 @@ class SingleSelectedCardView : FrameLayout {
 
     private lateinit var view: SingleSelectedCardViewVariables
 
-    private var status = IconStatus.UNSELECTED
+    var isChecked: Boolean = false
+    var isActive = false
+    private var color: String? = ""
 
     constructor(context: Context) : super(context) {
         inflateViews()
@@ -41,7 +46,6 @@ class SingleSelectedCardView : FrameLayout {
         obtainAttributes(attrs, defStyle)
     }
 
-    @SuppressLint("MissingInflatedId")
     private fun inflateViews() {
         val view = LayoutInflater.from(context).inflate(R.layout.chili_view_single_selected_card, this)
         this.view = SingleSelectedCardViewVariables(
@@ -81,7 +85,11 @@ class SingleSelectedCardView : FrameLayout {
         }
     }
 
-    fun setupBorder(color: String) {
+    fun setupColor(color: String) {
+        this.color = color
+    }
+
+    private fun setupBorder(color: String) {
         val borderBackground = view.root.background as? GradientDrawable
         borderBackground?.mutate()
         borderBackground?.setStroke(context.resources.getDimension(R.dimen.view_2dp).toInt(), Color.parseColor(color))
@@ -107,10 +115,26 @@ class SingleSelectedCardView : FrameLayout {
         background?.alpha = 51
     }
 
+    fun setSelected() {
+        color?.let {
+            setupBorder(it)
+            setupBackground(it)
+        }
+        isChecked = true
+    }
+
+    fun setActive() {
+        setStatus(IconStatus.ACTIVE)
+        color?.let { setupBorder(it) }
+        isActive = true
+    }
+
     fun reset() {
         setupBorder(context.getColorFromAttr(R.attr.ChiliCardViewBackground))
         setupBackground(context.getColorFromAttr(R.attr.ChiliCardViewBackground))
-        setIconStatus(IconStatus.UNSELECTED)
+        if (isActive) setActive()
+        else setStatus(IconStatus.UNSELECTED)
+        isChecked = false
     }
 
     fun setValueTextRes(@StringRes textResId: Int) {
@@ -123,17 +147,26 @@ class SingleSelectedCardView : FrameLayout {
     }
 
     fun setStatus(status: IconStatus) {
-        setIconStatus(status)
-    }
-
-    private fun setIconStatus(status: IconStatus) {
         when (status) {
-            IconStatus.SELECTED -> setIconDrawableRes(R.drawable.chili_ic_clear)
+            IconStatus.UNAVAILABLE -> setUnavailable(true)
+            IconStatus.SELECTED -> setIconDrawableRes(R.drawable.chili_ic_reset)
             IconStatus.ACTIVE -> setIconDrawableRes(R.drawable.chili_ic_done)
             else -> view.icon.invisible()
         }
-        this.status = status
         setIsIconClickable(status)
+    }
+
+    private fun setUnavailable(isUnavailable: Boolean) {
+        view.root.isClickable = !isUnavailable
+        view.icon.invisible()
+        if (isUnavailable) {
+            view.title.setTextColor(context.color(R.color.gray_1))
+            view.value.invisible()
+        }
+        else {
+            view.title.setTextColor(context.color(R.color.black_1))
+            view.value.visible()
+        }
     }
 
     private fun setIsIconClickable(status: IconStatus) {
@@ -145,17 +178,20 @@ class SingleSelectedCardView : FrameLayout {
 
     fun setOnClickListener(onClick: () -> Unit) {
         view.root.setOnClickListener {
-            onClick.invoke()
-            if (status != IconStatus.SELECTED) setIconStatus(IconStatus.SELECTED)
+            if (isChecked) reset()
             else {
-                setIconStatus(IconStatus.UNSELECTED)
-                reset()
+                setStatus(IconStatus.SELECTED)
+                setSelected()
             }
+            onClick.invoke()
         }
     }
 
     fun setOnIconClickListener(onClick: () -> Unit) {
-        view.icon.setOnClickListener { reset() }
+        view.icon.setOnClickListener {
+            reset()
+            onClick.invoke()
+        }
     }
 
     fun setActionIconVisibility(isVisible: Boolean){

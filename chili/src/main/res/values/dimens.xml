@@ -71,6 +71,7 @@
 
     <!-- Elevation   -->
     <dimen name="elevation_0dp">0dp</dimen>
+    <dimen name="elevation_4dp">4dp</dimen>
     <dimen name="elevation_8dp">8dp</dimen>
 
 </resources>

@@ -1,7 +1,6 @@
 package com.design.chili.view.card
 
 import android.content.Context
-import android.graphics.Color
 import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.view.View
@@ -15,9 +14,6 @@ import com.design.chili.R
 import com.design.chili.extensions.setImageByUrl
 import com.design.chili.extensions.visible
 import com.design.chili.model.Option
-import com.design.chili.util.IconStatus
-import com.design.chili.view.cells.BaseCellView
-import com.design.chili.view.cells.LogoTitleCellView
 
 class ConfigSelectorCardView : ConstraintLayout {
 
@@ -42,8 +38,7 @@ class ConfigSelectorCardView : ConstraintLayout {
     }
 
     private fun inflateViews() {
-        val view =
-            LayoutInflater.from(context).inflate(R.layout.chili_view_config_selector_card, this)
+        val view = LayoutInflater.from(context).inflate(R.layout.chili_view_config_selector_card, this)
         this.view = ConfigSelectorCardViewVariables(
             root = view.findViewById(R.id.root_view),
             tvTitle = view.findViewById(R.id.tv_title),
@@ -100,10 +95,9 @@ private data class ConfigSelectorCardViewVariables(
 class SingleSelectorAdapter(val listener: SingleSelectedListener) :
     RecyclerView.Adapter<SingleSelectorAdapter.SingleSelectorVH>() {
 
-    val items = ArrayList<Option<*>>()
+    private val items = ArrayList<Option<*>>()
 
     var selectedItemPosition = -1
-    var lastSelectedItemPosition = -1
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SingleSelectorVH {
         val view = SingleSelectedCardView(parent.context).apply {
@@ -112,18 +106,13 @@ class SingleSelectorAdapter(val listener: SingleSelectedListener) :
                 ViewGroup.LayoutParams.WRAP_CONTENT
             )
         }
-        return SingleSelectorVH(view, listener, ::onSelected)
+        return SingleSelectorVH(view, listener)
     }
 
     override fun onBindViewHolder(holder: SingleSelectorVH, position: Int) {
-        if (position == selectedItemPosition) (holder.itemView as SingleSelectedCardView).apply {
-            setStatus(IconStatus.SELECTED)
-            items[position].color?.let {
-                setupBorder(it)
-                setupBackground(it)
-            }
+        (holder.itemView as SingleSelectedCardView).apply {
+            items[position].color?.let { setupColor(it) }
         }
-        else (holder.itemView as SingleSelectedCardView).setStatus(IconStatus.UNSELECTED)
         holder.bind(items[position])
     }
 
@@ -137,34 +126,42 @@ class SingleSelectorAdapter(val listener: SingleSelectedListener) :
         notifyDataSetChanged()
     }
 
-    fun onSelected(position: Int) {
-        selectedItemPosition = position
-        lastSelectedItemPosition = if (lastSelectedItemPosition == -1) selectedItemPosition
-        else {
-            notifyItemChanged(lastSelectedItemPosition)
-            selectedItemPosition
-        }
-        notifyItemChanged(selectedItemPosition)
-    }
-
-    class SingleSelectorVH(
+    inner class SingleSelectorVH(
         view: View,
-        val listener: SingleSelectedListener,
-        val onSelected: (Int) -> Unit = {}
+        private val listener: SingleSelectedListener
     ) : RecyclerView.ViewHolder(view) {
         fun bind(item: Option<*>) {
             (itemView as SingleSelectedCardView).apply {
+                if (selectedItemPosition == adapterPosition) setSelected()
+                else reset()
+
                 item.title?.let { setTitleText(it) }
                 item.description?.let { setValue(it) }
+
+                if (item.isActive) setActive()
+
                 setOnClickListener {
-                    onSelected(adapterPosition)
-                    listener.onSelection(adapterPosition)
+                    if (selectedItemPosition != adapterPosition) {
+                        notifyItemChanged(selectedItemPosition)
+                        selectedItemPosition = adapterPosition
+                        listener.onSelected(adapterPosition)
+                    }
+                    else {
+                        selectedItemPosition = -1
+                        listener.onUnselected(adapterPosition)
+                    }
+                }
+
+                setOnIconClickListener {
+                    selectedItemPosition = -1
+                    listener.onUnselected(adapterPosition)
                 }
             }
         }
     }
 
     interface SingleSelectedListener {
-        fun onSelection(position: Int)
+        fun onSelected(position: Int)
+        fun onUnselected(position: Int)
     }
 }

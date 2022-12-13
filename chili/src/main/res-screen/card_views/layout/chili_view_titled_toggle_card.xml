@@ -6,6 +6,10 @@
     android:id="@+id/root_view"
     android:background="@drawable/chili_card_rounded_border"
     tools:backgroundTint="@color/blue_1_alpha_50"
+    android:elevation="@dimen/elevation_4dp"
+    android:layout_marginTop="@dimen/padding_4dp"
+    android:layout_marginStart="@dimen/padding_4dp"
+    android:layout_marginEnd="@dimen/padding_4dp"
     android:layout_marginBottom="@dimen/padding_12dp"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
@@ -24,7 +28,7 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"/>
 
-        <com.design.chili.view.cells.ToggleCellView
+        <com.design.chili.view.cells.ToggleCellViewNew
             android:id="@+id/tcv_toggle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

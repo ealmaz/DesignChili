@@ -13,7 +13,6 @@
         android:layout_marginStart="@dimen/padding_12dp"
         android:layout_marginTop="@dimen/padding_12dp"
         android:layout_marginEnd="@dimen/padding_12dp"
-        android:layout_marginBottom="@dimen/padding_4dp"
         android:ellipsize="end"
         android:maxLines="2"
         android:textAppearance="@style/Chili.H7.Primary.Bold"
@@ -49,6 +48,16 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:visibility="gone"
         android:src="@drawable/chili_ic_info"/>
+
+    <TextView
+        android:id="@+id/tv_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/Chili.H7.Primary"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:visibility="gone"/>
 
     <View
         android:id="@+id/divider"

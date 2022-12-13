@@ -1,34 +1,16 @@
 package com.design.chili.view.card
 
-import android.annotation.SuppressLint
 import android.content.Context
-import android.graphics.Color
-import android.graphics.Path.Op
-import android.graphics.drawable.GradientDrawable
-import android.text.Spanned
 import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.FrameLayout
-import android.widget.ImageView
-import android.widget.TextView
-import androidx.annotation.DrawableRes
-import androidx.annotation.StringRes
 import androidx.constraintlayout.widget.ConstraintLayout
-import androidx.core.view.isVisible
-import androidx.recyclerview.widget.DefaultItemAnimator
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.design.chili.R
-import com.design.chili.extensions.getColorFromAttr
-import com.design.chili.extensions.gone
-import com.design.chili.extensions.setImageByUrl
-import com.design.chili.extensions.visible
 import com.design.chili.model.Option
-import com.design.chili.util.IconStatus
 import com.design.chili.view.cells.TitledInfoCellView
-import com.design.chili.view.image.SquircleView
 
 class ConfigToggledCardView : ConstraintLayout {
 
@@ -85,8 +67,8 @@ class ConfigToggledCardView : ConstraintLayout {
         view.titledInfoView.setInfoButtonClickListener(onClick)
     }
 
-    fun setToggles(items: ArrayList<Option<*>>) {
-        val adapter = TitledTogglesAdapter()
+    fun setToggles(items: ArrayList<Option<*>>, listener: TitledTogglesAdapter.MultiCheckedListener) {
+        val adapter = TitledTogglesAdapter(listener)
         view.rvItems.layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
         view.rvItems.adapter = adapter
         adapter.addItems(items)
@@ -100,7 +82,7 @@ private data class ConfigToggledCardViewVariables(
     var rvItems: RecyclerView
 )
 
-class TitledTogglesAdapter() : RecyclerView.Adapter<TitledTogglesAdapter.TitledToggleVH>() {
+class TitledTogglesAdapter(private val listener: MultiCheckedListener) : RecyclerView.Adapter<TitledTogglesAdapter.TitledToggleVH>() {
 
     val items = ArrayList<Option<*>>()
 
@@ -108,7 +90,7 @@ class TitledTogglesAdapter() : RecyclerView.Adapter<TitledTogglesAdapter.TitledT
         val view = TitledToggleCardView(parent.context).apply {
             layoutParams = ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT)
         }
-        return TitledToggleVH(view)
+        return TitledToggleVH(view, listener)
     }
 
     override fun onBindViewHolder(holder: TitledToggleVH, position: Int) {
@@ -125,14 +107,23 @@ class TitledTogglesAdapter() : RecyclerView.Adapter<TitledTogglesAdapter.TitledT
         notifyDataSetChanged()
     }
 
-    class TitledToggleVH(view: View): RecyclerView.ViewHolder(view) {
+    class TitledToggleVH(view: View, private val listener: MultiCheckedListener): RecyclerView.ViewHolder(view) {
         fun bind(item: Option<*>) {
             (itemView as TitledToggleCardView).apply {
                 item.title?.let { setTitleText(it) }
                 item.description?.let { setValue(it) }
                 setIsInfoButtonVisible(item.isInfoBtnVisible == true)
                 item.icons?.let { setIcons(it) }
+                setOnCheckChangeListener { _, b ->
+                    if (b) listener.onChecked(adapterPosition)
+                    else listener.onUnchecked(adapterPosition)
+                }
             }
         }
+    }
+
+    interface MultiCheckedListener {
+        fun onChecked(position: Int)
+        fun onUnchecked(position: Int)
     }
 }

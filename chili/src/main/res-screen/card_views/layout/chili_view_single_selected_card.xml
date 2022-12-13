@@ -5,14 +5,16 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/root_view"
     android:background="@drawable/chili_card_rounded_border"
+    android:elevation="@dimen/elevation_4dp"
+    android:layout_margin="@dimen/padding_4dp"
     android:layout_marginEnd="@dimen/padding_12dp"
+    android:padding="@dimen/padding_4dp"
     android:layout_width="@dimen/view_136dp"
-    android:layout_height="wrap_content">
+    android:layout_height="@dimen/view_72dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_margin="@dimen/padding_2dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:id="@+id/cl_view"
         android:paddingBottom="@dimen/padding_12dp"
         tools:backgroundTint="@color/blue_1_alpha_50"
@@ -28,13 +30,14 @@
             android:layout_marginTop="@dimen/padding_12dp"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintHorizontal_bias="0"
-            tools:text="title"/>
+            android:includeFontPadding="false"
+            android:lineSpacingExtra="0dp"
+            tools:text="Title"/>
 
         <TextView
             android:id="@+id/tv_value"
             style="@style/Chili.SingleLineTextView"
-            android:textAppearance="@style/Chili.H9.Marked"
+            android:textAppearance="@style/Chili.H9.Primary"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/padding_12dp"
@@ -42,15 +45,15 @@
             app:layout_constraintTop_toBottomOf="@id/tv_title"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@id/iv_action_icon"
-            app:layout_constraintHorizontal_bias="0"
+            android:includeFontPadding="false"
+            android:lineSpacingExtra="0dp"
             android:visibility="gone"
             tools:text="Value"/>
 
         <ImageView
             android:id="@+id/iv_action_icon"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="@dimen/view_14dp"
+            android:layout_height="@dimen/view_14dp"
             tools:src="@drawable/chili_ic_reset"
             android:layout_marginEnd="@dimen/padding_4dp"
             android:layout_marginTop="@dimen/padding_4dp"
