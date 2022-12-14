@@ -64,6 +64,10 @@ class MaskedInputView @JvmOverloads constructor(
         maskTextWatcher.setupField()
     }
 
+    override fun clearInput() {
+        setText(maskTextWatcher.mask)
+    }
+
     fun setupNewMask(mask: String) {
         maskTextWatcher.setupNewMask(newMask = mask)
     }
