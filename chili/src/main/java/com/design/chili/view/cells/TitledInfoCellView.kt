@@ -13,6 +13,7 @@ import androidx.core.view.isVisible
 import com.design.chili.R
 import com.design.chili.extensions.setIsSurfaceClickable
 import com.design.chili.extensions.setupRoundedCellCornersMode
+import com.design.chili.extensions.visible
 import com.design.chili.util.RoundedCornerMode
 
 class TitledInfoCellView @JvmOverloads constructor(
@@ -61,6 +62,7 @@ class TitledInfoCellView @JvmOverloads constructor(
     }
 
     fun setSubtitle(subtitle: String) {
+        view.tvSubtitle.visible()
         view.tvSubtitle.text = subtitle
     }
 
