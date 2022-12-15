@@ -10,7 +10,8 @@
     android:layout_marginEnd="@dimen/padding_12dp"
     android:padding="@dimen/padding_4dp"
     android:layout_width="@dimen/view_136dp"
-    android:layout_height="@dimen/view_72dp">
+    android:maxHeight="@dimen/view_72dp"
+    android:layout_height="wrap_content">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"

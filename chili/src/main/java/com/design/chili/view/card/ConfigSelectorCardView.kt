@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.annotation.DrawableRes
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -71,6 +72,11 @@ class ConfigSelectorCardView : ConstraintLayout {
     fun setIcon(imgUrl: String) {
         view.ivIcon.visible()
         view.ivIcon.setImageByUrl(imgUrl)
+    }
+
+    fun setIcon(@DrawableRes resId: Int) {
+        view.ivIcon.visible()
+        view.ivIcon.setImageResource(resId)
     }
 
     fun setSelectors(

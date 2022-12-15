@@ -63,6 +63,11 @@
         <item name="ChiliToolbarIconsTint">@color/white_1</item>
         <item name="ChiliToolbarBackground">@color/black_3</item>
 
+
+        <!-- Additional Button attributes -->
+        <item name="ChiliNewAdditionalButtonBackgroundActive">@color/black_5</item>
+        <item name="ChiliNewAdditionalButtonBackgroundDisabled">@color/black_5</item>
+
         <!-- InputView -->
         <item name="ChiliInputViewEndIconTint">@color/gray_1</item>
         <item name="ChiliInputViewHintTextColor">@color/gray_1_alpha_50</item>

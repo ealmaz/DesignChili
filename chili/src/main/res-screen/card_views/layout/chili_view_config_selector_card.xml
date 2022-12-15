@@ -5,6 +5,7 @@
     android:id="@+id/root_view"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/padding_16dp"
     android:layout_marginBottom="@dimen/padding_8dp">
 
     <com.design.chili.view.image.SquircleView
@@ -40,7 +41,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/padding_16dp"
-        android:paddingStart="@dimen/padding_8dp"
+        android:paddingStart="@dimen/padding_4dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tv_title" />
