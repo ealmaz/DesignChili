@@ -41,6 +41,7 @@ class MultiIconedTitleCellView @JvmOverloads constructor(
         this.view = MultiIconedTitleCellViewVariables(
             rootView = view.findViewById(R.id.root_view),
             tvTitle = view.findViewById(R.id.tv_title),
+            tvDescription = view.findViewById(R.id.tv_description),
             rvIcons = view.findViewById(R.id.rv_icons),
             divider = view.findViewById(R.id.divider),
             ivInfo = view.findViewById(R.id.iv_info)
@@ -73,6 +74,11 @@ class MultiIconedTitleCellView @JvmOverloads constructor(
         }
     }
 
+    fun setDescription(description: String) {
+        view.tvDescription.visible()
+        view.tvDescription.text = description
+    }
+
     fun setRoundedMode(mode: RoundedCornerMode) {
         view.rootView.setupRoundedCellCornersMode(mode.value)
     }
@@ -103,6 +109,7 @@ class MultiIconedTitleCellView @JvmOverloads constructor(
 data class MultiIconedTitleCellViewVariables(
     val rootView: ConstraintLayout,
     val tvTitle: TextView,
+    val tvDescription: TextView,
     val rvIcons: RecyclerView,
     val divider: View,
     val ivInfo: ImageView
