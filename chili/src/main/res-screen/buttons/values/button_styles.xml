@@ -32,6 +32,12 @@
         <item name="android:textAppearance">@style/Chili.AdditionalButtonText</item>
     </style>
 
+    <style name="Chili.ButtonStyle.NewAdditional">
+        <item name="android:background">@drawable/chili_new_additional_button_background</item>
+        <item name="android:textColor">?attr/ChiliMarkedTextColor</item>
+        <item name="android:fontFamily">?attr/ChiliAdditionalButtonTextFont</item>
+        <item name="android:textSize">?attr/ChiliAdditionalButtonTextSize</item>
+    </style>
 
     <style name="Chili.ButtonStyle.Component">
         <item name="android:layout_width">wrap_content</item>

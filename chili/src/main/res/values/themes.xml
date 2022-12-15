@@ -127,6 +127,9 @@
 
         <!-- Additional Button attributes -->
         <item name="ChiliAdditionalButtonBackgroundActive">@android:color/transparent</item>
+        <item name="ChiliNewAdditionalButtonBackgroundActive">@color/gray_5</item>
+        <item name="ChiliNewAdditionalButtonBackgroundDisabled">@color/gray_5</item>
+        <item name="ChiliNewAdditionalButtonCornerRadius">@dimen/radius_12dp</item>
         <item name="ChiliAdditionalButtonBackgroundDisabled">@android:color/transparent</item>
         <item name="ChiliAdditionalButtonCornerRadius">@dimen/radius_4dp</item>
         <item name="ChiliAdditionalButtonTextSize">@dimen/text_14sp</item>
