@@ -8,5 +8,6 @@ data class Option<T>(
     val isInfoBtnVisible: Boolean? = false,
     val icons: ArrayList<String>? = null,
     val color: String? = null,
-    val isActive: Boolean = false
+    val isActive: Boolean = false,
+    val isUnavailable: Boolean = false
 )

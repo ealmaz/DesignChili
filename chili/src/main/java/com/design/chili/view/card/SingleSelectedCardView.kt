@@ -156,15 +156,15 @@ class SingleSelectedCardView : FrameLayout {
         setIsIconClickable(status)
     }
 
-    private fun setUnavailable(isUnavailable: Boolean) {
+    fun setUnavailable(isUnavailable: Boolean) {
         view.root.isClickable = !isUnavailable
         view.icon.invisible()
         if (isUnavailable) {
-            view.title.setTextColor(context.color(R.color.gray_1))
+            view.title.setTextColor(context.getColorFromAttr(R.attr.ChiliSecondaryTextColor))
             view.value.invisible()
         }
         else {
-            view.title.setTextColor(context.color(R.color.black_1))
+            view.title.setTextColor(context.getColorFromAttr(R.attr.ChiliMarkedTextColor))
             view.value.visible()
         }
     }
