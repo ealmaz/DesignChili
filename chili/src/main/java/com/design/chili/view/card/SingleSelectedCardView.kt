@@ -146,7 +146,8 @@ class SingleSelectedCardView : FrameLayout {
         view.icon.setImageResource(resId)
     }
 
-    fun setStatus(status: IconStatus) {
+    private fun setStatus(status: IconStatus) {
+        view.icon.visible()
         when (status) {
             IconStatus.UNAVAILABLE -> setUnavailable(true)
             IconStatus.SELECTED -> setIconDrawableRes(R.drawable.chili_ic_reset)
@@ -162,6 +163,8 @@ class SingleSelectedCardView : FrameLayout {
         if (isUnavailable) {
             view.title.setTextColor(context.getColorFromAttr(R.attr.ChiliSecondaryTextColor))
             view.value.invisible()
+            setupBorder(context.getColorFromAttr(R.attr.ChiliCardViewBackground))
+            setupBackground(context.getColorFromAttr(R.attr.ChiliCardViewBackground))
         }
         else {
             view.title.setTextColor(context.getColorFromAttr(R.attr.ChiliMarkedTextColor))
