@@ -158,6 +158,8 @@ class SingleSelectorAdapter(val listener: SingleSelectedListener) :
                     }
                 }
 
+                setUnavailable(item.isUnavailable)
+
                 setOnIconClickListener {
                     selectedItemPosition = -1
                     listener.onUnselected(adapterPosition)
