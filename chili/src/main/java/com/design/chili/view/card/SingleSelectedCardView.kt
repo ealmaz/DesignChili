@@ -1,10 +1,8 @@
 package com.design.chili.view.card
 
-import android.annotation.SuppressLint
 import android.content.Context
 import android.graphics.Color
 import android.graphics.drawable.GradientDrawable
-import android.os.Build
 import android.text.Spanned
 import android.util.AttributeSet
 import android.view.LayoutInflater
@@ -12,13 +10,10 @@ import android.widget.FrameLayout
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.annotation.DrawableRes
-import androidx.annotation.RequiresApi
 import androidx.annotation.StringRes
-import androidx.cardview.widget.CardView
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.view.isVisible
 import com.design.chili.R
-import com.design.chili.extensions.*
 import com.design.chili.extensions.getColorFromAttr
 import com.design.chili.extensions.invisible
 import com.design.chili.extensions.visible
@@ -95,7 +90,7 @@ class SingleSelectedCardView : FrameLayout {
         borderBackground?.setStroke(context.resources.getDimension(R.dimen.view_2dp).toInt(), Color.parseColor(color))
     }
 
-    fun setupBackground(color: String) {
+    private fun setupBackground(color: String) {
         val background = view.innerLayout.background as? GradientDrawable
         background?.mutate()
         background?.setColor(Color.parseColor(color))
@@ -149,7 +144,6 @@ class SingleSelectedCardView : FrameLayout {
     private fun setStatus(status: IconStatus) {
         view.icon.visible()
         when (status) {
-            IconStatus.UNAVAILABLE -> setUnavailable(true)
             IconStatus.SELECTED -> setIconDrawableRes(R.drawable.chili_ic_reset)
             IconStatus.ACTIVE -> setIconDrawableRes(R.drawable.chili_ic_done)
             else -> view.icon.invisible()
@@ -158,17 +152,19 @@ class SingleSelectedCardView : FrameLayout {
     }
 
     fun setUnavailable(isUnavailable: Boolean) {
-        view.root.isClickable = !isUnavailable
-        view.icon.invisible()
-        if (isUnavailable) {
-            view.title.setTextColor(context.getColorFromAttr(R.attr.ChiliSecondaryTextColor))
-            view.value.invisible()
-            setupBorder(context.getColorFromAttr(R.attr.ChiliCardViewBackground))
-            setupBackground(context.getColorFromAttr(R.attr.ChiliCardViewBackground))
-        }
-        else {
-            view.title.setTextColor(context.getColorFromAttr(R.attr.ChiliMarkedTextColor))
-            view.value.visible()
+        with(view) {
+            root.isClickable = !isUnavailable
+            if (isUnavailable) {
+                title.setTextColor(context.getColorFromAttr(R.attr.ChiliSecondaryTextColor))
+                value.invisible()
+                icon.invisible()
+                setupBorder(context.getColorFromAttr(R.attr.ChiliCardViewBackground))
+                setupBackground(context.getColorFromAttr(R.attr.ChiliCardViewBackground))
+            }
+            else {
+                title.setTextColor(context.getColorFromAttr(R.attr.ChiliMarkedTextColor))
+                value.visible()
+            }
         }
     }
 
