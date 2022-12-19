@@ -113,6 +113,9 @@ class TitledTogglesAdapter(private val listener: MultiCheckedListener) : Recycle
                 item.title?.let { setTitleText(it) }
                 item.description?.let { setValue(it) }
                 setIsInfoButtonVisible(item.isInfoBtnVisible == true)
+                setInfoButtonClickListener {
+                    listener.onServiceInfoClicked(adapterPosition)
+                }
                 item.icons?.let { setIcons(it) }
                 setOnCheckChangeListener { _, b ->
                     if (b) listener.onChecked(adapterPosition)
@@ -125,5 +128,6 @@ class TitledTogglesAdapter(private val listener: MultiCheckedListener) : Recycle
     interface MultiCheckedListener {
         fun onChecked(position: Int)
         fun onUnchecked(position: Int)
+        fun onServiceInfoClicked(position: Int)
     }
 }
