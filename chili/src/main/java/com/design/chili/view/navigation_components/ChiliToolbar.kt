@@ -103,15 +103,15 @@ class ChiliToolbar : LinearLayout {
         view.toolbar.setNavigationIcon(drawableRes)
     }
 
-    private fun setTitle(title: String?) {
+    fun setTitle(title: String?) {
         view.toolbar.title = title
     }
 
-    private fun setTitleTextAppearance(@StyleRes textAppearanceRes: Int) {
+    fun setTitleTextAppearance(@StyleRes textAppearanceRes: Int) {
         view.toolbar.setTitleTextAppearance(context, textAppearanceRes)
     }
 
-    private fun setIsTitleCentered(centered: Boolean) {
+    fun setIsTitleCentered(centered: Boolean) {
         view.toolbar.isTitleCentered = centered
     }
 
