@@ -7,11 +7,14 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.appcompat.app.AppCompatDelegate.MODE_NIGHT_NO
 import androidx.appcompat.app.AppCompatDelegate.MODE_NIGHT_YES
-import androidx.appcompat.widget.Toolbar
 import androidx.fragment.app.Fragment
 import com.design.app.fragments.MainFragment
+import com.design.chili.view.navigation_components.ChiliToolbar
 
 class MainActivity : AppCompatActivity() {
+
+    private lateinit var toolbar: ChiliToolbar
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -24,9 +27,12 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setupToolbar() {
-        val toolbar = findViewById<Toolbar>(R.id.toolbar)
-        setSupportActionBar(toolbar)
-        supportActionBar?.setHomeButtonEnabled(true)
+        toolbar = findViewById<ChiliToolbar>(R.id.toolbar)
+        toolbar.initToolbar(ChiliToolbar.Configuration(
+            this,
+            onNavigateUpClick = { onBackPressed() },
+            isNavigateUpButtonEnabled = false
+        ))
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -47,5 +53,13 @@ class MainActivity : AppCompatActivity() {
             .replace(R.id.container, fragment)
             .addToBackStack(null)
             .commit()
+    }
+
+    fun setTitle(title: String) {
+        toolbar.setTitle(title)
+    }
+
+    fun setUpHomeEnabled(isEnabled: Boolean) {
+        toolbar.isUpHomeEnabled(this, isEnabled)
     }
 }

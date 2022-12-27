@@ -2,6 +2,7 @@ package com.design.app.fragments
 
 import android.os.Bundle
 import android.view.View
+import com.design.app.MainActivity
 import com.design.app.base.BaseFragment
 import com.design.app.databinding.FragmentCellBinding
 
@@ -10,6 +11,7 @@ class CellViewsFragment : BaseFragment<FragmentCellBinding>() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        (activity as MainActivity).setUpHomeEnabled(true)
         vb.btnP1.setOnClickListener {
             vb.progress.setProgressPercent(100)
         }

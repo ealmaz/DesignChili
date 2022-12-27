@@ -12,19 +12,19 @@
         tools:context=".MainActivity">
 
         <com.design.chili.view.buttons.LoaderButton
-            android:text="Action"
+            android:text="Loader button"
             android:id="@+id/loader"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/padding_16dp"/>
 
-        <com.design.chili.view.buttons.LoaderButton
-            android:text="Action"
-            android:id="@+id/loader1"
-            android:enabled="false"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/padding_16dp"/>
+        <TextView
+            android:id="@+id/stop_loader"
+            android:text="Stop loader"
+            android:layout_gravity="end"
+            style="@style/Chili.ButtonStyle.Component"
+            android:layout_marginStart="@dimen/padding_16dp"
+            android:layout_marginEnd="@dimen/padding_16dp"/>
 
         <Button
             android:id="@+id/primary"

@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import androidx.fragment.app.FragmentResultListener
+import com.design.app.MainActivity
 import com.design.app.base.BaseFragment
 import com.design.app.databinding.FragmentDatePickerBinding
 import com.design.chili.view.modals.picker.DatePickerDialog
@@ -18,6 +19,7 @@ class DatePickerFargment : BaseFragment<FragmentDatePickerBinding>(), FragmentRe
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        (activity as MainActivity).setUpHomeEnabled(true)
         childFragmentManager.setFragmentResultListener(DatePickerDialog.PICKER_DIALOG_RESULT, this, this)
         childFragmentManager.setFragmentResultListener(RangeDatePickerDialog.RANGE_PICKER_DIALOG_RESULT, this, this)
         childFragmentManager.setFragmentResultListener(TimePickerDialog.TIME_PICKER_DIALOG_RESULT, this, this)

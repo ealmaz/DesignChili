@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import com.design.app.MainActivity
 import com.design.app.R
 import com.design.app.base.BaseFragment
 import com.design.app.databinding.FrgmentBottomSheetsBinding
@@ -26,6 +27,7 @@ class BottomSheetsFragment : BaseFragment<FrgmentBottomSheetsBinding>() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        (activity as MainActivity).setUpHomeEnabled(true)
         vb.action.setOnClickListener {
             ActionBottomSheet.create(listOf(
                 ActionBottomSheetButton("First", ActionBottomSheetButtonType.SIMPLE, {Toast.makeText(context, "OnClcik first", Toast.LENGTH_SHORT).show()}),
@@ -103,10 +105,16 @@ class BottomSheetsFragment : BaseFragment<FrgmentBottomSheetsBinding>() {
         vb.serachBottomSheet.setOnClickListener {
             val bs = SearchSelectorBottomSheet.Builder()
                 .setIsSingleSelection(false)
-                .setIsHeaderVisible(false)
+                .setIsHeaderVisible(true)
+                .setIsSearchAvailable(true)
                 .build(requireContext(), options)
             bs.setOnDismissListener {
-                Toast.makeText(requireContext(), options.toString(), Toast.LENGTH_LONG).show()
+                DetailedInfoBottomSheet.Builder()
+                    .setIcon(R.drawable.ic_cat)
+                    .setMessage(options.toString())
+                    .setPrimaryButton("Понятно" to { dismiss() })
+                    .build()
+                    .show(childFragmentManager)
             }
             bs.show()
         }
@@ -138,4 +146,10 @@ class CustomFragmentBottomSheet : BaseFragmentBottomSheetDialogFragment() {
         return CommonViewsFragment()
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+//        view.findViewById<LinearLayout>(com.design.chili.R.id.ll_content).apply {
+//            setBackgroundResource(com.design.chili.R.drawable.chili_bg_rounded_bottom_sheet_gray)
+//        }
+    }
 }

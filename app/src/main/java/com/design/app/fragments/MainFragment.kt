@@ -3,6 +3,7 @@ package com.design.app.fragments
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
+import com.design.app.MainActivity
 import com.design.app.ToolbarActivity
 import com.design.app.base.BaseFragment
 import com.design.app.databinding.FragmentMainBinding
@@ -42,6 +43,8 @@ class MainFragment : BaseFragment<FragmentMainBinding>() {
         vb.pickers.setOnClickListener {
             openFragment(DatePickerFargment())
         }
+
+        (activity as MainActivity).setUpHomeEnabled(false)
     }
 
     override fun inflateViewBinging(): FragmentMainBinding {

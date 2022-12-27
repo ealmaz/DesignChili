@@ -171,6 +171,13 @@ class ChiliToolbar : LinearLayout {
         }
     }
 
+    fun isUpHomeEnabled(hostActivity: AppCompatActivity, isEnabled: Boolean) {
+        hostActivity.apply {
+            supportActionBar?.setDisplayHomeAsUpEnabled(isEnabled)
+            supportActionBar?.setHomeButtonEnabled(isEnabled)
+        }
+    }
+
     data class Configuration(
         val hostActivity: FragmentActivity,
         val title: String? = null,

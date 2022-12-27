@@ -2,9 +2,8 @@ package com.design.app.fragments
 
 import android.graphics.Color
 import android.os.Bundle
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
+import com.design.app.MainActivity
 import com.design.app.base.BaseFragment
 import com.design.app.databinding.FragmentCardsBinding
 
@@ -12,6 +11,7 @@ class CardsFragment : BaseFragment<FragmentCardsBinding>() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        (activity as MainActivity).setUpHomeEnabled(true)
         vb.pieChart.apply {
             setAmount("550 c")
             setTitle("Траты за июль")

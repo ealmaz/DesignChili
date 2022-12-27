@@ -3,6 +3,7 @@ package com.design.app.fragments
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
+import com.design.app.MainActivity
 import com.design.app.R
 import com.design.app.base.BaseFragment
 import com.design.app.databinding.FragmentSnackbarsBinding
@@ -15,6 +16,7 @@ class SnackbarFragment : BaseFragment<FragmentSnackbarsBinding>() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        (activity as MainActivity).setUpHomeEnabled(true)
         vb.loadSnackbar.setOnClickListener {
             (requireActivity() as AppCompatActivity).showInfinitiveLoaderSnackbar(vb.root, "Snackbar meesage")
         }
