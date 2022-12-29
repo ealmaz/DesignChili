@@ -216,6 +216,7 @@
         <attr name="isChevronVisible" format="boolean"/>
         <attr name="titleTextAppearance"/>
         <attr name="subtitleTextAppearance"/>
+        <attr name="android:minHeight" format="dimension"/>
     </declare-styleable>
 
     <declare-styleable name="ToggleCellView">

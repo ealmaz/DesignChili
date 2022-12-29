@@ -86,6 +86,9 @@ open class BaseCellView @JvmOverloads constructor(
                 getResourceId(R.styleable.BaseCellView_subtitleTextAppearance, -1).takeIf { it != -1 }?.let {
                     setSubtitleTextAppearance(it)
                 }
+                getDimensionPixelSize(R.styleable.BaseCellView_android_minHeight, -1).takeIf { it != -1 }?.let {
+                    updateRootViewMinHeight(it)
+                }
                 recycle()
             }
     }
@@ -250,6 +253,10 @@ open class BaseCellView @JvmOverloads constructor(
             true -> View.VISIBLE
             else -> View.GONE
         }
+    }
+
+    fun updateRootViewMinHeight(minHeight: Int) {
+        view.rootView.minHeight = minHeight
     }
 }
 
