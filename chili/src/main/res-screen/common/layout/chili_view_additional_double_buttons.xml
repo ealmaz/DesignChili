@@ -33,6 +33,7 @@
             android:id="@+id/btn_second"
             android:layout_width="0dp"
             android:layout_weight="1"
+            android:fontFamily="@font/roboto_medium"
             android:layout_height="wrap_content"
             tools:text="ОПЛАЛИТЬ"
             style="@style/Chili.ButtonStyle.Component"/>
