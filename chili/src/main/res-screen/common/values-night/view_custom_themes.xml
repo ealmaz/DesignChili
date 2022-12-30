@@ -5,7 +5,7 @@
         <item name="ChiliCellViewBackground">@color/red_2</item>
     </style>
 
-    <style name="ChiliCellErrorSecondaryTheme" parent="BaseChiliDesignTheme">
+    <style name="ChiliCellSecondaryStateTheme" parent="BaseChiliDesignTheme">
         <item name="ChiliCellViewBackground">@color/black_3</item>
     </style>
 
