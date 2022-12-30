@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="ChiliCellErrorStateTheme" parent="BaseChiliDesignTheme">
+        <item name="ChiliCellViewBackground">@color/red_2</item>
+    </style>
+
+    <style name="ChiliCellErrorSecondaryTheme" parent="BaseChiliDesignTheme">
+        <item name="ChiliCellViewBackground">@color/black_3</item>
+    </style>
+
+</resources>
