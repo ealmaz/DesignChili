@@ -1,13 +1,14 @@
 package com.design.chili.view.cells
 
 import android.content.Context
+import android.os.Build
 import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.view.View
 import android.widget.TextView
 import androidx.annotation.StringRes
+import androidx.annotation.StyleRes
 import androidx.constraintlayout.widget.ConstraintLayout
-import androidx.core.view.get
 import com.design.chili.R
 import com.design.chili.extensions.setIsSurfaceClickable
 import com.design.chili.extensions.setupRoundedCellCornersMode
@@ -46,6 +47,12 @@ class InfoCellView @JvmOverloads constructor(
             getInteger(R.styleable.InfoCellView_roundedCornerMode, -1).takeIf { it != -1 }?.let {
                 view.rootView.setupRoundedCellCornersMode(it)
             }
+            getResourceId(R.styleable.InfoCellView_titleTextAppearance, -1).takeIf { it != -1 }?.let {
+                setTitleTextAppearance(it)
+            }
+            getResourceId(R.styleable.InfoCellView_subtitleTextAppearance, -1).takeIf { it != -1 }?.let {
+                setSubtitleTextAppearance(it)
+            }
             recycle()
         }
     }
@@ -83,6 +90,22 @@ class InfoCellView @JvmOverloads constructor(
 
     fun setupCornerRoundedMode(mode: RoundedCornerMode) {
         view.rootView.setupRoundedCellCornersMode(mode.value)
+    }
+
+    fun setTitleTextAppearance(@StyleRes resId: Int) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            view.tvTitle.setTextAppearance(resId)
+        } else {
+            view.tvTitle.setTextAppearance(context, resId)
+        }
+    }
+
+    fun setSubtitleTextAppearance(@StyleRes resId: Int) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            view.tvSubtitle.setTextAppearance(resId)
+        } else {
+            view.tvSubtitle.setTextAppearance(context, resId)
+        }
     }
 
 }

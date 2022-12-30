@@ -262,6 +262,8 @@
         <attr name="isSurfaceClickable"/>
         <attr name="title"/>
         <attr name="subtitle"/>
+        <attr name="titleTextAppearance"/>
+        <attr name="subtitleTextAppearance"/>
     </declare-styleable>
 
     <declare-styleable name="ExpandableCellView">
