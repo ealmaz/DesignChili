@@ -36,7 +36,7 @@
 
     <View
         android:id="@+id/divider"
-        android:background="?ChiliDividerColor"
+        android:background="?attr/ChiliDividerColor"
         android:layout_width="match_parent"
         android:layout_height="?attr/ChiliDividerHeightSize"
         android:layout_marginStart="@dimen/padding_8dp"
