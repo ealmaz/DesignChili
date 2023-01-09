@@ -40,7 +40,7 @@ class DescriptionBottomSheet : BaseViewBottomSheetDialogFragment() {
     private var secondaryButton: Pair<String, (DescriptionBottomSheet.() -> Unit)>? = null
     private var secondaryButtonRes: Pair<Int, (DescriptionBottomSheet.() -> Unit)>? = null
 
-    override val topDrawableVisible = true
+    override var topDrawableVisible = true
 
     override fun createContentView(inflater: LayoutInflater, container: ViewGroup?): View {
         val view = inflater.inflate(R.layout.chili_view_description_bottom_sheet, container, false)

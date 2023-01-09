@@ -68,6 +68,13 @@ class BottomSheetsFragment : BaseFragment<FrgmentBottomSheetsBinding>() {
         vb.custom.setOnClickListener {
             CustomFragmentBottomSheet().show(childFragmentManager)
         }
+        vb.customWithBuilder.setOnClickListener {
+            FragmentBottomSheet.Builder()
+                .setContentFragment(CommonViewsFragment())
+                .setIsBackButtonEnabled(true)
+                .build()
+                .show(childFragmentManager)
+        }
         vb.inApp.setOnClickListener {
             InAppPushBottomSheet.Builder()
                 .setBtnMoreInfo("Подробнее" to {
@@ -127,13 +134,10 @@ class BottomSheetsFragment : BaseFragment<FrgmentBottomSheetsBinding>() {
 
 class CustomFragmentBottomSheet : BaseFragmentBottomSheetDialogFragment() {
 
-    override val topDrawableVisible: Boolean
-        get() = true
-    override val hasCloseIcon: Boolean
-        get() = true
+    override var topDrawableVisible: Boolean = true
+    override var hasCloseIcon: Boolean = true
     override var isHideable: Boolean = false
-    override val isBackButtonEnabled: Boolean
-        get() = false
+    override var isBackButtonEnabled: Boolean = false
 
     override fun setupBottomSheetBehavior(behavior: BottomSheetBehavior<*>?) {
         behavior?.peekHeight = getWindowHeight() * 30 / 100

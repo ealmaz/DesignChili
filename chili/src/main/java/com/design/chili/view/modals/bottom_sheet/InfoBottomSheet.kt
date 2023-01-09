@@ -33,7 +33,7 @@ class InfoBottomSheet private constructor(): BaseViewBottomSheetDialogFragment()
     private var primaryButtonRes: Pair<Int, (InfoBottomSheet.() -> Unit)>? = null
     private var secondaryButtonRes: Pair<Int, (InfoBottomSheet.() -> Unit)>? = null
 
-    override val hasCloseIcon: Boolean = true
+    override var hasCloseIcon: Boolean = true
 
     override fun createContentView(inflater: LayoutInflater, container: ViewGroup?): View {
         val view = inflater.inflate(R.layout.chili_view_info_bottom_sheet, container, false)
