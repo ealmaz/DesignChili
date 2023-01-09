@@ -30,8 +30,8 @@ class DetailedInfoBottomSheet private constructor(): BaseViewBottomSheetDialogFr
     private var primaryButton: Pair<String, (DetailedInfoBottomSheet.() -> Unit)>? = null
     private var primaryButtonRes: Pair<Int, (DetailedInfoBottomSheet.() -> Unit)>? = null
 
-    override val hasCloseIcon: Boolean = true
-    override val topDrawableVisible = true
+    override var hasCloseIcon: Boolean = true
+    override var topDrawableVisible = true
 
     override fun createContentView(inflater: LayoutInflater, container: ViewGroup?): View {
         val view = inflater.inflate(R.layout.chili_view_detailed_info_bottom_sheet, container, false)

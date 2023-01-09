@@ -4,6 +4,8 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.LinearLayout
+import androidx.annotation.DrawableRes
 import androidx.annotation.NonNull
 import androidx.annotation.Nullable
 import androidx.fragment.app.Fragment
@@ -11,8 +13,13 @@ import com.design.chili.R
 
 abstract class BaseFragmentBottomSheetDialogFragment : BaseBottomSheetDialogFragment() {
 
+    private lateinit var llContent: LinearLayout
+
     override var topDrawableView: View? = null
     override var closeIconView: View? = null
+
+    @DrawableRes
+    protected open var backgroundDrawable: Int = R.drawable.chili_bg_rounded_bottom_sheet
 
     @Nullable
     override fun onCreateView(
@@ -24,7 +31,17 @@ abstract class BaseFragmentBottomSheetDialogFragment : BaseBottomSheetDialogFrag
         childFragmentManager.beginTransaction()
             .replace(R.id.bottom_sheet_container, createFragment())
             .commit()
+        llContent = view.findViewById(R.id.ll_content)
         return view
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        setupViews()
+    }
+
+    private fun setupViews() {
+        llContent.setBackgroundResource(backgroundDrawable)
     }
 
     private fun initViewVariables(view: View) {

@@ -21,10 +21,10 @@ import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 
 abstract class BaseBottomSheetDialogFragment : BottomSheetDialogFragment() {
 
-    protected open val topDrawableVisible: Boolean = false
-    protected open val hasCloseIcon: Boolean = false
+    protected open var topDrawableVisible: Boolean = false
+    protected open var hasCloseIcon: Boolean = false
     protected open var isHideable: Boolean = true
-    protected open val isBackButtonEnabled: Boolean = true
+    protected open var isBackButtonEnabled: Boolean = true
 
     abstract var topDrawableView: View?
     abstract var closeIconView: View?
@@ -39,7 +39,7 @@ abstract class BaseBottomSheetDialogFragment : BottomSheetDialogFragment() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O_MR1) updateNavbarColor(dialog)
         dialog.run {
             setOnShowListener { onShowDialog(this) }
-            setupBottomSheetBackButtonEnabled()
+            setupBottomSheetBackButtonEnabled(dialog)
         }
         return dialog
     }
@@ -97,9 +97,9 @@ abstract class BaseBottomSheetDialogFragment : BottomSheetDialogFragment() {
         }
     }
 
-    private fun setupBottomSheetBackButtonEnabled() {
+    private fun setupBottomSheetBackButtonEnabled(dialog: BottomSheetDialog) {
         if (!isBackButtonEnabled) {
-            dialog?.setOnKeyListener { _, keyCode, _ ->
+            dialog.setOnKeyListener { _, keyCode, _ ->
                 keyCode == KeyEvent.KEYCODE_BACK || keyCode == KeyEvent.ACTION_DOWN
             }
         }

@@ -15,7 +15,7 @@ import com.google.android.material.bottomsheet.BottomSheetBehavior
 
 class InAppPushBottomSheet private constructor() : BaseBottomSheetDialogFragment() {
 
-    override val hasCloseIcon: Boolean = true
+    override var hasCloseIcon: Boolean = true
 
     var rootView: View? = null
     var tvTitle: TextView? = null
