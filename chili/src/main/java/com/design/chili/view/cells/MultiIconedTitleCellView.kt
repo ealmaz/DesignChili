@@ -1,22 +1,21 @@
 package com.design.chili.view.cells
 
 import android.content.Context
-import android.net.Uri
 import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import androidx.annotation.DrawableRes
 import androidx.annotation.StringRes
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.view.isVisible
-import androidx.core.view.updatePadding
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.design.chili.R
-import com.design.chili.extensions.*
+import com.design.chili.extensions.setImageByUrl
+import com.design.chili.extensions.setOnSingleClickListener
+import com.design.chili.extensions.setupRoundedCellCornersMode
 import com.design.chili.extensions.visible
 import com.design.chili.util.ItemDecorator
 import com.design.chili.util.RoundedCornerMode
@@ -75,6 +74,11 @@ class MultiIconedTitleCellView @JvmOverloads constructor(
     }
 
     fun setDescription(description: String) {
+        view.tvDescription.visible()
+        view.tvDescription.text = description
+    }
+
+    fun setDescription(description: CharSequence) {
         view.tvDescription.visible()
         view.tvDescription.text = description
     }
