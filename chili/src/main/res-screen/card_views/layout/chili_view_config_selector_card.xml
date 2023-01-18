@@ -18,6 +18,7 @@
         android:visibility="gone"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/tv_title"
         tools:src="@tools:sample/avatars" />
 
     <TextView
@@ -33,7 +34,6 @@
         android:textAppearance="@style/Chili.H7.Primary.Bold"
         app:layout_constraintStart_toEndOf="@id/iv_icon"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="@id/iv_icon"
         tools:text="Заголовок" />
 
     <androidx.recyclerview.widget.RecyclerView
