@@ -148,7 +148,10 @@ class SingleSelectorAdapter(val listener: SingleSelectedListener) :
 
                 setOnClickListener {
                     if (selectedItemPosition != adapterPosition) {
-                        if (selectedItemPosition != -1) listener.onUnselected(selectedItemPosition)
+                        if (selectedItemPosition != -1) {
+                            listener.onUnselected(selectedItemPosition)
+                            notifyItemChanged(selectedItemPosition)
+                        }
                         selectedItemPosition = adapterPosition
                         listener.onSelected(adapterPosition)
                     }
