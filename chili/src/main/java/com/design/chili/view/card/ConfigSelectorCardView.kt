@@ -104,6 +104,8 @@ class SingleSelectorAdapter(val listener: SingleSelectedListener) :
     private val items = ArrayList<Option<*>>()
 
     var selectedItemPosition = -1
+    @Synchronized set
+    @Synchronized get
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SingleSelectorVH {
         val view = SingleSelectedCardView(parent.context).apply {
