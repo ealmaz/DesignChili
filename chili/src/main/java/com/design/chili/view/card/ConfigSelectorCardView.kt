@@ -154,10 +154,12 @@ class SingleSelectorAdapter(val listener: SingleSelectedListener) :
                         }
                         selectedItemPosition = adapterPosition
                         listener.onSelected(adapterPosition)
+                        true
                     }
                     else {
                         selectedItemPosition = -1
                         listener.onUnselected(adapterPosition)
+                        false
                     }
                 }
 

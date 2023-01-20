@@ -23,7 +23,6 @@ class SingleSelectedCardView : FrameLayout {
 
     private lateinit var view: SingleSelectedCardViewVariables
 
-    var isChecked: Boolean = false
     var isActive = false
     private var color: String? = ""
 
@@ -115,7 +114,6 @@ class SingleSelectedCardView : FrameLayout {
             setupBorder(it)
             setupBackground(it)
         }
-        isChecked = true
     }
 
     fun setActive() {
@@ -129,7 +127,6 @@ class SingleSelectedCardView : FrameLayout {
         setupBackground(context.getColorFromAttr(R.attr.ChiliCardViewBackground))
         if (isActive) setActive()
         else setStatus(IconStatus.UNSELECTED)
-        isChecked = false
     }
 
     fun setValueTextRes(@StringRes textResId: Int) {
@@ -175,14 +172,15 @@ class SingleSelectedCardView : FrameLayout {
         }
     }
 
-    fun setOnClickListener(onClick: () -> Unit) {
+    fun setOnClickListener(onClick: () -> Boolean) {
         view.root.setOnClickListener {
-            if (isChecked) reset()
-            else {
+            val isCheckedNewValue = onClick.invoke()
+            if (isCheckedNewValue) {
                 setStatus(IconStatus.SELECTED)
                 setSelected()
+            } else {
+                reset()
             }
-            onClick.invoke()
         }
     }
 
