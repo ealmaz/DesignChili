@@ -43,6 +43,7 @@
         android:layout_marginTop="@dimen/padding_16dp"
         android:paddingBottom="@dimen/padding_16dp"
         android:paddingStart="@dimen/padding_4dp"
+        android:clipToPadding="false"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tv_title" />
