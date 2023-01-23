@@ -104,7 +104,11 @@ class SingleSelectorAdapter(val listener: SingleSelectedListener) :
     private val items = ArrayList<Option<*>>()
 
     var selectedItemPosition = -1
-    @Synchronized set
+    @Synchronized set(value) {
+        if (field != -1) notifyItemChanged(field)
+        field = value
+        if (value != -1) notifyItemChanged(value)
+    }
     @Synchronized get
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SingleSelectorVH {
@@ -154,7 +158,6 @@ class SingleSelectorAdapter(val listener: SingleSelectedListener) :
                         selectedItemPosition = adapterPosition
                         if (prevSelectedItem != -1) {
                             listener.onUnselected(prevSelectedItem)
-                            notifyItemChanged(prevSelectedItem)
                         }
                         listener.onSelected(selectedItemPosition)
                         true
