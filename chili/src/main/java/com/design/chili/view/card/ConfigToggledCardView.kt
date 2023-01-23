@@ -117,6 +117,7 @@ class TitledTogglesAdapter(private val listener: MultiCheckedListener) : Recycle
                     listener.onServiceInfoClicked(adapterPosition)
                 }
                 item.icons?.let { setIcons(it) }
+                setUnavailable(item.isUnavailable)
                 setOnCheckChangeListener { _, b ->
                     if (b) listener.onChecked(adapterPosition)
                     else listener.onUnchecked(adapterPosition)

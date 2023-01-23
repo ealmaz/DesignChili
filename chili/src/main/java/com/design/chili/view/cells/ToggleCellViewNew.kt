@@ -76,4 +76,8 @@ class ToggleCellViewNew @JvmOverloads constructor(
             textOff = text
         }
     }
+
+    fun setIsEnabled(isEnabled: Boolean) {
+        switch?.isEnabled = isEnabled
+    }
 }

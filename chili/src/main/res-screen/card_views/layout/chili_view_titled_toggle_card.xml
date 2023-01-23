@@ -34,6 +34,7 @@
             android:layout_height="wrap_content"
             app:layout_constraintTop_toBottomOf="@id/mitcv_view"
             app:layout_constraintStart_toStartOf="parent"
+            app:isSurfaceClickable="false"
             app:isDividerVisible="false"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>

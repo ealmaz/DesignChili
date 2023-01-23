@@ -2,14 +2,12 @@ package com.design.chili.view.card
 
 import android.annotation.SuppressLint
 import android.content.Context
-import android.graphics.Color
 import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.widget.CompoundButton
 import android.widget.FrameLayout
 import com.design.chili.R
 import com.design.chili.view.cells.MultiIconedTitleCellView
-import com.design.chili.view.cells.ToggleCellView
 import com.design.chili.view.cells.ToggleCellViewNew
 
 class TitledToggleCardView : FrameLayout {
@@ -74,6 +72,10 @@ class TitledToggleCardView : FrameLayout {
 
     fun setOnCheckChangeListener(listener: (CompoundButton, Boolean) -> Unit) {
         view.toggleView.setOnCheckChangeListener(listener)
+    }
+
+    fun setUnavailable(isUnavailable: Boolean) {
+        view.toggleView.setIsEnabled(!isUnavailable)
     }
 }
 
