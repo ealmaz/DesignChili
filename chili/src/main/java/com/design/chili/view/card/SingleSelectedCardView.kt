@@ -114,6 +114,7 @@ class SingleSelectedCardView : FrameLayout {
             setupBorder(it)
             setupBackground(it)
         }
+        setStatus(IconStatus.SELECTED)
     }
 
     fun setActive() {
@@ -176,7 +177,6 @@ class SingleSelectedCardView : FrameLayout {
         view.root.setOnClickListener {
             val isCheckedNewValue = onClick.invoke()
             if (isCheckedNewValue) {
-                setStatus(IconStatus.SELECTED)
                 setSelected()
             } else {
                 reset()
