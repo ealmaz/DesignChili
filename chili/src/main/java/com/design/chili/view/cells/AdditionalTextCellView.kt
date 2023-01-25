@@ -59,6 +59,7 @@ class AdditionalTextCellView @JvmOverloads constructor(
     override fun setIsChevronVisible(isVisible: Boolean) {
         super.setIsChevronVisible(isVisible)
         if (isVisible) additionalText?.setPadding(0, 0,0, 0)
+        else additionalText?.setPadding(0, 0, resources.getDimensionPixelSize(R.dimen.padding_8dp), 0)
     }
 
     fun setAdditionalTextTextAppearance(@StyleRes resId: Int) {

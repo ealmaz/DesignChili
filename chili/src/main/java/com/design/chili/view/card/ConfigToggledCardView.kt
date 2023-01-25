@@ -111,7 +111,7 @@ class TitledTogglesAdapter(private val listener: MultiCheckedListener) : Recycle
         fun bind(item: Option<*>) {
             (itemView as TitledToggleCardView).apply {
                 item.title?.let { setTitleText(it) }
-                item.description?.let { setValue(it) }
+                item.description?.let { setValueHtml(it) }
                 setIsInfoButtonVisible(item.isInfoBtnVisible == true)
                 setInfoButtonClickListener {
                     listener.onServiceInfoClicked(adapterPosition)

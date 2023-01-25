@@ -3,6 +3,7 @@ package com.design.chili.view.cells
 import android.content.Context
 import android.graphics.drawable.Drawable
 import android.os.Build
+import android.text.Spanned
 import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.view.View
@@ -99,6 +100,10 @@ open class BaseCellView @JvmOverloads constructor(
 
     fun setTitle(@StringRes resId: Int) {
         view.tvTitle.setText(resId)
+    }
+
+    fun setTitle(text: Spanned) {
+        view.tvTitle.text = text
     }
 
     fun setTitleTextAppearance(@StyleRes resId: Int) {

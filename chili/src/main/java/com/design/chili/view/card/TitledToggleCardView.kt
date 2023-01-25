@@ -6,6 +6,7 @@ import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.widget.CompoundButton
 import android.widget.FrameLayout
+import androidx.core.text.parseAsHtml
 import com.design.chili.R
 import com.design.chili.view.cells.MultiIconedTitleCellView
 import com.design.chili.view.cells.ToggleCellViewNew
@@ -56,6 +57,10 @@ class TitledToggleCardView : FrameLayout {
 
     fun setValue(value: String) {
         view.toggleView.setTitle(value)
+    }
+
+    fun setValueHtml(value: String) {
+        view.toggleView.setTitle(value.parseAsHtml())
     }
 
     fun setIcons(icons: ArrayList<String>) {

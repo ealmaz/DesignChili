@@ -148,7 +148,7 @@ class SingleSelectorAdapter(val listener: SingleSelectedListener) :
                 else reset()
 
                 item.title?.let { setTitleText(it) }
-                item.description?.takeIf { it.isEmpty().not() }?.let { setValue(it) }
+                item.description?.takeIf { it.isEmpty().not() }?.let { setValueHtml(it) }
 
                 if (item.isActive) setActive()
 

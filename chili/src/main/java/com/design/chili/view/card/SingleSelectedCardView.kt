@@ -12,6 +12,7 @@ import android.widget.TextView
 import androidx.annotation.DrawableRes
 import androidx.annotation.StringRes
 import androidx.constraintlayout.widget.ConstraintLayout
+import androidx.core.text.parseAsHtml
 import androidx.core.view.isVisible
 import com.design.chili.R
 import com.design.chili.extensions.getColorFromAttr
@@ -76,6 +77,13 @@ class SingleSelectedCardView : FrameLayout {
         value?.let {
             view.value.visible()
             view.value.text = value
+        }
+    }
+
+    fun setValueHtml(value: String?) {
+        value?.let {
+            view.value.visible()
+            view.value.text = value.parseAsHtml()
         }
     }
 
