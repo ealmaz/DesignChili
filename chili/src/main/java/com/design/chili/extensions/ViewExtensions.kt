@@ -2,6 +2,7 @@ package com.design.chili.extensions
 
 import android.graphics.drawable.Drawable
 import android.os.Build
+import android.text.Spanned
 import android.view.View
 import android.view.ViewGroup
 import android.widget.EditText
@@ -80,6 +81,14 @@ internal fun View.gone() {
 }
 
 internal fun TextView.setTextOrHide(value: String?) {
+    text = value
+    when (value) {
+        null -> gone()
+        else -> visible()
+    }
+}
+
+internal fun TextView.setTextOrHide(value: Spanned?) {
     text = value
     when (value) {
         null -> gone()

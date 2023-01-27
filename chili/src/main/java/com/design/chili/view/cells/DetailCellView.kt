@@ -3,6 +3,7 @@ package com.design.chili.view.cells
 import android.content.Context
 import android.graphics.drawable.Drawable
 import android.os.Build
+import android.text.Spanned
 import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.widget.TextView
@@ -95,8 +96,12 @@ class DetailCellView @JvmOverloads constructor(
         view.tvValue.setTextOrHide(text)
     }
 
-    fun setValue(@StringRes textResId: Int) {
+    fun setValue(@StringRes textResId: Int?) {
         view.tvValue.setTextOrHide(textResId)
+    }
+
+    fun setValue(text: Spanned?) {
+        view.tvValue.setTextOrHide(text)
     }
 
     fun setValueTextColor(@ColorInt colorInt: Int) {

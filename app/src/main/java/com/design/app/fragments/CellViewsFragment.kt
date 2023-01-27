@@ -2,6 +2,7 @@ package com.design.app.fragments
 
 import android.os.Bundle
 import android.view.View
+import androidx.core.text.parseAsHtml
 import com.design.app.MainActivity
 import com.design.app.base.BaseFragment
 import com.design.app.databinding.FragmentCellBinding
@@ -25,6 +26,8 @@ class CellViewsFragment : BaseFragment<FragmentCellBinding>() {
             vb.progress4.setProgressPercent(20)
         }
         vb.dcv1.setValueTextColor(resources.getColor(com.design.chili.R.color.red_1))
+        
+        vb.dcv1.setValue("100 <u>c</u>".parseAsHtml())
     }
 
     override fun inflateViewBinging(): FragmentCellBinding {
