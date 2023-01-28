@@ -40,6 +40,7 @@ class AdditionalTextCellView @JvmOverloads constructor(
     private fun inflateAdditionalText() {
         this.additionalText = TextView(context).apply {
             setPadding(0, 0, resources.getDimensionPixelSize(R.dimen.padding_8dp), 0)
+            textAlignment = TEXT_ALIGNMENT_TEXT_END
         }
         view.flEndPlaceholder.addView(additionalText)
     }
