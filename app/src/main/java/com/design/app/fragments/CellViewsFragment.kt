@@ -26,8 +26,14 @@ class CellViewsFragment : BaseFragment<FragmentCellBinding>() {
             vb.progress4.setProgressPercent(20)
         }
         vb.dcv1.setValueTextColor(resources.getColor(com.design.chili.R.color.red_1))
-        
+
         vb.dcv1.setValue("100 <u>c</u>".parseAsHtml())
+        vb.dcv1.setIconUrl("https://minio.o.kg/call-center/telega.png")
+        vb.testAdditionalTextCellView.apply {
+            setOnClickListener {
+                setAdditionalText("0")
+            }
+        }
     }
 
     override fun inflateViewBinging(): FragmentCellBinding {

@@ -12,6 +12,7 @@ import androidx.annotation.DrawableRes
 import androidx.annotation.StringRes
 import androidx.annotation.StyleRes
 import androidx.constraintlayout.widget.ConstraintLayout
+import com.bumptech.glide.Glide
 import com.design.chili.R
 import com.design.chili.extensions.setIsSurfaceClickable
 import com.design.chili.extensions.setTextOrHide
@@ -148,6 +149,13 @@ class DetailCellView @JvmOverloads constructor(
         view.svIcon.setImageDrawable(drawable)
     }
 
+    fun setIconUrl(url: String?) {
+        if (url == null) return
+        Glide.with(view.svIcon)
+            .load(url)
+            .dontTransform()
+            .into(view.svIcon)
+    }
 }
 
 data class DetailCellViewVariables(

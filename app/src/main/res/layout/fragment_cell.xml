@@ -448,6 +448,7 @@
             />
 
         <com.design.chili.view.cells.AdditionalTextCellView
+            android:id="@+id/test_AdditionalTextCellView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:isDividerVisible="false"
@@ -898,10 +899,11 @@
             app:title="Заголовок" />
 
         <com.design.chili.view.common.AdditionalTextView
+            android:id="@+id/test_additional"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textAppearance="@style/Chili.H8.Error"
-            android:text="Поле ввода комментария вмещает в себя такое же количество символов, сколько поле поле ввода комментария - 130 символов"/>
+            android:text="Test now в себя такое же количество символов, сколько поле поле ввода комментария - 130 символов"/>
 
 
         <TextView
