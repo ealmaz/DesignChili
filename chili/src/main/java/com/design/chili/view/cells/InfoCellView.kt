@@ -2,6 +2,7 @@ package com.design.chili.view.cells
 
 import android.content.Context
 import android.os.Build
+import android.text.Spanned
 import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.view.View
@@ -69,7 +70,15 @@ class InfoCellView @JvmOverloads constructor(
         view.tvTitle.text = text
     }
 
+    fun setTitle(text: Spanned) {
+        view.tvTitle.text = text
+    }
+
     fun setSubtitle(text: String) {
+        view.tvSubtitle.text = text
+    }
+
+    fun setSubtitle(text: Spanned) {
         view.tvSubtitle.text = text
     }
 
