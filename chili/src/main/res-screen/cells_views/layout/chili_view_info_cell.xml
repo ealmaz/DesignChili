@@ -23,11 +23,12 @@
 
     <TextView
         android:id="@+id/tv_title"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="@style/Chili.H7.Primary"
         android:gravity="end"
         android:layout_marginEnd="@dimen/padding_8dp"
+        android:maxLength="30"
         tools:text="Information"
         app:layout_constraintTop_toTopOf="@id/tv_subtitle"
         app:layout_constraintBottom_toBottomOf="@id/tv_subtitle"
