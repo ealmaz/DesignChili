@@ -20,7 +20,7 @@
         <item name="ChiliRippleForegroundColor">@color/gray_1</item>
 
         <!-- Divider -->
-        <item name="ChiliDividerColor">@color/black_4</item>
+        <item name="ChiliDividerColor">@color/black_5</item>
 
         <!-- Snackbar attributes -->
         <item name="ChiliSnackbarBackground">@color/black_3</item>

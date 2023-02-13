@@ -36,7 +36,7 @@
         <item name="ChiliRippleForegroundCornerRadius">@dimen/radius_4dp</item>
 
         <!-- Divider -->
-        <item name="ChiliDividerColor">@color/gray_2</item>
+        <item name="ChiliDividerColor">@color/gray_6</item>
         <item name="ChiliDividerHeightSize">1dp</item>
 
         <!-- Snackbar attributes -->
