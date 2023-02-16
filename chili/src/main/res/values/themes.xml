@@ -98,7 +98,6 @@
         <item name="ChiliToolbarIconsTint">@color/black_1</item>
         <item name="ChiliToolbarBackground">@color/white_1</item>
 
-
         <!-- Primary Button attributes -->
         <item name="ChiliPrimaryButtonBackgroundActive">@color/green_1</item>
         <item name="ChiliPrimaryButtonBackgroundDisabled">@color/green_3</item>
@@ -190,6 +189,10 @@
         <item name="ChiliCellViewBackground">@color/white_1</item>
         <item name="ChiliCellCornerRadius">@dimen/radius_4dp</item>
         <item name="ChiliCellSquircleIconBackground">@color/gray_3</item>
+
+        <!-- Shimmer attributes -->
+        <item name="ChiliShimmerBoneColor">@color/gray_6</item>
+        <item name="ChiliShimmerRayColor">@color/white_1</item>
 
     </style>
 

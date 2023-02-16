@@ -6,12 +6,20 @@ import android.view.View
 import com.design.app.MainActivity
 import com.design.app.base.BaseFragment
 import com.design.app.databinding.FragmentCardsBinding
+import com.design.chili.view.shimmer.hideShimmer
+import com.design.chili.view.shimmer.showShimmer
 
 class CardsFragment : BaseFragment<FragmentCardsBinding>() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         (activity as MainActivity).setUpHomeEnabled(true)
+
+        vb.balanceView.run {
+            showShimmer()
+            postDelayed({ hideShimmer() }, 5000)
+        }
+
         vb.pieChart.apply {
             setAmount("550 c")
             setTitle("Траты за июль")
@@ -24,7 +32,18 @@ class CardsFragment : BaseFragment<FragmentCardsBinding>() {
             setPieChartData(mutableListOf(12F, 21F, 32F), mutableListOf(Color.BLUE))
         }
         vb.nvn2.setupView(listOf(), "Выбрать номер")
-        vb.pnpcvNumbers.setupView(listOf("+996 700 000 001", "+996 700 000 001", "+996 700 000 001", "+996 700 000 001", "+996 700 000 001", "+996 700 000 001", "+996 700 000 001", "+996 700 000 001"), "+996 700 000 001")
+        vb.pnpcvNumbers.setupView(
+            listOf(
+                "+996 700 000 001",
+                "+996 700 000 001",
+                "+996 700 000 001",
+                "+996 700 000 001",
+                "+996 700 000 001",
+                "+996 700 000 001",
+                "+996 700 000 001",
+                "+996 700 000 001"
+            ), "+996 700 000 001"
+        )
         vb.tpiv.apply {
             setOnCallFabClickListener { setCallRemain(0, 100) }
             setOnInternetFabClickListener { setInternetRemain(100, 83) }

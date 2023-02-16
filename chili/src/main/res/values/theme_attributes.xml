@@ -198,4 +198,8 @@
     <attr name="ChiliTariffPackagesInfoInternetProgress" format="color"/>
     <attr name="ChiliTariffPackagesInfoCallProgress" format="color"/>
 
+    <!-- Shimmer attributes -->
+    <attr name="ChiliShimmerBoneColor" format="color"/>
+    <attr name="ChiliShimmerRayColor" format="color"/>
+
 </resources>

@@ -5,6 +5,7 @@ import android.graphics.drawable.Drawable
 import android.text.Spanned
 import android.util.AttributeSet
 import android.view.LayoutInflater
+import android.view.View
 import android.widget.FrameLayout
 import android.widget.ImageView
 import android.widget.TextView
@@ -13,10 +14,14 @@ import androidx.annotation.StringRes
 import androidx.appcompat.content.res.AppCompatResources
 import androidx.core.view.isVisible
 import com.design.chili.R
+import com.design.chili.extensions.dp
 import com.design.chili.extensions.setupRoundedCardCornersMode
 import com.design.chili.util.IconType
+import com.design.chili.view.shimmer.CustomBone
+import com.design.chili.view.shimmer.Shimmering
+import com.design.chili.view.shimmer.getViewsByType
 
-class BalanceCardView : FrameLayout {
+class BalanceCardView : FrameLayout, Shimmering {
 
     private lateinit var view: BalanceCardViewVariables
 
@@ -129,7 +134,7 @@ class BalanceCardView : FrameLayout {
         view.icon.setOnClickListener { onClick.invoke() }
     }
 
-    fun setActionIconVisibility(isVisible: Boolean){
+    fun setActionIconVisibility(isVisible: Boolean) {
         view.icon.isVisible = isVisible
     }
 
@@ -140,6 +145,12 @@ class BalanceCardView : FrameLayout {
             view.icon.setBackgroundResource(R.drawable.chili_card_circle_ripple)
         }
     }
+
+    override fun getIgnoredViews(): Array<View> = emptyArray()
+
+    override fun getCustomBones(): Array<CustomBone> = arrayOf(
+        CustomBone(view.icon) { setWidth(0f) },
+    )
 }
 
 private data class BalanceCardViewVariables(
