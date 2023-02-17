@@ -16,6 +16,8 @@
         <attr name="logoTitleCellDefaultStyle" format="reference"/>
         <attr name="infoCellViewDefaultStyle" format="reference"/>
 
+        <attr name="expandableInfoCardViewDefaultStyle" format="reference"/>
+
         <attr name="multiLineRightIconCellDefaultStyle" format="reference"/>
 
         <attr name="cellViewDefaultStyle" format="reference"/>
@@ -305,6 +307,14 @@
         <attr name="android:text"/>
         <attr name="android:enabled"/>
         <attr name="isLoading" format="boolean"/>
+    </declare-styleable>
+
+    <declare-styleable name="ExpandableInfoCardView">
+        <attr name="title"/>
+        <attr name="subtitle"/>
+        <attr name="value"/>
+        <attr name="isExpandable" format="boolean"/>
+        <attr name="isExpanded"/>
     </declare-styleable>
 
 </resources>

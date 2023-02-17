@@ -26,4 +26,9 @@
 
     <style name="Chili.CardViewStyle.TariffPackagesInfoCardViewStyle"/>
 
+    <style name="Chili.CardViewStyle.ExpandableInfoCardView">
+        <item name="android:background">@drawable/chili_bg_expandable_info_card</item>
+        <item name="android:elevation">@dimen/elevation_4dp</item>
+    </style>
+
 </resources>

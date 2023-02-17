@@ -106,6 +106,12 @@ internal fun TextView.setTextOrHide(resId: Int?) {
     }
 }
 
+internal fun TextView.setTextOrHide(charSequence: CharSequence?) {
+    text = charSequence
+    if (charSequence == null) gone()
+    else visible()
+}
+
 fun SquircleView.setImageByUrl(url: String?) {
     Glide.with(this)
         .load(url)

@@ -17,6 +17,46 @@
         android:paddingBottom="@dimen/padding_16dp"
         tools:context=".MainActivity">
 
+        <com.design.chili.view.card.ExpandableInfoCardView
+            android:id="@+id/expandable"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding_12dp"
+            app:title="ExpandableInfoCardView"
+            app:subtitle="Дата погашения: 10.10.2022"
+            app:isExpandable="true"
+            app:isExpanded="false"/>
+
+        <com.design.chili.view.card.ExpandableInfoCardView
+            android:id="@+id/expandable_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding_12dp"
+            app:title="ExpandableInfoCardView"
+            app:subtitle="Дата погашения: 10.10.2022"
+            app:value="8 000,00 с"
+            app:isExpandable="false"
+            app:isExpanded="true"/>
+
+        <com.design.chili.view.card.ExpandableInfoCardView
+            android:id="@+id/expandable_3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding_12dp"
+            app:title="ExpandableInfoCardView"
+            app:isExpandable="false"
+            app:isExpanded="true"/>
+
+        <com.design.chili.view.card.ExpandableInfoCardView
+            android:id="@+id/expandable_4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding_12dp"
+            app:title="ExpandableInfoCardView"
+            app:value="6000 c"
+            app:isExpandable="false"
+            app:isExpanded="true"/>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
