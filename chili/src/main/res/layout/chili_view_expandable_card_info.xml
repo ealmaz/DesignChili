@@ -12,8 +12,8 @@
         android:id="@+id/tv_title"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:textAppearance="@style/Chili.H7.Primary.Bold"
-        android:paddingEnd="@dimen/padding_4dp"
+        android:textAppearance="@style/Chili.H7.Primary.700"
+        android:layout_marginEnd="@dimen/padding_4dp"
         tools:text="К погашению: 8 200,00 с"
         app:layout_constraintBottom_toTopOf="@id/tv_subtitle"
         app:layout_constraintTop_toTopOf="parent"
@@ -26,23 +26,23 @@
         android:layout_height="wrap_content"
         android:textAppearance="@style/Chili.H8.Primary"
         android:layout_marginTop="@dimen/padding_4dp"
-        android:paddingEnd="@dimen/padding_4dp"
+        android:layout_marginEnd="@dimen/padding_4dp"
         android:visibility="gone"
         tools:text="Дата погашения: 10.10.2022"
         app:layout_constraintTop_toBottomOf="@id/tv_title"
         app:layout_constraintStart_toStartOf="@id/tv_title"
         app:layout_constraintEnd_toStartOf="@id/tv_value"
-        app:layout_constraintBottom_toTopOf="@id/fl_expandable_content"/>
+        app:layout_constraintBottom_toBottomOf="parent"/>
 
     <TextView
         android:id="@+id/tv_value"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="@style/Chili.H7.Primary.Bold"
+        android:textAppearance="@style/Chili.H7.Primary.700"
         android:visibility="gone"
         tools:text="8 200,00"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/fl_expandable_content"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@id/iv_arrow"/>
 
     <ImageView
@@ -52,16 +52,6 @@
         android:src="@drawable/chili_ic_chevron_up"
         android:background="?selectableItemBackgroundBorderless"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/fl_expandable_content"/>
-
-    <FrameLayout
-        android:id="@+id/fl_expandable_content"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingTop="@dimen/padding_12dp"
-        android:visibility="gone"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"/>
 

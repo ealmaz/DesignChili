@@ -4,22 +4,24 @@ import android.content.Context
 import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.view.View
-import android.widget.FrameLayout
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
+import androidx.core.view.children
 import androidx.core.view.isVisible
 import com.design.chili.R
 import com.design.chili.extensions.gone
 import com.design.chili.extensions.setTextOrHide
 import com.design.chili.extensions.visible
+import com.design.chili.view.shimmer.CustomBone
+import com.design.chili.view.shimmer.Shimmering
 
 class ExpandableInfoCardView @JvmOverloads constructor(
     context: Context,
     attrs: AttributeSet? = null,
     defStyleAttr: Int = R.attr.expandableInfoCardViewDefaultStyle,
     defStyleRes: Int = R.style.Chili_CardViewStyle_ExpandableInfoCardView
-) : FrameLayout(context, attrs, defStyleAttr, defStyleRes) {
+) : LinearLayout(context, attrs, defStyleAttr, defStyleRes), Shimmering {
 
     private lateinit var view: ExpandableInfoCardViewVariables
 
@@ -39,8 +41,7 @@ class ExpandableInfoCardView @JvmOverloads constructor(
             tvTitle = view.findViewById(R.id.tv_title),
             tvSubtitle = view.findViewById(R.id.tv_subtitle),
             tvValue = view.findViewById(R.id.tv_value),
-            ivArrow = view.findViewById(R.id.iv_arrow),
-            flExpandableContent = view.findViewById(R.id.fl_expandable_content)
+            ivArrow = view.findViewById(R.id.iv_arrow)
         )
     }
 
@@ -49,8 +50,8 @@ class ExpandableInfoCardView @JvmOverloads constructor(
             getString(R.styleable.ExpandableInfoCardView_title).run { setTitle(this) }
             getString(R.styleable.ExpandableInfoCardView_subtitle).run { setSubtitle(this) }
             getString(R.styleable.ExpandableInfoCardView_value).run { setValue(this) }
-            isExpandable = getBoolean(R.styleable.ExpandableInfoCardView_isExpandable, false)
-            isExpanded = getBoolean(R.styleable.ExpandableInfoCardView_isExpanded, false)
+            setIsExpandable(getBoolean(R.styleable.ExpandableInfoCardView_isExpandable, false))
+            setIsExpanded(getBoolean(R.styleable.ExpandableInfoCardView_isExpanded, false))
             recycle()
         }
     }
@@ -88,10 +89,14 @@ class ExpandableInfoCardView @JvmOverloads constructor(
         this.isExpanded = isExpanded ?: false
         if (this.isExpanded) {
             rotateChevron(0f)
-            view.flExpandableContent.visible()
+            children.forEach {
+                if (it is ExpandableInfoCardItemView) it.visible()
+            }
         } else {
             rotateChevron(180f)
-            view.flExpandableContent.gone()
+            children.forEach {
+                if (it is ExpandableInfoCardItemView) it.gone()
+            }
         }
     }
 
@@ -99,29 +104,28 @@ class ExpandableInfoCardView @JvmOverloads constructor(
         view.ivArrow.animate().rotation(rotation)
     }
 
-    fun setItems(items: List<ExpandableItemData>) {
-        val column = LinearLayout(context).apply { orientation = LinearLayout.VERTICAL }
-        items.forEach {
-            val row = createExpandableRow()
-            setupExpandableRow(it, row)
-            column.addView(row)
-        }
-        view.flExpandableContent.removeAllViews()
-        view.flExpandableContent.addView(column)
-        setIsExpanded(isExpanded)
+//    fun setItems(items: List<ExpandableItemData>) {
+//        val column = LinearLayout(context).apply { orientation = LinearLayout.VERTICAL }
+//        items.forEach {
+//            val row = createExpandableRow()
+//            setupExpandableRow(it, row)
+//            column.addView(row)
+//        }
+//        view.flExpandableContent.removeAllViews()
+//        view.flExpandableContent.addView(column)
+//        setIsExpanded(isExpanded)
+//    }
+
+    private fun createExpandableRow(): ExpandableInfoCardItemView {
+        return ExpandableInfoCardItemView(context)
     }
 
-    private fun createExpandableRow(): View {
-        return LayoutInflater.from(context)
-            .inflate(R.layout.chili_view_expandable_card_info_item, this, false)
-    }
-
-    private fun setupExpandableRow(item: ExpandableItemData, rowView: View) {
-        rowView.apply {
-            findViewById<TextView>(R.id.tv_title).text = item.title
-            findViewById<TextView>(R.id.tv_subtitle).setTextOrHide(item.subTitle)
-            findViewById<TextView>(R.id.tv_title_value).setTextOrHide(item.titleValue)
-            findViewById<TextView>(R.id.tv_subtitle_value).setTextOrHide(item.subtitleValue)
+    private fun setupExpandableRow(item: ExpandableItemData, itemView: ExpandableInfoCardItemView) {
+        itemView.apply {
+            setTitle(item.title)
+            setSubtitle(item.subTitle)
+            setTitleValue(item.titleValue)
+            setSubtitleValue(item.subtitleValue)
         }
     }
 
@@ -131,6 +135,13 @@ class ExpandableInfoCardView @JvmOverloads constructor(
             setOnClickListener { setIsExpanded(!isExpanded) }
         }
     }
+
+    override fun getIgnoredViews(): Array<View> = arrayOf(view.ivArrow)
+
+    override fun getCustomBones(): Array<CustomBone> = arrayOf(
+        CustomBone(view.tvTitle) {},
+        CustomBone(view.tvSubtitle) {},
+    )
 }
 
 data class ExpandableInfoCardViewVariables(
@@ -138,7 +149,7 @@ data class ExpandableInfoCardViewVariables(
     val tvSubtitle: TextView,
     val tvValue: TextView,
     val ivArrow: ImageView,
-    val flExpandableContent: FrameLayout
+//    val flExpandableContent: FrameLayout
 )
 
 data class ExpandableItemData(

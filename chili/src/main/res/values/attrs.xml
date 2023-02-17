@@ -17,6 +17,7 @@
         <attr name="infoCellViewDefaultStyle" format="reference"/>
 
         <attr name="expandableInfoCardViewDefaultStyle" format="reference"/>
+        <attr name="expandableInfoCardItemViewDefaultStyle" format="reference"/>
 
         <attr name="multiLineRightIconCellDefaultStyle" format="reference"/>
 
@@ -315,6 +316,13 @@
         <attr name="value"/>
         <attr name="isExpandable" format="boolean"/>
         <attr name="isExpanded"/>
+    </declare-styleable>
+
+    <declare-styleable name="ExpandableInfoCardInfoView">
+        <attr name="title"/>
+        <attr name="subtitle"/>
+        <attr name="titleValue" format="string"/>
+        <attr name="subtitleValue" format="string"/>
     </declare-styleable>
 
 </resources>

@@ -23,6 +23,7 @@
     <attr name="ChiliRegularTextFont" format="string"/>
     <attr name="ChiliBoldTextFont" format="string"/>
     <attr name="ChiliItalicTextFont" format="string"/>
+    <attr name="Chili700TextFont" format="string"/>
 
 
     <!-- ScreenBackground -->

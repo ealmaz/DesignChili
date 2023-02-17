@@ -68,6 +68,8 @@
     <dimen name="view_140dp">140dp</dimen>
     <dimen name="view_150dp">150dp</dimen>
     <dimen name="view_200dp">200dp</dimen>
+    <dimen name="view_172dp">172dp</dimen>
+    <dimen name="view_220dp">220dp</dimen>
 
     <!-- Elevation   -->
     <dimen name="elevation_0dp">0dp</dimen>

@@ -3,11 +3,9 @@ package com.design.app.fragments
 import android.graphics.Color
 import android.os.Bundle
 import android.view.View
-import androidx.core.text.parseAsHtml
 import com.design.app.MainActivity
 import com.design.app.base.BaseFragment
 import com.design.app.databinding.FragmentCardsBinding
-import com.design.chili.view.card.ExpandableItemData
 import com.design.chili.view.shimmer.hideShimmer
 import com.design.chili.view.shimmer.showShimmer
 
@@ -56,25 +54,25 @@ class CardsFragment : BaseFragment<FragmentCardsBinding>() {
             setInternetRemain(0, 73)
             setCallRemain(0, 100)
         }
-        vb.expandable.setItems(listOf(
-            ExpandableItemData("Сумма к зачислению:", "Из нее - комиссии и сборы:", "8 000,00 <u>с</u>".parseAsHtml(), "150,00 <u>с</u>".parseAsHtml()),
-            ExpandableItemData("Сумма к зачислению:", "Из нее - комиссии и сборы:", "8 000,00 <u>с</u>".parseAsHtml(), "150,00 <u>с</u>".parseAsHtml()),
-            ExpandableItemData("Сумма к зачислению:", null, "8 000,00 <u>с</u>".parseAsHtml(), null),
-            ExpandableItemData("Сумма к зачислению:", null, "150,00 <u>с</u>".parseAsHtml()),
-            ExpandableItemData("Сумма к зачислению:", "Из нее - комиссии и сборы:", "8 000,00 <u>с</u>".parseAsHtml(), null),
-        ))
 
-        vb.expandable3.setItems(listOf(
-            ExpandableItemData("Сумма к зачислению:", "Из нее - комиссии и сборы:", "8 000,00 <u>с</u>".parseAsHtml(), "150,00 <u>с</u>".parseAsHtml()),
-            ExpandableItemData("Сумма к зачислению:", "Из нее - комиссии и сборы:", "8 000,00 <u>с</u>".parseAsHtml(), "150,00 <u>с</u>".parseAsHtml()),
-            ExpandableItemData("Сумма к зачислению:", "Из нее - комиссии и сборы:", "8 000,00 <u>с</u>".parseAsHtml(), "150,00 <u>с</u>".parseAsHtml()),
-        ))
+//        vb.expandable.setItems(listOf(
+//            ExpandableItemData("Сумма к зачислению:", "Из нее - комиссии и сборы:", "8 000,00 <u>с</u>".parseAsHtml(), "150,00 <u>с</u>".parseAsHtml()),
+//            ExpandableItemData("Сумма к зачислению:", "Из нее - комиссии и сборы:", "8 000,00 <u>с</u>".parseAsHtml(), "150,00 <u>с</u>".parseAsHtml()),
+//            ExpandableItemData("Сумма к зачислению:", null, "8 000,00 <u>с</u>".parseAsHtml(), null),
+//            ExpandableItemData("Сумма к зачислению:", null, "150,00 <u>с</u>".parseAsHtml()),
+//            ExpandableItemData("Сумма к зачислению:", "Из нее - комиссии и сборы:", "8 000,00 <u>с</u>".parseAsHtml(), null),
+//        ))
 
-        vb.expandable4.setItems(listOf(
-            ExpandableItemData("Сумма к зачислению:", "Из нее - комиссии и сборы:", "8 000,00 <u>с</u>".parseAsHtml(), "150,00 <u>с</u>".parseAsHtml()),
-            ExpandableItemData("Сумма к зачислению:", "Из нее - комиссии и сборы:", "8 000,00 <u>с</u>".parseAsHtml(), "150,00 <u>с</u>".parseAsHtml()),
-            ExpandableItemData("Сумма к зачислению:", "Из нее - комиссии и сборы:", "8 000,00 <u>с</u>".parseAsHtml(), "150,00 <u>с</u>".parseAsHtml()),
-        ))
+
+//        vb.expandable.showShimmer()
+//        vb.expandable2.showShimmer()
+//        vb.expandable3.showShimmer()
+//        vb.expandable4.showShimmer()
+
+        vb.expandable.showShimmer()
+        vb.item1.showShimmer()
+        vb.item2.showShimmer()
+        vb.item3.showShimmer()
 
     }
 

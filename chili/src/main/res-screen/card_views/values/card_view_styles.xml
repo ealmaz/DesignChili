@@ -29,6 +29,11 @@
     <style name="Chili.CardViewStyle.ExpandableInfoCardView">
         <item name="android:background">@drawable/chili_bg_expandable_info_card</item>
         <item name="android:elevation">@dimen/elevation_4dp</item>
+        <item name="android:paddingBottom">@dimen/padding_4dp</item>
+        <item name="android:animateLayoutChanges">true</item>
+        <item name="android:orientation">vertical</item>
     </style>
+
+    <style name="Chili.CardViewStyle.ExpandableInfoCardItemView"/>
 
 </resources>

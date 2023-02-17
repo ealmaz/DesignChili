@@ -4,15 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="?attr/ChiliScreenBackground"
+    android:background="@color/white_1"
     android:paddingBottom="@dimen/padding_16dp"
+    android:animateLayoutChanges="true"
     android:id="@+id/card_cv">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:layout_marginHorizontal="@dimen/padding_16dp"
         android:layout_marginTop="@dimen/padding_16dp"
         android:paddingBottom="@dimen/padding_16dp"
         tools:context=".MainActivity">
@@ -22,44 +22,107 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/padding_12dp"
-            app:title="ExpandableInfoCardView"
+            android:layout_marginHorizontal="@dimen/padding_16dp"
+            app:title="К погашению: 8 200,00 с"
             app:subtitle="Дата погашения: 10.10.2022"
             app:isExpandable="true"
-            app:isExpanded="false"/>
+            app:isExpanded="true">
+
+            <com.design.chili.view.card.ExpandableInfoCardItemView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/item1"
+                app:title="Сумма к зачислению:"
+                app:titleValue="8 000,00 с" />
+
+            <com.design.chili.view.card.ExpandableInfoCardItemView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/item2"
+                app:title="Сумма кредита: "
+                app:titleValue="8 150,00 с"
+                app:subtitle="Из нее - комиссии и сборы:"
+                app:subtitleValue="150,00 с"/>
+
+            <com.design.chili.view.card.ExpandableInfoCardItemView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/item3"
+                app:title="Сумма % по кредиту: "
+                app:value="50,00 с" />
+        </com.design.chili.view.card.ExpandableInfoCardView>
 
         <com.design.chili.view.card.ExpandableInfoCardView
-            android:id="@+id/expandable_2"
+            android:id="@+id/expandable2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/padding_12dp"
-            app:title="ExpandableInfoCardView"
+            android:layout_marginHorizontal="@dimen/padding_16dp"
+            app:title="К погашению: 8 200,00 с"
             app:subtitle="Дата погашения: 10.10.2022"
-            app:value="8 000,00 с"
-            app:isExpandable="false"
-            app:isExpanded="true"/>
+            app:isExpandable="true"
+            app:isExpanded="false">
+
+            <com.design.chili.view.card.ExpandableInfoCardItemView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/item21"
+                app:title="Сумма к зачислению:"
+                app:titleValue="8 000,00 с" />
+
+            <com.design.chili.view.card.ExpandableInfoCardItemView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/item22"
+                app:title="Сумма кредита: "
+                app:titleValue="8 150,00 с"
+                app:subtitle="Из нее - комиссии и сборы:"
+                app:subtitleValue="150,00 с"/>
+
+            <com.design.chili.view.card.ExpandableInfoCardItemView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/item23"
+                app:title="Сумма % по кредиту: "
+                app:value="50,00 с" />
+
+
+        </com.design.chili.view.card.ExpandableInfoCardView>
 
         <com.design.chili.view.card.ExpandableInfoCardView
-            android:id="@+id/expandable_3"
+            android:id="@+id/expandable3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/padding_12dp"
-            app:title="ExpandableInfoCardView"
+            android:layout_marginHorizontal="@dimen/padding_16dp"
+            app:title="К погашению"
+            app:value="8 200,00 с"
             app:isExpandable="false"
-            app:isExpanded="true"/>
+            app:isExpanded="true">
 
-        <com.design.chili.view.card.ExpandableInfoCardView
-            android:id="@+id/expandable_4"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/padding_12dp"
-            app:title="ExpandableInfoCardView"
-            app:value="6000 c"
-            app:isExpandable="false"
-            app:isExpanded="true"/>
+            <com.design.chili.view.card.ExpandableInfoCardItemView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/item32"
+                app:title="Сумма кредита: "
+                app:titleValue="8 150,00 с"
+                app:subtitle="Из нее - комиссии и сборы:"
+                app:subtitleValue="150,00 с"/>
+
+            <com.design.chili.view.card.ExpandableInfoCardItemView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/item33"
+                app:title="Сумма % по кредиту: "
+                app:value="50,00 с" />
+
+
+        </com.design.chili.view.card.ExpandableInfoCardView>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/padding_16dp"
             android:orientation="horizontal">
 
             <com.design.chili.view.card.BalanceCardView

@@ -25,6 +25,7 @@
         <item name="ChiliRegularTextFont">@font/roboto_regular</item>
         <item name="ChiliBoldTextFont">@font/roboto_medium</item>
         <item name="ChiliItalicTextFont">@font/roboto_italic</item>
+        <item name="Chili700TextFont">@font/roboto_700</item>
         <!-- End text appearance theme-->
 
 
