@@ -91,10 +91,15 @@
         <item name="ChiliCellViewBackground">@color/black_3</item>
         <item name="ChiliCellSquircleIconBackground">@color/black_2</item>
 
+
+        <!-- Shimmer attributes -->
+        <item name="ChiliShimmerBoneColor">@color/black_2</item>
+        <item name="ChiliShimmerRayColor">@color/black_4</item>
+
     </style>
 
-    <style name="ChiliDesignTheme" parent="BaseChiliDesignTheme.Night"/>
+    <style name="ChiliDesignTheme" parent="BaseChiliDesignTheme.Night" />
 
-    <style name="ChiliDesignThemeDay" parent="BaseChiliDesignTheme"/>
+    <style name="ChiliDesignThemeDay" parent="BaseChiliDesignTheme" />
 
 </resources>

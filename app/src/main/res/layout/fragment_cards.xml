@@ -23,13 +23,14 @@
             android:orientation="horizontal">
 
             <com.design.chili.view.card.BalanceCardView
+                android:id="@+id/balanceView"
                 android:layout_marginTop="@dimen/padding_16dp"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
                 app:title="Баланс"
+                app:value="100.00 c"
                 app:iconType="chevron"
-                app:value="100 c"
                 app:roundedCornerMode="single"/>
 
             <com.design.chili.view.card.TitleLogoCardView
@@ -49,6 +50,7 @@
         </LinearLayout>
 
         <com.design.chili.view.card.BalanceCardView
+            android:id="@+id/balance2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:value="500"
