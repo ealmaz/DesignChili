@@ -38,7 +38,7 @@
         android:id="@+id/tv_title_value"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="@style/Chili.H8.Primary.700"
+        android:textAppearance="@style/Chili.H8.Marked.700"
         tools:text="8 200,00"
         app:layout_constraintTop_toTopOf="@id/tv_title"
         app:layout_constraintBottom_toBottomOf="@id/tv_title"
