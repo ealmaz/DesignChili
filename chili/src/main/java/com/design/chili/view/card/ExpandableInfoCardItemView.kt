@@ -28,10 +28,10 @@ class ExpandableInfoCardItemView @JvmOverloads constructor(
     private fun inflateView(context: Context) {
         val view = LayoutInflater.from(context).inflate(R.layout.chili_view_expandable_card_info_item, this, true)
         this.view = ExpandableInfoCardItemViewVariables(
-            tvTitle = view.findViewById(R.id.tv_title),
-            tvSubtitle = view.findViewById(R.id.tv_subtitle),
-            tvTitleValue = view.findViewById(R.id.tv_title_value),
-            tvSubtitleValue = view.findViewById(R.id.tv_subtitle_value)
+            tvTitle = view.findViewById(R.id.tv_item_title),
+            tvSubtitle = view.findViewById(R.id.tv_item_subtitle),
+            tvTitleValue = view.findViewById(R.id.tv_item_title_value),
+            tvSubtitleValue = view.findViewById(R.id.tv_item_subtitle_value)
         )
     }
 
@@ -80,9 +80,7 @@ class ExpandableInfoCardItemView @JvmOverloads constructor(
 
     override fun getIgnoredViews(): Array<View> = emptyArray()
 
-    override fun getCustomBones(): Array<CustomBone> {
-        return arrayOf(CustomBone(this) { setWidth(0f) })
-    }
+    override fun getCustomBones(): Array<CustomBone> = emptyArray()
 }
 
 data class ExpandableInfoCardItemViewVariables(

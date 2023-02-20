@@ -4,6 +4,7 @@ import android.content.Context
 import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.view.View
+import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
@@ -20,7 +21,7 @@ class ExpandableInfoCardView @JvmOverloads constructor(
     context: Context,
     attrs: AttributeSet? = null,
     defStyleAttr: Int = R.attr.expandableInfoCardViewDefaultStyle,
-    defStyleRes: Int = R.style.Chili_CardViewStyle_ExpandableInfoCardView
+    defStyleRes: Int = R.style.Chili_CardViewStyle_ExpandableInfoCardView,
 ) : LinearLayout(context, attrs, defStyleAttr, defStyleRes), Shimmering {
 
     private lateinit var view: ExpandableInfoCardViewVariables
@@ -36,7 +37,8 @@ class ExpandableInfoCardView @JvmOverloads constructor(
     }
 
     private fun inflateView(context: Context) {
-        val view = LayoutInflater.from(context).inflate(R.layout.chili_view_expandable_card_info, this, true)
+        val view = LayoutInflater.from(context)
+            .inflate(R.layout.chili_view_expandable_card_info, this, true)
         this.view = ExpandableInfoCardViewVariables(
             tvTitle = view.findViewById(R.id.tv_title),
             tvSubtitle = view.findViewById(R.id.tv_subtitle),
@@ -45,7 +47,12 @@ class ExpandableInfoCardView @JvmOverloads constructor(
         )
     }
 
-    private fun obtainAttributes(context: Context, attrs: AttributeSet?, defStyleAttr: Int, defStyleRes: Int) {
+    private fun obtainAttributes(
+        context: Context,
+        attrs: AttributeSet?,
+        defStyleAttr: Int,
+        defStyleRes: Int,
+    ) {
         context.obtainStyledAttributes(attrs, R.styleable.ExpandableInfoCardView, defStyleAttr, defStyleRes).run {
             getString(R.styleable.ExpandableInfoCardView_title).run { setTitle(this) }
             getString(R.styleable.ExpandableInfoCardView_subtitle).run { setSubtitle(this) }
@@ -104,17 +111,10 @@ class ExpandableInfoCardView @JvmOverloads constructor(
         view.ivArrow.animate().rotation(rotation)
     }
 
-//    fun setItems(items: List<ExpandableItemData>) {
-//        val column = LinearLayout(context).apply { orientation = LinearLayout.VERTICAL }
-//        items.forEach {
-//            val row = createExpandableRow()
-//            setupExpandableRow(it, row)
-//            column.addView(row)
-//        }
-//        view.flExpandableContent.removeAllViews()
-//        view.flExpandableContent.addView(column)
-//        setIsExpanded(isExpanded)
-//    }
+    override fun addView(child: View?, index: Int, params: ViewGroup.LayoutParams?) {
+        if (child is ExpandableInfoCardItemView) child.isVisible = isExpanded
+        super.addView(child, index, params)
+    }
 
     private fun createExpandableRow(): ExpandableInfoCardItemView {
         return ExpandableInfoCardItemView(context)
@@ -156,5 +156,5 @@ data class ExpandableItemData(
     val title: CharSequence? = null,
     val subTitle: CharSequence? = null,
     val titleValue: CharSequence? = null,
-    val subtitleValue: CharSequence? = null
+    val subtitleValue: CharSequence? = null,
 )
