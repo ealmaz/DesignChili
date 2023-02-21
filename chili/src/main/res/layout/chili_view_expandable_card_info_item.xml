@@ -7,52 +7,57 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <TextView
-        android:id="@+id/tv_item_title"
-        android:layout_width="0dp"
+        android:minWidth="@dimen/view_200dp"
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="@style/Chili.H8.Primary"
-        android:layout_marginEnd="@dimen/padding_4dp"
         android:layout_marginVertical="@dimen/padding_8dp"
-        tools:text="К погашению: 8 200,00 с"
-        app:layout_constraintBottom_toTopOf="@id/tv_item_subtitle"
-        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginEnd="@dimen/padding_4dp"
+        android:textAppearance="@style/Chili.H8.Primary"
+        app:layout_constraintBottom_toTopOf="@id/tv_subtitle"
+        app:layout_constraintEnd_toStartOf="@id/tv_title_value"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/tv_item_title_value"/>
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="К погашению: 8 200,00 с" />
 
     <TextView
-        android:id="@+id/tv_item_subtitle"
-        android:layout_width="0dp"
+        android:id="@+id/tv_subtitle"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="@style/Chili.H8.Secondary"
+        android:layout_marginStart="@dimen/padding_12dp"
         android:layout_marginEnd="@dimen/padding_4dp"
         android:layout_marginBottom="@dimen/padding_8dp"
-        android:layout_marginStart="@dimen/padding_12dp"
+        android:textAppearance="@style/Chili.H8.Secondary"
         android:visibility="visible"
-        tools:text="Дата погашения: 10.10.2022"
-        app:layout_constraintTop_toBottomOf="@id/tv_item_title"
-        app:layout_constraintStart_toStartOf="@id/tv_item_title"
-        app:layout_constraintEnd_toStartOf="@id/tv_item_subtitle_value"
-        app:layout_constraintBottom_toBottomOf="parent"/>
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/tv_subtitle_value"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/tv_title"
+        app:layout_constraintTop_toBottomOf="@id/tv_title"
+        tools:text="Дата погашения: 10.10.2022" />
 
     <TextView
-        android:id="@+id/tv_item_title_value"
+        android:gravity="end"
+        android:minWidth="@dimen/view_52dp"
+        android:id="@+id/tv_title_value"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="@style/Chili.H8.Marked.700"
         tools:text="8 200,00"
-        app:layout_constraintTop_toTopOf="@id/tv_item_title"
-        app:layout_constraintBottom_toBottomOf="@id/tv_item_title"
+        app:layout_constraintTop_toTopOf="@id/tv_title"
+        app:layout_constraintBottom_toBottomOf="@id/tv_title"
         app:layout_constraintEnd_toEndOf="parent"/>
 
     <TextView
-        android:id="@+id/tv_item_subtitle_value"
+        android:id="@+id/tv_subtitle_value"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="@style/Chili.H8.Secondary"
         android:visibility="gone"
         tools:text="8 200,00"
-        app:layout_constraintTop_toTopOf="@id/tv_item_subtitle"
-        app:layout_constraintBottom_toBottomOf="@id/tv_item_subtitle"
+        app:layout_constraintTop_toTopOf="@id/tv_subtitle"
+        app:layout_constraintBottom_toBottomOf="@id/tv_subtitle"
         app:layout_constraintEnd_toEndOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

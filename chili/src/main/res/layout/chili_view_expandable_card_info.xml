@@ -6,34 +6,37 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:background="@drawable/chili_bg_expandable_info_card"
     android:padding="@dimen/padding_12dp"
-    android:animateLayoutChanges="true"
     android:id="@+id/root_view">
 
     <TextView
+        android:minWidth="@dimen/view_220dp"
         android:id="@+id/tv_title"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="@style/Chili.H7.Marked.700"
         android:layout_marginEnd="@dimen/padding_4dp"
-        tools:text="К погашению: 8 200,00 с"
+        android:textAppearance="@style/Chili.H7.Marked.700"
         app:layout_constraintBottom_toTopOf="@id/tv_subtitle"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/tv_value"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/tv_value"/>
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="К погашению: 8 200,00 с" />
 
     <TextView
+        android:visibility="gone"
         android:id="@+id/tv_subtitle"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="@style/Chili.H8.Primary"
         android:layout_marginTop="@dimen/padding_4dp"
         android:layout_marginEnd="@dimen/padding_4dp"
-        android:visibility="gone"
-        tools:text="Дата погашения: 10.10.2022"
-        app:layout_constraintTop_toBottomOf="@id/tv_title"
-        app:layout_constraintStart_toStartOf="@id/tv_title"
+        android:minWidth="@dimen/view_220dp"
+        android:textAppearance="@style/Chili.H8.Primary"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@id/tv_value"
-        app:layout_constraintBottom_toBottomOf="parent"/>
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/tv_title"
+        app:layout_constraintTop_toBottomOf="@id/tv_title"
+        tools:text="Дата погашения: 10.10.2022" />
 
     <TextView
         android:id="@+id/tv_value"

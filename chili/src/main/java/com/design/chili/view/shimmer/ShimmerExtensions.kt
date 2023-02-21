@@ -11,14 +11,22 @@ import com.eudycontreras.boneslibrary.properties.CornerRadii
 import com.eudycontreras.boneslibrary.properties.MutableColor
 
 fun Shimmering.showShimmer() {
-    (this as? ViewGroup)?.createShimmerDrawable(
-        ignoredBones = getIgnoredViews(),
-        customBones = getCustomBones()
-    )
+    val parentShimmer = this
+    (this as? ViewGroup)
+        ?.getAllChildViewGroups()
+        ?.forEach {
+            val shimmering = (it as? Shimmering) ?: parentShimmer
+            it.createShimmerDrawable(
+                ignoredBones = shimmering.getIgnoredViews(),
+                customBones = shimmering.getCustomBones()
+            )
+        }
 }
 
 fun Shimmering.hideShimmer() {
-    (this as? ViewGroup)?.disableSkeletonLoading()
+    (this as? ViewGroup)
+        ?.getAllChildViewGroups()
+        ?.forEach { it.disableSkeletonLoading() }
 }
 
 private fun ViewGroup.createShimmerDrawable(
@@ -34,7 +42,6 @@ private fun ViewGroup.createShimmerDrawable(
             setMaxThickness(8.dp)
             setMaxDistance(8.dp)
             setShaderMultiplier()
-            setDissectBones(true)
             setColor(MutableColor.fromColor(context.getColorFromAttr(settings.bonesColor)))
             setCornerRadii(CornerRadii(settings.bonesRadius.dp))
         }
@@ -50,20 +57,27 @@ private fun ViewGroup.createShimmerDrawable(
 }
 
 inline fun <reified T> ViewGroup.getViewsByType(): Array<View> {
-    val views = getAllViewsFromTree()
+    val views = getAllChildViews()
     return views
         .filter { it is T }
         .toTypedArray()
 }
 
 
-fun ViewGroup.getAllViewsFromTree(): List<View> {
+fun ViewGroup.getAllChildViews(): List<View> {
     val views = mutableListOf<View>()
     children.forEach {
         when (it) {
-            is ViewGroup -> views.addAll(it.getAllViewsFromTree())
+            is ViewGroup -> views.addAll(it.getAllChildViews())
             else -> views.add(it)
         }
     }
     return views
+}
+
+fun ViewGroup.getAllChildViewGroups(): List<ViewGroup> {
+    return children
+        .filter { it is ViewGroup }
+        .map { it as ViewGroup }
+        .toList()
 }
