@@ -192,7 +192,7 @@
         <item name="ChiliCellSquircleIconBackground">@color/gray_3</item>
 
         <!-- Shimmer attributes -->
-        <item name="ChiliShimmerBoneColor">@color/gray_6</item>
+        <item name="ChiliShimmerBoneColor">@color/gray_4</item>
         <item name="ChiliShimmerRayColor">@color/white_1</item>
 
     </style>

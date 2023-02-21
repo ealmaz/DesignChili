@@ -48,8 +48,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/item3"
-                app:title="Сумма % по кредиту: "
-                app:value="50,00 с" />
+                app:title="Сумма % по кредиту: " />
         </com.design.chili.view.card.ExpandableInfoCardView>
 
         <com.design.chili.view.card.ExpandableInfoCardView

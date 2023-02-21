@@ -146,10 +146,7 @@ class ExpandableInfoCardView @JvmOverloads constructor(
 
     override fun getIgnoredViews(): Array<View> = arrayOf(view.ivArrow)
 
-    override fun getCustomBones(): Array<CustomBone> = arrayOf(
-        CustomBone(view.tvTitle) {},
-        CustomBone(view.tvSubtitle) {},
-    )
+    override fun getCustomBones(): Array<CustomBone> = emptyArray()
 }
 
 data class ExpandableInfoCardViewVariables(
