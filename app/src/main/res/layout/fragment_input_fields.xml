@@ -76,12 +76,6 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/padding_16dp"/>
 
-        <com.design.chili.view.input.FilledSingleSelectorView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="fdfdfdfs"
-            android:layout_marginTop="@dimen/padding_16dp"/>
-
     </LinearLayout>
 
 </ScrollView>
