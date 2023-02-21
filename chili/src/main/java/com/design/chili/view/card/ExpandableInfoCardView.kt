@@ -34,7 +34,6 @@ class ExpandableInfoCardView @JvmOverloads constructor(
     init {
         inflateView(context)
         obtainAttributes(context, attrs, defStyleAttr, defStyleRes)
-        setupViews()
     }
 
     private fun inflateView(context: Context) {
@@ -92,6 +91,20 @@ class ExpandableInfoCardView @JvmOverloads constructor(
 
     fun setIsExpandable(isExpandable: Boolean?) {
         this.isExpandable = isExpandable ?: false
+        if (this.isExpandable) setupAsExpandable()
+        else setupAsUnExpandable()
+    }
+
+    private fun setupAsExpandable() = with(view) {
+        ivArrow.visible()
+        ivArrow.setOnClickListener { setIsExpanded(!isExpanded) }
+        rootView.setOnClickListener { setIsExpanded(!isExpanded) }
+    }
+
+    private fun setupAsUnExpandable() = with(view) {
+        ivArrow.gone()
+        ivArrow.setOnClickListener {}
+        rootView.setOnClickListener {}
     }
 
     fun setIsExpanded(isExpanded: Boolean?) {
@@ -128,14 +141,6 @@ class ExpandableInfoCardView @JvmOverloads constructor(
             setSubtitle(item.subTitle)
             setTitleValue(item.titleValue)
             setSubtitleValue(item.subtitleValue)
-        }
-    }
-
-    private fun setupViews() {
-        view.apply {
-            ivArrow.isVisible = isExpandable
-            ivArrow.setOnClickListener { setIsExpanded(!isExpanded) }
-            rootView.setOnClickListener { setIsExpanded(!isExpanded) }
         }
     }
 
