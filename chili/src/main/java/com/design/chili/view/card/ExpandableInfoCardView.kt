@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.view.children
 import androidx.core.view.isVisible
 import com.design.chili.R
@@ -43,7 +44,8 @@ class ExpandableInfoCardView @JvmOverloads constructor(
             tvTitle = view.findViewById(R.id.tv_title),
             tvSubtitle = view.findViewById(R.id.tv_subtitle),
             tvValue = view.findViewById(R.id.tv_value),
-            ivArrow = view.findViewById(R.id.iv_arrow)
+            ivArrow = view.findViewById(R.id.iv_arrow),
+            rootView = view.findViewById(R.id.root_view),
         )
     }
 
@@ -130,9 +132,10 @@ class ExpandableInfoCardView @JvmOverloads constructor(
     }
 
     private fun setupViews() {
-        view.ivArrow.apply {
-            isVisible = isExpandable
-            setOnClickListener { setIsExpanded(!isExpanded) }
+        view.apply {
+            ivArrow.isVisible = isExpandable
+            ivArrow.setOnClickListener { setIsExpanded(!isExpanded) }
+            rootView.setOnClickListener { setIsExpanded(!isExpanded) }
         }
     }
 
@@ -149,7 +152,7 @@ data class ExpandableInfoCardViewVariables(
     val tvSubtitle: TextView,
     val tvValue: TextView,
     val ivArrow: ImageView,
-//    val flExpandableContent: FrameLayout
+    val rootView: ConstraintLayout
 )
 
 data class ExpandableItemData(

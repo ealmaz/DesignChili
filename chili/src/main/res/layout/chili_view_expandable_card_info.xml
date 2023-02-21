@@ -6,7 +6,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:background="@drawable/chili_bg_expandable_info_card"
     android:padding="@dimen/padding_12dp"
-    android:animateLayoutChanges="true">
+    android:animateLayoutChanges="true"
+    android:id="@+id/root_view">
 
     <TextView
         android:id="@+id/tv_title"
