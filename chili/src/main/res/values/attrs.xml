@@ -59,6 +59,11 @@
         <attr name="endIconDrawable"/>
     </declare-styleable>
 
+    <declare-styleable name="FilledSingleSelectorView">
+        <attr name="android:hint"/>
+        <attr name="android:text"/>
+    </declare-styleable>
+
     <declare-styleable name="MaskedInputView">
         <attr name="mask" format="string"/>
         <attr name="allowedInputSymbols" format="string"/>
