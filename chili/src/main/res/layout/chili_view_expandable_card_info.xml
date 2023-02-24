@@ -22,6 +22,21 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:text="К погашению: 8 200,00 с" />
 
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/view_title_shimmer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/view_subtitle_shimmer">
+        <View
+            android:layout_width="@dimen/view_220dp"
+            android:layout_height="@dimen/view_8dp"
+            android:background="@drawable/chili_bg_shimmer"
+            android:layout_marginTop="@dimen/padding_4dp"/>
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
     <TextView
         android:visibility="gone"
         android:id="@+id/tv_subtitle"
@@ -37,6 +52,24 @@
         app:layout_constraintStart_toStartOf="@id/tv_title"
         app:layout_constraintTop_toBottomOf="@id/tv_title"
         tools:text="Дата погашения: 10.10.2022" />
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/view_subtitle_shimmer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/view_title_shimmer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <View
+            android:layout_width="@dimen/view_220dp"
+            android:layout_height="@dimen/view_8dp"
+            android:background="@drawable/chili_bg_shimmer"
+            android:layout_marginTop="@dimen/padding_16dp"
+            android:layout_marginBottom="@dimen/padding_4dp" />
+
+    </com.facebook.shimmer.ShimmerFrameLayout>
 
     <TextView
         android:id="@+id/tv_value"

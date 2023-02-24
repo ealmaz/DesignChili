@@ -15,15 +15,25 @@ import com.design.chili.R
 import com.design.chili.extensions.gone
 import com.design.chili.extensions.setTextOrHide
 import com.design.chili.extensions.visible
-import com.design.chili.view.shimmer.CustomBone
-import com.design.chili.view.shimmer.Shimmering
+import com.design.chili.view.shimmer.FacebookShimmering
+import com.design.chili.view.shimmer.startShimmering
+import com.design.chili.view.shimmer.stopShimmering
+import com.facebook.shimmer.ShimmerFrameLayout
 
 class ExpandableInfoCardView @JvmOverloads constructor(
     context: Context,
     attrs: AttributeSet? = null,
     defStyleAttr: Int = R.attr.expandableInfoCardViewDefaultStyle,
     defStyleRes: Int = R.style.Chili_CardViewStyle_ExpandableInfoCardView,
-) : LinearLayout(context, attrs, defStyleAttr, defStyleRes), Shimmering {
+) : LinearLayout(context, attrs, defStyleAttr, defStyleRes), FacebookShimmering {
+
+    private val mutableShimmeringViewMap = mutableMapOf<View, View?>()
+    private val shimmerViewGroups: List<ShimmerFrameLayout> by lazy {
+        listOf(
+            findViewById(R.id.view_title_shimmer),
+            findViewById(R.id.view_subtitle_shimmer),
+        )
+    }
 
     private lateinit var view: ExpandableInfoCardViewVariables
 
@@ -34,6 +44,7 @@ class ExpandableInfoCardView @JvmOverloads constructor(
     init {
         inflateView(context)
         obtainAttributes(context, attrs, defStyleAttr, defStyleRes)
+        setupViews()
     }
 
     private fun inflateView(context: Context) {
@@ -45,6 +56,8 @@ class ExpandableInfoCardView @JvmOverloads constructor(
             tvValue = view.findViewById(R.id.tv_value),
             ivArrow = view.findViewById(R.id.iv_arrow),
             rootView = view.findViewById(R.id.root_view),
+            titleShimmer = view.findViewById(R.id.view_title_shimmer),
+            subtitleShimmer = view.findViewById(R.id.view_subtitle_shimmer)
         )
     }
 
@@ -64,6 +77,10 @@ class ExpandableInfoCardView @JvmOverloads constructor(
         }
     }
 
+    private fun setupViews() {
+        mutableShimmeringViewMap[view.tvTitle] = view.titleShimmer
+    }
+
 
     fun setTitle(charSequence: CharSequence?) {
         view.tvTitle.text = charSequence
@@ -75,18 +92,26 @@ class ExpandableInfoCardView @JvmOverloads constructor(
 
     fun setSubtitle(charSequence: CharSequence?) {
         view.tvSubtitle.setTextOrHide(charSequence)
+        if (charSequence == null) mutableShimmeringViewMap.remove(view.tvSubtitle)
+        else mutableShimmeringViewMap[view.tvSubtitle] = view.subtitleShimmer
     }
 
     fun setSubtitle(resId: Int?) {
         view.tvSubtitle.setTextOrHide(resId)
+        if (resId == null) mutableShimmeringViewMap.remove(view.tvSubtitle)
+        else mutableShimmeringViewMap[view.tvSubtitle] = view.subtitleShimmer
     }
 
     fun setValue(charSequence: CharSequence?) {
         view.tvValue.setTextOrHide(charSequence)
+        if (charSequence == null) mutableShimmeringViewMap.remove(view.tvValue)
+        else mutableShimmeringViewMap[view.tvValue] = null
     }
 
     fun setValue(resId: Int) {
         view.tvValue.setText(resId)
+        if (resId == null) mutableShimmeringViewMap.remove(view.tvValue)
+        else mutableShimmeringViewMap[view.tvValue] = null
     }
 
     fun setIsExpandable(isExpandable: Boolean?) {
@@ -144,9 +169,16 @@ class ExpandableInfoCardView @JvmOverloads constructor(
         }
     }
 
-    override fun getIgnoredViews(): Array<View> = arrayOf(view.ivArrow)
+    override fun onStartShimmer() {
+        children.forEach { (it as? FacebookShimmering)?.startShimmering() }
+    }
 
-    override fun getCustomBones(): Array<CustomBone> = emptyArray()
+    override fun onStopShimmer() {
+        children.forEach { (it as? FacebookShimmering)?.stopShimmering() }
+    }
+
+    override fun getShimmerLayouts(): List<ShimmerFrameLayout> = shimmerViewGroups
+    override fun getShimmeribleViewsPair(): Map<View, View?> = mutableShimmeringViewMap
 }
 
 data class ExpandableInfoCardViewVariables(
@@ -154,7 +186,9 @@ data class ExpandableInfoCardViewVariables(
     val tvSubtitle: TextView,
     val tvValue: TextView,
     val ivArrow: ImageView,
-    val rootView: ConstraintLayout
+    val rootView: ConstraintLayout,
+    val titleShimmer: View,
+    val subtitleShimmer: View
 )
 
 data class ExpandableItemData(

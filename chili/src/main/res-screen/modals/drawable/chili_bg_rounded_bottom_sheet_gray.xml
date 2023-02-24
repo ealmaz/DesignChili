@@ -4,7 +4,7 @@
     android:shape="rectangle">
     <solid
         android:color="?attr/ChiliBottomSheetGrayBackgroundColor"
-        tools:color="@color/white_1"
+        tools:color="@color/gray_4"
         />
     <corners
         android:topLeftRadius="?attr/ChiliBottomSheetTopCornersRadius"

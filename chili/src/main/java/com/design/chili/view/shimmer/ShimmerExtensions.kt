@@ -4,6 +4,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.core.view.children
 import com.design.chili.extensions.getColorFromAttr
+import com.design.chili.extensions.gone
+import com.design.chili.extensions.invisible
+import com.design.chili.extensions.visible
 import com.eudycontreras.boneslibrary.extensions.disableSkeletonLoading
 import com.eudycontreras.boneslibrary.extensions.dp
 import com.eudycontreras.boneslibrary.framework.skeletons.SkeletonDrawable
@@ -80,4 +83,22 @@ fun ViewGroup.getAllChildViewGroups(): List<ViewGroup> {
         .filter { it is ViewGroup }
         .map { it as ViewGroup }
         .toList()
+}
+
+fun FacebookShimmering.startShimmering() {
+    onStartShimmer()
+    getShimmerLayouts().forEach { it.startShimmer() }
+    getShimmeribleViewsPair().forEach {
+        it.key.invisible()
+        it.value?.visible()
+    }
+}
+
+fun FacebookShimmering.stopShimmering() {
+    onStopShimmer()
+    getShimmerLayouts().forEach { it.stopShimmer() }
+    getShimmeribleViewsPair().forEach {
+        it.key.visible()
+        it.value?.gone()
+    }
 }

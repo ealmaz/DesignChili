@@ -8,21 +8,32 @@ import android.widget.FrameLayout
 import android.widget.TextView
 import com.design.chili.R
 import com.design.chili.extensions.setTextOrHide
-import com.design.chili.view.shimmer.CustomBone
-import com.design.chili.view.shimmer.Shimmering
+import com.design.chili.view.shimmer.FacebookShimmering
+import com.facebook.shimmer.ShimmerFrameLayout
 
 class ExpandableInfoCardItemView @JvmOverloads constructor(
     context: Context,
     attrs: AttributeSet? = null,
     defStyleAttr: Int = R.attr.expandableInfoCardItemViewDefaultStyle,
     defStyleRes: Int = R.style.Chili_CardViewStyle_ExpandableInfoCardItemView
-) : FrameLayout(context, attrs, defStyleAttr, defStyleRes), Shimmering {
+) : FrameLayout(context, attrs, defStyleAttr, defStyleRes), FacebookShimmering {
+
+    private val mutableShimmeringViewMap = mutableMapOf<View, View?>()
+    private val shimmerViewGroup: List<ShimmerFrameLayout> by lazy {
+        listOf(
+            findViewById(R.id.view_title_shimmer),
+            findViewById(R.id.view_subtitle_shimmer),
+            findViewById(R.id.view_title_value_shimmer),
+            findViewById(R.id.view_subtitle_value_shimmer),
+        )
+    }
 
     private lateinit var view: ExpandableInfoCardItemViewVariables
 
     init {
         inflateView(context)
         obtainAttributes(context, attrs, defStyleAttr, defStyleRes)
+        setupViews()
     }
 
     private fun inflateView(context: Context) {
@@ -31,7 +42,11 @@ class ExpandableInfoCardItemView @JvmOverloads constructor(
             tvTitle = view.findViewById(R.id.tv_title),
             tvSubtitle = view.findViewById(R.id.tv_subtitle),
             tvTitleValue = view.findViewById(R.id.tv_title_value),
-            tvSubtitleValue = view.findViewById(R.id.tv_subtitle_value)
+            tvSubtitleValue = view.findViewById(R.id.tv_subtitle_value),
+            tvTitleShimmer = view.findViewById(R.id.view_title_shimmer),
+            tvSubtitleShimmer = view.findViewById(R.id.view_subtitle_shimmer),
+            tvTitleValueShimmer = view.findViewById(R.id.view_title_value_shimmer),
+            tvSubtitleValueShimmer = view.findViewById(R.id.view_subtitle_value_shimmer),
         )
     }
 
@@ -45,6 +60,10 @@ class ExpandableInfoCardItemView @JvmOverloads constructor(
         }
     }
 
+    private fun setupViews() {
+        mutableShimmeringViewMap[view.tvTitle] = view.tvTitleShimmer
+    }
+
 
     fun setTitle(charSequence: CharSequence?) {
         view.tvTitle.text = charSequence
@@ -56,31 +75,42 @@ class ExpandableInfoCardItemView @JvmOverloads constructor(
 
     fun setSubtitle(charSequence: CharSequence?) {
         view.tvSubtitle.setTextOrHide(charSequence)
+        if (charSequence == null) mutableShimmeringViewMap.remove(view.tvSubtitle)
+        else mutableShimmeringViewMap[view.tvSubtitle] = view.tvSubtitleShimmer
     }
 
     fun setSubtitle(resId: Int?) {
         view.tvSubtitle.setTextOrHide(resId)
+        if (resId == null) mutableShimmeringViewMap.remove(view.tvSubtitle)
+        else mutableShimmeringViewMap[view.tvSubtitle] = view.tvSubtitleShimmer
     }
 
     fun setTitleValue(charSequence: CharSequence?) {
         view.tvTitleValue.setTextOrHide(charSequence)
+        if (charSequence == null) mutableShimmeringViewMap.remove(view.tvTitleValue)
+        else mutableShimmeringViewMap[view.tvTitleValue] = view.tvTitleValueShimmer
     }
 
     fun setTitleValue(resId: Int) {
         view.tvTitleValue.setText(resId)
+        mutableShimmeringViewMap[view.tvTitleValue] = view.tvTitleValueShimmer
     }
 
     fun setSubtitleValue(charSequence: CharSequence?) {
         view.tvSubtitleValue.setTextOrHide(charSequence)
+        if (charSequence == null) mutableShimmeringViewMap.remove(view.tvSubtitleValue)
+        else mutableShimmeringViewMap[view.tvSubtitleValue] = view.tvSubtitleValueShimmer
     }
 
     fun setSubtitleValue(resId: Int) {
         view.tvSubtitleValue.setText(resId)
+        mutableShimmeringViewMap[view.tvSubtitleValue] = view.tvSubtitleValueShimmer
     }
 
-    override fun getIgnoredViews(): Array<View> = emptyArray()
-
-    override fun getCustomBones(): Array<CustomBone> = emptyArray()
+    override fun onStartShimmer() {}
+    override fun onStopShimmer() {}
+    override fun getShimmerLayouts(): List<ShimmerFrameLayout> = shimmerViewGroup
+    override fun getShimmeribleViewsPair(): Map<View, View?> = mutableShimmeringViewMap
 }
 
 data class ExpandableInfoCardItemViewVariables(
@@ -88,4 +118,8 @@ data class ExpandableInfoCardItemViewVariables(
     val tvSubtitle: TextView,
     val tvTitleValue: TextView,
     val tvSubtitleValue: TextView,
+    val tvTitleShimmer: View,
+    val tvSubtitleShimmer: View,
+    val tvTitleValueShimmer: View,
+    val tvSubtitleValueShimmer: View,
 )

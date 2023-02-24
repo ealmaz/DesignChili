@@ -194,6 +194,7 @@
         <!-- Shimmer attributes -->
         <item name="ChiliShimmerBoneColor">@color/gray_4</item>
         <item name="ChiliShimmerRayColor">@color/white_1</item>
+        <item name="ChiliShimmerBoneRadius">@dimen/radius_10dp</item>
 
     </style>
 

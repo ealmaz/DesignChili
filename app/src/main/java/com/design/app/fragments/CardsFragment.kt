@@ -6,9 +6,10 @@ import android.view.View
 import com.design.app.MainActivity
 import com.design.app.base.BaseFragment
 import com.design.app.databinding.FragmentCardsBinding
-import com.design.chili.view.shimmer.getViewsByType
 import com.design.chili.view.shimmer.hideShimmer
 import com.design.chili.view.shimmer.showShimmer
+import com.design.chili.view.shimmer.startShimmering
+import com.design.chili.view.shimmer.stopShimmering
 
 class CardsFragment : BaseFragment<FragmentCardsBinding>() {
 
@@ -70,10 +71,14 @@ class CardsFragment : BaseFragment<FragmentCardsBinding>() {
 //        vb.expandable3.showShimmer()
 //        vb.expandable4.showShimmer()
 
-        vb.expandable.run {
-            postDelayed({ showShimmer() }, 1000)
-            postDelayed({ hideShimmer() }, 3000)
+        vb.startShimmer.setOnClickListener {
+            vb.expandable.startShimmering()
         }
+
+        vb.stopShimmer.setOnClickListener {
+            vb.expandable.stopShimmering()
+        }
+
 
     }
 

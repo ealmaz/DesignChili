@@ -2,18 +2,19 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card_cv"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white_1"
-    android:paddingBottom="@dimen/padding_16dp"
     android:animateLayoutChanges="true"
-    android:id="@+id/card_cv">
+    android:background="?ChiliScreenBackground"
+    android:paddingBottom="@dimen/padding_16dp">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
         android:layout_marginTop="@dimen/padding_16dp"
+        android:orientation="vertical"
+        android:paddingHorizontal="@dimen/padding_16dp"
         android:paddingBottom="@dimen/padding_16dp"
         tools:context=".MainActivity">
 
@@ -21,67 +22,90 @@
             android:id="@+id/expandable"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/padding_12dp"
             android:layout_marginHorizontal="@dimen/padding_16dp"
-            app:title="К погашению: 8 200,00 с"
-            app:subtitle="Дата погашения: 10.10.2022"
+            android:layout_marginTop="@dimen/padding_12dp"
             app:isExpandable="true"
-            app:isExpanded="true">
+            app:isExpanded="true"
+            app:subtitle="Дата погашения: 10.10.2022"
+            app:title="К погашению: 8 200,00 с">
 
             <com.design.chili.view.card.ExpandableInfoCardItemView
+                android:id="@+id/item1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/item1"
                 app:title="Сумма к зачислению:"
                 app:titleValue="8 000,00 с" />
 
             <com.design.chili.view.card.ExpandableInfoCardItemView
+                android:id="@+id/item2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/item2"
-                app:title="Сумма кредита: "
-                app:titleValue="8 150,00 с"
                 app:subtitle="Из нее - комиссии и сборы:"
-                app:subtitleValue="150,00 с"/>
+                app:subtitleValue="150,00 с"
+                app:title="Сумма кредита: "
+                app:titleValue="8 150,00 с" />
 
             <com.design.chili.view.card.ExpandableInfoCardItemView
+                android:id="@+id/item3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/item3"
                 app:title="Сумма % по кредиту: " />
         </com.design.chili.view.card.ExpandableInfoCardView>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/padding_14dp">
+
+            <Button
+                android:id="@+id/startShimmer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/Chili.ButtonStyle.Primary"
+                android:text="Start Shimmer"/>
+
+            <Button
+                android:id="@+id/stopShimmer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/Chili.ButtonStyle.Primary"
+                android:layout_marginStart="@dimen/padding_16dp"
+                android:text="Stop Shimmer"/>
+
+        </LinearLayout>
 
         <com.design.chili.view.card.ExpandableInfoCardView
             android:id="@+id/expandable2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/padding_12dp"
             android:layout_marginHorizontal="@dimen/padding_16dp"
-            app:title="К погашению: 8 200,00 с"
-            app:subtitle="Дата погашения: 10.10.2022"
+            android:layout_marginTop="@dimen/padding_12dp"
             app:isExpandable="true"
-            app:isExpanded="false">
+            app:isExpanded="false"
+            app:subtitle="Дата погашения: 10.10.2022"
+            app:title="К погашению: 8 200,00 с">
 
             <com.design.chili.view.card.ExpandableInfoCardItemView
+                android:id="@+id/item21"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/item21"
                 app:title="Сумма к зачислению:"
                 app:titleValue="8 000,00 с" />
 
             <com.design.chili.view.card.ExpandableInfoCardItemView
+                android:id="@+id/item22"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/item22"
-                app:title="Сумма кредита: "
-                app:titleValue="8 150,00 с"
                 app:subtitle="Из нее - комиссии и сборы:"
-                app:subtitleValue="150,00 с"/>
+                app:subtitleValue="150,00 с"
+                app:title="Сумма кредита: "
+                app:titleValue="8 150,00 с" />
 
             <com.design.chili.view.card.ExpandableInfoCardItemView
+                android:id="@+id/item23"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/item23"
                 app:title="Сумма % по кредиту: "
                 app:value="50,00 с" />
 
@@ -92,26 +116,26 @@
             android:id="@+id/expandable3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/padding_12dp"
             android:layout_marginHorizontal="@dimen/padding_16dp"
-            app:title="К погашению"
-            app:value="8 200,00 с"
+            android:layout_marginTop="@dimen/padding_12dp"
             app:isExpandable="false"
-            app:isExpanded="true">
+            app:isExpanded="true"
+            app:title="К погашению"
+            app:value="8 200,00 с">
 
             <com.design.chili.view.card.ExpandableInfoCardItemView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
                 android:id="@+id/item32"
-                app:title="Сумма кредита: "
-                app:titleValue="8 150,00 с"
-                app:subtitle="Из нее - комиссии и сборы:"
-                app:subtitleValue="150,00 с"/>
-
-            <com.design.chili.view.card.ExpandableInfoCardItemView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                app:subtitle="Из нее - комиссии и сборы:"
+                app:subtitleValue="150,00 с"
+                app:title="Сумма кредита: "
+                app:titleValue="8 150,00 с" />
+
+            <com.design.chili.view.card.ExpandableInfoCardItemView
                 android:id="@+id/item33"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 app:title="Сумма % по кредиту: "
                 app:value="50,00 с" />
 
@@ -126,28 +150,28 @@
 
             <com.design.chili.view.card.BalanceCardView
                 android:id="@+id/balanceView"
-                android:layout_marginTop="@dimen/padding_16dp"
                 android:layout_width="0dp"
-                android:layout_weight="1"
                 android:layout_height="wrap_content"
-                app:title="Баланс"
-                app:value="100.00 c"
+                android:layout_marginTop="@dimen/padding_16dp"
+                android:layout_weight="1"
                 app:iconType="chevron"
-                app:roundedCornerMode="single"/>
+                app:roundedCornerMode="single"
+                app:title="Баланс"
+                app:value="100.00 c" />
 
             <com.design.chili.view.card.TitleLogoCardView
-                android:layout_marginTop="@dimen/padding_16dp"
                 android:layout_width="0dp"
-                android:layout_weight="1"
                 android:layout_height="wrap_content"
-                app:title="Баланс"
-                app:iconType="chevron"
-                app:logoDrawable="@drawable/chili_ic_bank_cards"
                 android:layout_marginStart="@dimen/padding_4dp"
-                app:value="100 c"
+                android:layout_marginTop="@dimen/padding_16dp"
+                android:layout_weight="1"
+                app:iconType="chevron"
                 app:isIconClickable="false"
                 app:isSurfaceClickable="true"
-                app:roundedCornerMode="single"/>
+                app:logoDrawable="@drawable/chili_ic_bank_cards"
+                app:roundedCornerMode="single"
+                app:title="Баланс"
+                app:value="100 c" />
 
         </LinearLayout>
 
@@ -155,119 +179,119 @@
             android:id="@+id/balance2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:value="500"
-            app:title="Баланс"
+            android:layout_marginTop="@dimen/padding_16dp"
             app:iconType="chevron"
-            app:isSurfaceClickable="true"
             app:isIconClickable="false"
+            app:isSurfaceClickable="true"
             app:roundedCornerMode="top"
-            android:layout_marginTop="@dimen/padding_16dp"/>
+            app:title="Баланс"
+            app:value="500" />
 
         <com.design.chili.view.card.TitleLogoCardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/padding_16dp"
-            app:title="Баланс"
             app:iconType="chevron"
-            app:isSurfaceClickable="true"
             app:isIconClickable="false"
+            app:isSurfaceClickable="true"
             app:logoDrawable="@drawable/chili_ic_bank_cards"
             app:roundedCornerMode="single"
-            />
+            app:title="Баланс" />
 
         <com.design.chili.view.card.PieChartTitledView
             android:id="@+id/pieChart"
             android:layout_width="@dimen/view_200dp"
             android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding_16dp"
             android:clickable="true"
             android:focusable="true"
-            android:foreground="?selectableItemBackgroundBorderless"
-            android:layout_marginTop="@dimen/padding_16dp"/>
+            android:foreground="?selectableItemBackgroundBorderless" />
 
         <com.design.chili.view.card.PeriodPieChartView
             android:id="@+id/chart"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/padding_16dp"/>
+            android:layout_marginTop="@dimen/padding_16dp" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="@dimen/padding_16dp">
-
-
-            <com.design.chili.view.card.CategoryItemView
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="wrap_content"
-                app:title="title mirfewfwefwefwfwewefwewefwefwefw"
-                app:squircleViewDrawable="@drawable/ic_darkmode_false_"
-                app:isNotificationEnabled="true"
-                android:layout_marginEnd="@dimen/padding_4dp"/>
-
-            <com.design.chili.view.card.CategoryItemView
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="wrap_content"
-                app:title="title mir"
-                app:squircleViewDrawable="@drawable/ic_squircle_phone"
-                android:layout_marginEnd="@dimen/padding_4dp"/>
-
-
-            <com.design.chili.view.card.CategoryItemView
-                android:layout_width="0dp"
-                android:id="@+id/category_view"
-                android:layout_weight="1"
-                android:layout_height="wrap_content"
-                app:title="title mir"
-                app:amountText="550"
-                app:squircleViewDrawable="@drawable/ic_darkmode_false_"
-                android:layout_marginEnd="@dimen/padding_4dp"/>
-
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="@dimen/padding_4dp">
-
-
-            <com.design.chili.view.card.CategoryItemView
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="wrap_content"
-                app:title="title mir"
-                app:amountText="550"
-                app:squircleViewDrawable="@drawable/ic_squircle_phone"
-                android:layout_marginEnd="@dimen/padding_4dp"/>
-
-            <com.design.chili.view.card.CategoryItemView
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="wrap_content"
-                app:title="title mir"
-                app:squircleViewDrawable="@drawable/ic_darkmode_false_"
-                app:isNotificationEnabled="true"
-                android:layout_marginEnd="@dimen/padding_4dp"/>
-
-
-            <com.design.chili.view.card.CategoryItemView
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="wrap_content"
-                app:title="title mir"
-                app:amountText="550"
-                app:squircleViewDrawable="@drawable/ic_darkmode_false_"
-                app:isNotificationEnabled="true"
-                android:layout_marginEnd="@dimen/padding_4dp"/>
-
-        </LinearLayout>
-
-        <LinearLayout
             android:layout_marginTop="@dimen/padding_16dp"
+            android:orientation="horizontal">
+
+
+            <com.design.chili.view.card.CategoryItemView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/padding_4dp"
+                android:layout_weight="1"
+                app:isNotificationEnabled="true"
+                app:squircleViewDrawable="@drawable/ic_darkmode_false_"
+                app:title="title mirfewfwefwefwfwewefwewefwefwefw" />
+
+            <com.design.chili.view.card.CategoryItemView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/padding_4dp"
+                android:layout_weight="1"
+                app:squircleViewDrawable="@drawable/ic_squircle_phone"
+                app:title="title mir" />
+
+
+            <com.design.chili.view.card.CategoryItemView
+                android:id="@+id/category_view"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/padding_4dp"
+                android:layout_weight="1"
+                app:amountText="550"
+                app:squircleViewDrawable="@drawable/ic_darkmode_false_"
+                app:title="title mir" />
+
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding_4dp"
+            android:orientation="horizontal">
+
+
+            <com.design.chili.view.card.CategoryItemView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/padding_4dp"
+                android:layout_weight="1"
+                app:amountText="550"
+                app:squircleViewDrawable="@drawable/ic_squircle_phone"
+                app:title="title mir" />
+
+            <com.design.chili.view.card.CategoryItemView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/padding_4dp"
+                android:layout_weight="1"
+                app:isNotificationEnabled="true"
+                app:squircleViewDrawable="@drawable/ic_darkmode_false_"
+                app:title="title mir" />
+
+
+            <com.design.chili.view.card.CategoryItemView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/padding_4dp"
+                android:layout_weight="1"
+                app:amountText="550"
+                app:isNotificationEnabled="true"
+                app:squircleViewDrawable="@drawable/ic_darkmode_false_"
+                app:title="title mir" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding_16dp"
             android:orientation="horizontal">
 
 
@@ -276,86 +300,86 @@
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="4dp"
                 android:layout_weight="1"
-                app:title="История платежей"
                 app:cardIcon="@drawable/ic_group_1"
                 app:countDrawable="@drawable/ic_group_2"
-                app:isSurfaceClickable="true" />
+                app:isSurfaceClickable="true"
+                app:title="История платежей" />
 
             <com.design.chili.view.card.NavigatorCardView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_marginEnd="4dp"
                 android:layout_weight="1"
-                app:title="dqwdqwd"
                 app:cardIcon="@drawable/ic_group_1"
-                android:layout_marginEnd="4dp"/>
+                app:title="dqwdqwd" />
 
             <com.design.chili.view.card.NavigatorCardView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_marginEnd="4dp"
                 android:layout_weight="1"
-                app:title="wefwefwefwefwefwefwefwefewfwefwewfwefwefwefwefwefwefwefwefwf"
                 app:cardIcon="@drawable/ic_group_1"
-                android:layout_marginEnd="4dp"/>
+                app:title="wefwefwefwefwefwefwefwefewfwefwewfwefwefwefwefwefwefwefwefwf" />
 
         </LinearLayout>
 
         <com.design.chili.view.card.PhoneNumberPickerCardView
+            android:id="@+id/nvn2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding_16dp"
             app:title="Стань абонентом"
-            app:titleIcon="@drawable/ic_combined_shape__2_"
-            android:id="@+id/nvn2"
-            android:layout_marginTop="@dimen/padding_16dp"/>
+            app:titleIcon="@drawable/ic_combined_shape__2_" />
 
         <com.design.chili.view.card.PhoneNumberPickerCardView
             android:id="@+id/pnpcv_numbers"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:title="Стань абонентом"
-            app:titleIcon="@drawable/ic_combined_shape__2_"
+            android:layout_marginTop="@dimen/padding_16dp"
             app:primaryButtonText="Custorm primary"
             app:secondaryButtonText="Custorn sevs"
-            android:layout_marginTop="@dimen/padding_16dp"/>
+            app:title="Стань абонентом"
+            app:titleIcon="@drawable/ic_combined_shape__2_" />
 
         <com.design.chili.view.card.TariffPriceInfoCardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:roundedCornerMode="top"
-            app:title="Пакетов нет. Ваш тариф - Оной!"
-            app:isDividerVisible="true"
-            app:voiceInCost="12 c/ мин"
-            app:voiceOutCost="34 c/ мин"
+            android:layout_marginTop="@dimen/padding_16dp"
             app:internetCost="34 c/ мин"
+            app:isDividerVisible="true"
+            app:roundedCornerMode="top"
             app:smsCost="34 c/ мин"
-            android:layout_marginTop="@dimen/padding_16dp"/>
+            app:title="Пакетов нет. Ваш тариф - Оной!"
+            app:voiceInCost="12 c/ мин"
+            app:voiceOutCost="34 c/ мин" />
 
         <com.design.chili.view.card.TariffPackagesInfoCardView
             android:id="@+id/tpiv"
-            android:layout_marginTop="@dimen/padding_16dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:internetArcTitle="35 ГБ"
-            app:internetArcSubtitle="из 45 ГБ"
-            app:internetArcCaption="Больше интернета"
-            app:callArcTitle="17 мин"
-            app:callArcSubtitle="До 300 мин"
+            android:layout_marginTop="@dimen/padding_16dp"
             app:callArcCaption="Больше минут"
-            app:title="Пакеты активны до 20.06.2021. Внутри сети бесплатно!"
-            app:isDividerVisible="false" />
+            app:callArcSubtitle="До 300 мин"
+            app:callArcTitle="17 мин"
+            app:internetArcCaption="Больше интернета"
+            app:internetArcSubtitle="из 45 ГБ"
+            app:internetArcTitle="35 ГБ"
+            app:isDividerVisible="false"
+            app:title="Пакеты активны до 20.06.2021. Внутри сети бесплатно!" />
 
         <com.design.chili.view.card.TariffPackagesInfoCardView
             android:id="@+id/tpiv2"
-            android:layout_marginTop="@dimen/padding_16dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:internetArcSubtitle="До 100 ГБ"
+            android:layout_marginTop="@dimen/padding_16dp"
+            app:callArcFabVisibility="false"
+            app:callArcIcon="@drawable/ic_darkmode_false_"
+            app:callArcSubtitle="До 300 мин"
             app:internetArcFabVisibility="false"
             app:internetArcIcon="@drawable/ic_darkmode_false_"
-            app:callArcSubtitle="До 300 мин"
-            app:callArcIcon="@drawable/ic_darkmode_false_"
-            app:callArcFabVisibility="false"
-            app:title="Пакеты активны до 20.06.2021. Внутри сети бесплатно!"
-            app:isDividerVisible="false" />
+            app:internetArcSubtitle="До 100 ГБ"
+            app:isDividerVisible="false"
+            app:title="Пакеты активны до 20.06.2021. Внутри сети бесплатно!" />
 
     </LinearLayout>
 
