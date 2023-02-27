@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import android.widget.EditText
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.annotation.StyleRes
 import androidx.appcompat.content.res.AppCompatResources
 import androidx.core.widget.addTextChangedListener
 import com.bumptech.glide.Glide
@@ -201,4 +202,12 @@ fun View.setLeftMargin(margin: Int) {
     val params = layoutParams as ViewGroup.MarginLayoutParams
     params.setMargins(margin, params.topMargin, params.rightMargin, params.bottomMargin)
     layoutParams = params
+}
+
+fun TextView.setAppearance(@StyleRes resId: Int) {
+    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+        this.setTextAppearance(resId)
+    } else {
+        this.setTextAppearance(context, resId)
+    }
 }

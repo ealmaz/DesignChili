@@ -330,4 +330,11 @@
         <attr name="subtitleValue" format="string"/>
     </declare-styleable>
 
+    <declare-styleable name="ViewBalanceInfo">
+        <attr name="title"/>
+        <attr name="subtitle"/>
+        <attr name="value"/>
+        <attr name="icon"/>
+    </declare-styleable>
+
 </resources>
