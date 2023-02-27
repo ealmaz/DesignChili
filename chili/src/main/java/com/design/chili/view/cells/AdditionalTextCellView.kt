@@ -4,19 +4,35 @@ import android.content.Context
 import android.os.Build
 import android.text.Spanned
 import android.util.AttributeSet
+import android.view.View
 import android.widget.TextView
 import androidx.annotation.StringRes
 import androidx.annotation.StyleRes
 import com.design.chili.R
+import com.design.chili.view.shimmer.FacebookShimmering
+import com.facebook.shimmer.ShimmerFrameLayout
 
 class AdditionalTextCellView @JvmOverloads constructor(
     context: Context,
     attrs: AttributeSet? = null,
     defStyleAttr: Int = R.attr.additionalTextCellViewDefaultStyle,
     defStyleRes: Int = R.style.Chili_CellViewStyle_BaseCellViewStyle_AdditionalText
-) : BaseCellView(context, attrs, defStyleAttr, defStyleRes) {
+) : BaseCellView(context, attrs, defStyleAttr, defStyleRes), FacebookShimmering {
 
     private var additionalText: TextView? = null
+
+    private val mutableShimmeringViewMap = mutableMapOf<View, View?>()
+
+    private val shimmerViewGroup: List<ShimmerFrameLayout> by lazy {
+        listOf(
+            findViewById(R.id.view_title_shimmer),
+            findViewById(R.id.view_end_placeholder_shimmer)
+        )
+    }
+
+    init {
+        setupViews()
+    }
 
     override fun inflateView(context: Context) {
         super.inflateView(context)
@@ -35,6 +51,19 @@ class AdditionalTextCellView @JvmOverloads constructor(
                 }
                 recycle()
             }
+    }
+
+    override fun onStartShimmer() {}
+
+    override fun onStopShimmer() {}
+
+    override fun getShimmerLayouts() = shimmerViewGroup
+
+    override fun getShimmeribleViewsPair() = mutableShimmeringViewMap
+
+    private fun setupViews(){
+        mutableShimmeringViewMap[view.tvTitle] = view.tvTitleShimmer
+        mutableShimmeringViewMap[view.flEndPlaceholder] = view.endPlaceholderShimmer
     }
 
     private fun inflateAdditionalText() {
