@@ -62,6 +62,10 @@ class AdditionalDoubleButtonsView @JvmOverloads constructor(
         view.btnSecond.setOnClickListener { onClick.invoke() }
     }
 
+    fun setIsButtonsEnabled(isEnabled: Boolean){
+        view.btnFirst.isEnabled = isEnabled
+        view.btnSecond.isEnabled = isEnabled
+    }
 
 }
 

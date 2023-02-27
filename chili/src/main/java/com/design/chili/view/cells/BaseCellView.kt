@@ -43,7 +43,9 @@ open class BaseCellView @JvmOverloads constructor(
             tvSubtitle = view.findViewById(R.id.tv_subtitle),
             divider = view.findViewById(R.id.divider),
             rootView = view.findViewById(R.id.root_view),
-            chevron = view.findViewById(R.id.iv_chevron)
+            chevron = view.findViewById(R.id.iv_chevron),
+            tvTitleShimmer = view.findViewById(R.id.view_title_shimmer),
+            endPlaceholderShimmer = view.findViewById(R.id.view_end_placeholder_shimmer)
         )
     }
 
@@ -273,5 +275,6 @@ data class BaseCellViewVariables(
     var tvSubtitle: TextView,
     var divider: View,
     var rootView: ConstraintLayout,
-    var chevron: ImageView
-)
+    var chevron: ImageView,
+    val tvTitleShimmer: View,
+    val endPlaceholderShimmer: View)
