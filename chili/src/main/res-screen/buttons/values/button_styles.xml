@@ -52,5 +52,7 @@
     <style name="Chili.LoaderButton">
     </style>
 
+    <style name="Chili.ViewBalanceInfo">
+    </style>
 
 </resources>

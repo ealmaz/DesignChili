@@ -991,6 +991,15 @@
             app:title="Заголовок"
             app:icon="@drawable/chili_ic_success" />
 
+        <com.design.chili.view.cells.ViewBalanceInfo
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding_8dp"
+            app:title="Общий баланс"
+            app:subtitle="На связь и кошелек О!Деньги"
+            app:value="323,10 c"
+            app:icon="@drawable/ic_info"/>
+
     </LinearLayout>
 
 </ScrollView>
