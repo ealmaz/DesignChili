@@ -30,7 +30,7 @@ internal var View.lastItemClickTime: Long
         return getTag(R.id.lastItemClickTime) as? Long ?: 0L
     }
 
-internal fun View.setOnSingleClickListener(action: () -> Unit) {
+fun View.setOnSingleClickListener(action: () -> Unit) {
     setOnClickListener {
         if (lastItemClickTime == 0L
             || TimeUnit.MILLISECONDS.toSeconds(System.currentTimeMillis() - lastItemClickTime) >= 1) {
@@ -40,7 +40,7 @@ internal fun View.setOnSingleClickListener(action: () -> Unit) {
     }
 }
 
-internal fun View.setOnDoubleClickListener(action: () -> Unit) {
+fun View.setOnDoubleClickListener(action: () -> Unit) {
     setOnClickListener {
         val clickTime = System.currentTimeMillis()
         if (TimeUnit.MILLISECONDS.toSeconds(clickTime - lastItemClickTime) < 0.2) action()
