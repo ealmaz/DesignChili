@@ -7,10 +7,7 @@ import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.widget.ImageView
 import android.widget.TextView
-import androidx.annotation.ColorInt
-import androidx.annotation.DrawableRes
-import androidx.annotation.StringRes
-import androidx.annotation.StyleRes
+import androidx.annotation.*
 import androidx.constraintlayout.widget.ConstraintLayout
 import com.bumptech.glide.Glide
 import com.design.chili.R
@@ -25,6 +22,8 @@ class ViewBalanceInfo @JvmOverloads constructor(
 ) : ConstraintLayout(context, attributeSet, defStyleAttr, defStyleRes) {
 
     private lateinit var view: BalanceInfoViewVariables
+    private var topPadding: Int = 0
+    private var bottomPadding: Int = 0
 
     init {
         initView(context)
@@ -58,6 +57,9 @@ class ViewBalanceInfo @JvmOverloads constructor(
             setSubtitle(getString(R.styleable.ViewBalanceInfo_subtitle))
             setValue(getString(R.styleable.ViewBalanceInfo_value))
             setIcon(getDrawable(R.styleable.ViewBalanceInfo_icon))
+            setVerticalPadding(getResourceId(R.styleable.ViewBalanceInfo_rootVerticalPadding, R.dimen.view_0dp))
+            setTopPadding(getResourceId(R.styleable.ViewBalanceInfo_rootTopPadding, R.dimen.view_0dp))
+            setBottomPadding(getResourceId(R.styleable.ViewBalanceInfo_rootBottomPadding, R.dimen.view_0dp))
             recycle()
         }
     }
@@ -120,6 +122,23 @@ class ViewBalanceInfo @JvmOverloads constructor(
             .load(url)
             .dontTransform()
             .into(view.ivIcon)
+    }
+
+    fun setVerticalPadding(@DimenRes resId: Int) {
+        val padding = resources.getDimensionPixelSize(resId)
+        view.root.setPadding(0, padding, 0, padding)
+    }
+
+    fun setTopPadding(@DimenRes resId: Int) {
+        val padding = resources.getDimensionPixelSize(resId)
+        topPadding = padding
+        view.root.setPadding(0, topPadding, 0, bottomPadding)
+    }
+
+    fun setBottomPadding(@DimenRes resId: Int) {
+        val padding = resources.getDimensionPixelSize(resId)
+        bottomPadding = padding
+        view.root.setPadding(0, topPadding, 0, bottomPadding)
     }
 }
 

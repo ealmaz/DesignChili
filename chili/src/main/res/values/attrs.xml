@@ -335,6 +335,9 @@
         <attr name="subtitle"/>
         <attr name="value"/>
         <attr name="icon"/>
+        <attr name="rootVerticalPadding" format="dimension"/>
+        <attr name="rootTopPadding" format="dimension"/>
+        <attr name="rootBottomPadding" format="dimension"/>
     </declare-styleable>
 
 </resources>
