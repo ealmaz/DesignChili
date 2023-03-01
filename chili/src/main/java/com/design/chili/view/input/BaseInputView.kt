@@ -23,6 +23,7 @@ import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.ContextCompat
 import androidx.core.view.updatePadding
 import com.design.chili.R
+import com.design.chili.extensions.*
 import com.design.chili.extensions.gone
 import com.design.chili.extensions.setOnDoubleClickListener
 import com.design.chili.extensions.setOnSingleClickListener
@@ -274,13 +275,18 @@ open class BaseInputView @JvmOverloads constructor(
     }
 
     fun disableEdition() {
-        view.inputField.isEnabled = false
+        view.inputField.apply {
+            isEnabled = false
+            setTextColor(context.getColorFromAttr(R.attr.ChiliInputViewHintTextColor))
+        }
     }
 
     fun isInputEnabled() = view.inputField.isEnabled
 
     fun setIsInputEnabled(isEnabled: Boolean) {
         view.inputField.isEnabled = isEnabled
+        if (!isEnabled)
+            view.inputField.setTextColor(context.getColorFromAttr(R.attr.ChiliInputViewHintTextColor))
     }
 
     fun disableSystemKeyboard() {
