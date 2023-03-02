@@ -16,7 +16,7 @@
         <item name="ChiliTextSizeH9">@dimen/text_12sp</item>
         <item name="ChiliTextSizeH10">@dimen/text_10sp</item>
 
-        <item name="ChiliPrimaryTextColor">@color/black_5</item>
+        <item name="ChiliPrimaryTextColor">@color/chili_state_primary_text_color</item>
         <item name="ChiliSecondaryTextColor">@color/gray_1</item>
         <item name="ChiliMarkedTextColor">@color/black_1</item>
         <item name="ChiliErrorTextColor">@color/red_1</item>
