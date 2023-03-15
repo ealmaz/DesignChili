@@ -139,7 +139,7 @@
     </style>
 
     <style name="Chili.H2.Primary.700">
-        <item name="android:fontFamily">?attr/ChiliItalicTextFont</item>
+        <item name="android:fontFamily">?attr/Chili700TextFont</item>
     </style>
 
     <style name="Chili.H2.Secondary.Bold">
@@ -208,12 +208,20 @@
         <item name="android:fontFamily">?attr/ChiliItalicTextFont</item>
     </style>
 
+    <style name="Chili.H3.Primary.700">
+        <item name="android:fontFamily">?attr/Chili700TextFont</item>
+    </style>
+
     <style name="Chili.H3.Secondary.Bold">
         <item name="android:fontFamily">?attr/ChiliBoldTextFont</item>
     </style>
 
     <style name="Chili.H3.Secondary.Italic">
         <item name="android:fontFamily">?attr/ChiliItalicTextFont</item>
+    </style>
+
+    <style name="Chili.H3.Secondary.700">
+        <item name="android:fontFamily">?attr/Chili700TextFont</item>
     </style>
 
     <style name="Chili.H3.Marked.Bold">
@@ -224,12 +232,20 @@
         <item name="android:fontFamily">?attr/ChiliItalicTextFont</item>
     </style>
 
+    <style name="Chili.H3.Marked.700">
+        <item name="android:fontFamily">?attr/Chili700TextFont</item>
+    </style>
+
     <style name="Chili.H3.Error.Bold">
         <item name="android:fontFamily">?attr/ChiliBoldTextFont</item>
     </style>
 
     <style name="Chili.H3.Error.Italic">
         <item name="android:fontFamily">?attr/ChiliItalicTextFont</item>
+    </style>
+
+    <style name="Chili.H3.Error.700">
+        <item name="android:fontFamily">?attr/Chili700TextFont</item>
     </style>
 
 
@@ -262,12 +278,20 @@
         <item name="android:fontFamily">?attr/ChiliItalicTextFont</item>
     </style>
 
+    <style name="Chili.H4.Primary.700">
+        <item name="android:fontFamily">?attr/Chili700TextFont</item>
+    </style>
+
     <style name="Chili.H4.Secondary.Bold">
         <item name="android:fontFamily">?attr/ChiliBoldTextFont</item>
     </style>
 
     <style name="Chili.H4.Secondary.Italic">
         <item name="android:fontFamily">?attr/ChiliItalicTextFont</item>
+    </style>
+
+    <style name="Chili.H4.Secondary.700">
+        <item name="android:fontFamily">?attr/Chili700TextFont</item>
     </style>
 
     <style name="Chili.H4.Marked.Bold">
@@ -278,12 +302,20 @@
         <item name="android:fontFamily">?attr/ChiliItalicTextFont</item>
     </style>
 
+    <style name="Chili.H4.Marked.700">
+        <item name="android:fontFamily">?attr/Chili700TextFont</item>
+    </style>
+
     <style name="Chili.H4.Error.Bold">
         <item name="android:fontFamily">?attr/ChiliBoldTextFont</item>
     </style>
 
     <style name="Chili.H4.Error.Italic">
         <item name="android:fontFamily">?attr/ChiliItalicTextFont</item>
+    </style>
+
+    <style name="Chili.H4.Error.700">
+        <item name="android:fontFamily">?attr/Chili700TextFont</item>
     </style>
 
 
@@ -316,12 +348,20 @@
         <item name="android:fontFamily">?attr/ChiliItalicTextFont</item>
     </style>
 
+    <style name="Chili.H5.Primary.700">
+        <item name="android:fontFamily">?attr/Chili700TextFont</item>
+    </style>
+
     <style name="Chili.H5.Secondary.Bold">
         <item name="android:fontFamily">?attr/ChiliBoldTextFont</item>
     </style>
 
     <style name="Chili.H5.Secondary.Italic">
         <item name="android:fontFamily">?attr/ChiliItalicTextFont</item>
+    </style>
+
+    <style name="Chili.H5.Secondary.700">
+        <item name="android:fontFamily">?attr/Chili700TextFont</item>
     </style>
 
     <style name="Chili.H5.Marked.Bold">
@@ -332,12 +372,20 @@
         <item name="android:fontFamily">?attr/ChiliItalicTextFont</item>
     </style>
 
+    <style name="Chili.H5.Marked.700">
+        <item name="android:fontFamily">?attr/Chili700TextFont</item>
+    </style>
+
     <style name="Chili.H5.Error.Bold">
         <item name="android:fontFamily">?attr/ChiliBoldTextFont</item>
     </style>
 
     <style name="Chili.H5.Error.Italic">
         <item name="android:fontFamily">?attr/ChiliItalicTextFont</item>
+    </style>
+
+    <style name="Chili.H5.Error.700">
+        <item name="android:fontFamily">?attr/Chili700TextFont</item>
     </style>
 
 
@@ -370,12 +418,20 @@
         <item name="android:fontFamily">?attr/ChiliItalicTextFont</item>
     </style>
 
+    <style name="Chili.H6.Primary.700">
+        <item name="android:fontFamily">?attr/Chili700TextFont</item>
+    </style>
+
     <style name="Chili.H6.Secondary.Bold">
         <item name="android:fontFamily">?attr/ChiliBoldTextFont</item>
     </style>
 
     <style name="Chili.H6.Secondary.Italic">
         <item name="android:fontFamily">?attr/ChiliItalicTextFont</item>
+    </style>
+
+    <style name="Chili.H6.Secondary.700">
+        <item name="android:fontFamily">?attr/Chili700TextFont</item>
     </style>
 
     <style name="Chili.H6.Marked.Bold">
@@ -386,12 +442,20 @@
         <item name="android:fontFamily">?attr/ChiliItalicTextFont</item>
     </style>
 
+    <style name="Chili.H6.Marked.700">
+        <item name="android:fontFamily">?attr/Chili700TextFont</item>
+    </style>
+
     <style name="Chili.H6.Error.Bold">
         <item name="android:fontFamily">?attr/ChiliBoldTextFont</item>
     </style>
 
     <style name="Chili.H6.Error.Italic">
         <item name="android:fontFamily">?attr/ChiliItalicTextFont</item>
+    </style>
+
+    <style name="Chili.H6.Error.700">
+        <item name="android:fontFamily">?attr/Chili700TextFont</item>
     </style>
 
 
@@ -563,12 +627,20 @@
         <item name="android:fontFamily">?attr/ChiliItalicTextFont</item>
     </style>
 
+    <style name="Chili.H9.Primary.700">
+        <item name="android:fontFamily">?attr/Chili700TextFont</item>
+    </style>
+
     <style name="Chili.H9.Secondary.Bold">
         <item name="android:fontFamily">?attr/ChiliBoldTextFont</item>
     </style>
 
     <style name="Chili.H9.Secondary.Italic">
         <item name="android:fontFamily">?attr/ChiliItalicTextFont</item>
+    </style>
+
+    <style name="Chili.H9.Secondary.700">
+        <item name="android:fontFamily">?attr/Chili700TextFont</item>
     </style>
 
     <style name="Chili.H9.Marked.Bold">
@@ -579,12 +651,20 @@
         <item name="android:fontFamily">?attr/ChiliItalicTextFont</item>
     </style>
 
+    <style name="Chili.H9.Marked.700">
+        <item name="android:fontFamily">?attr/Chili700TextFont</item>
+    </style>
+
     <style name="Chili.H9.Error.Bold">
         <item name="android:fontFamily">?attr/ChiliBoldTextFont</item>
     </style>
 
     <style name="Chili.H9.Error.Italic">
         <item name="android:fontFamily">?attr/ChiliItalicTextFont</item>
+    </style>
+
+    <style name="Chili.H9.Error.700">
+        <item name="android:fontFamily">?attr/Chili700TextFont</item>
     </style>
 
 
@@ -617,12 +697,20 @@
         <item name="android:fontFamily">?attr/ChiliItalicTextFont</item>
     </style>
 
+    <style name="Chili.H10.Primary.700">
+        <item name="android:fontFamily">?attr/Chili700TextFont</item>
+    </style>
+
     <style name="Chili.H10.Secondary.Bold">
         <item name="android:fontFamily">?attr/ChiliBoldTextFont</item>
     </style>
 
     <style name="Chili.H10.Secondary.Italic">
         <item name="android:fontFamily">?attr/ChiliItalicTextFont</item>
+    </style>
+
+    <style name="Chili.H10.Secondary.700">
+        <item name="android:fontFamily">?attr/Chili700TextFont</item>
     </style>
 
     <style name="Chili.H10.Marked.Bold">
@@ -633,12 +721,20 @@
         <item name="android:fontFamily">?attr/ChiliItalicTextFont</item>
     </style>
 
+    <style name="Chili.H10.Marked.700">
+        <item name="android:fontFamily">?attr/Chili700TextFont</item>
+    </style>
+
     <style name="Chili.H10.Error.Bold">
         <item name="android:fontFamily">?attr/ChiliBoldTextFont</item>
     </style>
 
     <style name="Chili.H10.Error.Italic">
         <item name="android:fontFamily">?attr/ChiliItalicTextFont</item>
+    </style>
+
+    <style name="Chili.H10.Error.700">
+        <item name="android:fontFamily">?attr/Chili700TextFont</item>
     </style>
 
 </resources>
