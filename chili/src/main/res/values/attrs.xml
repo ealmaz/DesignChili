@@ -332,7 +332,6 @@
 
     <declare-styleable name="ViewBalanceInfo">
         <attr name="title"/>
-        <attr name="subtitle"/>
         <attr name="value"/>
         <attr name="icon"/>
         <attr name="rootVerticalPadding" format="dimension"/>

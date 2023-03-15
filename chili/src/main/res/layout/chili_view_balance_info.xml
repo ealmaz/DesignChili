@@ -13,33 +13,21 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/padding_16dp"
-        android:textAppearance="@style/Chili.H9.Marked.Bold"
-        app:layout_constraintHorizontal_bias="0"
+        android:layout_marginTop="@dimen/padding_12dp"
+        android:layout_marginBottom="@dimen/padding_12dp"
+        android:textAppearance="@style/Chili.H9.Primary"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:text="title" />
-
-    <TextView
-        android:id="@+id/tv_subtitle"
-        style="@style/Chili.SingleLineTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/padding_16dp"
-        android:layout_marginTop="@dimen/padding_2dp"
-        android:textAppearance="@style/Chili.H9.Primary"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_title"
-        tools:text="Value" />
 
     <TextView
         android:id="@+id/tv_value"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="@dimen/padding_12dp"
-        android:textAppearance="@style/Chili.H6.Marked.Bold"
-        app:layout_constraintBottom_toBottomOf="@id/tv_subtitle"
+        android:textAppearance="@style/Chili.H7.Marked.Bold"
+        app:layout_constraintBottom_toBottomOf="@id/tv_title"
         app:layout_constraintEnd_toStartOf="@id/iv_icon"
         app:layout_constraintTop_toTopOf="@id/tv_title"
         tools:text="323.50 c" />
@@ -50,7 +38,7 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="@dimen/padding_16dp"
         android:src="@drawable/ic_info"
-        app:layout_constraintBottom_toBottomOf="@id/tv_subtitle"
+        app:layout_constraintBottom_toBottomOf="@id/tv_title"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@id/tv_title" />
 

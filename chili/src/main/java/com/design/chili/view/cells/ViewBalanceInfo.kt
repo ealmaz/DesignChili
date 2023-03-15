@@ -35,7 +35,6 @@ class ViewBalanceInfo @JvmOverloads constructor(
         this.view = BalanceInfoViewVariables(
             root = view.findViewById(R.id.root),
             tvTitle = view.findViewById(R.id.tv_title),
-            tvSubtitle = view.findViewById(R.id.tv_subtitle),
             tvValue = view.findViewById(R.id.tv_value),
             ivIcon = view.findViewById(R.id.iv_icon)
         )
@@ -54,7 +53,6 @@ class ViewBalanceInfo @JvmOverloads constructor(
             defStyleRes
         ).run {
             setTitle(getString(R.styleable.ViewBalanceInfo_title))
-            setSubtitle(getString(R.styleable.ViewBalanceInfo_subtitle))
             setValue(getString(R.styleable.ViewBalanceInfo_value))
             setIcon(getDrawable(R.styleable.ViewBalanceInfo_icon))
             setVerticalPadding(getResourceId(R.styleable.ViewBalanceInfo_rootVerticalPadding, R.dimen.view_0dp))
@@ -74,18 +72,6 @@ class ViewBalanceInfo @JvmOverloads constructor(
 
     fun setTitleTextAppearance(@StyleRes resId: Int) {
         view.tvTitle.setAppearance(resId)
-    }
-
-    fun setSubtitle(text: String?) {
-        view.tvSubtitle.setTextOrHide(text)
-    }
-
-    fun setSubtitle(@StringRes textResId: Int) {
-        view.tvSubtitle.setTextOrHide(textResId)
-    }
-
-    fun setSubtitleTextAppearance(@StyleRes resId: Int) {
-        view.tvSubtitle.setAppearance(resId)
     }
 
     fun setValue(text: String?) {
@@ -145,7 +131,6 @@ class ViewBalanceInfo @JvmOverloads constructor(
 data class BalanceInfoViewVariables(
     val root: ConstraintLayout,
     val tvTitle: TextView,
-    val tvSubtitle: TextView,
     val tvValue: TextView,
     val ivIcon: ImageView
 )
