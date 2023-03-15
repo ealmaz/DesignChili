@@ -995,22 +995,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/padding_8dp"
-            app:title="Общий баланс"
-            app:subtitle="На связь и кошелек О!Деньги"
+            app:title="На связь и кошелек О!Деньги"
             app:value="323,10 c"
-            app:icon="@drawable/ic_info"
-            app:rootTopPadding="@dimen/padding_16dp"
-            app:rootBottomPadding="@dimen/padding_8dp"/>
-
-        <com.design.chili.view.cells.ViewBalanceInfo
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:title="Общий баланс"
-            app:subtitle="На связь и кошелек О!Деньги"
-            app:value="323,10 c"
-            app:icon="@drawable/ic_info"
-            app:rootTopPadding="@dimen/padding_8dp"
-            app:rootBottomPadding="@dimen/padding_16dp"/>
+            app:icon="@drawable/ic_info" />
 
     </LinearLayout>
 
