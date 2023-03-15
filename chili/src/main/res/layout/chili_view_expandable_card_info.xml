@@ -82,7 +82,7 @@
         android:id="@+id/iv_arrow"
         android:layout_width="@dimen/view_24dp"
         android:layout_height="@dimen/view_24dp"
-        android:src="@drawable/chili_ic_chevron_up_24dp"
+        android:src="@drawable/chili_ic_shevron_down"
         android:background="?selectableItemBackgroundBorderless"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

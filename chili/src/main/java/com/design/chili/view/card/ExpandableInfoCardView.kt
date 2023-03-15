@@ -135,12 +135,12 @@ class ExpandableInfoCardView @JvmOverloads constructor(
     fun setIsExpanded(isExpanded: Boolean?) {
         this.isExpanded = isExpanded ?: false
         if (this.isExpanded) {
-            rotateChevron(0f)
+            rotateChevron(180f)
             children.forEach {
                 if (it is ExpandableInfoCardItemView) it.visible()
             }
         } else {
-            rotateChevron(180f)
+            rotateChevron(0f)
             children.forEach {
                 if (it is ExpandableInfoCardItemView) it.gone()
             }
