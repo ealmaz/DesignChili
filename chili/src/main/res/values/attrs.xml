@@ -45,6 +45,7 @@
         <attr name="android:enabled"/>
         <attr name="android:textAllCaps"/>
         <attr name="android:maxLength"/>
+        <attr name="android:editTextColor" format="reference"/>
         <attr name="android:textAppearance" format="reference"/>
         <attr name="message" format="string"/>
         <attr name="errorMessage" format="string"/>

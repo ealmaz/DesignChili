@@ -23,9 +23,8 @@ import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.ContextCompat
 import androidx.core.view.updatePadding
 import com.design.chili.R
+import com.design.chili.extensions.*
 import com.design.chili.extensions.gone
-import com.design.chili.extensions.setOnDoubleClickListener
-import com.design.chili.extensions.setOnSingleClickListener
 import com.design.chili.extensions.visible
 import com.design.chili.util.cyrillicRegex
 import com.design.chili.view.input.text_watchers.ClearTextIconTextWatcher
@@ -128,6 +127,9 @@ open class BaseInputView @JvmOverloads constructor(
             }
             getResourceId(R.styleable.BaseInputView_android_textAppearance, -1).takeIf { it != -1 }?.let {
                 setupInputTextAppearance(it)
+            }
+            getColorStateList(R.styleable.BaseInputView_android_editTextColor)?.let {
+                view.inputField.setTextColor(it)
             }
             getInteger(R.styleable.BaseInputView_android_maxLength, -1)
                 .takeIf { it != -1 }?.let {
