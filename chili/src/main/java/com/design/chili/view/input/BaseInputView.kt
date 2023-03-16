@@ -128,7 +128,7 @@ open class BaseInputView @JvmOverloads constructor(
             getResourceId(R.styleable.BaseInputView_android_textAppearance, -1).takeIf { it != -1 }?.let {
                 setupInputTextAppearance(it)
             }
-            getColor(R.styleable.BaseInputView_android_textColor, ContextCompat.getColor(context, R.color.chili_state_primary_text_color)).let {
+            getColorStateList(R.styleable.BaseInputView_android_editTextColor)?.let {
                 view.inputField.setTextColor(it)
             }
             getInteger(R.styleable.BaseInputView_android_maxLength, -1)
