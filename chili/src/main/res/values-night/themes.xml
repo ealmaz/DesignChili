@@ -5,7 +5,7 @@
 
 
         <!-- Text appearance-->
-        <item name="ChiliPrimaryTextColor">@color/chili_state_primary_text_color</item>
+        <item name="ChiliPrimaryTextColor">@color/gray_3</item>
         <item name="ChiliMarkedTextColor">@color/white_1</item>
         <!-- End text appearance-->
 
