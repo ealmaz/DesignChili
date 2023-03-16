@@ -8,7 +8,7 @@
         <item name="errorMessageTextColor">?attr/ChiliInputViewErrorMessageTextColor</item>
         <item name="messageTextColor">?attr/ChiliInputViewMessageTextColor</item>
         <item name="android:textAppearance">@style/Chili.H5.Primary.Bold</item>
-        <item name="android:textColor">@color/chili_state_primary_text_color</item>
+        <item name="android:editTextColor">@color/chili_state_primary_text_color</item>
     </style>
 
 
