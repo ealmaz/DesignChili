@@ -77,6 +77,25 @@ open class BaseCellView @JvmOverloads constructor(
                 getDimensionPixelSize(R.styleable.BaseCellView_cellIconVerticalMargin, -1).takeIf { it != -1 }?.let {
                     updateIconMargin(topMarginPx = it, bottomMarginPx = it)
                 }
+                getDimensionPixelSize(R.styleable.BaseCellView_cellIconHorizontalMargin, -1).takeIf { it != -1 }?.let {
+                    updateIconMargin(startMarginPx = it, endMarginPx = it)
+                }
+
+                getDimensionPixelSize(R.styleable.BaseCellView_cellIconStartMargin, -1).takeIf { it != -1 }?.let {
+                    updateIconMargin(startMarginPx = it)
+                }
+
+                getDimensionPixelSize(R.styleable.BaseCellView_cellIconEndMargin, -1).takeIf { it != -1 }?.let {
+                    updateIconMargin(endMarginPx = it)
+                }
+
+                getDimensionPixelSize(R.styleable.BaseCellView_cellIconTopMargin, -1).takeIf { it != -1 }?.let {
+                    updateIconMargin(topMarginPx = it)
+                }
+
+                getDimensionPixelSize(R.styleable.BaseCellView_cellIconBottomMargin, -1).takeIf { it != -1 }?.let {
+                    updateIconMargin(bottomMarginPx = it)
+                }
                 getColor(R.styleable.BaseCellView_squircleIconBackgroundColor, -1).takeIf { it != -1 }?.let {
                     setSquircleIconBackgroundColor(it)
                 }
@@ -116,6 +135,17 @@ open class BaseCellView @JvmOverloads constructor(
         }
     }
 
+    fun updateTitleMargin(startMarginPx: Int? = null, topMarginPx: Int? = null, endMarginPx: Int? = null, bottomMarginPx: Int? = null) {
+        val param = view.tvTitle.layoutParams as? MarginLayoutParams ?: return
+        param.apply {
+            leftMargin = startMarginPx ?: leftMargin
+            topMargin = topMarginPx ?: topMargin
+            rightMargin = endMarginPx ?: rightMargin
+            bottomMargin = bottomMarginPx ?: bottomMargin
+        }
+        view.tvTitle.layoutParams = param
+    }
+
     fun setSubtitle(text: String?) {
         view.tvSubtitle.setTextOrHide(text)
     }
@@ -135,6 +165,7 @@ open class BaseCellView @JvmOverloads constructor(
     fun setIcon(@DrawableRes drawableRes: Int) {
         view.ivIcon.apply {
             visible()
+            updateTitleMargin(startMarginPx = 0)
             setImageResource(drawableRes)
         }
     }
@@ -142,6 +173,7 @@ open class BaseCellView @JvmOverloads constructor(
     fun setIcon(drawable: Drawable) {
         view.ivIcon.apply {
             visible()
+            updateTitleMargin(startMarginPx = 0)
             setImageDrawable(drawable)
         }
     }
@@ -149,6 +181,7 @@ open class BaseCellView @JvmOverloads constructor(
     fun setIcon(url: String?, placeHolderResId: Int? = null) {
         view.ivIcon.apply {
             visible()
+            updateTitleMargin(startMarginPx = 0)
             Glide.with(this)
                 .load(url)
                 .placeholder(context.drawable(placeHolderResId?:R.drawable.chili_ic_stub))
@@ -183,6 +216,7 @@ open class BaseCellView @JvmOverloads constructor(
             view.ivIcon.run {
                 setImageByUrl(url)
                 visible()
+                updateTitleMargin(startMarginPx = 0)
             }
         }
     }

@@ -218,6 +218,11 @@
             <enum name="large" value="-3"/>
         </attr>
         <attr name="cellIconVerticalMargin" format="dimension"/>
+        <attr name="cellIconHorizontalMargin" format="dimension"/>
+        <attr name="cellIconTopMargin" format="dimension"/>
+        <attr name="cellIconBottomMargin" format="dimension"/>
+        <attr name="cellIconStartMargin" format="dimension"/>
+        <attr name="cellIconEndMargin" format="dimension"/>
         <attr name="roundedCornerMode"/>
         <attr name="isDividerVisible"/>
         <attr name="isSurfaceClickable"/>

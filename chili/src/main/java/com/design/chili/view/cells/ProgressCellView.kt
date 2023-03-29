@@ -1,6 +1,7 @@
 package com.design.chili.view.cells
 
 import android.content.Context
+import android.text.Spanned
 import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.widget.LinearLayout
@@ -70,12 +71,20 @@ class ProgressCellView @JvmOverloads constructor(
         view.tvTitle.setText(textResId)
     }
 
+    fun setTitle(spanned: Spanned) {
+        view.tvTitle.text = spanned
+    }
+
     fun setDescriptionText(description: String) {
         view.tvDescription.text = description
     }
 
     fun setDescriptionText(@StringRes descriptionResId: Int) {
         view.tvDescription.setText(descriptionResId)
+    }
+
+    fun setDescriptionText(spanned: Spanned) {
+        view.tvDescription.text = spanned
     }
 }
 
