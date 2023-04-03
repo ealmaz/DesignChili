@@ -44,6 +44,7 @@
     <attr name="ChiliCardViewCornerRadius" format="dimension"/>
     <attr name="ChiliCardViewCornerRadius10" format="dimension"/>
     <attr name="ChiliCardViewCornerRadius12" format="dimension"/>
+    <attr name="ChiliCardViewCornerRadius24" format="dimension"/>
     <attr name="ChiliCardViewSquircleBackground" format="reference"/>
     <attr name="ChiliCardViewPhonePickerDividerColor" format="color"/>
     <attr name="ChiliAnimatedLeftoverAddButtonBackground" format="color"/>
@@ -203,5 +204,9 @@
     <attr name="ChiliShimmerBoneColor" format="color"/>
     <attr name="ChiliShimmerRayColor" format="color"/>
     <attr name="ChiliShimmerBoneRadius" format="dimension"/>
+
+    <!-- NotifiedBalanceCardView -->
+    <attr name="ChiliNotifiedBalanceCardBackgroundTint" format="color"/>
+    <attr name="ChiliNotifiedBalanceCardNotificationColor" format="color"/>
 
 </resources>

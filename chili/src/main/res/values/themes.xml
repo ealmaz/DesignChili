@@ -166,6 +166,7 @@
         <item name="ChiliCardViewCornerRadius">@dimen/radius_4dp</item>
         <item name="ChiliCardViewCornerRadius10">@dimen/radius_10dp</item>
         <item name="ChiliCardViewCornerRadius12">@dimen/radius_12dp</item>
+        <item name="ChiliCardViewCornerRadius24">@dimen/radius_24dp</item>
         <item name="ChiliCardViewSquircleBackground">@color/gray_3</item>
         <item name="ChiliCardViewPhonePickerDividerColor">@color/gray_5</item>
         <item name="ChiliAnimatedLeftoverAddButtonBackground">@color/white_1</item>
@@ -195,6 +196,10 @@
         <item name="ChiliShimmerBoneColor">@color/gray_4</item>
         <item name="ChiliShimmerRayColor">@color/white_1</item>
         <item name="ChiliShimmerBoneRadius">@dimen/radius_10dp</item>
+
+        <!-- NotifiedBalanceCardView -->
+        <item name="ChiliNotifiedBalanceCardBackgroundTint">@color/magenta_1</item>
+        <item name="ChiliNotifiedBalanceCardNotificationColor">@color/white_1</item>
 
     </style>
 

@@ -198,6 +198,18 @@
             app:roundedCornerMode="single"
             app:title="Баланс" />
 
+        <com.design.chili.view.card.NotifiedBalanceCardView
+            android:id="@+id/notified_balance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding_16dp"
+            app:iconType="chevron"
+            app:isIconClickable="false"
+            app:isSurfaceClickable="true"
+            app:roundedCornerMode="top"
+            app:title="Баланс"
+            app:value="500" />
+
         <com.design.chili.view.card.PieChartTitledView
             android:id="@+id/pieChart"
             android:layout_width="@dimen/view_200dp"

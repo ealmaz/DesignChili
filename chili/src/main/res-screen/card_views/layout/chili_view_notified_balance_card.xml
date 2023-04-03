@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_title"
+            style="@style/Chili.SingleLineTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/padding_16dp"
+            android:layout_marginTop="@dimen/padding_12dp"
+            android:textAppearance="@style/Chili.H9.Primary"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="title" />
+
+        <TextView
+            android:id="@+id/tv_value"
+            style="@style/Chili.SingleLineTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/padding_16dp"
+            android:layout_marginTop="@dimen/padding_6dp"
+            android:layout_marginBottom="@dimen/padding_12dp"
+            android:textAppearance="@style/Chili.H7.Marked.Bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/iv_action_icon"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_title"
+            tools:text="Value" />
+
+        <ImageView
+            android:id="@+id/iv_action_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/padding_8dp"
+            android:layout_marginEnd="@dimen/padding_4dp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_title"
+            app:layout_constraintLeft_toRightOf="@+id/tv_title"
+            app:layout_constraintTop_toTopOf="@+id/tv_title"
+            tools:src="@drawable/chili_ic_chevron_light" />
+
+        <LinearLayout
+            android:id="@+id/ll_notification"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/padding_8dp"
+            android:background="@drawable/chili_card_rounded_background_24dp"
+            android:backgroundTint="?attr/ChiliNotifiedBalanceCardBackgroundTint"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingStart="@dimen/padding_8dp"
+            android:paddingTop="@dimen/padding_4dp"
+            android:paddingEnd="@dimen/padding_8dp"
+            android:paddingBottom="@dimen/padding_4dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <TextView
+                android:id="@+id/tv_notification_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/padding_8dp"
+                android:textAppearance="@style/Chili.H9.Primary.Bold"
+                android:textColor="?attr/ChiliNotifiedBalanceCardNotificationColor" />
+
+            <ImageView
+                android:id="@+id/iv_notification_icon"
+                android:layout_width="@dimen/view_14dp"
+                android:layout_height="@dimen/view_14dp"
+                app:tint="?attr/ChiliNotifiedBalanceCardNotificationColor" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

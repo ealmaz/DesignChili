@@ -4,6 +4,7 @@ import android.graphics.Color
 import android.os.Bundle
 import android.view.View
 import com.design.app.MainActivity
+import com.design.app.R
 import com.design.app.base.BaseFragment
 import com.design.app.databinding.FragmentCardsBinding
 import com.design.chili.view.shimmer.hideShimmer
@@ -79,7 +80,11 @@ class CardsFragment : BaseFragment<FragmentCardsBinding>() {
             vb.expandable.stopShimmering()
         }
 
-
+        vb.notifiedBalance.apply {
+            setNotificationText("Подарок")
+            setNotificationDrawableRes(R.drawable.ic_gift)
+            showNotification()
+        }
     }
 
     override fun inflateViewBinging(): FragmentCardsBinding {
