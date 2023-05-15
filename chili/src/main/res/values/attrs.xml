@@ -96,6 +96,7 @@
         </attr>
         <attr name="isSurfaceClickable" format="boolean"/>
         <attr name="isIconClickable" format="boolean"/>
+        <attr name="titleIcon" format="reference"/>
     </declare-styleable>
 
     <declare-styleable name="SingleSelectedCardView">
@@ -126,7 +127,7 @@
 
     <declare-styleable name="PhoneNumberPickerCardView">
         <attr name="title"/>
-        <attr name="titleIcon" format="reference"/>
+        <attr name="titleIcon"/>
         <attr name="primaryButtonText" format="string"/>
         <attr name="secondaryButtonText" format="string"/>
     </declare-styleable>

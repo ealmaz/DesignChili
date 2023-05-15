@@ -14,12 +14,11 @@ import androidx.annotation.StringRes
 import androidx.appcompat.content.res.AppCompatResources
 import androidx.core.view.isVisible
 import com.design.chili.R
-import com.design.chili.extensions.dp
 import com.design.chili.extensions.setupRoundedCardCornersMode
+import com.design.chili.extensions.visible
 import com.design.chili.util.IconType
 import com.design.chili.view.shimmer.CustomBone
 import com.design.chili.view.shimmer.Shimmering
-import com.design.chili.view.shimmer.getViewsByType
 
 class BalanceCardView : FrameLayout, Shimmering {
 
@@ -46,6 +45,7 @@ class BalanceCardView : FrameLayout, Shimmering {
             title = view.findViewById(R.id.tv_title),
             value = view.findViewById(R.id.tv_value),
             icon = view.findViewById(R.id.iv_action_icon),
+            titleIcon = view.findViewById(R.id.ic_title_icon),
         )
     }
 
@@ -76,6 +76,9 @@ class BalanceCardView : FrameLayout, Shimmering {
             getBoolean(R.styleable.BalanceCardView_isIconClickable, true).let {
                 setIsIconClickable(it)
             }
+            getDrawable(R.styleable.BalanceCardView_titleIcon).let {
+                setTitleIcon(it)
+            }
             recycle()
         }
     }
@@ -95,6 +98,14 @@ class BalanceCardView : FrameLayout, Shimmering {
 
     fun setTitleTextRes(@StringRes textResId: Int) {
         view.title.setText(textResId)
+    }
+
+    fun setTitleIcon(drawable: Drawable?) {
+        if (drawable == null) return
+        view.titleIcon.apply {
+            visible()
+            setImageDrawable(drawable)
+        }
     }
 
     fun setValue(value: String) {
@@ -157,5 +168,6 @@ private data class BalanceCardViewVariables(
     var root: FrameLayout,
     var title: TextView,
     var value: TextView,
-    var icon: ImageView
+    var icon: ImageView,
+    var titleIcon: ImageView,
 )

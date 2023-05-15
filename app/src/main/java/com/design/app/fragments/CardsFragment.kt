@@ -18,10 +18,6 @@ class CardsFragment : BaseFragment<FragmentCardsBinding>() {
         super.onViewCreated(view, savedInstanceState)
         (activity as MainActivity).setUpHomeEnabled(true)
 
-        vb.balanceView.run {
-            showShimmer()
-            postDelayed({ hideShimmer() }, 5000)
-        }
 
         vb.pieChart.apply {
             setAmount("550 c")

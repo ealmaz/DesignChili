@@ -2,6 +2,7 @@ package com.design.chili.view.input
 
 import android.content.Context
 import android.util.AttributeSet
+import android.view.KeyEvent
 import androidx.core.view.ViewCompat
 
 class SelectionEditText(context: Context, attributeSet: AttributeSet) : androidx.appcompat.widget.AppCompatEditText(context, attributeSet) {

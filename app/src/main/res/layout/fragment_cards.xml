@@ -155,6 +155,7 @@
                 android:layout_marginTop="@dimen/padding_16dp"
                 android:layout_weight="1"
                 app:iconType="chevron"
+                app:titleIcon="@drawable/rectangle_405"
                 app:roundedCornerMode="single"
                 app:title="Баланс"
                 app:value="100.00 c" />

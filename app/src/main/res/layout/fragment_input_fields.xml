@@ -19,6 +19,7 @@
             style="@style/Chili.InputViewStyle.Masked.PhoneMask"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            app:endIconMode="clear_text"
             android:layout_marginTop="@dimen/padding_16dp"/>
 
         <com.design.chili.view.input.BaseInputView
