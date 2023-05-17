@@ -9,4 +9,8 @@
         <item name="ChiliCellViewBackground">@color/gray_5</item>
     </style>
 
+    <style name="ThemeOverlay_chili_back_card_field_ripple">
+        <item name="ChiliCardViewCornerRadius">?ChiliBankCardViewFieldsCornerRadius</item>
+    </style>
+
 </resources>

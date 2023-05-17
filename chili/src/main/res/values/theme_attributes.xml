@@ -48,6 +48,11 @@
     <attr name="ChiliCardViewSquircleBackground" format="reference"/>
     <attr name="ChiliCardViewPhonePickerDividerColor" format="color"/>
     <attr name="ChiliAnimatedLeftoverAddButtonBackground" format="color"/>
+    
+    <!-- BankCardView -->
+    <attr name="ChiliBankCardViewCornerRadius" format="dimension"/>
+    <attr name="ChiliBankCardViewFieldsBackground" format="reference"/>
+    <attr name="ChiliBankCardViewFieldsCornerRadius" format="dimension"/>
 
 
     <!-- CellView attributes -->

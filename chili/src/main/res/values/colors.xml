@@ -39,6 +39,7 @@
     <color name="blue_3">#CAEDF7</color>
     <color name="blue_4">#52B1B7</color>
     <color name="blue_5">#4A90E2</color>
+    <color name="custom_blue_1">#2680ADF5</color>
 
     <!-- Red -->
     <color name="red_1">#FF3B30</color>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="MissingDefaultResource">
+    <solid
+        android:color="?ChiliBankCardViewFieldsBackground"
+        tools:color="#2680ADF5" />
+    <corners
+        android:radius="?ChiliBankCardViewFieldsCornerRadius"
+        tools:radius="8dp" />
+</shape>

@@ -171,6 +171,11 @@
         <item name="ChiliCardViewPhonePickerDividerColor">@color/gray_5</item>
         <item name="ChiliAnimatedLeftoverAddButtonBackground">@color/white_1</item>
 
+        <!-- BankCardView -->
+        <item name="ChiliBankCardViewCornerRadius">@dimen/radius_12dp</item>
+        <item name="ChiliBankCardViewFieldsBackground">@color/custom_blue_1</item>
+        <item name="ChiliBankCardViewFieldsCornerRadius">@dimen/radius_8dp</item>
+
         <!-- TariffPriceInfoView -->
         <item name="ChiliInternetLabel">Internet t</item>
         <item name="ChiliInternetIcon">@drawable/chili_ic_clear</item>

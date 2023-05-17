@@ -36,4 +36,8 @@
 
     <style name="Chili.CardViewStyle.ExpandableInfoCardItemView"/>
 
+    <style name="Chili.CardViewStyle.BankCard">
+        <item name="cardCornerRadius">?ChiliBankCardViewCornerRadius</item>
+    </style>
+
 </resources>

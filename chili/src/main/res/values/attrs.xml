@@ -36,6 +36,8 @@
         <attr name="toolbarDefaultStyle" format="reference"/>
 
         <attr name="loaderButtonDefaultStyle" format="reference"/>
+        
+        <attr name="bankCardViewDefaultStyle" format="reference"/>
     </declare-styleable>
 
     <declare-styleable name="BaseInputView">
@@ -344,6 +346,20 @@
         <attr name="rootVerticalPadding" format="dimension"/>
         <attr name="rootTopPadding" format="dimension"/>
         <attr name="rootBottomPadding" format="dimension"/>
+    </declare-styleable>
+    
+    <declare-styleable name="BankCardView">
+        <attr name="cardCornerRadius"/>
+        <attr name="cardBackground" format="reference"/>
+        <attr name="cardElevation"/>
+        <attr name="cardPan" format="string"/>
+        <attr name="cvv" format="string"/>
+        <attr name="dueDate" format="string"/>
+        <attr name="cardHolderName" format="string"/>
+        <attr name="cardIcon"/>
+        <attr name="isCvvToggleEnabled" format="boolean"/>
+        <attr name="isCardPanToggleEnabled" format="boolean"/>
+
     </declare-styleable>
 
 </resources>
