@@ -1029,6 +1029,15 @@
             app:statusIcon="@drawable/ic_payment"
             app:statusTextColor="@color/white_1"
             app:statusBackgroundColor="@color/magenta_1"/>
+
+        <com.design.chili.view.cells.StatusMarkerCellView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding_8dp"
+            app:roundedCornerMode="single"
+            app:isDividerVisible="false"
+            app:title="На связь и кошелек О!Деньги"
+            app:value="323,10 c" />
     </LinearLayout>
 
 </ScrollView>

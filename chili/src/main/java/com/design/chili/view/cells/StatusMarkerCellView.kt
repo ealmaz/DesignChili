@@ -8,6 +8,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.annotation.ColorInt
 import androidx.cardview.widget.CardView
+import androidx.core.view.isVisible
 import com.design.chili.R
 import com.design.chili.extensions.gone
 import com.design.chili.extensions.visible
@@ -52,12 +53,26 @@ class StatusMarkerCellView @JvmOverloads constructor(
         }
     }
 
+    fun setupStatus(
+        status: CharSequence,
+        iconResId: Int?,
+        @ColorInt textColorInt: Int? = null,
+        @ColorInt backgroundColorInt: Int? = null
+    ) {
+        setStatusText(status)
+        setStatusIcon(iconResId)
+        textColorInt?.let { setStatusTextColor(it) }
+        backgroundColorInt?.let { setStatusBackgroundColor(it) }
+    }
+
     fun setStatusText(charSequence: CharSequence?) {
+        view.flEndPlaceholder.isVisible = charSequence != null
         statusView.tvStatus.text = charSequence
     }
 
     fun setStatusText(resId: Int) {
         statusView.tvStatus.setText(resId)
+        view.flEndPlaceholder.visible()
     }
 
     fun setStatusTextTextAppearance(resId: Int) {
