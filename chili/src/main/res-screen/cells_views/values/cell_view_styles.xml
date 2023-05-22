@@ -36,4 +36,6 @@
 
     <style name="Chili.CellViewStyle.DetailCellView"/>
 
+    <style name="Chili.CellViewStyle.StatusMarkerCellView"/>
+
 </resources>

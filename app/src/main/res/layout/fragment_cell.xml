@@ -999,6 +999,36 @@
             app:value="323,10 c"
             app:icon="@drawable/ic_info" />
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="StatusMarkerCellView"
+            android:layout_margin="@dimen/padding_16dp" />
+
+        <com.design.chili.view.cells.StatusMarkerCellView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding_8dp"
+            app:roundedCornerMode="single"
+            app:isDividerVisible="false"
+            app:title="На связь и кошелек О!Деньги"
+            app:value="323,10 c"
+            app:statusText="Active"
+            app:statusIcon="@drawable/ic_payment"
+            app:statusBackgroundColor="@color/green_3"/>
+
+        <com.design.chili.view.cells.StatusMarkerCellView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding_8dp"
+            app:roundedCornerMode="single"
+            app:isDividerVisible="false"
+            app:title="На связь и кошелек О!Деньги"
+            app:value="323,10 c"
+            app:statusText="Active"
+            app:statusIcon="@drawable/ic_payment"
+            app:statusTextColor="@color/white_1"
+            app:statusBackgroundColor="@color/magenta_1"/>
     </LinearLayout>
 
 </ScrollView>

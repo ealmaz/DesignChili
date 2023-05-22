@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="@dimen/view_24dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/marker_root_view"
+    app:cardElevation="@dimen/elevation_0dp"
+    app:cardCornerRadius="?ChiliMarkerStatusCellViewStatusCornerRadius">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="@dimen/padding_2dp">
+
+        <ImageView
+            android:id="@+id/iv_icon"
+            android:layout_width="@dimen/view_16dp"
+            android:layout_height="@dimen/view_16dp"
+            android:layout_marginStart="@dimen/padding_4dp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/Chili.H9.Primary"
+            android:layout_marginEnd="@dimen/padding_8dp"
+            android:layout_marginStart="@dimen/padding_4dp"
+            tools:text="Active"/>
+    </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>

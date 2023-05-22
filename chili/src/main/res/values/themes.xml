@@ -197,6 +197,9 @@
         <item name="ChiliCellCornerRadius">@dimen/radius_4dp</item>
         <item name="ChiliCellSquircleIconBackground">@color/gray_3</item>
 
+        <!-- StatusMarkerCellView -->
+        <item name="ChiliMarkerStatusCellViewStatusCornerRadius">@dimen/radius_14dp</item>
+
         <!-- Shimmer attributes -->
         <item name="ChiliShimmerBoneColor">@color/gray_4</item>
         <item name="ChiliShimmerRayColor">@color/white_1</item>
