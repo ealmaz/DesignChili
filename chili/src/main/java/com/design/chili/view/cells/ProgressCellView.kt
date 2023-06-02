@@ -6,6 +6,7 @@ import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.widget.LinearLayout
 import android.widget.TextView
+import androidx.annotation.ColorInt
 import androidx.annotation.StringRes
 import com.design.chili.R
 import com.design.chili.view.common.AnimatedProgressLine
@@ -40,7 +41,7 @@ class ProgressCellView @JvmOverloads constructor(
                 view.progressLine.setIsProgressAnimated(it)
             }
             getColor(R.styleable.ProgressCellView_progressColor, -1).takeIf { it != -1 }?.let {
-                view.progressLine.setProgressColor(it)
+                progressColor(it)
             }
             getColor(R.styleable.ProgressCellView_progressBackgroundColor, -1).takeIf { it != -1 }?.let {
                 view.progressLine.setProgressBackgroundColor(it)
@@ -85,6 +86,10 @@ class ProgressCellView @JvmOverloads constructor(
 
     fun setDescriptionText(spanned: Spanned) {
         view.tvDescription.text = spanned
+    }
+
+    fun progressColor(@ColorInt colorInt: Int) {
+        view.progressLine.setProgressColor(colorInt)
     }
 }
 
