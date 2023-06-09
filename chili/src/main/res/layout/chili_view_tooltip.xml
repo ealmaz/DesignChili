@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cl_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:alpha="0.9">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/top_arrows"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/cv_root"
+        app:layout_constraintEnd_toEndOf="@id/cv_root"
+        app:layout_constraintStart_toStartOf="@id/cv_root"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/top_arrow_start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/chili_ic_tooltip_arrow_top"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="?ChiliTooltipBackground" />
+
+        <ImageView
+            android:id="@+id/top_arrow_center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/chili_ic_tooltip_arrow_top"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="?ChiliTooltipBackground" />
+
+        <ImageView
+            android:id="@+id/top_arrow_end"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/chili_ic_tooltip_arrow_top"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.8"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="?ChiliTooltipBackground" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/bottom_arrows"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@id/cv_root"
+        app:layout_constraintStart_toStartOf="@id/cv_root"
+        app:layout_constraintTop_toBottomOf="@id/cv_root">
+
+        <ImageView
+            android:id="@+id/bottom_arrow_start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/chili_ic_tooltip_arrow_down"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="?ChiliTooltipBackground" />
+
+        <ImageView
+            android:id="@+id/bottom_arrow_center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/chili_ic_tooltip_arrow_down"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="?ChiliTooltipBackground" />
+
+        <ImageView
+            android:id="@+id/bottom_arrow_end"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/chili_ic_tooltip_arrow_down"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.8"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="?ChiliTooltipBackground" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/arrow_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/chili_ic_tooltip_arrow_start"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/cv_root"
+        app:layout_constraintEnd_toStartOf="@id/cv_root"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/cv_root"
+        app:tint="?ChiliTooltipBackground" />
+
+    <ImageView
+        android:id="@+id/arrow_end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/chili_ic_tooltip_arrow_end"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/cv_root"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/cv_root"
+        app:layout_constraintTop_toTopOf="@id/cv_root"
+        app:tint="?ChiliTooltipBackground" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_root"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="?ChiliTooltipBackground"
+        app:cardCornerRadius="?ChiliTooltipCornerRadius"
+        app:cardElevation="@dimen/elevation_0dp"
+        app:layout_constraintBottom_toTopOf="@id/cv_root"
+        app:layout_constraintStart_toEndOf="@id/arrow_start"
+        app:layout_constraintTop_toBottomOf="@id/top_arrows">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/padding_12dp">
+
+            <TextView
+                android:id="@+id/tv_title"
+                style="style/Chili.SingleLineTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/padding_32dp"
+                android:textAppearance="@style/Chili.H9.Marked.Bold"
+                android:textColor="@color/white_1"
+                app:layout_constraintEnd_toStartOf="@id/img_close"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_subtitle"
+                style="style/Chili.SingleLineTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding_4dp"
+                android:layout_marginEnd="@dimen/padding_32dp"
+                android:textAppearance="@style/Chili.H9.Marked"
+                android:textColor="@color/white_1"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/img_close"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_title" />
+
+            <ImageView
+                android:id="@+id/img_close"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_close_gray"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

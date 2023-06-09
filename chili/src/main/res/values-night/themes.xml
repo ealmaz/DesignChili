@@ -96,6 +96,9 @@
         <item name="ChiliShimmerBoneColor">@color/black_2</item>
         <item name="ChiliShimmerRayColor">@color/black_4</item>
 
+        <!-- Tooltip attributes -->
+        <item name="ChiliTooltipBackground">@color/black_5</item>
+
     </style>
 
     <style name="ChiliDesignTheme" parent="BaseChiliDesignTheme.Night" />

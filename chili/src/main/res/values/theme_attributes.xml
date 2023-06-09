@@ -217,4 +217,8 @@
     <attr name="ChiliNotifiedBalanceCardBackgroundTint" format="color"/>
     <attr name="ChiliNotifiedBalanceCardNotificationColor" format="color"/>
 
+    <!-- Tooltip attributes -->
+    <attr name="ChiliTooltipBackground" format="color"/>
+    <attr name="ChiliTooltipCornerRadius" format="dimension"/>
+
 </resources>
