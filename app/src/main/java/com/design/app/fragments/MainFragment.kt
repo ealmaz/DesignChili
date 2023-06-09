@@ -43,6 +43,9 @@ class MainFragment : BaseFragment<FragmentMainBinding>() {
         vb.pickers.setOnClickListener {
             openFragment(DatePickerFargment())
         }
+        vb.tooltips.setOnClickListener {
+            openFragment(TooltipsFragment())
+        }
 
         (activity as MainActivity).setUpHomeEnabled(false)
     }

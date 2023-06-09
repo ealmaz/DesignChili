@@ -209,6 +209,9 @@
         <item name="ChiliNotifiedBalanceCardBackgroundTint">@color/magenta_1</item>
         <item name="ChiliNotifiedBalanceCardNotificationColor">@color/white_1</item>
 
+        <!-- Tooltip attributes -->
+        <item name="ChiliTooltipBackground">@color/black_3</item>
+        <item name="ChiliTooltipCornerRadius">@dimen/radius_12dp</item>
     </style>
 
 
