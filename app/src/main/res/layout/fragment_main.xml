@@ -100,6 +100,14 @@
             style="@style/Chili.ButtonStyle.Primary"
             android:layout_margin="@dimen/padding_16dp"/>
 
+        <Button
+            android:id="@+id/large_icons"
+            android:text="ICONS"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Chili.ButtonStyle.Primary"
+            android:layout_margin="@dimen/padding_16dp"/>
+
     </LinearLayout>
 
 </ScrollView>
