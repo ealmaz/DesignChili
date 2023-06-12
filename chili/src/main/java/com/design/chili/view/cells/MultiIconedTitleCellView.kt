@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.annotation.DimenRes
 import androidx.annotation.StringRes
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.view.isVisible
@@ -17,6 +18,7 @@ import com.design.chili.extensions.setImageByUrl
 import com.design.chili.extensions.setOnSingleClickListener
 import com.design.chili.extensions.setupRoundedCellCornersMode
 import com.design.chili.extensions.visible
+import com.design.chili.util.IconSize
 import com.design.chili.util.ItemDecorator
 import com.design.chili.util.RoundedCornerMode
 import com.design.chili.view.image.SquircleView
@@ -119,13 +121,12 @@ data class MultiIconedTitleCellViewVariables(
     val ivInfo: ImageView
 )
 
-class MultiIconedAdapter(): RecyclerView.Adapter<MultiIconedAdapter.IconVH>() {
+class MultiIconedAdapter(val iconSize: IconSize = IconSize.SMALL): RecyclerView.Adapter<MultiIconedAdapter.IconVH>() {
 
     private val icons = ArrayList<String>()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): IconVH {
-        return IconVH(LayoutInflater.from(parent.context)
-            .inflate(R.layout.chili_item_icon, parent, false))
+        return IconVH.create(parent, iconSize)
     }
 
     override fun onBindViewHolder(holder: IconVH, position: Int) {
@@ -144,6 +145,44 @@ class MultiIconedAdapter(): RecyclerView.Adapter<MultiIconedAdapter.IconVH>() {
         fun bind(item: String) {
             val ivImg = itemView.findViewById<SquircleView>(R.id.iv_img)
             ivImg.setImageByUrl(item)
+        }
+
+        companion object {
+            fun create(parent: ViewGroup, iconSize: IconSize): IconVH {
+                return IconVH(LayoutInflater.from(parent.context)
+                    .inflate(R.layout.chili_item_icon, parent, false)).apply {
+                    setIconSize(iconSize)
+                }
+            }
+        }
+
+        fun setIconSize(iconSize: IconSize) {
+            val size = when(iconSize) {
+                IconSize.LARGE -> {
+                    R.dimen.view_48dp
+                }
+                IconSize.MEDIUM -> {
+                    R.dimen.view_32dp
+                }
+                IconSize.SMALL -> {
+                    R.dimen.view_24dp
+                }
+            }
+            setIconSize(size, size)
+        }
+
+        fun setIconSize(@DimenRes widthDimenRes: Int, @DimenRes heightDimenRes: Int) {
+            val widthPx = itemView.resources.getDimensionPixelSize(widthDimenRes)
+            val heightPx = itemView.resources.getDimensionPixelSize(heightDimenRes)
+            setupIconSize(widthPx, heightPx)
+        }
+
+        private fun setupIconSize(widthPx: Int, heightPx: Int) {
+            val ivImg = itemView.findViewById<SquircleView>(R.id.iv_img)
+            val params = ivImg.layoutParams
+            params.height = heightPx
+            params.width = widthPx
+            ivImg.layoutParams = params
         }
     }
 }

@@ -46,6 +46,9 @@ class MainFragment : BaseFragment<FragmentMainBinding>() {
         vb.tooltips.setOnClickListener {
             openFragment(TooltipsFragment())
         }
+        vb.largeIcons.setOnClickListener {
+            openFragment(IconsFragment())
+        }
 
         (activity as MainActivity).setUpHomeEnabled(false)
     }
