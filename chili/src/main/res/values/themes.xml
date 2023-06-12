@@ -210,7 +210,7 @@
         <item name="ChiliNotifiedBalanceCardNotificationColor">@color/white_1</item>
 
         <!-- Tooltip attributes -->
-        <item name="ChiliTooltipBackground">@color/black_4</item>
+        <item name="ChiliTooltipBackground">@color/black_3</item>
         <item name="ChiliTooltipCornerRadius">@dimen/radius_12dp</item>
     </style>
 

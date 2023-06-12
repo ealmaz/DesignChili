@@ -11,6 +11,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.view.ViewTreeObserver.OnGlobalLayoutListener
 import android.widget.ImageView
+import android.widget.LinearLayout
 import android.widget.PopupWindow
 import android.widget.TextView
 import androidx.annotation.DimenRes
@@ -67,6 +68,7 @@ class Tooltip(builder: Builder) : PopupWindow.OnDismissListener {
 
     private fun configPopupWindow() {
         mPopupWindow = PopupWindow(mContext, null, mDefaultPopupWindowStyleRes).apply {
+            width = LinearLayout.LayoutParams.MATCH_PARENT
             setOnDismissListener(this@Tooltip)
             setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
             isOutsideTouchable = true
@@ -81,8 +83,6 @@ class Tooltip(builder: Builder) : PopupWindow.OnDismissListener {
             title = view.findViewById(R.id.tv_title),
             subtitle = view.findViewById(R.id.tv_subtitle),
             close = view.findViewById(R.id.img_close),
-            arrowStart = view.findViewById(R.id.arrow_start),
-            arrowEnd = view.findViewById(R.id.arrow_end),
             topArrowStart = view.findViewById(R.id.top_arrow_start),
             topArrowCenter = view.findViewById(R.id.top_arrow_center),
             topArrowEnd = view.findViewById(R.id.top_arrow_end),
@@ -106,16 +106,6 @@ class Tooltip(builder: Builder) : PopupWindow.OnDismissListener {
 
     private fun initArrow() {
         when {
-            mGravity == GRAVITY_START -> {
-                hideAllArrows()
-                view.arrowEnd.visible()
-            }
-
-            mGravity == GRAVITY_END -> {
-                hideAllArrows()
-                view.arrowStart.visible()
-            }
-
             mGravity == GRAVITY_TOP && mArrowAlign == ALIGN_START -> {
                 hideAllArrows()
                 view.bottomArrowStart.visible()
@@ -152,8 +142,6 @@ class Tooltip(builder: Builder) : PopupWindow.OnDismissListener {
 
     private fun hideAllArrows() {
         with(view) {
-            arrowStart.gone()
-            arrowEnd.gone()
             topArrowStart.gone()
             topArrowCenter.gone()
             topArrowEnd.gone()
@@ -218,18 +206,8 @@ class Tooltip(builder: Builder) : PopupWindow.OnDismissListener {
         val anchorCenter = PointF(anchorRect.centerX(), anchorRect.centerY())
 
         when {
-            mGravity == GRAVITY_START-> {
-                location.x = anchorRect.left - popup.contentView.width - mMargin
-                location.y = anchorCenter.y - popup.contentView.height / 2f
-            }
-
-            mGravity == GRAVITY_END -> {
-                location.x = anchorRect.right + mMargin
-                location.y = anchorCenter.y - popup.contentView.height / 2f
-            }
-
             mGravity == GRAVITY_TOP && mArrowAlign == ALIGN_START -> {
-                location.x = anchorCenter.x - popup.contentView.width / 4.5f
+                location.x = anchorCenter.x - popup.contentView.width / 2f
                 location.y = anchorRect.top - popup.contentView.height - mMargin
             }
 
@@ -239,12 +217,12 @@ class Tooltip(builder: Builder) : PopupWindow.OnDismissListener {
             }
 
             mGravity == GRAVITY_TOP && mArrowAlign == ALIGN_END -> {
-                location.x = anchorCenter.x - popup.contentView.width + popup.contentView.width / 4.5f
+                location.x = anchorCenter.x - popup.contentView.width / 2f
                 location.y = anchorRect.top - popup.contentView.height - mMargin
             }
 
             mGravity == GRAVITY_BOTTOM && mArrowAlign == ALIGN_START -> {
-                location.x = anchorCenter.x - popup.contentView.width / 4.5f
+                location.x = anchorCenter.x - popup.contentView.width / 2f
                 location.y = anchorRect.bottom + mMargin
             }
 
@@ -254,7 +232,7 @@ class Tooltip(builder: Builder) : PopupWindow.OnDismissListener {
             }
 
             mGravity == GRAVITY_BOTTOM && mArrowAlign == ALIGN_END -> {
-                location.x = anchorCenter.x - popup.contentView.width + popup.contentView.width / 4.5f
+                location.x = anchorCenter.x - popup.contentView.width / 2f
                 location.y = anchorRect.bottom + mMargin
             }
 
@@ -397,8 +375,6 @@ class Tooltip(builder: Builder) : PopupWindow.OnDismissListener {
     companion object {
         const val GRAVITY_TOP = 0
         const val GRAVITY_BOTTOM = 1
-        const val GRAVITY_START = 2
-        const val GRAVITY_END = 3
         const val GRAVITY_CENTER = 4
 
         const val ALIGN_CENTER = 0
@@ -412,8 +388,6 @@ private data class TooltipVariables(
     var title: TextView,
     var subtitle: TextView,
     var close: ImageView,
-    var arrowStart: ImageView,
-    var arrowEnd: ImageView,
     var topArrowStart: ImageView,
     var topArrowCenter: ImageView,
     var topArrowEnd: ImageView,

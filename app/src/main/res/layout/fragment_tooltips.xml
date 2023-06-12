@@ -4,56 +4,18 @@
     android:id="@+id/tooltips_sv"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="?attr/ChiliScreenBackground"
     android:padding="@dimen/padding_16dp">
 
-    <Button
-        android:id="@+id/btn_bottom"
-        style="@style/Chili.ButtonStyle.Primary"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="BOTTOM"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/arrow_end"
-        style="@style/Chili.ButtonStyle.Primary"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="END"
-        app:layout_constraintBottom_toTopOf="@id/btn_center"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btn_bottom" />
-
-    <Button
-        android:id="@+id/btn_center"
-        style="@style/Chili.ButtonStyle.Primary"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="CENTER"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/arrow_start"
-        style="@style/Chili.ButtonStyle.Primary"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="START"
-        app:layout_constraintBottom_toTopOf="@id/btn_top"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btn_center" />
-
-    <Button
-        android:id="@+id/btn_top"
-        style="@style/Chili.ButtonStyle.Primary"
-        android:layout_width="wrap_content"
+    <com.design.chili.view.input.MaskedInputView
+        android:id="@+id/input_field"
+        style="@style/Chili.InputViewStyle.Masked.PhoneMask"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/padding_16dp"
-        android:text="TOP"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:actionButtonText="Из контактов"
+        app:endIconMode="clear_text"
+        app:layout_constraintTop_toTopOf="parent"
+        app:message="Введите номер" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
