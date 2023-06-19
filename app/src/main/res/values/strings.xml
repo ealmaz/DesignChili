@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">DesignChili</string>
+
+    <string name="agree_terms"><![CDATA[Я согласен с условиями <a href="https://o.kg">пользовательского соглашения</a> и условиями\n<a href="https://o.kg">оферты сервиса «О!Деньги»</a>]]></string>
 </resources>

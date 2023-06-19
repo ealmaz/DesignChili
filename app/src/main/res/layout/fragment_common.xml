@@ -147,6 +147,37 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:text="AgreementView"
+            android:textAppearance="@style/Chili.H8.Primary"
+            android:layout_marginStart="@dimen/padding_16dp"
+            android:layout_marginTop="@dimen/padding_8dp"/>
+
+        <com.design.chili.view.common.AgreementView
+            android:id="@+id/av_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding_8dp"
+            android:layout_marginHorizontal="@dimen/padding_12dp"
+            app:title="@string/agree_terms"/>
+
+        <com.design.chili.view.common.AgreementView
+            android:id="@+id/av_2"
+            android:layout_marginTop="@dimen/padding_8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/padding_16dp"
+            app:title="@string/agree_terms"
+            app:isEditable="false" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/padding_16dp"
+            android:background="@color/gray_1"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:textAppearance="@style/Chili.H8.Primary"
             android:text="Switch"
             android:layout_marginStart="@dimen/padding_16dp"
