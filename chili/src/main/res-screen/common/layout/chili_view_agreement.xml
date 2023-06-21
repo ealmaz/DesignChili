@@ -29,7 +29,7 @@
         android:layout_height="wrap_content"
         android:clickable="true"
         android:focusable="true"
-        android:textAppearance="@style/Chili.H9.Primary"
+        android:textAppearance="@style/Chili.H8.Primary"
         android:textColorLink="@color/magenta_1"
         tools:text="Я подтверждаю, что ознакомлен с Кредитным заявлением" />
 
