@@ -4,7 +4,7 @@
     android:id="@+id/cl_root"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:alpha="0.9">
+    android:alpha="0.95">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/top_arrows"
