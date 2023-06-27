@@ -21,7 +21,7 @@ import com.design.chili.R
 import com.design.chili.extensions.gone
 import com.design.chili.extensions.visible
 
-class Tooltip(builder: Builder) : PopupWindow.OnDismissListener {
+class TooltipView(builder: Builder) : PopupWindow.OnDismissListener {
 
     private lateinit var view: TooltipVariables
 
@@ -41,7 +41,6 @@ class Tooltip(builder: Builder) : PopupWindow.OnDismissListener {
     private var mGravity: Int
     private var mArrowAlign: Int
     private var mFocusable: Boolean
-    private var mPadding = 0f
     private var mMargin = 0f
 
     init {
@@ -52,7 +51,6 @@ class Tooltip(builder: Builder) : PopupWindow.OnDismissListener {
         mRootView = TooltipUtils.findFrameLayout(mAnchorView)
         mGravity = builder.gravity
         mArrowAlign = builder.arrowAlign
-        mPadding = builder.padding
         mMargin = builder.margin
         mFocusable = builder.focusable
         mOnShowListener = builder.onShowListener
@@ -71,7 +69,7 @@ class Tooltip(builder: Builder) : PopupWindow.OnDismissListener {
     private fun configPopupWindow() {
         mPopupWindow = PopupWindow(mContext, null, mDefaultPopupWindowStyleRes).apply {
             width = LinearLayout.LayoutParams.MATCH_PARENT
-            setOnDismissListener(this@Tooltip)
+            setOnDismissListener(this@TooltipView)
             setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
             isOutsideTouchable = true
             isClippingEnabled = false
@@ -161,10 +159,11 @@ class Tooltip(builder: Builder) : PopupWindow.OnDismissListener {
     }
 
     private fun onClick() {
-        mOnClickListener?.onClick(this@Tooltip)
+        mOnClickListener?.onClick(this@TooltipView)
     }
 
     fun show() {
+        if (mPopupWindow?.isShowing == true) return
         mContentLayout?.viewTreeObserver?.addOnGlobalLayoutListener(mLocationLayoutListener)
 
         mRootView?.post {
@@ -197,7 +196,7 @@ class Tooltip(builder: Builder) : PopupWindow.OnDismissListener {
         override fun onGlobalLayout() {
             val popup = mPopupWindow ?: return
             TooltipUtils.removeOnGlobalLayoutListener(popup.contentView, this)
-            mOnShowListener?.onShow(this@Tooltip)
+            mOnShowListener?.onShow(this@TooltipView)
         }
     }
 
@@ -267,19 +266,19 @@ class Tooltip(builder: Builder) : PopupWindow.OnDismissListener {
     }
 
     interface OnShowListener {
-        fun onShow(tooltip: Tooltip)
+        fun onShow(tooltipView: TooltipView)
     }
 
     interface OnDismissListener {
-        fun onDismiss(tooltip: Tooltip)
+        fun onDismiss(tooltipView: TooltipView)
     }
 
     interface OnCloseBtnListener {
-        fun onClose(tooltip: Tooltip)
+        fun onClose(tooltipView: TooltipView)
     }
 
     interface OnClickListener {
-        fun onClick(tooltip: Tooltip)
+        fun onClick(tooltipView: TooltipView)
     }
 
     class Builder(context: Context) {
@@ -295,7 +294,6 @@ class Tooltip(builder: Builder) : PopupWindow.OnDismissListener {
         var gravity: Int = GRAVITY_BOTTOM
         var arrowAlign: Int = ALIGN_CENTER
         var focusable: Boolean = true
-        var padding = 0f
         var margin = 0f
 
         init {
@@ -330,14 +328,6 @@ class Tooltip(builder: Builder) : PopupWindow.OnDismissListener {
             arrowAlign = align; return this
         }
 
-        fun padding(pad: Float): Builder {
-            padding = pad; return this
-        }
-
-        fun padding(@DimenRes paddingRes: Int): Builder {
-            padding = context.resources.getDimension(paddingRes); return this
-        }
-
         fun margin(mar: Float): Builder {
             margin = mar; return this
         }
@@ -367,8 +357,8 @@ class Tooltip(builder: Builder) : PopupWindow.OnDismissListener {
             return this
         }
 
-        fun build(): Tooltip {
-            return Tooltip(this)
+        fun build(): TooltipView {
+            return TooltipView(this)
         }
     }
 

@@ -5,29 +5,33 @@ import android.view.View
 import com.design.app.MainActivity
 import com.design.app.base.BaseFragment
 import com.design.app.databinding.FragmentTooltipsBinding
-import com.design.chili.view.tooltip.Tooltip
+import com.design.chili.view.tooltip.TooltipView
+import com.design.chili.view.tooltip.createTooltipView
 
 class TooltipsFragment : BaseFragment<FragmentTooltipsBinding>() {
+
+    private var tooltipView: TooltipView? = null
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         (activity as MainActivity).setUpHomeEnabled(true)
-        with(vb.inputField) {
-            setOnClickListener { showTooltip(it) }
-            performClick()
-        }
+        initTooltip()
+        initButton()
     }
 
-    private fun showTooltip(view: View) {
-        Tooltip.Builder(requireContext())
-            .anchorView(view)
-            .gravity(Tooltip.GRAVITY_BOTTOM)
-            .arrowAlign(Tooltip.ALIGN_START)
-            .title("Получи бонус 10 ГБ! (22)")
-            .subtitle("При пополнении баланса на 120 с (32)")
-            .margin(com.design.chili.R.dimen.padding_6dp)
-            .build()
-            .show()
+    private fun initTooltip() {
+        tooltipView = requireContext().createTooltipView(
+            anchorView = vb.inputField,
+            title = "Получи бонус 10 ГБ! (22)",
+            subtitle = "При пополнении баланса на 120 с (32)"
+        )
+    }
+
+    private fun initButton() {
+        with(vb.inputField) {
+            setOnClickListener { tooltipView?.show() }
+            performClick()
+        }
     }
 
     override fun inflateViewBinging(): FragmentTooltipsBinding {
