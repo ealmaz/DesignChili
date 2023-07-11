@@ -184,6 +184,10 @@
         <attr name="callArcFabVisibility" format="boolean"/>
         <attr name="callArcIcon" format="reference"/>
 
+        <!-- PassportCardCameraOverlay -->
+        <attr name="passportCardCameraOverlay" format="reference"/>
+
+
     </declare-styleable>
 
     <declare-styleable name="ChiliToolbar">
@@ -374,6 +378,15 @@
         <attr name="android:checked" />
         <attr name="title" />
         <attr name="isEditable" format="boolean"/>
+    </declare-styleable>
+
+
+    <!-- Camera Passport card overlay -->
+    <declare-styleable name="PassportCardOverlay">
+        <attr name="overlayAlpha" format="integer"/>
+        <attr name="headerText" format="string"/>
+        <attr name="title"/>
+        <attr name="description"/>
     </declare-styleable>
 
 </resources>
