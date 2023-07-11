@@ -63,6 +63,11 @@ class PassportCardOverlay @JvmOverloads constructor(
         invalidate()
     }
 
+    fun setAlpha(alpha: Int) {
+        this.overlayAlpha = alpha
+        invalidate()
+    }
+
 
     override fun drawShapes(canvas: Canvas) {
         drawColor(canvas, R.color.black_1, overlayAlpha)
