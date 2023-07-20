@@ -33,6 +33,7 @@
     </style>
 
     <style name="Chili.ButtonStyle.NewAdditional">
+        <item name="android:foreground">@drawable/chili_new_additional_button_ripple</item>
         <item name="android:background">@drawable/chili_new_additional_button_background</item>
         <item name="android:textColor">?attr/ChiliMarkedTextColor</item>
         <item name="android:fontFamily">?attr/ChiliAdditionalButtonTextFont</item>
