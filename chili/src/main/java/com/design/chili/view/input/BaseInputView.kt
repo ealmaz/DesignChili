@@ -43,6 +43,8 @@ open class BaseInputView @JvmOverloads constructor(
     protected val textWatchers by lazy { mutableListOf<TextWatcher>() }
 
     protected var messageText: String? = null
+    protected var isErrorShown: Boolean = false
+    protected var isLabelBehaviorEnabled: Boolean = false
 
     @ColorInt protected var hintTextColor: Int = -1
     @ColorInt protected var fieldBackground: Int = -1
@@ -501,6 +503,7 @@ open class BaseInputView @JvmOverloads constructor(
                     setText(messageText)
                     setTextColor(messageTextColor)
                     visible()
+                    if (isLabelBehaviorEnabled && !(getInputField().hasFocus())) gone()
                 }
             }
         }
@@ -514,14 +517,17 @@ open class BaseInputView @JvmOverloads constructor(
         view.tvMessage.apply {
             text = errorText
             setTextColor(errorMessageTextColor)
+            isErrorShown = true
             visible()
         }
         view.textInputLayout.setBackgroundColor(fieldErrorBackground)
     }
 
     fun clearFieldError() {
+        if (!isErrorShown) return
         view.textInputLayout.setBackgroundColor(fieldBackground)
         setMessage(messageText)
+        isErrorShown = false
     }
 
     fun hideMessage() {
@@ -555,6 +561,16 @@ open class BaseInputView @JvmOverloads constructor(
     fun setActionWithColor(title: String, @ColorInt textColor: Int, action: () -> Unit = {}) {
         setAction(title, action)
         view.tvAction.setTextColor(textColor)
+    }
+
+    fun setupMessageAsLabelBehavior(isEnabled: Boolean) {
+        isLabelBehaviorEnabled = isEnabled
+        if (!isErrorShown) view.tvMessage.gone()
+        setFocusChangeListener({
+            if (!isErrorShown && isLabelBehaviorEnabled) view.tvMessage.visible()
+        }, {
+            if (!isErrorShown && isLabelBehaviorEnabled) view.tvMessage.gone()
+        })
     }
 
 
