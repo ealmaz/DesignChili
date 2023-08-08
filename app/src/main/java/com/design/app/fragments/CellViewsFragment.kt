@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.View
 import androidx.core.text.parseAsHtml
 import com.design.app.MainActivity
+import com.design.app.R
 import com.design.app.base.BaseFragment
 import com.design.app.databinding.FragmentCellBinding
 
@@ -13,6 +14,7 @@ class CellViewsFragment : BaseFragment<FragmentCellBinding>() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         (activity as MainActivity).setUpHomeEnabled(true)
+        vb.bcv.setChevron(resources.getDrawable(R.drawable.ic_cat))
         vb.btnP1.setOnClickListener {
             vb.progress.setProgressPercent(100)
         }

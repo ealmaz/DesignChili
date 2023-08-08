@@ -306,6 +306,13 @@ open class BaseCellView @JvmOverloads constructor(
             setImageDrawable(drawable)
         }
     }
+
+    fun setChevron(drawableRes: Int) {
+        view.chevron.apply {
+            visible()
+            setImageResource(drawableRes)
+        }
+    }
 }
 
 data class BaseCellViewVariables(

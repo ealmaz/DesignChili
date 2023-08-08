@@ -23,6 +23,7 @@
             android:layout_margin="@dimen/padding_16dp" />
 
         <com.design.chili.view.cells.BaseCellView
+            android:id="@+id/bcv"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/padding_16dp"
