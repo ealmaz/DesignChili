@@ -299,6 +299,13 @@ open class BaseCellView @JvmOverloads constructor(
     fun updateRootViewMinHeight(minHeight: Int) {
         view.rootView.minHeight = minHeight
     }
+
+    fun setChevron(drawable: Drawable) {
+        view.chevron.apply {
+            visible()
+            setImageDrawable(drawable)
+        }
+    }
 }
 
 data class BaseCellViewVariables(
