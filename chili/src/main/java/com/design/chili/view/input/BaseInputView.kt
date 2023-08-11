@@ -10,6 +10,7 @@ import android.text.method.DigitsKeyListener
 import android.util.AttributeSet
 import android.view.Gravity
 import android.view.LayoutInflater
+import android.view.View
 import android.view.inputmethod.InputMethodManager
 import android.widget.EditText
 import android.widget.FrameLayout
@@ -68,7 +69,8 @@ open class BaseInputView @JvmOverloads constructor(
             tvMessage = view.findViewById(R.id.tv_message),
             tvAction = view.findViewById(R.id.tv_action),
             flActionBg = view.findViewById(R.id.fl_action_bg),
-            ivEndIcon = view.findViewById(R.id.iv_end_icon))
+            ivEndIcon = view.findViewById(R.id.iv_end_icon),
+            clickableMask = view.findViewById(R.id.clickable_mask))
     }
 
     private fun obtainAttributes(attrs: AttributeSet?, defStyleAttr: Int, defStyle: Int) {
@@ -573,6 +575,23 @@ open class BaseInputView @JvmOverloads constructor(
         })
     }
 
+    fun setupOnGetFocusAction(action: () -> Unit) {
+        view.clickableMask.apply {
+            visible()
+            setOnSingleClickListener {
+                action.invoke()
+                requestFocus()
+                showSystemKeyboard()
+            }
+        }
+        setFocusChangeListener({
+            view.clickableMask.gone()
+            action.invoke()
+        }, {
+            view.clickableMask.visible()
+        })
+    }
+
 
     companion object {
         const val SUPER_STATE = "superState"
@@ -585,5 +604,6 @@ data class BaseInputViewVariables(
     var tvMessage: TextView,
     var tvAction: TextView,
     var flActionBg: FrameLayout,
-    var ivEndIcon: ImageView
+    var ivEndIcon: ImageView,
+    var clickableMask: View,
 )
