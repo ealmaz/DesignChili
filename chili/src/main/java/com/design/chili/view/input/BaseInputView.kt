@@ -579,9 +579,9 @@ open class BaseInputView @JvmOverloads constructor(
         view.clickableMask.apply {
             visible()
             setOnSingleClickListener {
-                action.invoke()
                 requestFocus()
                 showSystemKeyboard()
+                action.invoke()
             }
         }
         setFocusChangeListener({
