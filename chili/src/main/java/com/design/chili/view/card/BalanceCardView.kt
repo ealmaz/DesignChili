@@ -9,11 +9,13 @@ import android.view.View
 import android.widget.FrameLayout
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.annotation.ColorInt
 import androidx.annotation.DrawableRes
 import androidx.annotation.StringRes
 import androidx.appcompat.content.res.AppCompatResources
 import androidx.core.view.isVisible
 import com.design.chili.R
+import com.design.chili.extensions.gone
 import com.design.chili.extensions.setupRoundedCardCornersMode
 import com.design.chili.extensions.visible
 import com.design.chili.util.IconType
@@ -45,6 +47,7 @@ class BalanceCardView : FrameLayout, Shimmering {
             title = view.findViewById(R.id.tv_title),
             value = view.findViewById(R.id.tv_value),
             icon = view.findViewById(R.id.iv_action_icon),
+            ivEndIcon = view.findViewById(R.id.iv_end_icon),
             titleIcon = view.findViewById(R.id.ic_title_icon),
         )
     }
@@ -78,6 +81,9 @@ class BalanceCardView : FrameLayout, Shimmering {
             }
             getDrawable(R.styleable.BalanceCardView_titleIcon).let {
                 setTitleIcon(it)
+            }
+            getDrawable(R.styleable.BalanceCardView_endIcon).let {
+                setEndIcon(it)
             }
             recycle()
         }
@@ -122,6 +128,10 @@ class BalanceCardView : FrameLayout, Shimmering {
         view.value.setText(textResId)
     }
 
+    fun setValueTextColor(@ColorInt colorId: Int) {
+        view.value.setTextColor(colorId)
+    }
+
     fun setIconDrawable(drawable: Drawable?) {
         view.icon.setImageDrawable(drawable)
     }
@@ -134,6 +144,22 @@ class BalanceCardView : FrameLayout, Shimmering {
         when (type) {
             IconType.PLUS -> setIconDrawableRes(R.drawable.chili_ic_magenta_plus)
             IconType.CHEVRON -> setIconDrawableRes(R.drawable.chili_ic_chevron_light)
+        }
+    }
+
+    fun setEndIcon(drawable: Drawable?) = with(view.ivEndIcon) {
+        if (drawable == null) gone()
+        else {
+            visible()
+            setImageDrawable(drawable)
+        }
+    }
+
+    fun setEndIcon(drawableRes: Int?) = with(view.ivEndIcon) {
+        if (drawableRes == null) gone()
+        else {
+            visible()
+            setImageResource(drawableRes)
         }
     }
 
@@ -169,5 +195,6 @@ private data class BalanceCardViewVariables(
     var title: TextView,
     var value: TextView,
     var icon: ImageView,
+    val ivEndIcon: ImageView,
     var titleIcon: ImageView,
 )
