@@ -54,6 +54,18 @@
             tools:text="Value"/>
 
         <ImageView
+            android:id="@+id/iv_end_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_marginStart="@dimen/padding_8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/iv_action_icon"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/chili_ic_info"
+            tools:visibility="visible" />
+
+        <ImageView
             android:id="@+id/iv_action_icon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

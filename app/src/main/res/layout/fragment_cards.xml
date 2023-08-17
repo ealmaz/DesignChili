@@ -193,6 +193,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/padding_16dp"
             app:iconType="chevron"
+            app:endIcon="@drawable/chili_ic_info"
             app:isIconClickable="false"
             app:isSurfaceClickable="true"
             app:roundedCornerMode="top"

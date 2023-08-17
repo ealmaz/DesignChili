@@ -100,6 +100,7 @@
         <attr name="isSurfaceClickable" format="boolean"/>
         <attr name="isIconClickable" format="boolean"/>
         <attr name="titleIcon" format="reference"/>
+        <attr name="endIcon" />
     </declare-styleable>
 
     <declare-styleable name="SingleSelectedCardView">
