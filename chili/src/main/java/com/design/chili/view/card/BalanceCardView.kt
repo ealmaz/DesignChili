@@ -163,6 +163,13 @@ class BalanceCardView : FrameLayout, Shimmering {
         }
     }
 
+    fun setIsEndIconVisible(isVisible: Boolean) = with(view.ivEndIcon) {
+        when (isVisible) {
+            true -> visible()
+            else -> gone()
+        }
+    }
+
     fun setOnCardClickListener(onClick: () -> Unit) {
         view.root.setOnClickListener { onClick.invoke() }
     }
