@@ -111,6 +111,8 @@ open class BaseCellView @JvmOverloads constructor(
                 getDimensionPixelSize(R.styleable.BaseCellView_android_minHeight, -1).takeIf { it != -1 }?.let {
                     updateRootViewMinHeight(it)
                 }
+                getInteger(R.styleable.BaseCellView_android_maxLines, -1)
+                    .takeIf { it != -1 }?.let { setTitleMaxLines(it) }
                 recycle()
             }
     }
@@ -313,6 +315,11 @@ open class BaseCellView @JvmOverloads constructor(
             setImageResource(drawableRes)
         }
     }
+
+    fun setTitleMaxLines(maxLines: Int){
+        view.tvTitle.maxLines = maxLines
+    }
+
 }
 
 data class BaseCellViewVariables(
