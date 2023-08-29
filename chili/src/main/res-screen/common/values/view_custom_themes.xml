@@ -12,5 +12,8 @@
     <style name="ThemeOverlay_chili_back_card_field_ripple">
         <item name="ChiliCardViewCornerRadius">?ChiliBankCardViewFieldsCornerRadius</item>
     </style>
+    <style name="ThemeOverlay_chili_date_picker_button">
+        <item name="ChiliPrimaryButtonCornerRadius">4dp</item>
+    </style>
 
 </resources>

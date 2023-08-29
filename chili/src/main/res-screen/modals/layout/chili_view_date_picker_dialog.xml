@@ -35,6 +35,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         style="@style/Chili.ButtonStyle.Primary"
+        android:theme="@style/ThemeOverlay_chili_date_picker_button"
         tools:text="Готово"/>
 
 
