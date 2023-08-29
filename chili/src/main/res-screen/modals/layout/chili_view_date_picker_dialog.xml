@@ -34,7 +34,7 @@
         android:id="@+id/btn_done"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        style="@style/Chili.ButtonStyle.Primary"
+        style="@style/Chili.ButtonStyle.PrimaryRectangular"
         tools:text="Готово"/>
 
 
