@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/border_frame"
+    android:layout_width="88dp"
+    android:layout_height="88dp"
+    android:background="@drawable/gradiented_border"
+    android:layout_margin="@dimen/padding_4dp">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/white_border_frame"
+        android:layout_width="84dp"
+        android:layout_height="84dp"
+        app:cardElevation="@dimen/elevation_0dp"
+        android:layout_gravity="center"
+        app:cardCornerRadius="@dimen/radius_12dp">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            app:cardElevation="@dimen/elevation_0dp"
+            android:layout_gravity="center"
+            app:cardCornerRadius="12dp">
+
+            <ImageView
+                android:id="@+id/image"
+                android:foreground="#66000000"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop" />
+
+            <ImageView
+                android:id="@+id/all_stories_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/padding_4dp"
+                android:visibility="gone"
+                android:src="@drawable/chili_all_stories_icon"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+        </androidx.cardview.widget.CardView>
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/padding_24dp"
+        android:fontFamily="@font/roboto_regular"
+        android:textSize="@dimen/text_10sp"
+        android:textColor="@color/white_1"
+        tools:text="Получи\n10 ГБ"
+        android:layout_margin="@dimen/padding_10dp"
+        android:layout_gravity="bottom"/>
+
+    <ImageView
+        android:id="@+id/right_corner_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/chili_heart_side_icon"
+        android:layout_gravity="end"
+        android:visibility="gone" />
+
+</FrameLayout>

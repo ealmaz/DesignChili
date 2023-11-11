@@ -10,4 +10,11 @@
         <item name="maxLines">1</item>
         <item name="android:ellipsize">end</item>
     </style>
+
+    <style name="Chili.StoryViewStyle">
+        <item name="gapBetweenProgressBars">8dp</item>
+        <item name="storyDisplayTime">10</item>
+        <item name="isBadgeVisible">false</item>
+        <item name="overlayDrawable">@drawable/chili_shading</item>
+    </style>
 </resources>

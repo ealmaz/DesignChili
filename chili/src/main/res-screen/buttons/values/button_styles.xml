@@ -49,6 +49,12 @@
         <item name="android:paddingEnd">@dimen/padding_0dp</item>
     </style>
 
+    <style name="Chili.ButtonStyle.Accent">
+        <item name="android:foreground">@drawable/chili_accent_button_ripple</item>
+        <item name="android:background">@drawable/chili_accent_button_background</item>
+        <item name="android:textAppearance">@style/Chili.AccentButtonText</item>
+    </style>
+
     <style name="Chili.LoaderButton">
     </style>
 

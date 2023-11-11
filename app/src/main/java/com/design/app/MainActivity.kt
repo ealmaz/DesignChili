@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.appcompat.app.AppCompatDelegate.MODE_NIGHT_NO
 import androidx.appcompat.app.AppCompatDelegate.MODE_NIGHT_YES
+import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import com.design.app.fragments.MainFragment
 import com.design.chili.view.navigation_components.ChiliToolbar
@@ -27,7 +28,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setupToolbar() {
-        toolbar = findViewById<ChiliToolbar>(R.id.toolbar)
+        toolbar = findViewById(R.id.toolbar)
         toolbar.initToolbar(ChiliToolbar.Configuration(
             this,
             onNavigateUpClick = { onBackPressed() },
@@ -57,6 +58,14 @@ class MainActivity : AppCompatActivity() {
 
     fun setTitle(title: String) {
         toolbar.setTitle(title)
+    }
+
+    fun hideToolbar() {
+        toolbar.isVisible = false
+    }
+
+    fun showToolbar() {
+        toolbar.isVisible = true
     }
 
     fun setUpHomeEnabled(isEnabled: Boolean) {

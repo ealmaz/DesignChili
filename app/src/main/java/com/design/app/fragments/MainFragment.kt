@@ -12,6 +12,9 @@ class MainFragment : BaseFragment<FragmentMainBinding>() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        vb.stories.setOnClickListener {
+            openFragment(StoriesFragment())
+        }
         vb.text.setOnClickListener {
             openFragment(TextAppearancesFragment())
         }

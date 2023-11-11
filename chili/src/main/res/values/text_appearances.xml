@@ -37,6 +37,12 @@
         <item name="android:textSize">?attr/ChiliComponentButtonTextSize</item>
     </style>
 
+    <style name="Chili.AccentButtonText" parent="Chili.BaseButtonText">
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">@color/chili_primary_button_text_color</item>
+        <item name="android:fontFamily">?attr/ChiliPrimaryButtonTextFont</item>
+        <item name="android:textSize">?attr/ChiliPrimaryButtonTextSize</item>
+    </style>
 
     <!--    H1 -->
     <style name="Chili.H1" parent="Chili.BaseTextAppearance">

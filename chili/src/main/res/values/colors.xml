@@ -25,6 +25,8 @@
     <color name="magenta_1">#f0047f</color>
     <color name="magenta_2">#CC0D71</color>
     <color name="magenta_3">#f6a7d0</color>
+    <color name="custom_magenta_1">#FF0051</color>
+    <color name="custom_magenta_2">#FF0066</color>
 
     <!-- Green -->
     <color name="green_1">#82B752</color>
@@ -40,6 +42,7 @@
     <color name="blue_4">#52B1B7</color>
     <color name="blue_5">#4A90E2</color>
     <color name="custom_blue_1">#2680ADF5</color>
+    <color name="custom_blue_2">#1C67F8</color>
 
     <!-- Red -->
     <color name="red_1">#FF3B30</color>
@@ -69,5 +72,6 @@
     <color name="black_1_alpha_20">#33010101</color>
     <color name="blue_1_alpha_50">#80007AFF</color>
     <color name="magenta_1_alpha_40">#66F0047F</color>
-
+    <color name="transparent">#00FFFFFF</color>
+    <color name="black_alpha_50">#80000000</color>
 </resources>
